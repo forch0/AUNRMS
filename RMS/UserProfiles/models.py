@@ -1,3 +1,5 @@
+# your_app_name/models.py
+
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.core.validators import RegexValidator
 from django.db import models
@@ -9,10 +11,9 @@ class UserManager(BaseUserManager):
         """
         if not username:
             raise ValueError('The Username must be set')
-        if email:
-            email = self.normalize_email(email)
-            if not email.endswith('@aun.edu.ng'):
-                raise ValueError('Email must be from aun.edu.ng domain.')
+        email = self.normalize_email(email)
+        if not email.endswith('@aun.edu.ng'):
+            raise ValueError('Email must be from aun.edu.ng domain.')
         user = self.model(username=username, email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
@@ -29,12 +30,12 @@ class UserManager(BaseUserManager):
 class UserCred(AbstractBaseUser, PermissionsMixin):
     id = models.AutoField(primary_key=True)
     username = models.CharField(max_length=150, unique=True)
-    email = models.EmailField(max_length=255, blank=True, null=True, validators=[
+    email = models.EmailField(max_length=255, blank=False, validators=[
         RegexValidator(
             regex=r'@aun\.edu\.ng$',
             message='Email must be from aun.edu.ng domain.',
         ),
-    ])
+    ], default='aun@example.com')  # Provide a default email
     firstname = models.CharField(max_length=150, blank=True)
     lastname = models.CharField(max_length=150, blank=True)
     is_staff = models.BooleanField(default=False)
@@ -62,7 +63,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
 class Resident(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
-    
+
     def __str__(self):
         return f"Resident: {self.user.username}"
 
@@ -70,18 +71,20 @@ class Resident(models.Model):
         verbose_name = 'resident'
         verbose_name_plural = 'residents'
 
+class Role(models.Model):
+    name = models.CharField(max_length=20, unique=True)
+    abbreviation = models.CharField(max_length=5, blank=True, unique=True)
+
+    def __str__(self):
+        return self.name
+
 class Staff(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staff_profile')
-    ROLE_CHOICES = (
-        ('RA', 'Residence Assistant'),
-        ('RD', 'Residence Director'),
-        ('RLD', 'ResLife Director'),
-    )
-    role = models.CharField(max_length=3, choices=ROLE_CHOICES)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.get_role_display()} - {self.user.username}"
+        return f"{self.role.name} - {self.user.username}"
 
     class Meta:
         verbose_name = 'staff'
