@@ -88,4 +88,4 @@ class Staff(models.Model):
 
     class Meta:
         verbose_name = 'staff'
-        verbose_name_plural = 'staff'
+        verbose_name_plural = 'staffs'
