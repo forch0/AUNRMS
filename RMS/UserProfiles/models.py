@@ -1,4 +1,4 @@
-# your_app_name/models.py
+# UserProfiles/models.py
 
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.core.validators import RegexValidator
@@ -6,9 +6,6 @@ from django.db import models
 
 class UserManager(BaseUserManager):
     def create_user(self, username, email=None, password=None, **extra_fields):
-        """
-        Creates and saves a User with the given username and password.
-        """
         if not username:
             raise ValueError('The Username must be set')
         email = self.normalize_email(email)
@@ -20,9 +17,6 @@ class UserManager(BaseUserManager):
         return user
 
     def create_superuser(self, username, email=None, password=None, **extra_fields):
-        """
-        Creates and saves a superuser with the given username and password.
-        """
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         return self.create_user(username, email, password, **extra_fields)
@@ -35,7 +29,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
             regex=r'@aun\.edu\.ng$',
             message='Email must be from aun.edu.ng domain.',
         ),
-    ], default='aun@example.com')  # Provide a default email
+    ], default='aun@example.com')
     firstname = models.CharField(max_length=150, blank=True)
     lastname = models.CharField(max_length=150, blank=True)
     is_staff = models.BooleanField(default=False)
@@ -60,7 +54,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
         verbose_name = 'user'
         verbose_name_plural = 'users'
 
-class Resident(models.Model):
+class Residents(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
 
@@ -71,18 +65,22 @@ class Resident(models.Model):
         verbose_name = 'resident'
         verbose_name_plural = 'residents'
 
-class Role(models.Model):
+class Roles(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=20, unique=True)
     abbreviation = models.CharField(max_length=5, blank=True, unique=True)
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = 'role'
+        verbose_name_plural = 'roles'
 
-class Staff(models.Model):
+class Staffs(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staff_profile')
-    role = models.ForeignKey(Role, on_delete=models.CASCADE)
+    role = models.ForeignKey(Roles, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.role.name} - {self.user.username}"

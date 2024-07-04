@@ -1,5 +1,5 @@
 from django.contrib.auth.backends import ModelBackend
-from .models import UserCred, Staff, Resident
+from .models import UserCred, Staffs, Residents
 
 class StaffBackend(ModelBackend):
     def authenticate(self, request, username=None, password=None, **kwargs):
