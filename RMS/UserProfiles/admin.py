@@ -10,7 +10,7 @@ class UserCredAdmin(admin.ModelAdmin):
 # , 'uuid'
 @admin.register(Residents)
 class ResidentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'uuid', 'username',)
+    list_display = ('id', 'username',)
     search_fields = ('user__username',)
     raw_id_fields = ('user',)
     ordering = ('id',)
@@ -21,7 +21,7 @@ class ResidentAdmin(admin.ModelAdmin):
 
 @admin.register(Staffs)
 class StaffAdmin(admin.ModelAdmin):
-    list_display = ('id', 'uuid', 'username', 'role_name')
+    list_display = ('id', 'username', 'role_name')
     search_fields = ('user__username', 'role__name')
     ordering = ('id',)
 
@@ -35,6 +35,6 @@ class StaffAdmin(admin.ModelAdmin):
 
 @admin.register(Roles)
 class RoleAdmin(admin.ModelAdmin):
-    list_display = ('id', 'uuid', 'name', 'abbreviation')
+    list_display = ('id', 'name', 'abbreviation')
     search_fields = ('name', 'abbreviation')
     ordering = ('id',)

@@ -2,6 +2,9 @@ import uuid
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+import uuid
+from django.db import models
+
 class Dorm(models.Model):
     MALE = 'M'
     FEMALE = 'F'
@@ -17,13 +20,17 @@ class Dorm(models.Model):
         (OFF_CAMPUS, 'Off Campus'),
     ]
 
+    id = models.AutoField(primary_key=True)
+    # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     name = models.CharField(max_length=100)
-    address = models.CharField(max_length=255)
+    address = models.CharField(max_length=255, null=True, blank=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, default=MALE)
     campus_status = models.CharField(max_length=3, choices=CAMPUS_STATUS_CHOICES, default=ON_CAMPUS)
+    capacity = models.IntegerField(default=0, help_text='Total capacity of the dorm')
 
     def __str__(self):
         return self.name
+
 
 class Room(models.Model):
     id = models.AutoField(primary_key=True)

@@ -3,7 +3,7 @@ from .models import Dorm, Room, Storage, StorageItem
 
 @admin.register(Dorm)
 class DormAdmin(admin.ModelAdmin):
-    list_display = ('id', 'uuid', 'name', 'address', 'gender', 'campus_status')
+    list_display = ('id', 'name', 'address', 'gender', 'campus_status','capacity')
     list_filter = ('gender', 'campus_status')
     search_fields = ('name', 'address')
     ordering = ('id',)
