@@ -6,3 +6,8 @@ resident, year joined a room or dorm in a year / semester.
 Track a specific residents history. if they have changed dorms, complaints they have made, every single thing.
 Geospatial view for dorms snapchat example.
 AUN Vendors, can filter by dorm.
+
+
+python manage.py makemigrations 
+python manage.py migrate
+python manage.py runserver

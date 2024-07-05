@@ -3,10 +3,24 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 class Dorm(models.Model):
-    id = models.AutoField(primary_key=True)
-    uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    MALE = 'M'
+    FEMALE = 'F'
+    GENDER_CHOICES = [
+        (MALE, 'Male'),
+        (FEMALE, 'Female'),
+    ]
+
+    ON_CAMPUS = 'ON'
+    OFF_CAMPUS = 'OFF'
+    CAMPUS_STATUS_CHOICES = [
+        (ON_CAMPUS, 'On Campus'),
+        (OFF_CAMPUS, 'Off Campus'),
+    ]
+
     name = models.CharField(max_length=100)
-    address = models.TextField()
+    address = models.CharField(max_length=255)
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, default=MALE)
+    campus_status = models.CharField(max_length=3, choices=CAMPUS_STATUS_CHOICES, default=ON_CAMPUS)
 
     def __str__(self):
         return self.name

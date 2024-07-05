@@ -7,34 +7,34 @@ class UserCredAdmin(admin.ModelAdmin):
     search_fields = ('username', 'email', 'firstname', 'lastname')
     list_filter = ('is_staff', 'is_active')
     ordering = ('id',)
-
+# , 'uuid'
 @admin.register(Residents)
 class ResidentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user_username',)
+    list_display = ('id', 'uuid', 'username',)
     search_fields = ('user__username',)
     raw_id_fields = ('user',)
     ordering = ('id',)
 
-    def user_username(self, obj):
+    def username(self, obj):
         return obj.user.username
-    user_username.short_description = 'Username'
+    username.short_description = 'Username'
 
 @admin.register(Staffs)
 class StaffAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user_username', 'get_role_name')
+    list_display = ('id', 'uuid', 'username', 'role_name')
     search_fields = ('user__username', 'role__name')
     ordering = ('id',)
 
-    def user_username(self, obj):
+    def username(self, obj):
         return obj.user.username
-    user_username.short_description = 'Username'
+    username.short_description = 'Username'
 
-    def get_role_name(self, obj):
+    def role_name(self, obj):
         return obj.role.name
-    get_role_name.short_description = 'Role'
+    role_name.short_description = 'Role'
 
 @admin.register(Roles)
 class RoleAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'abbreviation')
+    list_display = ('id', 'uuid', 'name', 'abbreviation')
     search_fields = ('name', 'abbreviation')
     ordering = ('id',)
