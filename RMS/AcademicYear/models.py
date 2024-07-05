@@ -9,8 +9,10 @@ class AcademicSession(models.Model):
     name = models.CharField(max_length=100, blank=True, editable=False, help_text="Automatically formatted as start_year/end_year")
 
     def clean(self):
-        if self.start_year >= timezone.now().year:
-            raise ValidationError("Start year must be at least one year before the current year.")
+        current_year = timezone.now().year
+        last_year = current_year - 1
+        if self.start_year < last_year or self.start_year > current_year:
+            raise ValidationError("Start year must be from at least last year to this year.")
         if self.end_year != self.start_year + 1:
             raise ValidationError("End year must be exactly one year higher than start year.")
 
@@ -37,8 +39,14 @@ class Semester(models.Model):
     academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)
 
     def clean(self):
-        if self.start_date.year != self.academic_session.start_year or self.end_date.year != self.academic_session.end_year:
-            raise ValidationError("Semester dates must fall within the academic session's start and end years.")
+        if self.start_date is None or self.end_date is None:
+            raise ValidationError("Start date and end date must be provided.")
+        
+        if self.start_date.year != self.end_date.year:
+            raise ValidationError("Semester start date and end date must be within the same year.")
+        
+        if self.start_date.year not in (self.academic_session.start_year, self.academic_session.end_year):
+            raise ValidationError("Semester dates must fall within the academic session's start or end years.")
 
     def __str__(self):
-        return f"{self.get_semester_type_display()} {self.start_date.year}/{self.end_date.year} - {self.academic_session.name}"
+        return f"{self.get_semester_type_display()} {self.start_date.year} - {self.academic_session.name}"
