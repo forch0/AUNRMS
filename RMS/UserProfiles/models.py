@@ -56,7 +56,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
 class Residents(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
-    room = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='residents')  # Ensure correct reference
+    room = models.ForeignKey('Dorms.Room', on_delete=models.CASCADE, related_name='residents')  # Ensure correct reference
 
     def __str__(self):
         return f"Resident: {self.user.username}"

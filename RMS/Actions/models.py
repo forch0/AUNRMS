@@ -38,9 +38,9 @@ class MaintenanceRequest(models.Model):
     ]
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    dorm = models.ForeignKey('Dorm', on_delete=models.CASCADE, related_name='maintenance_requests')
-    room = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='maintenance_requests', blank=True, null=True)
-    resident = models.ForeignKey('Residents', on_delete=models.CASCADE, related_name='maintenance_requests')
+    dorm = models.ForeignKey('Dorms.Dorm', on_delete=models.CASCADE, related_name='maintenance_requests')
+    room = models.ForeignKey('Dorms.Room', on_delete=models.CASCADE, related_name='maintenance_requests', blank=True, null=True)
+    resident = models.ForeignKey('UserProfiles.Residents', on_delete=models.CASCADE, related_name='maintenance_requests')
     semester = models.ForeignKey('AcademicYear.Semester', on_delete=models.CASCADE, related_name='maintenance_requests')
     academic_session = models.ForeignKey('AcademicYear.AcademicSession', on_delete=models.CASCADE, related_name='maintenance_requests')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
