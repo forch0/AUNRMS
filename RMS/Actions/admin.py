@@ -1,6 +1,5 @@
 from django.core.exceptions import ValidationError
 from django.contrib import admin
-
 from .models import MaintenanceRequest, Category, SubCategory, Announcement, Complaint
 
 @admin.register(MaintenanceRequest)
@@ -31,7 +30,6 @@ class CategoryAdmin(admin.ModelAdmin):
     inlines = [SubCategoryInline]
     list_display = ('name',)
     search_fields = ('name',)
-
 
 @admin.register(Announcement)
 class AnnouncementAdmin(admin.ModelAdmin):
