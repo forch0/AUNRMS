@@ -1,9 +1,12 @@
-from django.core.exceptions import ValidationError
+
+# from Dorms.models import Dorm, Room  # Adjust the import as per your project structure
+
+import uuid
 from django.db import models
 from django.utils import timezone
-import uuid
+from django.core.exceptions import ValidationError
 from UserProfiles.models import Residents, Staffs, Roles
-from Dorms.models import Dorm, Room
+
 
 class AcademicSession(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -59,17 +62,17 @@ class Enrollment(models.Model):
     resident = models.ForeignKey(Residents, on_delete=models.CASCADE, related_name='enrollments')
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='enrollments')
     academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE, related_name='enrollments')
-    dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE, related_name='enrollments')
-    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='enrollments')
+    dorm = models.ForeignKey('Dorms.Dorm', on_delete=models.CASCADE, related_name='enrollments')
+    room = models.ForeignKey('Dorms.Room', on_delete=models.CASCADE, related_name='enrollments')
     date_enrolled = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.resident.name} - {self.semester.name} ({self.academic_session.year})"
-    
+        return f"{self.resident.user.username} - {self.semester.semester_type} ({self.academic_session.name})"
+
 class StaffAssignment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     staff = models.ForeignKey(Staffs, on_delete=models.CASCADE)
-    dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE)
+    dorm = models.ForeignKey('Dorms.Dorm', on_delete=models.CASCADE)
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
     academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE)

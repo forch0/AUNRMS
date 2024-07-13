@@ -14,7 +14,7 @@ class Dorm(models.Model):
     GENDER_CHOICES = [
         (MALE, 'Male'),
         (FEMALE, 'Female'),
-        (UNISEX,'Unisex'),
+        (UNISEX, 'Unisex'),
     ]
 
     ON_CAMPUS = 'ON'
@@ -31,20 +31,16 @@ class Dorm(models.Model):
     campus_status = models.CharField(max_length=3, choices=CAMPUS_STATUS_CHOICES, default=ON_CAMPUS)
 
     def active_residents_count(self, semester):
-        # Count active residents across all rooms for the given semester
         return Enrollment.objects.filter(room__dorm=self, semester=semester).count()
 
     def total_capacity(self):
-        # Calculate total capacity of all rooms in the dorm
         return sum(room.capacity for room in self.rooms.all())
 
     def is_full(self, semester):
-        # Check if the dorm is full based on the total capacity of rooms
         active_count = self.active_residents_count(semester)
         return active_count >= self.total_capacity()
 
     def occupancy_ratio(self, semester):
-        # Get the occupancy ratio of the dorm
         active_count = self.active_residents_count(semester)
         total_capacity = self.total_capacity()
         return f"{active_count}/{total_capacity}"
@@ -65,7 +61,6 @@ class Room(models.Model):
         ('2_in_1_wof', 'Double Without Facilities'),
         ('3_in_1_wf', 'Triple With Facilities'),
         ('2_in_1_wf', 'Double With Facilities'),
-        # Add more room types as needed
     ]
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -76,22 +71,18 @@ class Room(models.Model):
     dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE, related_name='rooms')
 
     def active_residents_count(self, semester):
-        # Count active residents for the given semester
         return Enrollment.objects.filter(room=self, semester=semester).count()
 
     def is_full(self, semester):
-        # Check if the room is full based on its capacity
         active_count = self.active_residents_count(semester)
         return active_count >= self.capacity
 
     def occupancy_ratio(self, semester):
-        # Get the occupancy ratio of the room
         active_count = self.active_residents_count(semester)
         return f"{active_count}/{self.capacity}"
 
     def __str__(self):
         return f"Room {self.number} - {self.dorm.name}"
-
 class Storage(models.Model):
 
     FLOOR_CHOICES = [

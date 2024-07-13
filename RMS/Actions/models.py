@@ -41,8 +41,8 @@ class MaintenanceRequest(models.Model):
     dorm = models.ForeignKey('Dorm', on_delete=models.CASCADE, related_name='maintenance_requests')
     room = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='maintenance_requests', blank=True, null=True)
     resident = models.ForeignKey('Residents', on_delete=models.CASCADE, related_name='maintenance_requests')
-    semester = models.ForeignKey('Semester', on_delete=models.CASCADE, related_name='maintenance_requests')
-    academic_session = models.ForeignKey('AcademicSession', on_delete=models.CASCADE, related_name='maintenance_requests')
+    semester = models.ForeignKey('AcademicYear.Semester', on_delete=models.CASCADE, related_name='maintenance_requests')
+    academic_session = models.ForeignKey('AcademicYear.AcademicSession', on_delete=models.CASCADE, related_name='maintenance_requests')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     sub_category = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
     description = models.TextField(null=True, blank=True)
@@ -76,8 +76,8 @@ class Announcement(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     dorms = models.ManyToManyField(Dorm, blank=True)  # For ResLife Director's global announcements
     is_global = models.BooleanField(default=False)
-    semester = models.ForeignKey('Semester', on_delete=models.CASCADE, related_name='maintenance_requests')
-    academic_session = models.ForeignKey('AcademicSession', on_delete=models.CASCADE, related_name='maintenance_requests')
+    semester = models.ForeignKey('AcademicYear.Semester', on_delete=models.CASCADE, related_name='announcements')
+    academic_session = models.ForeignKey('AcademicYear.AcademicSession', on_delete=models.CASCADE, related_name='announcements')
 
     def clean(self):
         if self.is_global:

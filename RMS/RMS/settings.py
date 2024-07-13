@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'UserProfiles',
     'Dorms',
-    'AcademicYear'
+    'AcademicYear',
+    'Actions',
 
 ]
 

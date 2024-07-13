@@ -56,7 +56,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
 class Residents(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
-    room = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='residents')
+    room = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='residents')  # Ensure correct reference
 
     def __str__(self):
         return f"Resident: {self.user.username}"
@@ -79,7 +79,7 @@ class Roles(models.Model):
         verbose_name_plural = 'roles'
 
 class Staffs(models.Model):
-    models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id= models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staff_profile')
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
