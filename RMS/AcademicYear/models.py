@@ -2,7 +2,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
 import uuid
-from UserProfiles.models import Residents
+from UserProfiles.models import Residents, Staffs, Roles
 from Dorms.models import Dorm, Room
 
 class AcademicSession(models.Model):
@@ -65,3 +65,24 @@ class Enrollment(models.Model):
 
     def __str__(self):
         return f"{self.resident.name} - {self.semester.name} ({self.academic_session.year})"
+    
+class StaffAssignment(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    staff = models.ForeignKey(Staffs, on_delete=models.CASCADE)
+    dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE)
+    role = models.ForeignKey(Roles, on_delete=models.CASCADE)
+    academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE)
+
+    def clean(self):
+        allowed_roles = ['Residence Assistant', 'Residence Director']
+        if self.role.name not in allowed_roles:
+            raise ValidationError(f"Staff can only be assigned if they have roles: {', '.join(allowed_roles)}")
+
+    def __str__(self):
+        return f"{self.staff} assigned to {self.dorm} for {self.semester} in {self.academic_session}"
+
+    class Meta:
+        verbose_name = 'Staff Assignment'
+        verbose_name_plural = 'Staff Assignments'
+        unique_together = ('staff', 'dorm', 'academic_session', 'semester')

@@ -3,3 +3,4 @@ django-unfold
 psycopg2
 python-dotenv
 django-multiselectfield
+cryptography

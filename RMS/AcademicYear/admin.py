@@ -1,122 +1,39 @@
+search_fields = ('timeline',)
+
 from django.contrib import admin
-from .models import AcademicSession, Semester
-from .forms import SemesterForm
+from .models import AcademicSession, Semester, Enrollment, StaffAssignment
+
 @admin.register(AcademicSession)
 class AcademicSessionAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name','start_year','end_year')
-    search_fields = ('timeline',)
+    list_display = ('id', 'name', 'start_year', 'end_year','timeline')
+    search_fields = ('name', 'start_year', 'end_year','timeline')
+    ordering = ('start_year',)
 
 @admin.register(Semester)
 class SemesterAdmin(admin.ModelAdmin):
-    form = SemesterForm
-    list_display = ('id', 'semester_type', 'academic_session', 'start_date', 'end_date')
-    list_filter = ('semester_type', 'academic_session__start_year', 'academic_session__end_year')
+    list_display = ('id', 'semester_type', 'start_date', 'end_date', 'academic_session')
+    list_filter = ('semester_type', 'academic_session')
     search_fields = ('semester_type', 'academic_session__name')
-    fieldsets = (
-        (None, {
-            'fields': ('semester_type', 'start_date', 'end_date', 'academic_session')
-        }),
-    )
+    ordering = ('start_date',)
 
-    def get_queryset(self, request):
-        queryset = super().get_queryset(request)
-        queryset = queryset.select_related('academic_session')  # Ensure academic_session is fetched in one query
-        return queryset
+@admin.register(Enrollment)
+class EnrollmentAdmin(admin.ModelAdmin):
+    list_display = ('id', 'resident', 'semester', 'academic_session', 'dorm', 'room', 'date_enrolled')
+    list_filter = ('semester', 'academic_session', 'dorm', 'room')
+    search_fields = ('resident__name', 'dorm__name', 'room__number')
+    ordering = ('date_enrolled',)
 
-    def academic_session__start_year(self, obj):
-        return obj.academic_session.start_year
 
-    academic_session__start_year.admin_order_field = 'academic_session__start_year'
-    academic_session__start_year.short_description = 'Academic Start Year'
+class StaffAssignmentAdmin(admin.ModelAdmin):
+    list_display = ('staff', 'dorm', 'role', 'academic_session', 'semester')
+    search_fields = ('staff__user__username', 'dorm__name', 'role__name', 'academic_session__name', 'semester__semester_type')
+    list_filter = ('dorm', 'role', 'academic_session', 'semester')
+    ordering = ('academic_session', 'semester', 'dorm', 'staff')
+    list_select_related = ('staff', 'dorm', 'role', 'academic_session', 'semester')
+    autocomplete_fields = ('staff', 'dorm', 'academic_session', 'semester')
 
-    def academic_session__end_year(self, obj):
-        return obj.academic_session.end_year
+    def save_model(self, request, obj, form, change):
+        obj.clean()  # Ensure validation is performed
+        super().save_model(request, obj, form, change)
 
-    academic_session__end_year.admin_order_field = 'academic_session__end_year'
-    academic_session__end_year.short_description = 'Academic End Year'
-    form = SemesterForm
-    list_display = ('id', 'semester_type', 'academic_session', 'start_date', 'end_date')
-    list_filter = ('semester_type', 'academic_session__start_year', 'academic_session__end_year')
-    search_fields = ('semester_type', 'academic_session__name')
-    fieldsets = (
-        (None, {
-            'fields': ('semester_type', 'start_date', 'end_date', 'academic_session')
-        }),
-    )
-
-    def get_queryset(self, request):
-        queryset = super().get_queryset(request)
-        queryset = queryset.select_related('academic_session')  # Ensure academic_session is fetched in one query
-        return queryset
-
-    def academic_session__start_year(self, obj):
-        return obj.academic_session.start_year
-
-    academic_session__start_year.admin_order_field = 'academic_session__start_year'
-    academic_session__start_year.short_description = 'Academic Start Year'
-
-    def academic_session__end_year(self, obj):
-        return obj.academic_session.end_year
-
-    academic_session__end_year.admin_order_field = 'academic_session__end_year'
-    academic_session__end_year.short_description = 'Academic End Year'
-    list_display = ('id', 'semester_type', 'academic_session', 'start_date', 'end_date')
-    list_filter = ('semester_type', 'academic_session__start_year', 'academic_session__end_year')
-    search_fields = ('semester_type', 'academic_session__name')
-
-    def get_queryset(self, request):
-        queryset = super().get_queryset(request)
-        queryset = queryset.select_related('academic_session')  # Ensure academic_session is fetched in one query
-        return queryset
-
-    def academic_session__start_year(self, obj):
-        return obj.academic_session.start_year
-
-    academic_session__start_year.admin_order_field = 'academic_session__start_year'
-    academic_session__start_year.short_description = 'Academic Start Year'
-
-    def academic_session__end_year(self, obj):
-        return obj.academic_session.end_year
-
-    academic_session__end_year.admin_order_field = 'academic_session__end_year'
-    academic_session__end_year.short_description = 'Academic End Year'
-    list_display = ('id', 'semester_type', 'academic_session', 'start_date', 'end_date')
-    list_filter = ('semester_type', 'academic_session__start_year', 'academic_session__end_year')
-    search_fields = ('semester_type', 'academic_session__timeline')
-
-    def get_queryset(self, request):
-        queryset = super().get_queryset(request)
-        queryset = queryset.select_related('academic_session')  # Ensure academic_session is fetched in one query
-        return queryset
-
-    def academic_session__start_year(self, obj):
-        return obj.academic_session.start_year
-
-    academic_session__start_year.admin_order_field = 'academic_session__start_year'
-    academic_session__start_year.short_description = 'Academic Start Year'
-
-    def academic_session__end_year(self, obj):
-        return obj.academic_session.end_year
-
-    academic_session__end_year.admin_order_field = 'academic_session__end_year'
-    academic_session__end_year.short_description = 'Academic End Year'
-    list_display = ('id', 'semester_type', 'academic_session', 'start_date', 'end_date')
-    list_filter = ('semester_type', 'academic_session__start_year', 'academic_session__end_year')
-    search_fields = ('semester_type', 'academic_session__timeline')
-
-    def get_queryset(self, request):
-        queryset = super().get_queryset(request)
-        queryset = queryset.select_related('academic_session')  # Ensure academic_session is fetched in one query
-        return queryset
-
-    def academic_session__start_year(self, obj):
-        return obj.academic_session.start_year
-
-    academic_session__start_year.admin_order_field = 'academic_session__start_year'
-    academic_session__start_year.short_description = 'Academic Start Year'
-
-    def academic_session__end_year(self, obj):
-        return obj.academic_session.end_year
-
-    academic_session__end_year.admin_order_field = 'academic_session__end_year'
-    academic_session__end_year.short_description = 'Academic End Year'
+admin.site.register(StaffAssignment, StaffAssignmentAdmin)

@@ -1,47 +1,137 @@
 from django.db import models
-import uuid
+from django.conf import settings
+from django.core.exceptions import ValidationError
 from django.utils import timezone
-from AcademicYear.models import AcademicSession, Semester  # Adjust import path as needed
-from Dorms.models import Dorm  # Adjust import path as needed
-from UserProfiles.models import UserCred  # Adjust import path as needed
+import uuid
+from cryptography.fernet import Fernet
+from AcademicYear.models import AcademicSession, Semester,Enrollment  # Adjust import path as needed
+from Dorms.models import Dorm, Room 
+from UserProfiles.models import Staffs  # Adjust import path as needed
 
-class Announcement(models.Model):
+key = Fernet.generate_key()
+cipher = Fernet(key)
+
+class Category(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.ForeignKey(UserCred, on_delete=models.CASCADE, related_name='announcements')
-    title = models.CharField(max_length=100)
-    content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    active = models.BooleanField(default=True)
-    academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)
-    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, null=True, blank=True)
-    global_announcement = models.BooleanField(default=False)
-    dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE, null=True, blank=True)
+    name = models.CharField(max_length=20, unique=True)
 
     def __str__(self):
-        return self.title
-    
-    class Meta:
-        ordering = ['-id']  # Order by id descending (-id) by default
+        return self.name
 
+class SubCategory(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=50)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='subcategories')
+
+    def __str__(self):
+        return f"{self.name} ({self.category.name})"
+
+class MaintenanceRequest(models.Model):
+
+    PENDING = 'P'
+    IN_PROGRESS = 'IP'
+    COMPLETED = 'C'
+    STATUS_CHOICES = [
+        (PENDING, 'Pending'),
+        (IN_PROGRESS, 'In Progress'),
+        (COMPLETED, 'Completed'),
+    ]
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    dorm = models.ForeignKey('Dorm', on_delete=models.CASCADE, related_name='maintenance_requests')
+    room = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='maintenance_requests', blank=True, null=True)
+    resident = models.ForeignKey('Residents', on_delete=models.CASCADE, related_name='maintenance_requests')
+    semester = models.ForeignKey('Semester', on_delete=models.CASCADE, related_name='maintenance_requests')
+    academic_session = models.ForeignKey('AcademicSession', on_delete=models.CASCADE, related_name='maintenance_requests')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    sub_category = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
+    description = models.TextField(null=True, blank=True)
+    status = models.CharField(max_length=2, choices=STATUS_CHOICES, default=PENDING)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_by = models.ForeignKey(Staffs, on_delete=models.SET_NULL, null=True, blank=True, related_name='updated_requests')
+    updated_at = models.DateTimeField(auto_now=True)
+    completion_date = models.DateTimeField(null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        if self.status == self.COMPLETED and self.completion_date is None:
+            self.completion_date = timezone.now()
+        super().save(*args, **kwargs)
+
+    def clean(self):
+        if self.updated_by:
+            if self.updated_by.role.name not in ['Residence Assistant', 'Residence Director']:
+                raise ValidationError("Only staff with the role of Residence Assistant or Residence Director can change the status.")
+            if self.updated_by.dorm != self.dorm:
+                raise ValidationError("Only staff assigned to the dorm can update the maintenance request.")
+
+    def __str__(self):
+        return f"Request {self.id} by {self.resident.user.username} - {self.status}"
+    
+class Announcement(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    title = models.CharField(max_length=200)
+    message = models.TextField(blank=True, null=True)
+    created_by = models.ForeignKey(Staffs, on_delete=models.CASCADE, related_name='created_announcements')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    dorms = models.ManyToManyField(Dorm, blank=True)  # For ResLife Director's global announcements
+    is_global = models.BooleanField(default=False)
+    semester = models.ForeignKey('Semester', on_delete=models.CASCADE, related_name='maintenance_requests')
+    academic_session = models.ForeignKey('AcademicSession', on_delete=models.CASCADE, related_name='maintenance_requests')
+
+    def clean(self):
+        if self.is_global:
+            if self.created_by.role.name != 'ResLife Director':
+                raise ValidationError("Only ResLife Directors can make global announcements.")
+        else:
+            if not self.dorms.exists():
+                raise ValidationError("Announcements must be assigned to a dorm.")
+            for dorm in self.dorms.all():
+                if self.created_by.dorm != dorm and self.created_by.role.name not in ['Residence Director', 'Residence Assistant']:
+                    raise ValidationError("You can only create announcements for the dorm you are assigned to.")
+
+    def __str__(self):
+        return f"{self.title} by {self.created_by.user.username}"
+
+    class Meta:
+        verbose_name = 'announcement'
+        verbose_name_plural = 'announcements'
 
 class Complaint(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.ForeignKey(UserCred, on_delete=models.CASCADE, related_name='complaints')
-    title = models.CharField(max_length=100)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='complaints', null=True, blank=True)
+    enrollment = models.ForeignKey(Enrollment, on_delete=models.CASCADE, related_name='complaints')
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='complaints')
+    academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE, related_name='complaints')
     description = models.TextField()
-    anonymous = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)
-    semester = models.ForeignKey(Semester, on_delete=models.CASCADE)
+    is_anonymous = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.title
 
     def save(self, *args, **kwargs):
-        if self.anonymous:
-            self.user = None
+        if self.is_anonymous:
+            self.description = cipher.encrypt(self.description.encode()).decode()
         super().save(*args, **kwargs)
 
+    def get_description(self):
+        if self.is_anonymous:
+            return "This complaint is anonymous."
+        return self.description
+
+    def decrypt_description(self):
+        """Decrypt the description if it's an anonymous complaint."""
+        if self.is_anonymous:
+            return cipher.decrypt(self.description.encode()).decode()
+        return self.description
+
+    def __str__(self):
+        return f"Complaint by {'Anonymous' if self.is_anonymous else self.user.username} - {self.id}"
+
     class Meta:
-        ordering = ['-id']  # Order by id descending (-id) by default
+        verbose_name = 'complaint'
+        verbose_name_plural = 'complaints'
+
+    def can_view(self, staff):
+        """Check if the given staff can view the complaint."""
+        if self.is_anonymous:
+            return staff.role.name in ['ResLife Director', 'Dean of Students Affairs']
+        return True  # Non-anonymous complaints are visible to all
