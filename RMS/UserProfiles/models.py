@@ -21,7 +21,7 @@ class UserManager(BaseUserManager):
         return self.create_user(username, email, password, **extra_fields)
 
 class UserCred(AbstractBaseUser, PermissionsMixin):
-    id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     username = models.CharField(max_length=150, unique=True)
     email = models.EmailField(max_length=255, blank=False, validators=[
         RegexValidator(
@@ -54,7 +54,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = 'users'
 
 class Residents(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
     room = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='residents')
 
@@ -66,7 +66,7 @@ class Residents(models.Model):
         verbose_name_plural = 'residents'
 
 class Roles(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     name = models.CharField(max_length=30, unique=True)
     abbreviation = models.CharField(max_length=5, blank=True, unique=True)
@@ -79,7 +79,7 @@ class Roles(models.Model):
         verbose_name_plural = 'roles'
 
 class Staffs(models.Model):
-    id = models.AutoField(primary_key=True)
+    models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staff_profile')
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
