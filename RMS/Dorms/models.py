@@ -101,7 +101,11 @@ class Storage(models.Model):
 
     def __str__(self):
         return f"Storage {self.id} in {self.dorm.name}"
-
+    
+    class Meta:
+            verbose_name = 'Storage Location'
+            verbose_name_plural = 'Storage Locations'
+    
 class StorageItem(models.Model):
     PENDING = 'P'
     APPROVED = 'A'
@@ -126,6 +130,10 @@ class StorageItem(models.Model):
     collected_at = models.DateTimeField(null=True, blank=True)  # Date and time when collected
     collected_by = models.ForeignKey(Residents, on_delete=models.SET_NULL, null=True, blank=True, related_name='collected_items')
 
+    class Meta:
+            verbose_name = 'Storage Item'
+            verbose_name_plural = 'Storage Items'
+
     def approve(self, staff_member):
         allowed_roles = ['Residence Assistant', 'Residence Director']  # List of allowed role names
 
@@ -136,7 +144,11 @@ class StorageItem(models.Model):
             self.save()
         else:
             raise PermissionError("Staff member does not have permission to approve storage items.")
+        
+        
 
     
         def __str__(self):
             return f"Storage Item: {self.description} (Quantity: {self.quantity}) - Resident: {self.resident.name} - Status: {self.get_status_display()}"
+        
+        

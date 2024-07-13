@@ -28,6 +28,11 @@ class AcademicSession(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+    
+
+    class Meta:
+        verbose_name = 'Academic Session'
+        verbose_name_plural = 'Academic Sessions'
 
 class Semester(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

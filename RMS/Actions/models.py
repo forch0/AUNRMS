@@ -17,6 +17,11 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = 'Maintenance-Category'
+        verbose_name_plural = 'Maintenance-Categories'
+
 
 class SubCategory(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -25,6 +30,10 @@ class SubCategory(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.category.name})"
+    
+    class Meta:
+        verbose_name = 'Maintenance-Sub-Category'
+        verbose_name_plural = 'Maintenance-Sub-Categories'
 
 class MaintenanceRequest(models.Model):
 
@@ -66,6 +75,10 @@ class MaintenanceRequest(models.Model):
 
     def __str__(self):
         return f"Request {self.id} by {self.resident.user.username} - {self.status}"
+    
+    class Meta:
+        verbose_name = 'Maintenance Request'
+        verbose_name_plural = 'Maintenance Requests'
     
 class Announcement(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
