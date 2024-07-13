@@ -54,7 +54,6 @@ class Semester(models.Model):
     def __str__(self):
         return f"{self.get_semester_type_display()} {self.start_date.year} - {self.academic_session.name}"
 
-
 class Enrollment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     resident = models.ForeignKey(Residents, on_delete=models.CASCADE, related_name='enrollments')

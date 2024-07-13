@@ -1,0 +1,95 @@
+# views.py
+from django.shortcuts import render, redirect
+from .models import StorageItem, Residents
+
+def store_items(request, resident_id):
+    if request.method == 'POST':
+        item_descriptions = request.POST.getlist('item_descriptions')  # List of item descriptions
+        item_quantities = request.POST.getlist('item_quantities')  # List of item quantities
+        storage = Storage.objects.get(id=request.POST['storage_id'])  # Get the storage
+
+        resident = Residents.objects.get(id=resident_id)
+
+        for description, quantity in zip(item_descriptions, item_quantities):
+            # Create and save each StorageItem
+            storage_item = StorageItem(
+                description=description,
+                quantity=int(quantity),
+                storage=storage,
+                resident=resident,
+                # Set semester and academic session as needed
+            )
+            storage_item.save()
+
+        return redirect('success_url')  # Redirect after saving items
+
+    # Render a form for adding items
+    return render(request, 'store_items.html', {'resident_id': resident_id})
+
+
+<form method="POST">
+    {% csrf_token %}
+    <div id="item-container">
+        <div class="item-entry">
+            <input type="text" name="item_descriptions" placeholder="Item Description" required>
+            <input type="number" name="item_quantities" placeholder="Quantity" required min="1">
+        </div>
+    </div>
+    <button type="button" onclick="addItem()">Add Another Item</button>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function addItem() {
+    const container = document.getElementById('item-container');
+    const newEntry = document.createElement('div');
+    newEntry.className = 'item-entry';
+    newEntry.innerHTML = `
+        <input type="text" name="item_descriptions" placeholder="Item Description" required>
+        <input type="number" name="item_quantities" placeholder="Quantity" required min="1">
+    `;
+    container.appendChild(newEntry);
+}
+</script>
+
+----
+def collect_item(request, item_id):
+    storage_item = StorageItem.objects.get(id=item_id)
+
+    if request.method == 'POST':
+        # Assuming you get the collector from the request, e.g., from form data
+        collector_id = request.POST.get('collector_id')
+        collector = Residents.objects.get(id=collector_id)
+
+        # Update the storage item with collection details
+        storage_item.collected_at = timezone.now()
+        storage_item.collected_by = collector
+        storage_item.save()
+
+        return redirect('success_url')  # Redirect after collection
+
+    # Render a form for collecting the item
+    return render(request, 'collect_item.html', {'storage_item': storage_item})
+
+
+@login_required
+def approve_collection(request, item_id):
+    storage_item = get_object_or_404(StorageItem, id=item_id)
+
+    # Check if the user has the required role
+    if request.user.role.name in ['Residence Assistant', 'Residence Director']:  # Adjust as necessary
+        if request.method == 'POST':
+            # Assuming you get the collector from the request, e.g., from form data
+            collector_id = request.POST.get('collector_id')
+            collector = Residents.objects.get(id=collector_id)
+
+            # Update the storage item with collection details
+            storage_item.collected_at = timezone.now()
+            storage_item.collected_by = collector
+            storage_item.approved = True  # Mark as approved
+            storage_item.save()
+
+            return redirect('success_url')  # Redirect after approval
+
+    # Render a form for approving the collection
+    return render(request, 'approve_collection.html', {'storage_item': storage_item})

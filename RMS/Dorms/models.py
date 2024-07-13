@@ -1,8 +1,11 @@
 import uuid
+from django.conf import settings
+from django.utils import timezone
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-import uuid
 from django.db import models
+from AcademicYear.models import Enrollment, AcademicSession,Semester
+from UserProfiles.models import Residents, Staffs
 
 class Dorm(models.Model):
     MALE = 'M'
@@ -22,16 +25,32 @@ class Dorm(models.Model):
     ]
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=255, null=True, blank=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, default=MALE)
     campus_status = models.CharField(max_length=3, choices=CAMPUS_STATUS_CHOICES, default=ON_CAMPUS)
-    capacity = models.IntegerField(default=0, help_text='Total capacity of the dorm')
+
+    def active_residents_count(self, semester):
+        # Count active residents across all rooms for the given semester
+        return Enrollment.objects.filter(room__dorm=self, semester=semester).count()
+
+    def total_capacity(self):
+        # Calculate total capacity of all rooms in the dorm
+        return sum(room.capacity for room in self.rooms.all())
+
+    def is_full(self, semester):
+        # Check if the dorm is full based on the total capacity of rooms
+        active_count = self.active_residents_count(semester)
+        return active_count >= self.total_capacity()
+
+    def occupancy_ratio(self, semester):
+        # Get the occupancy ratio of the dorm
+        active_count = self.active_residents_count(semester)
+        total_capacity = self.total_capacity()
+        return f"{active_count}/{total_capacity}"
 
     def __str__(self):
         return self.name
-
 
 class Room(models.Model):
     FLOOR_CHOICES = [
@@ -56,28 +75,77 @@ class Room(models.Model):
     floor = models.IntegerField(choices=FLOOR_CHOICES)
     dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE, related_name='rooms')
 
+    def active_residents_count(self, semester):
+        # Count active residents for the given semester
+        return Enrollment.objects.filter(room=self, semester=semester).count()
+
+    def is_full(self, semester):
+        # Check if the room is full based on its capacity
+        active_count = self.active_residents_count(semester)
+        return active_count >= self.capacity
+
+    def occupancy_ratio(self, semester):
+        # Get the occupancy ratio of the room
+        active_count = self.active_residents_count(semester)
+        return f"{active_count}/{self.capacity}"
+
     def __str__(self):
         return f"Room {self.number} - {self.dorm.name}"
-    
 
 class Storage(models.Model):
+
+    FLOOR_CHOICES = [
+        (1, 'Ground Floor'),
+        (2, 'First Floor'),
+        (3, 'Second Floor'),
+        (4, 'Third Floor'),
+    ]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     description = models.TextField()
     capacity = models.IntegerField()
+    floor = models.IntegerField(choices=FLOOR_CHOICES)
     current_capacity = models.IntegerField(default=0)
     dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE, related_name='storages')
 
     def __str__(self):
         return f"Storage {self.id} in {self.dorm.name}"
 
-
 class StorageItem(models.Model):
+    PENDING = 'P'
+    APPROVED = 'A'
+    REJECTED = 'R'
+    STATUS_CHOICES = [
+        (PENDING, 'Pending'),
+        (APPROVED, 'Approved'),
+        (REJECTED, 'Rejected'),
+    ]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     description = models.TextField()
     quantity = models.IntegerField()
     storage = models.ForeignKey(Storage, on_delete=models.CASCADE, related_name='items')
     room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='items', blank=True, null=True)
+    resident = models.ForeignKey(Residents, on_delete=models.CASCADE, related_name='storage_items')
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='storage_items')
+    academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE, related_name='storage_items')
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default=PENDING)
+    approved_by = models.ForeignKey(Staffs, on_delete=models.SET_NULL, null=True, blank=True, related_name='approved_storage_items')
+    approval_date = models.DateField(null=True, blank=True)
+    collected_at = models.DateTimeField(null=True, blank=True)  # Date and time when collected
+    collected_by = models.ForeignKey(Residents, on_delete=models.SET_NULL, null=True, blank=True, related_name='collected_items')
 
-    def __str__(self):
-        return f"{self.quantity} of {self.description} in Storage {self.storage.id} - {self.storage.dorm.name}"
+    def approve(self, staff_member):
+        allowed_roles = ['Residence Assistant', 'Residence Director']  # List of allowed role names
 
+        if staff_member.role.name in allowed_roles:
+            self.status = StorageItem.APPROVED
+            self.approved_by = staff_member
+            self.approval_date = timezone.now()
+            self.save()
+        else:
+            raise PermissionError("Staff member does not have permission to approve storage items.")
+
+    
+        def __str__(self):
+            return f"Storage Item: {self.description} (Quantity: {self.quantity}) - Resident: {self.resident.name} - Status: {self.get_status_display()}"
