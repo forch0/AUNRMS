@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.core.validators import RegexValidator
 from django.db import models
+import uuid
 
 class UserManager(BaseUserManager):
     def create_user(self, username, email=None, password=None, **extra_fields):
@@ -20,15 +21,14 @@ class UserManager(BaseUserManager):
         return self.create_user(username, email, password, **extra_fields)
 
 class UserCred(AbstractBaseUser, PermissionsMixin):
-    id = models.AutoField(primary_key=True)
-    # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     username = models.CharField(max_length=150, unique=True)
     email = models.EmailField(max_length=255, blank=False, validators=[
         RegexValidator(
             regex=r'@aun\.edu\.ng$',
             message='Email must be from aun.edu.ng domain.',
         ),
-    ], default='aun@example.com')
+    ], default='aun@edu.ng')
     firstname = models.CharField(max_length=150, blank=True)
     lastname = models.CharField(max_length=150, blank=True)
     is_staff = models.BooleanField(default=False)
@@ -56,6 +56,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
 class Residents(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
+    room = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='residents')
 
     def __str__(self):
         return f"Resident: {self.user.username}"

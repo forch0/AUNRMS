@@ -1,11 +1,12 @@
 from django.db import models
+import uuid
 from django.utils import timezone
 from AcademicYear.models import AcademicSession, Semester  # Adjust import path as needed
 from Dorms.models import Dorm  # Adjust import path as needed
 from UserProfiles.models import UserCred  # Adjust import path as needed
 
 class Announcement(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(UserCred, on_delete=models.CASCADE, related_name='announcements')
     title = models.CharField(max_length=100)
     content = models.TextField()
@@ -25,7 +26,7 @@ class Announcement(models.Model):
 
 
 class Complaint(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(UserCred, on_delete=models.CASCADE, related_name='complaints')
     title = models.CharField(max_length=100)
     description = models.TextField()

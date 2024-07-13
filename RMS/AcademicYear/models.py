@@ -1,9 +1,12 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
+import uuid
+from UserProfiles.models import Residents
+from Dorms.models import Dorm, Room
 
 class AcademicSession(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     start_year = models.IntegerField()
     end_year = models.IntegerField()
     name = models.CharField(max_length=100, blank=True, editable=False, help_text="Automatically formatted as start_year/end_year")
@@ -24,7 +27,7 @@ class AcademicSession(models.Model):
         return f"{self.name}"
 
 class Semester(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     FALL = 'Fall'
     SPRING = 'Spring'
     SUMMER = 'Summer'
@@ -50,3 +53,16 @@ class Semester(models.Model):
 
     def __str__(self):
         return f"{self.get_semester_type_display()} {self.start_date.year} - {self.academic_session.name}"
+
+
+class Enrollment(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    resident = models.ForeignKey(Residents, on_delete=models.CASCADE, related_name='enrollments')
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='enrollments')
+    academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE, related_name='enrollments')
+    dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE, related_name='enrollments')
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='enrollments')
+    date_enrolled = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.resident.name} - {self.semester.name} ({self.academic_session.year})"
