@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('UserProfiles.urls')),
     path('dorms/', include('Dorms.urls')),
     path('year/', include('AcademicYear.urls')),
+    # path('actions/', include('Actions.urls')),
 ]

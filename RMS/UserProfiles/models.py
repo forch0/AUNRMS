@@ -1,9 +1,6 @@
-import uuid
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.core.validators import RegexValidator
 from django.db import models
-
-# Define UserCred and UserManager first
 
 class UserManager(BaseUserManager):
     def create_user(self, username, email=None, password=None, **extra_fields):
@@ -56,12 +53,6 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
         verbose_name = 'user'
         verbose_name_plural = 'users'
 
-
-# Import models after defining UserCred and UserManager
-
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-
 class Residents(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
@@ -76,7 +67,7 @@ class Residents(models.Model):
 class Roles(models.Model):
     id = models.AutoField(primary_key=True)
     # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
-    name = models.CharField(max_length=20, unique=True)
+    name = models.CharField(max_length=30, unique=True)
     abbreviation = models.CharField(max_length=5, blank=True, unique=True)
 
     def __str__(self):
