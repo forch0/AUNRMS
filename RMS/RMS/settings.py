@@ -99,8 +99,20 @@ DATABASES = {
         'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),                  
+    },
+
+    'supabase': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.cesztotrungramvrtiqa',
+        'PASSWORD': 'nSbWwmdEk#f2dv3',
+        'HOST': 'aws-0-eu-central-1.pooler.supabase.com',
+        'PORT': '5432',  # Default PostgreSQL port
+        # python manage.py migrate --database=supabase
     }
 }
+
+DATABASE_ROUTERS = ['RMS.routers.DatabaseRouter']
 
 
 # Password validation
