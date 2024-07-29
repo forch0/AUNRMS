@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'Dorms',
     'AcademicYear',
     'Actions',
+    'Home',
+    'Dashboard',
 
 ]
 
