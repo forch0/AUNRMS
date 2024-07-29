@@ -90,9 +90,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'RMS.wsgi.application'
 
 
+
+'''ERIC AND YOLANDA, USE THIS DATABASE'''
+'''ALL YOU NEDD TO DO IS TO APPLY MIGRATIONS'''
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+'''COMMENT THIS WHEN WORKING ON YOUR FILE'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -103,18 +114,20 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT'),                  
     },
 
-    'supabase': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.cesztotrungramvrtiqa',
-        'PASSWORD': 'nSbWwmdEk#f2dv3',
-        'HOST': 'aws-0-eu-central-1.pooler.supabase.com',
-        'PORT': '5432',  # Default PostgreSQL port
+    # 'supabase': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'postgres',
+    #     'USER': 'postgres.cesztotrungramvrtiqa',
+    #     'PASSWORD': 'nSbWwmdEk#f2dv3',
+    #     'HOST': 'aws-0-eu-central-1.pooler.supabase.com',
+    #     'PORT': '5432',  # Default PostgreSQL port
         # python manage.py migrate --database=supabase
-    }
+    # }
 }
 
-DATABASE_ROUTERS = ['RMS.routers.DatabaseRouter']
+
+
+# DATABASE_ROUTERS = ['RMS.routers.DatabaseRouter']
 
 
 # Password validation

@@ -6,4 +6,4 @@ from django.urls import reverse_lazy
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Welcome to Actions Section.")
+    return HttpResponse("Welcome to Operations Section.")

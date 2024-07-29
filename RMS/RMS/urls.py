@@ -24,6 +24,6 @@ urlpatterns = [
     path('dorms/', include('Dorms.urls')),
     path('dashboard/', include('Dashboard.urls')),
     path('year/', include('AcademicYear.urls')),
-    path('actions/', include('Actions.urls')),
+    path('operations/', include('Actions.urls')),
     # path('actions/', include('Actions.urls')),
 ]
