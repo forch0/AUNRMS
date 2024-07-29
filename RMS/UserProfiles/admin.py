@@ -3,14 +3,14 @@ from .models import UserCred, Residents, Staffs, Roles
 
 @admin.register(UserCred)
 class UserCredAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username', 'email', 'firstname', 'lastname', 'is_staff', 'is_active')
+    list_display = ('id', 'username', 'email', 'firstname', 'lastname','phoneNumber' ,'is_staff', 'is_active')
     search_fields = ('username', 'email', 'firstname', 'lastname')
     list_filter = ('is_staff', 'is_active')
     ordering = ('id',)
 # , 'uuid'
 @admin.register(Residents)
 class ResidentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username',)
+    list_display = ('id', 'username','room','guardianPhoneNumber')
     search_fields = ('user__username',)
     raw_id_fields = ('user',)
     ordering = ('id',)
