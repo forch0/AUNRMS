@@ -83,6 +83,14 @@ class Room(models.Model):
 
     def __str__(self):
         return f"Room {self.number} - {self.dorm.name}"
+    
+
+    @property
+    def room_name(self):
+        return f"{self.dorm.name}-{self.number}"
+
+    def __str__(self):
+        return self.room_name
 class Storage(models.Model):
 
     FLOOR_CHOICES = [
