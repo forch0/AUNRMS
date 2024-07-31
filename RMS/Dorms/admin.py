@@ -15,6 +15,10 @@ class RoomAdmin(admin.ModelAdmin):
     search_fields = ('number', 'dorm__name')
     ordering = ('id',)
 
+    def room_name(self, obj):
+        return obj.room_name
+    room_name.short_description = 'Room Name'
+
 @admin.register(Storage)
 class StorageAdmin(admin.ModelAdmin):
     list_display = ('id', 'description', 'capacity', 'current_capacity', 'floor', 'dorm')
