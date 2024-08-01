@@ -44,6 +44,9 @@ class Dorm(models.Model):
         active_count = self.active_residents_count(semester)
         total_capacity = self.total_capacity()
         return f"{active_count}/{total_capacity}"
+    
+    def room_count(self):
+        return self.rooms.count()
 
     def __str__(self):
         return self.name
@@ -112,7 +115,6 @@ class Storage(models.Model):
     class Meta:
             verbose_name = 'Storage Location'
             verbose_name_plural = 'Storage Locations'
-    
 class StorageItem(models.Model):
     PENDING = 'P'
     APPROVED = 'A'
