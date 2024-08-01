@@ -1,9 +1,9 @@
-{% extends "admin/base_site.html" %}
+{% extends 'admin/base_site.html' %}
+
 {% block content %}
-  <h1>Generate Rooms</h1>
-  <form method="post" action="{% url 'dorm_generate_rooms' %}">
-    {% csrf_token %}
+  <h1>{{ title }}</h1>
+  <form method="post">{% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" name="apply">Generate Rooms</button>
+    <button type="submit" name="apply" class="default">Generate Rooms</button>
   </form>
 {% endblock %}
