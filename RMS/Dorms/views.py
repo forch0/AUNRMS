@@ -26,9 +26,10 @@ def generate_rooms(request):
             elif range_start and range_end:
                 create_rooms_from_manual(dorm, range_start, range_end, capacity, room_plan, floor)
 
-
             # Use the correct admin URL namespace for the changelist view
-            return redirect(reverse('admin:dorms_dorm_changelist'))
+            # return redirect(reverse('admin:dorms_dorm_changelist'))
+            # Redirect to the Django admin home page
+            return redirect(reverse('admin:index'))
             
         
 

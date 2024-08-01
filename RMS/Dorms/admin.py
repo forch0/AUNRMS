@@ -31,7 +31,7 @@ class DormAdmin(admin.ModelAdmin):
 
                 self.message_user(request, "Rooms have been generated.")
                 # Redirect to the correct admin view for Dorm model
-                return redirect(reverse('admin:dorm_changelist'))
+                return redirect(reverse('admin:index'))
         else:
             form = RoomGenerationForm()
 
