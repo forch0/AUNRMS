@@ -1,23 +1,97 @@
+from django.contrib import admin
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from .models import Dorm, Room, Storage,StorageItem
+from .models import Dorm, Room, Storage, StorageItem
 from .forms import RoomGenerationForm
-from django.contrib import admin
+
+# @admin.register(Dorm)
+# class DormAdmin(admin.ModelAdmin):
+#     list_display = ('name', 'address', 'gender', 'campus_status', 'get_room_count')
+#     list_filter = ('gender', 'campus_status')
+#     search_fields = ('name', 'address')
+#     ordering = ('name',)
+#     actions = ['show_generate_rooms_form']
+
+#     def show_generate_rooms_form(self, request, queryset):
+#         if 'apply' in request.POST:
+#             form = RoomGenerationForm(request.POST)
+#             if form.is_valid():
+#                 dorm = form.cleaned_data.get('dorm')
+#                 range_choice = form.cleaned_data.get('range')
+#                 range_start = form.cleaned_data.get('range_start')
+#                 range_end = form.cleaned_data.get('range_end')
+#                 capacity = form.cleaned_data.get('capacity')
+#                 room_plan = form.cleaned_data.get('room_plan')
+#                 floor = form.cleaned_data.get('floor')
+
+#                 if range_choice:
+#                     self.create_rooms_from_choice(dorm, range_choice, capacity, room_plan, floor)
+#                 elif range_start and range_end:
+#                     self.create_rooms_from_manual(dorm, range_start, range_end, capacity, room_plan, floor)
+
+#                 self.message_user(request, "Rooms have been generated.")
+#                 # Redirect to the correct admin view for Dorm model
+#                 return redirect(reverse('admin:index'))
+#         else:
+#             form = RoomGenerationForm()
+
+#         context = {
+#             'form': form,
+#             'title': "Generate Rooms",
+#         }
+#         return render(request, 'admin/generate_rooms.html', context)
+
+#     def create_rooms_from_choice(self, dorm, range_choice, capacity, room_plan, floor):
+#         ranges = {
+#             '101-116': (101, 116),
+#             '201-216': (201, 216),
+#             '301-316': (301, 316),
+#             # Add more predefined ranges here if needed
+#         }
+#         start, end = ranges.get(range_choice, (0, 0))
+#         for number in range(start, end + 1):
+#             Room.objects.create(
+#                 number=number,
+#                 capacity=capacity,
+#                 room_plan=room_plan,
+#                 floor=floor,
+#                 dorm=dorm,
+#             )
+
+#     def create_rooms_from_manual(self, dorm, start, end, capacity, room_plan, floor):
+#         for number in range(start, end + 1):
+#             Room.objects.create(
+#                 number=number,
+#                 capacity=capacity,
+#                 room_plan=room_plan,
+#                 floor=floor,
+#                 dorm=dorm,
+#             )
+
+#     def get_room_count(self, obj):
+#         return obj.rooms.count()
+#     get_room_count.short_description = 'Number of Rooms'
+
+
 
 @admin.register(Dorm)
 class DormAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address', 'gender', 'campus_status', 'get_room_count')
+    list_display = ('name', 'address', 'gender', 'campus_status', 'room_count')
     list_filter = ('gender', 'campus_status')
     search_fields = ('name', 'address')
-    ordering = ('id',)
+    ordering = ('name',)
     actions = ['show_generate_rooms_form']
+
+    def room_count(self, obj):
+        return obj.room_count()
+    room_count.short_description = 'Room Count'
 
     def show_generate_rooms_form(self, request, queryset):
         if 'apply' in request.POST:
             form = RoomGenerationForm(request.POST)
             if form.is_valid():
                 dorm = form.cleaned_data.get('dorm')
-                range_choice = form.cleaned_data.get('range')
+                range_choice = form.cleaned_data.get('range_choice')
                 range_start = form.cleaned_data.get('range_start')
                 range_end = form.cleaned_data.get('range_end')
                 capacity = form.cleaned_data.get('capacity')
@@ -26,12 +100,11 @@ class DormAdmin(admin.ModelAdmin):
 
                 if range_choice:
                     self.create_rooms_from_choice(dorm, range_choice, capacity, room_plan, floor)
-                elif range_start and range_end:
+                elif range_start is not None and range_end is not None:
                     self.create_rooms_from_manual(dorm, range_start, range_end, capacity, room_plan, floor)
 
                 self.message_user(request, "Rooms have been generated.")
-                # Redirect to the correct admin view for Dorm model
-                return redirect(reverse('admin:index'))
+                return redirect(reverse('admin:dorms_dorm_changelist'))
         else:
             form = RoomGenerationForm()
 
@@ -42,35 +115,29 @@ class DormAdmin(admin.ModelAdmin):
         return render(request, 'admin/generate_rooms.html', context)
 
     def create_rooms_from_choice(self, dorm, range_choice, capacity, room_plan, floor):
-        ranges = {
-            '101-116': (101, 116),
-            '201-216': (201, 216),
-            '301-316': (301, 316),
-            # Add more predefined ranges here if needed
-        }
-        start, end = ranges.get(range_choice, (0, 0))
-        for number in range(start, end + 1):
+        room_numbers = [int(num) for num in range_choice.split(',') if num.strip().isdigit()]
+        for room_number in room_numbers:
             Room.objects.create(
-                number=number,
+                dorm=dorm,
+                number=room_number,
                 capacity=capacity,
                 room_plan=room_plan,
-                floor=floor,
-                dorm=dorm,
+                floor=floor
             )
 
-    def create_rooms_from_manual(self, dorm, start, end, capacity, room_plan, floor):
-        for number in range(start, end + 1):
+    def create_rooms_from_manual(self, dorm, range_start, range_end, capacity, room_plan, floor):
+        for room_number in range(range_start, range_end + 1):
             Room.objects.create(
-                number=number,
+                dorm=dorm,
+                number=room_number,
                 capacity=capacity,
                 room_plan=room_plan,
-                floor=floor,
-                dorm=dorm,
+                floor=floor
             )
 
-    def get_room_count(self, obj):
-        return obj.rooms.count()
-    get_room_count.short_description = 'Number of Rooms'
+
+
+
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
