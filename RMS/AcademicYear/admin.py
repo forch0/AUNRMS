@@ -43,13 +43,6 @@ class EnrollmentAdmin(admin.ModelAdmin):
     ordering = ('date_enrolled',)
 
 # Registering the Dorm model
-@admin.register(Dorm)
-class DormAdmin(admin.ModelAdmin):
-    list_display = ('id','name', 'address', 'gender', 'campus_status')
-    search_fields = ('name', 'address')
-    ordering = ('id',)
-
-# Registering the StaffAssignment model
 class StaffAssignmentAdmin(admin.ModelAdmin):
     list_display = ('id','staff', 'dorm', 'role', 'academic_session', 'semester')
     search_fields = (
