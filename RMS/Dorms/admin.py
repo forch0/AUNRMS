@@ -1,8 +1,8 @@
-from django.contrib import admin
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from .models import Dorm, Room, Storage, StorageItem
+from .models import Dorm, Room, Storage,StorageItem
 from .forms import RoomGenerationForm
+from django.contrib import admin
 
 @admin.register(Dorm)
 class DormAdmin(admin.ModelAdmin):
@@ -10,9 +10,9 @@ class DormAdmin(admin.ModelAdmin):
     list_filter = ('gender', 'campus_status')
     search_fields = ('name', 'address')
     ordering = ('id',)
-    actions = ['generate_rooms']
+    actions = ['show_generate_rooms_form']
 
-    def generate_rooms(self, request, queryset):
+    def show_generate_rooms_form(self, request, queryset):
         if 'apply' in request.POST:
             form = RoomGenerationForm(request.POST)
             if form.is_valid():
@@ -30,7 +30,8 @@ class DormAdmin(admin.ModelAdmin):
                     self.create_rooms_from_manual(dorm, range_start, range_end, capacity, room_plan, floor)
 
                 self.message_user(request, "Rooms have been generated.")
-                return redirect(reverse('admin:dorms_dorm_changelist'))
+                # Redirect to the correct admin view for Dorm model
+                return redirect(reverse('admin:dorm_changelist'))
         else:
             form = RoomGenerationForm()
 
@@ -70,6 +71,7 @@ class DormAdmin(admin.ModelAdmin):
     def get_room_count(self, obj):
         return obj.rooms.count()
     get_room_count.short_description = 'Number of Rooms'
+
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
     list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm')

@@ -26,8 +26,11 @@ def generate_rooms(request):
             elif range_start and range_end:
                 create_rooms_from_manual(dorm, range_start, range_end, capacity, room_plan, floor)
 
+
             # Use the correct admin URL namespace for the changelist view
             return redirect(reverse('admin:dorms_dorm_changelist'))
+            
+        
 
     else:
         form = RoomGenerationForm()
@@ -64,3 +67,4 @@ def create_rooms_from_manual(dorm, start, end, capacity, room_plan, floor):
             floor=floor,
             dorm=dorm,
         )
+
