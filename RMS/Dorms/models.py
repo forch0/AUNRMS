@@ -66,12 +66,21 @@ class Room(models.Model):
         ('2_in_1_wf', 'Double With Facilities'),
     ]
 
+    RANGE_CHOICES = [
+        ('101-116', '101-116'),
+        ('201-216', '201-216'),
+        ('301-316', '301-316'),
+        ('2x2a-2x2b', '2x2a-2x2b'),
+        ('3x3a-3x3b', '3x3a-3x3b'),
+    ]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     number = models.CharField(max_length=20)
     capacity = models.IntegerField()
     room_plan = models.CharField(max_length=20, choices=ROOM_OPTIONS)
     floor = models.IntegerField(choices=FLOOR_CHOICES)
     dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE, related_name='rooms')
+    range = models.CharField(max_length=20, choices=RANGE_CHOICES, blank=True, null=True)
 
     def active_residents_count(self, semester):
         return Enrollment.objects.filter(room=self, semester=semester).count()
