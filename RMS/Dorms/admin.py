@@ -3,8 +3,108 @@ from .models import Dorm, Room, Storage, StorageItem
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import path
-from .utils import create_rooms
-from .forms import RoomRangeForm
+from .forms import GenerateRoomsForm
+
+# @admin.register(Dorm)
+# class DormAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'name', 'address', 'gender', 'campus_status', 'get_room_count')
+#     list_filter = ('gender', 'campus_status')
+#     search_fields = ('name', 'address')
+#     ordering = ('id',)
+#     actions = ['redirect_to_create_rooms']
+
+#     def redirect_to_create_rooms(self, request, queryset):
+#         selected = request.POST.getlist(admin.ACTION_CHECKBOX_NAME)
+#         return HttpResponseRedirect(f'/admin/dorms/dorm/{selected[0]}/create_rooms/')
+
+#     redirect_to_create_rooms.short_description = "Create rooms with specified ranges"
+
+#     def get_urls(self):
+#         urls = super().get_urls()
+#         custom_urls = [
+#             path(
+#                 '<path:object_id>/create_rooms/',
+#                 self.admin_site.admin_view(self.create_rooms_view),
+#                 name='create-rooms',
+#             ),
+#         ]
+#         return custom_urls + urls
+
+#     def create_rooms_view(self, request, object_id):
+#         dorm = self.get_object(request, object_id)
+#         if not dorm:
+#             return redirect('admin:dorms_dorm_changelist')
+
+#         if request.method == 'POST':
+#             form = RoomRangeForm(request.POST)
+#             if form.is_valid():
+#                 selected_ranges = form.cleaned_data['ranges']
+#                 capacity = form.cleaned_data['capacity']
+#                 room_plan = form.cleaned_data['room_plan']
+#                 floor = form.cleaned_data['floor']
+
+#                 create_rooms(dorm, selected_ranges, capacity, room_plan, floor)
+#                 self.message_user(request, "Rooms created successfully.")
+#                 return redirect('admin:dorms_dorm_changelist')
+#         else:
+#             form = RoomRangeForm()
+
+#         context = {
+#             'form': form,
+#             'dorm': dorm,
+#             'opts': self.model._meta,
+#             'add': False,
+#             'change': False,
+#             'is_popup': False,
+#             'save_as': False,
+#             'has_view_permission': self.has_view_permission(request),
+#             'has_change_permission': self.has_change_permission(request, dorm),
+#             'has_add_permission': self.has_add_permission(request),
+#             'has_delete_permission': self.has_delete_permission(request, dorm),
+#         }
+#         return render(request, 'admin/create_rooms_form.html', context)
+
+#     def get_room_count(self, obj):
+#         return obj.rooms.count()
+#     get_room_count.short_description = 'Room Count'
+
+
+
+def generate_rooms(modeladmin, request, queryset):
+    form = GenerateRoomsForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        selected_ranges = form.cleaned_data.get('ranges', [])
+        if not selected_ranges:
+            modeladmin.message_user(request, "No ranges selected.")
+            return HttpResponseRedirect(request.get_full_path())
+
+        for dorm in queryset:
+            for range_choice in selected_ranges:
+                start, end = range_choice.split('-')
+                start_number = int(start)
+                end_number = int(end)
+
+                for number in range(start_number, end_number + 1):
+                    room_number = f"{number:03d}"  # Format number with leading zeros
+                    Room.objects.create(
+                        number=room_number,
+                        capacity=3,  # Adjust as needed
+                        room_plan='3_in_1_wf',  # Adjust as needed
+                        floor=1,  # Adjust as needed
+                        dorm=dorm,
+                        range=range_choice  # Assigning range
+                    )
+        modeladmin.message_user(request, "Rooms have been generated for the selected dorms.")
+    else:
+        # Display the form if GET request
+        context = {
+            'form': form,
+            'opts': modeladmin.model._meta,
+            'title': 'Generate Rooms',
+        }
+        return modeladmin.render_change_form(request, context, add_form=form, change_form=None)
+
+generate_rooms.short_description = "Generate Rooms for Selected Dorms"
 
 @admin.register(Dorm)
 class DormAdmin(admin.ModelAdmin):
@@ -12,61 +112,52 @@ class DormAdmin(admin.ModelAdmin):
     list_filter = ('gender', 'campus_status')
     search_fields = ('name', 'address')
     ordering = ('id',)
-    actions = ['redirect_to_create_rooms']
-
-    def redirect_to_create_rooms(self, request, queryset):
-        selected = request.POST.getlist(admin.ACTION_CHECKBOX_NAME)
-        return HttpResponseRedirect(f'/admin/dorms/dorm/{selected[0]}/create_rooms/')
-
-    redirect_to_create_rooms.short_description = "Create rooms with specified ranges"
+    actions = [generate_rooms]
 
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
-            path(
-                '<path:object_id>/create_rooms/',
-                self.admin_site.admin_view(self.create_rooms_view),
-                name='create-rooms',
-            ),
+            path('generate_rooms/', self.admin_site.admin_view(self.generate_rooms_view), name='generate-rooms'),
         ]
         return custom_urls + urls
 
-    def create_rooms_view(self, request, object_id):
-        dorm = self.get_object(request, object_id)
-        if not dorm:
-            return redirect('admin:dorms_dorm_changelist')
+    def generate_rooms_view(self, request):
+        form = GenerateRoomsForm(request.POST or None)
+        if request.method == 'POST' and form.is_valid():
+            selected_ranges = form.cleaned_data.get('ranges', [])
+            if not selected_ranges:
+                self.message_user(request, "No ranges selected.")
+                return HttpResponseRedirect(request.get_full_path())
 
-        if request.method == 'POST':
-            form = RoomRangeForm(request.POST)
-            if form.is_valid():
-                selected_ranges = form.cleaned_data['ranges']
-                capacity = form.cleaned_data['capacity']
-                room_plan = form.cleaned_data['room_plan']
-                floor = form.cleaned_data['floor']
+            queryset = Dorm.objects.all()  # Apply filter as needed
+            for dorm in queryset:
+                for range_choice in selected_ranges:
+                    start, end = range_choice.split('-')
+                    start_number = int(start)
+                    end_number = int(end)
 
-                create_rooms(dorm, selected_ranges, capacity, room_plan, floor)
-                self.message_user(request, "Rooms created successfully.")
-                return redirect('admin:dorms_dorm_changelist')
-        else:
-            form = RoomRangeForm()
+                    for number in range(start_number, end_number + 1):
+                        room_number = f"{number:03d}"
+                        Room.objects.create(
+                            number=room_number,
+                            capacity=3,
+                            room_plan='3_in_1_wf',
+                            floor=1,
+                            dorm=dorm,
+                            range=range_choice
+                        )
+            self.message_user(request, "Rooms have been generated for the selected dorms.")
+            return HttpResponseRedirect(request.get_full_path())
 
         context = {
             'form': form,
-            'dorm': dorm,
             'opts': self.model._meta,
-            'add': False,
-            'change': False,
-            'is_popup': False,
-            'save_as': False,
-            'has_view_permission': self.has_view_permission(request),
-            'has_change_permission': self.has_change_permission(request, dorm),
-            'has_add_permission': self.has_add_permission(request),
-            'has_delete_permission': self.has_delete_permission(request, dorm),
+            'title': 'Generate Rooms',
         }
-        return render(request, 'admin/create_rooms_form.html', context)
-
+        return self.render_change_form(request, context, add_form=form, change_form=None)
+    
     def get_room_count(self, obj):
-        return obj.rooms.count()
+        return obj.room_count()
     get_room_count.short_description = 'Room Count'
 
 @admin.register(Room)

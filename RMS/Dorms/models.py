@@ -93,6 +93,7 @@ class Room(models.Model):
 
     def __str__(self):
         return self.room_name
+
 class Storage(models.Model):
 
     FLOOR_CHOICES = [
