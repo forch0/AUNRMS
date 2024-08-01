@@ -7,7 +7,6 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("Welcome to Dorms Section.")
-    pass
 
 def generate_rooms(request):
     if request.method == 'POST':
@@ -26,12 +25,8 @@ def generate_rooms(request):
             elif range_start and range_end:
                 create_rooms_from_manual(dorm, range_start, range_end, capacity, room_plan, floor)
 
-            # Use the correct admin URL namespace for the changelist view
-            # return redirect(reverse('admin:dorms_dorm_changelist'))
             # Redirect to the Django admin home page
             return redirect(reverse('admin:index'))
-            
-        
 
     else:
         form = RoomGenerationForm()

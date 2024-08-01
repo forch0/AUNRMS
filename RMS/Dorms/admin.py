@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
-from django.urls import path, reverse
-from django.contrib import admin, messages
-from .models import Dorm, Room,Storage,StorageItem
+from django.urls import reverse
+from .models import Dorm, Room, Storage,StorageItem
 from .forms import RoomGenerationForm
+from django.contrib import admin
 
 @admin.register(Dorm)
 class DormAdmin(admin.ModelAdmin):
@@ -10,20 +10,10 @@ class DormAdmin(admin.ModelAdmin):
     list_filter = ('gender', 'campus_status')
     search_fields = ('name', 'address')
     ordering = ('id',)
+    actions = ['show_generate_rooms_form']
 
-    def get_urls(self):
-        urls = super().get_urls()
-        custom_urls = [
-            path(
-                'generate-rooms/',
-                self.admin_site.admin_view(self.generate_rooms),
-                name='dorms_dorm_generate_rooms',
-            ),
-        ]
-        return custom_urls + urls
-
-    def generate_rooms(self, request):
-        if request.method == 'POST':
+    def show_generate_rooms_form(self, request, queryset):
+        if 'apply' in request.POST:
             form = RoomGenerationForm(request.POST)
             if form.is_valid():
                 dorm = form.cleaned_data.get('dorm')
@@ -40,15 +30,14 @@ class DormAdmin(admin.ModelAdmin):
                     self.create_rooms_from_manual(dorm, range_start, range_end, capacity, room_plan, floor)
 
                 self.message_user(request, "Rooms have been generated.")
-                return redirect(reverse('admin:index'))  # Redirect to admin home page
-
+                # Redirect to the correct admin view for Dorm model
+                return redirect(reverse('admin:index'))
         else:
             form = RoomGenerationForm()
 
         context = {
             'form': form,
             'title': "Generate Rooms",
-            'opts': self.model._meta,
         }
         return render(request, 'admin/generate_rooms.html', context)
 
@@ -57,6 +46,7 @@ class DormAdmin(admin.ModelAdmin):
             '101-116': (101, 116),
             '201-216': (201, 216),
             '301-316': (301, 316),
+            # Add more predefined ranges here if needed
         }
         start, end = ranges.get(range_choice, (0, 0))
         for number in range(start, end + 1):
@@ -79,8 +69,10 @@ class DormAdmin(admin.ModelAdmin):
             )
 
     def get_room_count(self, obj):
-        return obj.room_set.count()  # Use reverse relation name correctly
+        return obj.rooms.count()
     get_room_count.short_description = 'Number of Rooms'
+
+@admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
     list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm')
     list_filter = ('dorm__name', 'room_plan', 'floor')
