@@ -1,10 +1,8 @@
 {% extends "admin/base_site.html" %}
 {% block content %}
-  <h1>Create Rooms for {{ dorm.name }}</h1>
-  <form method="post">
-    {% csrf_token %}
+<h1>Create Rooms for "{{ dorm.name }}"</h1>
+<form method="post">{% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Create Rooms</button>
-    <a href="{% url 'admin:dorms_dorm_changelist' %}" class="btn btn-secondary">Cancel</a>
-  </form>
+    <button type="submit">Create Rooms</button>
+</form>
 {% endblock %}

@@ -2,22 +2,9 @@ from django.contrib import admin
 from .models import Dorm, Room, Storage, StorageItem
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django import forms
 from django.urls import path
 from .utils import create_rooms
-
-class RoomRangeForm(forms.Form):
-    RANGE_CHOICES = [
-        ('101-116', '101-116'),
-        ('201-216', '201-216'),
-        ('301-316', '301-316'),
-        ('2x2a-2x2b', '2x2a-2x2b'),
-        ('3x3a-3x3b', '3x3a-3x3b'),
-    ]
-    ranges = forms.MultipleChoiceField(choices=RANGE_CHOICES, widget=forms.CheckboxSelectMultiple)
-    capacity = forms.IntegerField(min_value=1, required=False, initial=3)
-    room_plan = forms.CharField(max_length=20, required=False, initial='3_in_1_wf')
-    floor = forms.IntegerField(min_value=1, max_value=4, required=False, initial=2)
+from .forms import RoomRangeForm
 
 @admin.register(Dorm)
 class DormAdmin(admin.ModelAdmin):
@@ -29,7 +16,7 @@ class DormAdmin(admin.ModelAdmin):
 
     def redirect_to_create_rooms(self, request, queryset):
         selected = request.POST.getlist(admin.ACTION_CHECKBOX_NAME)
-        return HttpResponseRedirect(f'/admin/Dorms/dorm/{selected[0]}/create_rooms/')
+        return HttpResponseRedirect(f'/admin/dorms/dorm/{selected[0]}/create_rooms/')
 
     redirect_to_create_rooms.short_description = "Create rooms with specified ranges"
 
@@ -47,7 +34,7 @@ class DormAdmin(admin.ModelAdmin):
     def create_rooms_view(self, request, object_id):
         dorm = self.get_object(request, object_id)
         if not dorm:
-            return redirect('admin:Dorms_dorm_changelist')
+            return redirect('admin:dorms_dorm_changelist')
 
         if request.method == 'POST':
             form = RoomRangeForm(request.POST)
@@ -59,7 +46,7 @@ class DormAdmin(admin.ModelAdmin):
 
                 create_rooms(dorm, selected_ranges, capacity, room_plan, floor)
                 self.message_user(request, "Rooms created successfully.")
-                return redirect('admin:Dorms_dorm_changelist')
+                return redirect('admin:dorms_dorm_changelist')
         else:
             form = RoomRangeForm()
 
