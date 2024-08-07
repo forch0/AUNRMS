@@ -1,8 +1,8 @@
 # Import necessary modules and forms
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .models import Category, SubCategory, MaintenanceRequest, Announcement, Complaint
-from .forms import CategoryForm, SubCategoryForm, MaintenanceRequestForm, AnnouncementForm, ComplaintForm
+# from .models import Category, SubCategory, MaintenanceRequest, Announcement, Complaint
+# from .forms import CategoryForm, SubCategoryForm, MaintenanceRequestForm, AnnouncementForm, ComplaintForm
 from django.http import HttpResponse
 
 def index(request):
