@@ -1,5 +1,5 @@
 from django import forms
-from .models import Dorm,Room
+from .models import *
 
 class RoomGenerationForm(forms.Form):
     dorm = forms.ModelChoiceField(queryset=Dorm.objects.all(), label="Dorm")
@@ -20,4 +20,36 @@ class RoomGenerationForm(forms.Form):
         if range_start is not None and range_end is not None and range_start > range_end:
             raise forms.ValidationError("Start range must be less than or equal to end range.")
         
+class DormForm(forms.ModelForm):
+    class Meta:
+        model = Dorm
+        fields = ['name', 'address', 'gender', 'campus_status']
+        widgets = {
+            'address': forms.Textarea(attrs={'rows': 2}),
+        }
 
+class RoomForm(forms.ModelForm):
+    class Meta:
+        model = Room
+        fields = ['number', 'capacity', 'room_plan', 'floor', 'dorm', 'range']
+        widgets = {
+            'range': forms.Select(attrs={'class': 'form-control'}),
+        }
+
+class StorageForm(forms.ModelForm):
+    class Meta:
+        model = Storage
+        fields = ['description', 'capacity', 'floor', 'dorm']
+        widgets = {
+            'description': forms.Textarea(attrs={'rows': 2}),
+        }
+
+class StorageItemForm(forms.ModelForm):
+    class Meta:
+        model = StorageItem
+        fields = ['description', 'quantity', 'storage', 'room', 'resident', 'semester', 'academic_session', 'status', 'approved_by', 'approval_date', 'collected_at', 'collected_by']
+        widgets = {
+            'description': forms.Textarea(attrs={'rows': 2}),
+            'approval_date': forms.DateInput(attrs={'type': 'date'}),
+            'collected_at': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
+        }
