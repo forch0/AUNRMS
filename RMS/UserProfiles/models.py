@@ -54,6 +54,15 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
 
     def get_short_name(self):
         return self.username
+    
+    def is_staff_and_resident(self):
+        return self.is_staff and hasattr(self, 'resident_profile')
+
+    def is_resident_only(self):
+        return not self.is_staff and hasattr(self, 'resident_profile')
+
+    def is_staff_only(self):
+        return self.is_staff and not hasattr(self, 'resident_profile')
 
     class Meta:
         verbose_name = 'user'
