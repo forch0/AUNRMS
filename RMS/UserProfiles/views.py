@@ -45,7 +45,7 @@ class UserCredDeleteView(LoginRequiredMixin, DeleteView):
 '''RESIDENT'''
 class ResidentRegistrationView(CreateView):
     form_class = ResidentRegistrationForm
-    template_name = 'userprofiles/resident_registration.html'
+    template_name = 'accounts/registration/resident_registration.html'
     success_url = reverse_lazy('resident_login')
 
 class ResidentLoginView(LoginView):
