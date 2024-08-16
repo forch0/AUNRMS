@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resident Registration</title>
+</head>
+<body>
+    <h1>Resident Registration</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+    <a href="{% url 'resident_login' %}">Already registered? Login here</a>
+</body>
+</html>
