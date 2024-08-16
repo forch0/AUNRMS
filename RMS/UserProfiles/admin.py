@@ -10,7 +10,7 @@ class UserCredAdmin(admin.ModelAdmin):
 # , 'uuid'
 @admin.register(Residents)
 class ResidentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username','room','guardianPhoneNumber')
+    list_display = ('id', 'username','guardianPhoneNumber')
     search_fields = ('user__username',)
     raw_id_fields = ('user',)
     ordering = ('id',)
