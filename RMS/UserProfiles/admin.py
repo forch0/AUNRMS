@@ -10,42 +10,42 @@ def transition_to_resident_only(modeladmin, request, queryset):
         user.save()
     modeladmin.message_user(request, "Selected users have been transitioned to resident only.")
 
-transition_to_resident_only.short_description = "Transition selected users to Resident Only"
+# transition_to_resident_only.short_description = "Transition selected users to Resident Only"
 
-def transition_to_staff(modeladmin, request, queryset):
-    for resident in queryset:
-        user = resident.user
-        if not user.is_staff:
-            user.is_staff = True
-            user.save()
-            # Create the Staff profile for the user
-            Staffs.objects.create(
-                user=user,
-                role=Role.objects.first()  # Assign a default role; you might want to handle this differently
-            )
-    modeladmin.message_user(request, "Selected users have been transitioned to staff.")
+# def transition_to_staff(modeladmin, request, queryset):
+#     for resident in queryset:
+#         user = resident.user
+#         if not user.is_staff:
+#             user.is_staff = True
+#             user.save()
+#             # Create the Staff profile for the user
+#             Staffs.objects.create(
+#                 user=user,
+#                 role=Role.objects.first()  # Assign a default role; you might want to handle this differently
+#             )
+#     modeladmin.message_user(request, "Selected users have been transitioned to staff.")
 
-transition_to_staff.short_description = "Transition selected users to Staff"
+# transition_to_staff.short_description = "Transition selected users to Staff"
 
 
-@admin.register(UserCred)
-class UserCredAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username', 'email', 'firstname', 'lastname', 'phone_number', 'is_staff', 'is_active')
-    search_fields = ('username', 'email', 'firstname', 'lastname')
-    list_filter = ('is_staff', 'is_active')
-    ordering = ('id',)
+# @admin.register(UserCred)
+# class UserCredAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'username', 'email', 'firstname', 'lastname', 'phone_number', 'is_staff', 'is_active')
+#     search_fields = ('username', 'email', 'firstname', 'lastname')
+#     list_filter = ('is_staff', 'is_active')
+#     ordering = ('id',)
 
-@admin.register(Residents)
-class ResidentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username', 'guardian_phone_number')
-    search_fields = ('user__username',)
-    raw_id_fields = ('user',)
-    ordering = ('id',)
-    actions = [transition_to_staff]
+# @admin.register(Residents)
+# class ResidentAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'username', 'guardian_phone_number')
+#     search_fields = ('user__username',)
+#     raw_id_fields = ('user',)
+#     ordering = ('id',)
+#     actions = [transition_to_staff]
 
-    def username(self, obj):
-        return obj.user.username
-    username.short_description = 'Username'
+#     def username(self, obj):
+#         return obj.user.username
+#     username.short_description = 'Username'
 
 @admin.register(Staffs)
 class StaffAdmin(admin.ModelAdmin):
