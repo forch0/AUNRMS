@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserCred, Residents, Staffs, Roles
+from .models import UserCred, Residents, Roles, Staffs
 
 def transition_to_resident_only(modeladmin, request, queryset):
     for staff in queryset:
@@ -28,43 +28,30 @@ def transition_to_staff(modeladmin, request, queryset):
 transition_to_staff.short_description = "Transition selected users to Staff"
 
 
-# @admin.register(UserCred)
-# class UserCredAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'username', 'email', 'firstname', 'lastname', 'phone_number', 'is_staff', 'is_active')
-#     search_fields = ('username', 'email', 'firstname', 'lastname')
-#     list_filter = ('is_staff', 'is_active')
-#     ordering = ('id',)
+class UserCredAdmin(admin.ModelAdmin):
+    list_display = ('username', 'email', 'firstname', 'lastname', 'phone_number', 'is_staff', 'is_active')
+    search_fields = ('username', 'email', 'firstname', 'lastname')
+    list_filter = ('is_staff', 'is_active')
 
-# @admin.register(Residents)
-# class ResidentAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'username', 'guardian_phone_number')
-#     search_fields = ('user__username',)
-#     raw_id_fields = ('user',)
-#     ordering = ('id',)
-#     actions = [transition_to_staff]
+class ResidentsAdmin(admin.ModelAdmin):
+    list_display = ('user', 'guardian_phone_number')
+    search_fields = ('user__username', 'guardian_phone_number')
+    list_filter = ('user__username',)
+    ordering = ('id',)
+    actions = [transition_to_staff]
 
-#     def username(self, obj):
-#         return obj.user.username
-#     username.short_description = 'Username'
+class RolesAdmin(admin.ModelAdmin):
+    list_display = ('name', 'abbreviation')
+    search_fields = ('name', 'abbreviation')
 
-@admin.register(Staffs)
-class StaffAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username', 'role_name')
+class StaffsAdmin(admin.ModelAdmin):
+    list_display = ('user', 'role')
     search_fields = ('user__username', 'role__name')
-    raw_id_fields = ('user', 'role')
+    list_filter = ('role',)
     ordering = ('id',)
     actions = [transition_to_resident_only]
 
-    def username(self, obj):
-        return obj.user.username
-    username.short_description = 'Username'
-
-    def role_name(self, obj):
-        return obj.role.name
-    role_name.short_description = 'Role'
-
-@admin.register(Roles)
-class RoleAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'abbreviation')
-    search_fields = ('name', 'abbreviation')
-    ordering = ('id',)
+admin.site.register(UserCred, UserCredAdmin)
+admin.site.register(Residents, ResidentsAdmin)
+admin.site.register(Roles, RolesAdmin)
+admin.site.register(Staffs, StaffsAdmin)
