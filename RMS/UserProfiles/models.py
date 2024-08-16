@@ -37,7 +37,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
     ], default='aun@edu.ng')
     firstname = models.CharField(max_length=150, blank=True)
     lastname = models.CharField(max_length=150, blank=True)
-    phoneNumber = models.CharField(validators=[phone_regex], max_length=17, blank=True, unique=True)
+    phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True, unique=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     objects = UserManager()
@@ -63,7 +63,7 @@ class Residents(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
     # room = models.ForeignKey('Dorms.Room', on_delete=models.CASCADE, related_name='residents')
-    guardianPhoneNumber = models.CharField(validators=[phone_regex], max_length=17, blank=True)
+    guardian_phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
 
     def __str__(self):
         return f"Resident: {self.user.username}"
