@@ -10,22 +10,22 @@ def transition_to_resident_only(modeladmin, request, queryset):
         user.save()
     modeladmin.message_user(request, "Selected users have been transitioned to resident only.")
 
-# transition_to_resident_only.short_description = "Transition selected users to Resident Only"
+transition_to_resident_only.short_description = "Transition selected users to Resident Only"
 
-# def transition_to_staff(modeladmin, request, queryset):
-#     for resident in queryset:
-#         user = resident.user
-#         if not user.is_staff:
-#             user.is_staff = True
-#             user.save()
-#             # Create the Staff profile for the user
-#             Staffs.objects.create(
-#                 user=user,
-#                 role=Role.objects.first()  # Assign a default role; you might want to handle this differently
-#             )
-#     modeladmin.message_user(request, "Selected users have been transitioned to staff.")
+def transition_to_staff(modeladmin, request, queryset):
+    for resident in queryset:
+        user = resident.user
+        if not user.is_staff:
+            user.is_staff = True
+            user.save()
+            # Create the Staff profile for the user
+            Staffs.objects.create(
+                user=user,
+                role=Role.objects.first()  # Assign a default role; you might want to handle this differently
+            )
+    modeladmin.message_user(request, "Selected users have been transitioned to staff.")
 
-# transition_to_staff.short_description = "Transition selected users to Staff"
+transition_to_staff.short_description = "Transition selected users to Staff"
 
 
 # @admin.register(UserCred)

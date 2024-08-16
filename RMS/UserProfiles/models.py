@@ -80,18 +80,6 @@ class Residents(models.Model):
         verbose_name = 'resident'
         verbose_name_plural = 'residents'
 
-class Staffs(models.Model):
-    id= models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staff_profile')
-    role = models.ForeignKey(Roles, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return f"{self.role.name} - {self.user.username}"
-
-    class Meta:
-        verbose_name = 'staff'
-        verbose_name_plural = 'staffs'
-
 class Roles(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
@@ -104,3 +92,15 @@ class Roles(models.Model):
     class Meta:
         verbose_name = 'role'
         verbose_name_plural = 'roles'
+
+class Staffs(models.Model):
+    id= models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staff_profile')
+    role = models.ForeignKey(Roles, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.role.name} - {self.user.username}"
+
+    class Meta:
+        verbose_name = 'staff'
+        verbose_name_plural = 'staffs'
