@@ -1,16 +1,15 @@
 from django.contrib import admin
 from .models import UserCred, Residents, Staffs, Roles
-
 @admin.register(UserCred)
 class UserCredAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username', 'email', 'firstname', 'lastname','phone_number' ,'is_staff', 'is_active')
+    list_display = ('id', 'username', 'email', 'firstname', 'lastname', 'phone_number', 'is_staff', 'is_active')
     search_fields = ('username', 'email', 'firstname', 'lastname')
     list_filter = ('is_staff', 'is_active')
     ordering = ('id',)
-# , 'uuid'
+
 @admin.register(Residents)
 class ResidentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username','guardian_phone_number')
+    list_display = ('id', 'username', 'guardian_phone_number')
     search_fields = ('user__username',)
     raw_id_fields = ('user',)
     ordering = ('id',)
@@ -23,6 +22,7 @@ class ResidentAdmin(admin.ModelAdmin):
 class StaffAdmin(admin.ModelAdmin):
     list_display = ('id', 'username', 'role_name')
     search_fields = ('user__username', 'role__name')
+    raw_id_fields = ('user', 'role')
     ordering = ('id',)
 
     def username(self, obj):
