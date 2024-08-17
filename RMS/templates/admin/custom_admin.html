@@ -2,8 +2,42 @@
 
 {% block extrahead %}
     {{ block.super }}
+
+    <!-- Include Bootstrap Datepicker CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-datepicker.min.css' %}">
+
+    <!-- Custom CSS to Increase Width of Permissions Select Box -->
+    <style>
+        /* Target the permissions select box and force it to be wider */
+        .form-row .field-box select[multiple],
+        .form-row .field-box select.filtered {
+            width: 100% !important;
+            min-width: 600px !important; /* Adjust this width as needed */
+        }
+        
+        /* Ensure the container is also wide enough */
+        .form-row .field-box {
+            width: 100% !important;
+        }
+        
+        /* If django-unfold uses specific classes, try targeting them */
+        .unfold-field--permissions select {
+            width: 100% !important;
+            min-width: 600px !important;
+        }
+        
+        .unfold-field--permissions {
+            width: 100% !important;
+        }
+
+        .selector {
+            max-width: 80rem !important;
+        }
+    </style>
+
+    <!-- Include Bootstrap Datepicker JS -->
     <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var datepickers = document.querySelectorAll('.datepicker');
@@ -16,4 +50,5 @@
             });
         });
     </script>
+    <script src="{% static 'js/permission_counter.js' %}"></script>
 {% endblock %}
