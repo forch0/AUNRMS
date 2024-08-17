@@ -50,7 +50,7 @@ class RolesAdmin(admin.ModelAdmin):
 
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
-        form.base_fields['permissions'].queryset = Permission.objects.filter(content_type__app_label='your_app_name')
+        form.base_fields['permissions'].queryset = Permission.objects.all()
         return form
 
 class StaffsAdmin(admin.ModelAdmin):
