@@ -1,6 +1,5 @@
 
 # from Dorms.models import Dorm, Room  # Adjust the import as per your project structure
-
 import uuid
 from django.db import models
 from django.utils import timezone
