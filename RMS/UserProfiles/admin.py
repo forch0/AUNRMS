@@ -1,4 +1,7 @@
 from django.contrib import admin
+from django.contrib.auth.models import Permission
+from django.contrib.contenttypes.models import ContentType
+
 from .models import UserCred, Residents, Roles, Staffs
 
 def transition_to_resident_only(modeladmin, request, queryset):
@@ -43,6 +46,12 @@ class ResidentsAdmin(admin.ModelAdmin):
 class RolesAdmin(admin.ModelAdmin):
     list_display = ('name', 'abbreviation')
     search_fields = ('name', 'abbreviation')
+    filter_horizontal = ('permissions',)
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        form.base_fields['permissions'].queryset = Permission.objects.filter(content_type__app_label='your_app_name')
+        return form
 
 class StaffsAdmin(admin.ModelAdmin):
     list_display = ('user', 'role')

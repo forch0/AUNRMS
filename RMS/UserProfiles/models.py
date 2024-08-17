@@ -3,6 +3,7 @@ from django.core.validators import RegexValidator
 from django.db import models
 import uuid
 from django.core.validators import RegexValidator
+from django.contrib.auth.models import Permission
 
 phone_regex = RegexValidator(
     regex=r'^\+?1?\d{9,15}$',
@@ -85,6 +86,7 @@ class Roles(models.Model):
     # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     name = models.CharField(max_length=30, unique=True)
     abbreviation = models.CharField(max_length=5, blank=True, unique=True)
+    permissions = models.ManyToManyField(Permission, blank=True)
 
     def __str__(self):
         return self.name
@@ -100,6 +102,11 @@ class Staffs(models.Model):
 
     def __str__(self):
         return f"{self.role.name} - {self.user.username}"
+    
+    def has_perm(self, perm, obj=None):
+        if self.is_superuser:
+            return True
+        return self.role.permissions.filter(codename=perm.split('.')[-1]).exists()
 
     class Meta:
         verbose_name = 'staff'
