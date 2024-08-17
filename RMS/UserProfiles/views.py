@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView, LogoutView
@@ -9,37 +9,42 @@ from .models import UserCred, Residents, Roles, Staffs
 from .forms import StaffRegistrationForm, StaffLoginForm, ResidentRegistrationForm, ResidentLoginForm
 
 '''USERCRED'''
-class UserCredListView(LoginRequiredMixin, ListView):
+class UserCredListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = UserCred
     template_name = 'userprofiles/usercred_list.html'
     context_object_name = 'users'
     login_url = 'login'
+    permission_required = 'userprofiles.view_usercred'
 
-class UserCredDetailView(LoginRequiredMixin, DetailView):
+class UserCredDetailView(LoginRequiredMixin, PermissionRequiredMixin, DetailView):
     model = UserCred
     template_name = 'userprofiles/usercred_detail.html'
     context_object_name = 'user'
     login_url = 'login'
+    permission_required = 'userprofiles.view_usercred'
 
-class UserCredCreateView(LoginRequiredMixin, CreateView):
+class UserCredCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = UserCred
     form_class = StaffRegistrationForm
     template_name = 'userprofiles/usercred_form.html'
     success_url = reverse_lazy('usercred_list')
     login_url = 'login'
+    permission_required = 'userprofiles.add_usercred'
 
-class UserCredUpdateView(LoginRequiredMixin, UpdateView):
+class UserCredUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = UserCred
     form_class = StaffRegistrationForm
     template_name = 'userprofiles/usercred_form.html'
     success_url = reverse_lazy('usercred_list')
     login_url = 'login'
+    permission_required = 'userprofiles.change_usercred'
 
-class UserCredDeleteView(LoginRequiredMixin, DeleteView):
+class UserCredDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     model = UserCred
     template_name = 'userprofiles/usercred_confirm_delete.html'
     success_url = reverse_lazy('usercred_list')
     login_url = 'login'
+    permission_required = 'userprofiles.delete_usercred'
 
 
 '''RESIDENT'''
@@ -64,44 +69,49 @@ class ResidentLoginView(LoginView):
         else:
             return self.form_invalid(form)
 
-class ResidentDashboardView(LoginRequiredMixin, ListView):
+class ResidentDashboardView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = Residents
     template_name = 'userprofiles/resident_dashboard.html'
     context_object_name = 'residents'
     login_url = 'login'
+    permission_required = 'userprofiles.view_residents'
 
-class ResidentsListView(LoginRequiredMixin, ListView):
+class ResidentsListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = Residents
     template_name = 'userprofiles/residents_list.html'
     context_object_name = 'residents'
     login_url = 'login'
+    permission_required = 'userprofiles.view_residents'
 
-class ResidentsDetailView(LoginRequiredMixin, DetailView):
+class ResidentsDetailView(LoginRequiredMixin, PermissionRequiredMixin, DetailView):
     model = Residents
     template_name = 'userprofiles/residents_detail.html'
     context_object_name = 'resident'
     login_url = 'login'
+    permission_required = 'userprofiles.view_residents'
 
-class ResidentsCreateView(LoginRequiredMixin, CreateView):
+class ResidentsCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Residents
     fields = ['user', 'guardian_phone_number']
     template_name = 'userprofiles/residents_form.html'
     success_url = reverse_lazy('residents_list')
     login_url = 'login'
+    permission_required = 'userprofiles.add_residents'
 
-class ResidentsUpdateView(LoginRequiredMixin, UpdateView):
+class ResidentsUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = Residents
     fields = ['guardian_phone_number']
     template_name = 'userprofiles/residents_form.html'
     success_url = reverse_lazy('residents_list')
     login_url = 'login'
+    permission_required = 'userprofiles.change_residents'
 
-class ResidentsDeleteView(LoginRequiredMixin, DeleteView):
+class ResidentsDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     model = Residents
     template_name = 'userprofiles/residents_confirm_delete.html'
     success_url = reverse_lazy('residents_list')
     login_url = 'login'
-
+    permission_required = 'userprofiles.delete_residents'
 
 
 '''STAFF'''
@@ -126,77 +136,88 @@ class StaffLoginView(LoginView):
         else:
             return self.form_invalid(form)
 
-class StaffDashboardView(LoginRequiredMixin, ListView):
+class StaffDashboardView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = Staffs
     template_name = 'userprofiles/staff_dashboard.html'
     context_object_name = 'staffs'
     login_url = 'login'
+    permission_required = 'userprofiles.view_staffs'
 
-class StaffsListView(LoginRequiredMixin, ListView):
+class StaffsListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = Staffs
     template_name = 'userprofiles/staffs_list.html'
     context_object_name = 'staffs'
     login_url = 'login'
-class StaffsDetailView(LoginRequiredMixin, DetailView):
+    permission_required = 'userprofiles.view_staffs'
+
+class StaffsDetailView(LoginRequiredMixin, PermissionRequiredMixin, DetailView):
     model = Staffs
     template_name = 'userprofiles/staffs_detail.html'
     context_object_name = 'staff'
     login_url = 'login'
+    permission_required = 'userprofiles.view_staffs'
 
-class StaffsCreateView(LoginRequiredMixin, CreateView):
+class StaffsCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Staffs
     fields = ['user', 'role']
     template_name = 'userprofiles/staffs_form.html'
     success_url = reverse_lazy('staffs_list')
     login_url = 'login'
+    permission_required = 'userprofiles.add_staffs'
 
-class StaffsUpdateView(LoginRequiredMixin, UpdateView):
+class StaffsUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = Staffs
     fields = ['role']
     template_name = 'userprofiles/staffs_form.html'
     success_url = reverse_lazy('staffs_list')
     login_url = 'login'
+    permission_required = 'userprofiles.change_staffs'
 
-class StaffsDeleteView(LoginRequiredMixin, DeleteView):
+class StaffsDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     model = Staffs
     template_name = 'userprofiles/staffs_confirm_delete.html'
     success_url = reverse_lazy('staffs_list')
     login_url = 'login'
+    permission_required = 'userprofiles.delete_staffs'
 
 
 '''ROLES'''
-class RolesListView(LoginRequiredMixin, ListView):
+class RolesListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = Roles
     template_name = 'userprofiles/roles_list.html'
     context_object_name = 'roles'
     login_url = 'login'
+    permission_required = 'userprofiles.view_roles'
 
-class RolesDetailView(LoginRequiredMixin, DetailView):
+class RolesDetailView(LoginRequiredMixin, PermissionRequiredMixin, DetailView):
     model = Roles
     template_name = 'userprofiles/roles_detail.html'
     context_object_name = 'role'
     login_url = 'login'
+    permission_required = 'userprofiles.view_roles'
 
-class RolesCreateView(LoginRequiredMixin, CreateView):
+class RolesCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Roles
     fields = ['name', 'abbreviation']
     template_name = 'userprofiles/roles_form.html'
     success_url = reverse_lazy('roles_list')
     login_url = 'login'
+    permission_required = 'userprofiles.add_roles'
 
-class RolesUpdateView(LoginRequiredMixin, UpdateView):
+class RolesUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = Roles
     fields = ['name', 'abbreviation']
     template_name = 'userprofiles/roles_form.html'
     success_url = reverse_lazy('roles_list')
     login_url = 'login'
+    permission_required = 'userprofiles.change_roles'
 
-class RolesDeleteView(LoginRequiredMixin, DeleteView):
+class RolesDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     model = Roles
     template_name = 'userprofiles/roles_confirm_delete.html'
     success_url = reverse_lazy('roles_list')
     login_url = 'login'
-
+    permission_required = 'userprofiles.delete_roles'
 
 # Logout View
 class LogoutView(LogoutView):
