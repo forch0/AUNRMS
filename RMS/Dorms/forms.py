@@ -53,3 +53,24 @@ class StorageItemForm(forms.ModelForm):
             'approval_date': forms.DateInput(attrs={'type': 'date'}),
             'collected_at': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
         }
+
+
+class StorageItemApprovalForm(forms.ModelForm):
+    class Meta:
+        model = StorageItem
+        fields = ['description', 'quantity', 'status']  # Include fields you want to be editable
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['status'].widget = forms.HiddenInput()  # Status field will be set programmatically
+        self.fields['description'].widget.attrs.update({'readonly': 'readonly'})
+        self.fields['quantity'].widget.attrs.update({'readonly': 'readonly'})
+        
+    def clean(self):
+        cleaned_data = super().clean()
+        status = cleaned_data.get('status')
+
+        if status and status != StorageItem.APPROVED:
+            raise forms.ValidationError("The status must be set to approved when saving.")
+        
+        return cleaned_data

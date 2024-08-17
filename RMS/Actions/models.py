@@ -143,8 +143,4 @@ class Complaint(models.Model):
         verbose_name = 'complaint'
         verbose_name_plural = 'complaints'
 
-    def can_view(self, staff):
-        """Check if the given staff can view the complaint."""
-        if self.is_anonymous:
-            return staff.role.name in ['ResLife Director', 'Dean of Students Affairs']
-        return True  # Non-anonymous complaints are visible to all
+    
