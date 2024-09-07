@@ -1,5 +1,6 @@
 from django.contrib.auth.backends import BaseBackend
-from .models import UserCred, Residents, Enrollment
+from .models import UserCred, Residents
+from AcademicYear.models import Enrollment
 
 class StaffBackend(BaseBackend):
     def authenticate(self, request, email=None, password=None, **kwargs):
