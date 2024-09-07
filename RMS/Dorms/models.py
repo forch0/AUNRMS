@@ -3,7 +3,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from AcademicYear.models import Enrollment, AcademicSession, Semester
 from UserProfiles.models import Residents, Staffs
-
+from django.utils import timezone
 class Dorm(models.Model):
     MALE = 'M'
     FEMALE = 'F'
@@ -140,7 +140,7 @@ class StorageItem(models.Model):
     approval_date = models.DateField(null=True, blank=True)
     collected_at = models.DateTimeField(null=True, blank=True)  # Date and time when collected
     collected_by = models.ForeignKey(Residents, on_delete=models.SET_NULL, null=True, blank=True, related_name='collected_items')
-
+    created_at = models.DateTimeField(default=timezone.now)
     class Meta:
         verbose_name = 'Storage Item'
         verbose_name_plural = 'Storage Items'

@@ -118,7 +118,7 @@ class Complaint(models.Model):
     academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE, related_name='complaints')
     description = models.TextField()
     is_anonymous = models.BooleanField(default=False)
-
+    created_at = models.DateTimeField(default=timezone.now)
 
     def save(self, *args, **kwargs):
         if self.is_anonymous:

@@ -12,7 +12,8 @@ class AcademicSession(models.Model):
     start_year = models.IntegerField()
     end_year = models.IntegerField()
     name = models.CharField(max_length=100, blank=True, editable=False, help_text="Automatically formatted as start_year/end_year")
-
+    created_at = models.DateTimeField(default=timezone.now)
+    
     def clean(self):
         current_year = timezone.now().year
         last_year = current_year - 1
@@ -47,7 +48,7 @@ class Semester(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)
-
+    created_at = models.DateTimeField(default=timezone.now)
     def clean(self):
         if self.start_date is None or self.end_date is None:
             raise ValidationError("Start date and end date must be provided.")
@@ -69,7 +70,7 @@ class Enrollment(models.Model):
     dorm = models.ForeignKey('Dorms.Dorm', on_delete=models.CASCADE, related_name='enrollments')
     room = models.ForeignKey('Dorms.Room', on_delete=models.CASCADE, related_name='enrollments')
     date_enrolled = models.DateField(auto_now_add=True)
-
+    created_at = models.DateTimeField(default=timezone.now)
     def __str__(self):
         return f"{self.resident.user.username} - {self.semester.semester_type} ({self.academic_session.name})"
 
@@ -80,7 +81,7 @@ class StaffAssignment(models.Model):
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
     academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE)
-
+    created_at = models.DateTimeField(default=timezone.now)
     def clean(self):
         allowed_roles = ['Residence Assistant', 'Residence Director']
         if self.role.name not in allowed_roles:
