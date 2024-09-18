@@ -6,3 +6,4 @@ django-multiselectfield
 cryptography
 django-bootstrap5 
 psycopg2-binary
+heroicons==2.8.0

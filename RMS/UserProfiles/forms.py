@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import UserCred, Staffs, Roles, Residents
 from django.core.validators import RegexValidator
 
@@ -27,11 +27,8 @@ class StaffRegistrationForm(UserCreationForm):
             # Role will be assigned later by an admin
             Staffs.objects.create(user=user)
         return user
-
-class StaffLoginForm(forms.Form):
-    email = forms.EmailField()
-    password = forms.CharField(widget=forms.PasswordInput)
-
+class StaffLoginForm(AuthenticationForm):
+    username = forms.EmailField(label='Email', max_length=254)  # Changed to EmailField
 
 class ResidentRegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -56,7 +53,6 @@ class ResidentRegistrationForm(UserCreationForm):
             )
         return user
     
-class ResidentLoginForm(forms.Form):
-    room_number = forms.CharField(max_length=10)
-    email = forms.EmailField()
-    password = forms.CharField(widget=forms.PasswordInput)
+class ResidentLoginForm(AuthenticationForm):
+    username = forms.EmailField(label='Email', max_length=254)  # Changed to EmailField
+    room_number = forms.CharField(label='Room Number', max_length=10)

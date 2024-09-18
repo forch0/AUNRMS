@@ -1,0 +1,12 @@
+<!-- templates/admin/custom_login_choice.html -->
+
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" name="staff_login">Login as Staff</button>
+    <button type="submit" name="resident_login">Login as Resident</button>
+  </form>
+{% endblock %}
