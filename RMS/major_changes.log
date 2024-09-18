@@ -1,0 +1,818 @@
+INFO 2024-09-18 18:21:43,177 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 18:58:17,689 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 18:58:21,317 basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR 2024-09-18 18:58:21,461 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 199, in login
+    return super().login(request, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 422, in login
+    **self.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 52, in each_context
+    context = super().each_context(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 337, in each_context
+    "available_apps": self.get_app_list(request),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 536, in get_app_list
+    app_dict = self._build_app_dict(request, app_label)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 478, in _build_app_dict
+    has_module_perms = model_admin.has_module_permission(request)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 611, in has_module_permission
+    return request.user.has_module_perms(self.opts.app_label)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\models.py", line 488, in has_module_perms
+    return _user_has_module_perms(self, module)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\models.py", line 231, in _user_has_module_perms
+    for backend in auth.get_backends():
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 38, in get_backends
+    return _get_backends(return_tuples=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 27, in _get_backends
+    backend = load_backend(backend_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 21, in load_backend
+    return import_string(path)()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1142, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'authentication_backends'
+ERROR 2024-09-18 18:58:21,489 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 144958
+ERROR 2024-09-18 18:59:07,277 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 199, in login
+    return super().login(request, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 422, in login
+    **self.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 52, in each_context
+    context = super().each_context(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 337, in each_context
+    "available_apps": self.get_app_list(request),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 536, in get_app_list
+    app_dict = self._build_app_dict(request, app_label)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 478, in _build_app_dict
+    has_module_perms = model_admin.has_module_permission(request)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 611, in has_module_permission
+    return request.user.has_module_perms(self.opts.app_label)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\models.py", line 488, in has_module_perms
+    return _user_has_module_perms(self, module)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\models.py", line 231, in _user_has_module_perms
+    for backend in auth.get_backends():
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 38, in get_backends
+    return _get_backends(return_tuples=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 27, in _get_backends
+    backend = load_backend(backend_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 21, in load_backend
+    return import_string(path)()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1142, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'authentication_backends'
+ERROR 2024-09-18 18:59:07,290 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 145095
+INFO 2024-09-18 19:01:56,758 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-18 19:07:47,887 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:07:50,608 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:07:53,778 basehttp "GET /admin/ HTTP/1.1" 200 69242
+INFO 2024-09-18 19:08:02,250 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60104
+INFO 2024-09-18 19:08:02,357 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:08:06,848 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53963
+INFO 2024-09-18 19:08:06,950 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:08:07,248 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-09-18 19:08:07,257 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2024-09-18 19:08:07,260 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2024-09-18 19:08:07,267 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2024-09-18 19:08:07,271 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-09-18 19:08:23,137 basehttp "POST /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:08:23,267 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60475
+INFO 2024-09-18 19:08:23,377 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:08:34,167 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 40731
+INFO 2024-09-18 19:08:34,362 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:08:37,107 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 47967
+INFO 2024-09-18 19:08:37,207 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:08:45,487 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 54106
+INFO 2024-09-18 19:08:45,567 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:08:49,683 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60122
+INFO 2024-09-18 19:08:49,767 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:08:52,867 basehttp "GET /admin/UserProfiles/usercred/a330d592-c0a6-4785-9fe8-b159dbeb43d9/change/ HTTP/1.1" 200 53909
+INFO 2024-09-18 19:08:52,957 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:08:56,807 basehttp "POST /admin/UserProfiles/usercred/a330d592-c0a6-4785-9fe8-b159dbeb43d9/change/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:08:56,917 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60477
+INFO 2024-09-18 19:08:57,008 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:09:02,778 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 19:09:04,062 basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR 2024-09-18 19:09:04,151 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: registration/admin_login.html
+ERROR 2024-09-18 19:09:04,159 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 84345
+INFO 2024-09-18 19:10:57,567 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:10:59,202 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:11:01,637 basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR 2024-09-18 19:11:01,678 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: registration/admin_login.html
+ERROR 2024-09-18 19:11:01,687 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 84455
+INFO 2024-09-18 19:11:03,010 basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR 2024-09-18 19:11:03,042 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: registration/admin_login.html
+ERROR 2024-09-18 19:11:03,046 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 84181
+INFO 2024-09-18 19:14:22,562 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:14:26,385 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:14:30,172 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:14:30,205 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8414
+ERROR 2024-09-18 19:14:57,249 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:14:57,256 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9159
+INFO 2024-09-18 19:15:07,446 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:15:07,527 basehttp "GET /admin/ HTTP/1.1" 200 69223
+INFO 2024-09-18 19:16:57,687 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\forms.py changed, reloading.
+INFO 2024-09-18 19:16:58,442 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:17:16,577 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-09-18 19:17:17,183 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:17:22,764 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-09-18 19:17:23,438 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:17:33,956 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-09-18 19:17:34,743 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:17:52,587 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-09-18 19:17:53,167 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:18:07,137 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-09-18 19:18:07,843 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:18:34,336 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:18:35,106 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:18:42,761 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:18:43,456 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:19:15,997 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:19:16,648 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:19:19,259 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-09-18 19:19:19,936 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:19:54,899 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:19:57,591 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:20:00,892 basehttp "GET /admin/ HTTP/1.1" 200 69223
+INFO 2024-09-18 19:20:05,378 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 19:20:06,657 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:20:06,677 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3459
+ERROR 2024-09-18 19:20:32,940 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:20:32,947 basehttp "POST /admin/login/ HTTP/1.1" 200 3630
+ERROR 2024-09-18 19:21:03,017 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:21:03,017 basehttp "POST /admin/login/ HTTP/1.1" 200 3630
+INFO 2024-09-18 19:22:34,082 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-09-18 19:22:34,789 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:23:08,337 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:23:08,896 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:23:16,491 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:23:17,086 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:23:24,816 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-09-18 19:23:25,448 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:24:48,900 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:24:49,491 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:24:56,052 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:24:57,662 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:25:03,376 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:25:03,408 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3508
+ERROR 2024-09-18 19:25:31,117 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:25:31,126 basehttp "POST /admin/login/ HTTP/1.1" 200 3679
+INFO 2024-09-18 19:27:19,584 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:27:20,936 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:27:23,706 basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR 2024-09-18 19:27:23,792 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-09-18 19:27:23,806 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 171236
+INFO 2024-09-18 19:27:25,126 basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR 2024-09-18 19:27:25,166 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-09-18 19:27:25,184 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 170962
+INFO 2024-09-18 19:28:22,590 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-18 19:28:23,288 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-18 19:28:30,321 authentication_backends User with email None does not exist
+ERROR 2024-09-18 19:28:30,366 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-09-18 19:28:30,388 basehttp "POST /admin/login/ HTTP/1.1" 500 171974
+INFO 2024-09-18 19:28:42,183 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:28:46,276 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:28:49,429 basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR 2024-09-18 19:28:49,495 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-09-18 19:28:49,503 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 171485
+WARNING 2024-09-18 19:28:51,309 log Not Found: /years
+WARNING 2024-09-18 19:28:51,309 basehttp "GET /years HTTP/1.1" 404 2920
+INFO 2024-09-18 19:28:58,212 basehttp "GET /year HTTP/1.1" 301 0
+INFO 2024-09-18 19:28:58,216 basehttp "GET /year/ HTTP/1.1" 200 25
+INFO 2024-09-18 19:29:04,864 basehttp "GET /dorms HTTP/1.1" 301 0
+INFO 2024-09-18 19:29:04,866 basehttp "GET /dorms/ HTTP/1.1" 200 25
+WARNING 2024-09-18 19:29:10,267 log Not Found: /dormss
+WARNING 2024-09-18 19:29:10,267 basehttp "GET /dormss HTTP/1.1" 404 2923
+INFO 2024-09-18 19:29:19,686 basehttp "GET /operations HTTP/1.1" 301 0
+INFO 2024-09-18 19:29:19,692 basehttp "GET /operations/ HTTP/1.1" 200 30
+INFO 2024-09-18 19:29:22,296 basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR 2024-09-18 19:29:22,347 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-09-18 19:29:22,361 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 171485
+INFO 2024-09-18 19:29:23,234 basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR 2024-09-18 19:29:23,266 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-09-18 19:29:23,289 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 171211
+INFO 2024-09-18 19:30:15,367 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:30:17,111 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:30:22,409 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:30:22,441 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3525
+INFO 2024-09-18 19:30:41,767 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:30:41,781 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3525
+ERROR 2024-09-18 19:31:00,181 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:31:00,192 basehttp "POST /admin/login/ HTTP/1.1" 200 3696
+INFO 2024-09-18 19:43:14,059 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:43:15,774 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:43:21,046 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:43:21,094 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 7750
+ERROR 2024-09-18 19:43:41,116 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:43:41,124 basehttp "POST /admin/login/ HTTP/1.1" 200 7929
+ERROR 2024-09-18 19:44:04,334 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:44:04,340 basehttp "POST /admin/login/ HTTP/1.1" 200 7929
+INFO 2024-09-18 19:44:17,006 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-09-18 19:44:17,665 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:44:30,477 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:44:31,107 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-18 19:44:35,150 authentication_backends User with email None does not exist
+ERROR 2024-09-18 19:44:35,180 log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: registration/admin_login.html
+ERROR 2024-09-18 19:44:35,189 basehttp "POST /admin/login/ HTTP/1.1" 500 85036
+INFO 2024-09-18 19:44:43,166 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:44:43,740 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-18 19:44:47,189 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:44:47,208 basehttp "POST /admin/login/ HTTP/1.1" 200 9129
+ERROR 2024-09-18 19:44:53,276 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:44:53,276 basehttp "POST /admin/login/ HTTP/1.1" 200 9129
+INFO 2024-09-18 19:45:00,236 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 19:45:03,225 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:45:03,243 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+ERROR 2024-09-18 19:45:24,426 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:45:24,426 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9142
+INFO 2024-09-18 19:45:34,566 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:45:34,657 basehttp "GET /admin/ HTTP/1.1" 200 69223
+INFO 2024-09-18 19:45:45,951 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 19:45:47,338 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:45:47,349 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+INFO 2024-09-18 19:45:59,009 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:45:59,087 basehttp "GET /admin/ HTTP/1.1" 200 69223
+INFO 2024-09-18 19:46:28,279 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:46:28,895 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:46:39,496 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60127
+INFO 2024-09-18 19:46:39,577 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:46:55,849 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 51994
+INFO 2024-09-18 19:46:55,930 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:46:58,586 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60127
+INFO 2024-09-18 19:47:06,766 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 19:47:08,110 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:47:08,124 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+ERROR 2024-09-18 19:47:16,905 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:47:16,912 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9160
+ERROR 2024-09-18 19:47:21,611 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:47:21,617 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9160
+INFO 2024-09-18 19:47:43,267 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:47:43,347 basehttp "GET /admin/ HTTP/1.1" 200 69223
+INFO 2024-09-18 19:47:52,460 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60127
+INFO 2024-09-18 19:47:52,529 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:47:56,696 basehttp "GET /admin/UserProfiles/usercred/a330d592-c0a6-4785-9fe8-b159dbeb43d9/change/ HTTP/1.1" 200 53632
+INFO 2024-09-18 19:47:56,777 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:47:59,366 basehttp "GET /admin/UserProfiles/usercred/a330d592-c0a6-4785-9fe8-b159dbeb43d9/delete/ HTTP/1.1" 200 35969
+INFO 2024-09-18 19:47:59,460 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2024-09-18 19:48:01,016 basehttp "POST /admin/UserProfiles/usercred/a330d592-c0a6-4785-9fe8-b159dbeb43d9/delete/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:48:01,106 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 55493
+INFO 2024-09-18 19:48:01,183 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:48:16,127 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-09-18 19:48:16,878 autoreload Watching for file changes with StatReloader

@@ -6,7 +6,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from .models import UserCred, Residents, Roles, Staffs
-from .forms import StaffRegistrationForm, StaffLoginForm, ResidentRegistrationForm, ResidentLoginForm
+from .forms import StaffRegistrationForm, StaffLoginForm, ResidentRegistrationForm, ResidentLoginForm, EmailAuthenticationForm
 from django.conf import settings
 
 # '''USERCRED'''
@@ -228,20 +228,18 @@ def index(request):
     return HttpResponse("Welcome to AUN ResLife App.")
 
 
-'''DJANGO ADMIN'''
+# '''DJANGO ADMIN'''
+# class CustomAdminLoginView(LoginView):
+#     template_name = 'registration/admin_login.html'
+#     authentication_form = EmailAuthenticationForm
 
-# class CustomStaffLoginView(LoginView):
-#     template_name = 'admin/staff_login.html'
-#     success_url = reverse_lazy('admin:index')  # Redirect after login
-
-# class CustomResidentLoginView(LoginView):
-#     template_name = 'admin/resident_login.html'
-#     success_url = reverse_lazy('admin:index')  # 
-
-# def custom_login_choice(request):
-#     if request.method == 'POST':
-#         if 'staff_login' in request.POST:
-#             return redirect('staff_login')
-#         elif 'resident_login' in request.POST:
-#             return redirect('resident_login')
-#     return render(request, 'admin/custom_login_choice.html')
+#     def form_valid(self, form):
+#         email = form.cleaned_data.get('username')
+#         password = form.cleaned_data.get('password')
+#         user = authenticate(request=self.request, email=email, password=password)
+#         if user is not None:
+#             login(self.request, user)
+#             return redirect('admin:index')
+#         else:
+#             form.add_error(None, 'Invalid email or password.')
+#             return self.form_invalid(form)

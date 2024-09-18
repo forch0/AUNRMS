@@ -56,3 +56,7 @@ class ResidentRegistrationForm(UserCreationForm):
 class ResidentLoginForm(AuthenticationForm):
     username = forms.EmailField(label='Email', max_length=254)  # Changed to EmailField
     room_number = forms.CharField(label='Room Number', max_length=10)
+
+
+class EmailAuthenticationForm(AuthenticationForm):
+    username = forms.EmailField(label='Email')

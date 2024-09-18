@@ -12,7 +12,53 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+# from UserProfiles.authentication_backends import EmailBackend
 
+
+import logging
+from logging.handlers import RotatingFileHandler
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',  # Adjust level to capture only major changes
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': 'major_changes.log',
+            'maxBytes': 1024 * 1024 * 5,  # 5 MB
+            'backupCount': 5,  # Keep 5 backup files
+            'formatter': 'verbose',
+        },
+        'console': {
+            'level': 'INFO',  # Adjust level to capture only major changes
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',  # Capture INFO level logs
+            'propagate': False,
+        },
+        'authentication': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',  # Capture INFO level logs
+            'propagate': False,
+        },
+    },
+}
 # Load environment variables from .env file
 load_dotenv()
 
@@ -64,8 +110,9 @@ MIDDLEWARE = [
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # Default backend
-    'UserProfiles.auth_backends.StaffBackend',    # Custom staff backend
-    'UserProfiles.auth_backends.ResidentBackend', # Custom resident backend
+    'UserProfiles.authentication_backends.EmailBackend',
+    # 'UserProfiles.auth_backends.StaffBackend',    # Custom staff backend
+    # 'UserProfiles.auth_backends.ResidentBackend', # Custom resident backend
     # Add other backends as needed
 ]
 
@@ -82,6 +129,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
