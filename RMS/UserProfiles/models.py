@@ -2,7 +2,6 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.core.validators import RegexValidator
 from django.db import models
 import uuid
-from django.core.validators import RegexValidator
 from django.contrib.auth.models import Permission
 
 phone_regex = RegexValidator(
@@ -35,7 +34,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
             regex=r'@aun\.edu\.ng$',
             message='Email must be from aun.edu.ng domain.',
         ),
-    ], default='aun@edu.ng')
+    ])
     firstname = models.CharField(max_length=150, blank=True)
     lastname = models.CharField(max_length=150, blank=True)
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True, unique=True)
@@ -55,19 +54,19 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
 
     def get_short_name(self):
         return self.username
-    
-    def is_staff_and_resident(self):
-        return self.is_staff and hasattr(self, 'resident_profile')
 
-    def is_resident_only(self):
-        return not self.is_staff and hasattr(self, 'resident_profile')
+    @property
+    def is_resident(self):
+        return hasattr(self, 'resident_profile')
 
+    @property
     def is_staff_only(self):
-        return self.is_staff and not hasattr(self, 'resident_profile')
+        return hasattr(self, 'staff_profile') and not self.is_resident
 
     class Meta:
         verbose_name = 'user'
         verbose_name_plural = 'users'
+        ordering = ['username']
 
 class Residents(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -80,34 +79,36 @@ class Residents(models.Model):
     class Meta:
         verbose_name = 'resident'
         verbose_name_plural = 'residents'
+        ordering = ['user__username']
 
 class Roles(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    # uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     name = models.CharField(max_length=30, unique=True)
     abbreviation = models.CharField(max_length=5, blank=True, unique=True)
     permissions = models.ManyToManyField(Permission, blank=True)
 
     def __str__(self):
         return self.name
-    
+
     class Meta:
         verbose_name = 'role'
         verbose_name_plural = 'roles'
+        ordering = ['name']
 
 class Staffs(models.Model):
-    id= models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staff_profile')
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.role.name} - {self.user.username}"
-    
+
     def has_perm(self, perm, obj=None):
-        if self.is_superuser:
+        if self.user.is_superuser:
             return True
         return self.role.permissions.filter(codename=perm.split('.')[-1]).exists()
 
     class Meta:
         verbose_name = 'staff'
         verbose_name_plural = 'staffs'
+        ordering = ['user__username']

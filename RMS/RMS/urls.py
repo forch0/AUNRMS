@@ -16,14 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from UserProfiles.views import custom_login_choice,CustomStaffLoginView, CustomResidentLoginView
+# from UserProfiles.views import custom_login_choice,CustomStaffLoginView, CustomResidentLoginView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('admin/login/', custom_login_choice, name='login_choice'),
-    path('admin/login/staff/', CustomStaffLoginView.as_view(), name='staff_login'),
-    path('admin/login/resident/', CustomResidentLoginView.as_view(), name='resident_login'),
+    # path('admin/login/', custom_login_choice, name='login_choice'),
+    # path('admin/login/staff/', CustomStaffLoginView.as_view(), name='staff_login'),
+    # path('admin/login/resident/', CustomResidentLoginView.as_view(), name='resident_login'),
     path('', include('Home.urls')),
     path('users/', include('UserProfiles.urls')),
     path('dorms/', include('Dorms.urls')),

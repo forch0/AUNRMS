@@ -229,39 +229,19 @@ def index(request):
 
 
 '''DJANGO ADMIN'''
-class CustomStaffLoginView(LoginView):
-    form_class = StaffLoginForm
-    template_name = 'admin/staff_login.html'
 
-    def form_valid(self, form):
-        email = form.cleaned_data.get('username')
-        password = form.cleaned_data.get('password')
-        user = authenticate(request=self.request, email=email, password=password)
-        if user and user.is_staff:
-            login(self.request, user)
-            return redirect(settings.ADMIN_URL)
-        return self.form_invalid(form)
-    
+# class CustomStaffLoginView(LoginView):
+#     template_name = 'admin/staff_login.html'
+#     success_url = reverse_lazy('admin:index')  # Redirect after login
 
-class CustomResidentLoginView(LoginView):
-    form_class = ResidentLoginForm
-    template_name = 'admin/resident_login.html'
+# class CustomResidentLoginView(LoginView):
+#     template_name = 'admin/resident_login.html'
+#     success_url = reverse_lazy('admin:index')  # 
 
-    def form_valid(self, form):
-        email = form.cleaned_data.get('username')
-        password = form.cleaned_data.get('password')
-        room_number = form.cleaned_data.get('room_number')
-        user = authenticate(request=self.request, email=email, password=password, room_number=room_number)
-        if user and not user.is_staff:
-            login(self.request, user)
-            return redirect(settings.ADMIN_URL)
-        return self.form_invalid(form)
-    
-
-def custom_login_choice(request):
-    if request.method == 'POST':
-        if 'staff_login' in request.POST:
-            return redirect('staff_login')
-        elif 'resident_login' in request.POST:
-            return redirect('resident_login')
-    return render(request, 'admin/custom_login_choice.html')
+# def custom_login_choice(request):
+#     if request.method == 'POST':
+#         if 'staff_login' in request.POST:
+#             return redirect('staff_login')
+#         elif 'resident_login' in request.POST:
+#             return redirect('resident_login')
+#     return render(request, 'admin/custom_login_choice.html')
