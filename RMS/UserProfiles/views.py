@@ -6,7 +6,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from .models import UserCred, Residents, Roles, Staffs
-from .forms import StaffRegistrationForm, StaffLoginForm, ResidentRegistrationForm, ResidentLoginForm, EmailAuthenticationForm
+# from .forms import StaffRegistrationForm, StaffLoginForm, ResidentRegistrationForm, ResidentLoginForm, EmailAuthenticationForm
 from django.conf import settings
 
 # '''USERCRED'''

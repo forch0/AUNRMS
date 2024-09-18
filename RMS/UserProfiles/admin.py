@@ -1,14 +1,13 @@
 from django.contrib import admin
 from django.contrib.auth.models import Permission
-from django.contrib.contenttypes.models import ContentType
-
 from .models import UserCred, Residents, Roles, Staffs
+from django.contrib.auth.admin import UserAdmin as DefaultUserAdmin
 
 def transition_to_resident_only(modeladmin, request, queryset):
     for staff in queryset:
         user = staff.user
-        if hasattr(user, 'staffs'):
-            user.staffs.delete()  # Remove the staff profile
+        if hasattr(user, 'staff_profile'):  # Corrected related_name
+            user.staff_profile.delete()  # Remove the staff profile
         user.is_staff = False
         user.save()
     modeladmin.message_user(request, "Selected users have been transitioned to resident only.")
@@ -24,22 +23,41 @@ def transition_to_staff(modeladmin, request, queryset):
             # Create the Staff profile for the user
             Staffs.objects.create(
                 user=user,
-                role=Role.objects.first()  # Assign a default role; you might want to handle this differently
+                role=Roles.objects.first()  # Assign a default role; adjust as needed
             )
     modeladmin.message_user(request, "Selected users have been transitioned to staff.")
 
 transition_to_staff.short_description = "Transition selected users to Staff"
 
-
 class UserCredAdmin(admin.ModelAdmin):
-    list_display = ('username', 'email', 'firstname', 'lastname', 'phone_number', 'is_staff', 'is_active')
-    search_fields = ('username', 'email', 'firstname', 'lastname')
+    model = UserCred
+    fieldsets = (
+        (None, {'fields': ('email', 'password')}),
+        ('Personal info', {'fields': ('firstname', 'lastname', 'phone_number')}),
+        ('Permissions', {'fields': ('is_active', 'is_staff')}),
+
+
+    )
+    
+    list_display = ('email', 'firstname', 'lastname', 'phone_number', 'is_staff', 'is_active')
+    search_fields = ('email', 'firstname', 'lastname')
     list_filter = ('is_staff', 'is_active')
+    ordering = ('email',)
+
+    # readonly_fields = ('email',)  # Example of making the email field read-only
+
+    def get_changeform_initial_data(self, request):
+        """
+        Return the initial data to be used when rendering the form for changing a user's password.
+        """
+        user = self.get_object(request, self.get_changeform_initial_data(request))
+        return {'password': user.password}
+
 
 class ResidentsAdmin(admin.ModelAdmin):
     list_display = ('user', 'guardian_phone_number')
-    search_fields = ('user__username', 'guardian_phone_number')
-    list_filter = ('user__username',)
+    search_fields = ('user__email', 'guardian_phone_number')  # Updated to use 'user__email'
+    list_filter = ('user__email',)  # Updated to use 'user__email'
     ordering = ('id',)
     actions = [transition_to_staff]
 
@@ -55,7 +73,7 @@ class RolesAdmin(admin.ModelAdmin):
 
 class StaffsAdmin(admin.ModelAdmin):
     list_display = ('user', 'role')
-    search_fields = ('user__username', 'role__name')
+    search_fields = ('user__email', 'role__name')  # Updated to use 'user__email'
     list_filter = ('role',)
     ordering = ('id',)
     actions = [transition_to_resident_only]

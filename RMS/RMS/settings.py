@@ -110,7 +110,7 @@ MIDDLEWARE = [
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # Default backend
-    'UserProfiles.authentication_backends.EmailBackend',
+    # 'UserProfiles.authentication_backends.EmailBackend',
     # 'UserProfiles.auth_backends.StaffBackend',    # Custom staff backend
     # 'UserProfiles.auth_backends.ResidentBackend', # Custom resident backend
     # Add other backends as needed

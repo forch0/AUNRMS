@@ -60,3 +60,5 @@ class ResidentLoginForm(AuthenticationForm):
 
 class EmailAuthenticationForm(AuthenticationForm):
     username = forms.EmailField(label='Email')
+
+

@@ -29,10 +29,10 @@ class UserManager(BaseUserManager):
             raise ValueError('Superuser must have is_superuser=True.')
 
         return self.create_user(email, password, **extra_fields)
+
 class UserCred(AbstractBaseUser, PermissionsMixin):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    username = models.CharField(max_length=150, unique=True)
-    email = models.EmailField(max_length=255,unique=True, blank=False, validators=[
+    email = models.EmailField(max_length=255, unique=True, blank=False, validators=[
         RegexValidator(
             regex=r'@aun\.edu\.ng$',
             message='Email must be from aun.edu.ng domain.',
@@ -41,14 +41,14 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
     firstname = models.CharField(max_length=150, blank=True)
     lastname = models.CharField(max_length=150, blank=True)
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True, unique=True)
-    is_staff = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=True)
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    # EMAIL_FIELD = 'email'
     REQUIRED_FIELDS = []
+ 
 
     def __str__(self):
         return self.email
@@ -57,7 +57,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
         return f"{self.firstname} {self.lastname}"
 
     def get_short_name(self):
-        return self.username
+        return self.email
 
     @property
     def is_resident(self):
@@ -70,7 +70,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
     class Meta:
         verbose_name = 'user'
         verbose_name_plural = 'users'
-        ordering = ['username']
+        ordering = ['email']
 
 class Residents(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -78,12 +78,12 @@ class Residents(models.Model):
     guardian_phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
 
     def __str__(self):
-        return f"Resident: {self.user.username}"
+        return f"Resident: {self.user.email}"
 
     class Meta:
         verbose_name = 'resident'
         verbose_name_plural = 'residents'
-        ordering = ['user__username']
+        ordering = ['user__email']
 
 class Roles(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -105,7 +105,7 @@ class Staffs(models.Model):
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.role.name} - {self.user.username}"
+        return f"{self.role.name} - {self.user.email}"
 
     def has_perm(self, perm, obj=None):
         if self.user.is_superuser:
@@ -115,4 +115,4 @@ class Staffs(models.Model):
     class Meta:
         verbose_name = 'staff'
         verbose_name_plural = 'staffs'
-        ordering = ['user__username']
+        ordering = ['user__email']

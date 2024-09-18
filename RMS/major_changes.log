@@ -816,3 +816,456 @@ INFO 2024-09-18 19:48:01,106 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.
 INFO 2024-09-18 19:48:01,183 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-09-18 19:48:16,127 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
 INFO 2024-09-18 19:48:16,878 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:49:28,876 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 19:49:30,398 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 51994
+INFO 2024-09-18 19:49:30,503 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:50:09,593 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 52553
+INFO 2024-09-18 19:50:09,676 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:50:25,586 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:50:25,676 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60476
+INFO 2024-09-18 19:50:25,748 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:50:30,662 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53676
+INFO 2024-09-18 19:50:30,743 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:50:38,864 basehttp "POST /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:50:38,936 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60482
+INFO 2024-09-18 19:50:39,018 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:50:47,604 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 51994
+INFO 2024-09-18 19:50:47,682 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:50:50,156 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60118
+INFO 2024-09-18 19:51:07,636 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 19:51:09,426 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:51:09,443 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+ERROR 2024-09-18 19:51:15,015 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:51:15,016 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9157
+INFO 2024-09-18 19:51:16,896 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+INFO 2024-09-18 19:51:21,837 basehttp "POST /admin/logout/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:51:21,846 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:51:21,856 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+ERROR 2024-09-18 19:51:31,076 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:51:31,076 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9142
+INFO 2024-09-18 19:51:39,230 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:51:39,316 basehttp "GET /admin/ HTTP/1.1" 200 69167
+INFO 2024-09-18 19:51:47,199 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60118
+INFO 2024-09-18 19:51:47,286 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:51:54,956 basehttp "GET /admin/UserProfiles/usercred/7210ecb4-a564-4839-bad7-b26f8ee3bd9b/change/ HTTP/1.1" 200 53586
+INFO 2024-09-18 19:51:55,039 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:52:17,686 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60118
+WARNING 2024-09-18 19:56:52,585 log Forbidden (CSRF token from POST incorrect.): /admin/login/
+WARNING 2024-09-18 19:56:52,586 basehttp "POST /admin/login/ HTTP/1.1" 403 2518
+INFO 2024-09-18 19:56:55,960 basehttp "GET /admin/ HTTP/1.1" 200 69167
+INFO 2024-09-18 19:57:00,042 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60118
+INFO 2024-09-18 19:57:00,103 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:57:08,555 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53694
+INFO 2024-09-18 19:57:08,624 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:57:13,665 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60118
+INFO 2024-09-18 19:57:15,575 basehttp "GET /admin/UserProfiles/usercred/7210ecb4-a564-4839-bad7-b26f8ee3bd9b/change/ HTTP/1.1" 200 53586
+INFO 2024-09-18 19:57:15,637 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:57:17,876 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60118
+INFO 2024-09-18 19:57:20,141 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53694
+INFO 2024-09-18 19:57:20,205 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:57:25,275 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60118
+INFO 2024-09-18 19:57:28,088 basehttp "GET /admin/UserProfiles/usercred/7210ecb4-a564-4839-bad7-b26f8ee3bd9b/change/ HTTP/1.1" 200 53586
+INFO 2024-09-18 19:57:28,158 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 19:57:32,485 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 60118
+INFO 2024-09-18 19:57:45,915 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 19:57:48,057 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 19:57:48,067 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+ERROR 2024-09-18 19:57:56,915 authentication_backends User with email None does not exist
+INFO 2024-09-18 19:57:56,922 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9157
+INFO 2024-09-18 20:01:45,675 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-09-18 20:01:46,250 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 20:01:49,633 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-09-18 20:01:50,160 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 20:04:17,217 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 20:04:17,765 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 20:04:46,269 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 20:04:47,921 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 20:04:55,003 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:04:55,035 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+ERROR 2024-09-18 20:05:04,380 authentication_backends User with email None does not exist
+INFO 2024-09-18 20:05:04,385 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9142
+INFO 2024-09-18 20:05:15,565 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:05:15,631 basehttp "GET /admin/ HTTP/1.1" 200 69178
+INFO 2024-09-18 20:05:26,664 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58375
+INFO 2024-09-18 20:05:26,721 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:05:36,075 basehttp "GET /admin/UserProfiles/usercred/7210ecb4-a564-4839-bad7-b26f8ee3bd9b/change/ HTTP/1.1" 200 52959
+INFO 2024-09-18 20:05:36,135 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:05:38,913 basehttp "GET /admin/UserProfiles/usercred/7210ecb4-a564-4839-bad7-b26f8ee3bd9b/delete/ HTTP/1.1" 200 35450
+INFO 2024-09-18 20:05:40,325 basehttp "POST /admin/UserProfiles/usercred/7210ecb4-a564-4839-bad7-b26f8ee3bd9b/delete/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:05:40,382 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 54256
+INFO 2024-09-18 20:05:40,439 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:05:44,085 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 51382
+INFO 2024-09-18 20:05:44,148 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:06:23,946 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 51971
+INFO 2024-09-18 20:06:24,003 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:06:56,679 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 51980
+INFO 2024-09-18 20:06:56,734 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:07:08,738 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:07:08,791 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58723
+INFO 2024-09-18 20:07:08,844 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:07:13,635 basehttp "GET /admin/UserProfiles/usercred/e5b1925a-ca15-48f3-9287-1c72b2451c31/change/ HTTP/1.1" 200 52931
+INFO 2024-09-18 20:07:13,692 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:07:16,295 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58364
+INFO 2024-09-18 20:07:18,290 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53065
+INFO 2024-09-18 20:07:18,347 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:07:22,166 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58364
+INFO 2024-09-18 20:07:28,467 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 20:07:30,005 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:07:30,018 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+ERROR 2024-09-18 20:07:41,916 authentication_backends User with email None does not exist
+INFO 2024-09-18 20:07:41,925 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9150
+INFO 2024-09-18 20:07:45,412 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+INFO 2024-09-18 20:07:49,068 basehttp "POST /admin/logout/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:07:49,075 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:07:49,085 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+INFO 2024-09-18 20:07:58,525 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:07:58,583 basehttp "GET /admin/ HTTP/1.1" 200 68931
+INFO 2024-09-18 20:08:04,235 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58364
+INFO 2024-09-18 20:08:04,292 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:08:06,135 basehttp "GET /admin/UserProfiles/usercred/e5b1925a-ca15-48f3-9287-1c72b2451c31/change/ HTTP/1.1" 200 52931
+INFO 2024-09-18 20:08:06,192 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:08:08,303 basehttp "GET /admin/UserProfiles/usercred/e5b1925a-ca15-48f3-9287-1c72b2451c31/delete/ HTTP/1.1" 200 35623
+INFO 2024-09-18 20:08:09,785 basehttp "POST /admin/UserProfiles/usercred/e5b1925a-ca15-48f3-9287-1c72b2451c31/delete/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:08:09,868 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 54249
+INFO 2024-09-18 20:08:09,945 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:11:52,016 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-09-18 20:11:52,030 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-09-18 20:11:52,680 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 20:11:52,718 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 20:12:04,474 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-09-18 20:12:04,474 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-09-18 20:12:05,125 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 20:12:05,125 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 20:12:07,545 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 53976
+INFO 2024-09-18 20:12:07,611 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:12:10,455 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 51390
+INFO 2024-09-18 20:12:10,522 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:12:32,758 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:12:32,816 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58717
+INFO 2024-09-18 20:12:32,871 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 20:12:37,038 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 20:12:38,215 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:12:38,230 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+ERROR 2024-09-18 20:12:44,641 authentication_backends User with email None does not exist
+INFO 2024-09-18 20:12:44,646 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9150
+INFO 2024-09-18 20:17:31,104 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 20:17:35,372 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 20:31:59,876 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:31:59,891 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+INFO 2024-09-18 20:32:17,034 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 20:32:17,085 basehttp "GET /admin/ HTTP/1.1" 200 68831
+INFO 2024-09-18 21:10:54,123 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:10:54,270 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:10:54,920 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:10:55,019 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:10:57,182 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 21:11:01,839 basehttp "GET /admin/ HTTP/1.1" 200 68831
+INFO 2024-09-18 21:11:09,664 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58358
+INFO 2024-09-18 21:11:09,749 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:11:13,653 basehttp "GET /admin/UserProfiles/usercred/a9fe03bb-8a40-4f32-b7e2-486952c31cd6/change/ HTTP/1.1" 200 52972
+INFO 2024-09-18 21:11:13,752 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:11:15,599 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58358
+INFO 2024-09-18 21:11:16,943 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53126
+INFO 2024-09-18 21:11:17,029 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:12:31,730 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:12:32,303 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:12:32,548 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:12:33,011 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:12:44,363 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:12:44,841 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:12:45,153 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:12:45,579 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:12:48,734 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58358
+INFO 2024-09-18 21:12:49,689 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58358
+INFO 2024-09-18 21:12:49,763 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-09-18 21:12:52,392 log Internal Server Error: /admin/UserProfiles/usercred/a9fe03bb-8a40-4f32-b7e2-486952c31cd6/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 809, in get_form
+    return modelform_factory(self.model, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 642, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 321, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for UserCred
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1782, in _changeform_view
+    ModelForm = self.get_form(
+                ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\admin.py", line 98, in get_form
+    return super().get_form(request, obj, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 811, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for UserCred. Check fields/fieldsets/exclude attributes of class UserCredAdmin.
+ERROR 2024-09-18 21:12:52,438 basehttp "GET /admin/UserProfiles/usercred/a9fe03bb-8a40-4f32-b7e2-486952c31cd6/change/ HTTP/1.1" 500 144458
+INFO 2024-09-18 21:12:57,499 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58358
+ERROR 2024-09-18 21:12:58,799 log Internal Server Error: /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 809, in get_form
+    return modelform_factory(self.model, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 642, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 321, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for UserCred
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1782, in _changeform_view
+    ModelForm = self.get_form(
+                ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\admin.py", line 98, in get_form
+    return super().get_form(request, obj, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 811, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for UserCred. Check fields/fieldsets/exclude attributes of class UserCredAdmin.
+ERROR 2024-09-18 21:12:58,845 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 500 144470
+INFO 2024-09-18 21:13:07,385 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:13:07,528 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:13:08,386 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:13:08,435 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:13:10,294 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53126
+INFO 2024-09-18 21:13:10,361 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:13:13,553 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58358
+INFO 2024-09-18 21:13:15,879 basehttp "GET /admin/UserProfiles/usercred/a9fe03bb-8a40-4f32-b7e2-486952c31cd6/change/ HTTP/1.1" 200 52972
+INFO 2024-09-18 21:13:15,978 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:13:18,229 basehttp "GET /admin/UserProfiles/usercred/a9fe03bb-8a40-4f32-b7e2-486952c31cd6/delete/ HTTP/1.1" 200 35429
+INFO 2024-09-18 21:13:19,935 basehttp "POST /admin/UserProfiles/usercred/a9fe03bb-8a40-4f32-b7e2-486952c31cd6/delete/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:13:20,051 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 54249
+INFO 2024-09-18 21:13:20,139 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:13:22,249 basehttp "GET /admin/ HTTP/1.1" 200 68754
+INFO 2024-09-18 21:14:29,639 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:14:31,148 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58358
+INFO 2024-09-18 21:14:31,233 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:14:39,196 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 21:14:40,583 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:14:40,612 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+INFO 2024-09-18 21:14:54,138 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:14:54,258 basehttp "GET /admin/ HTTP/1.1" 200 58485
+INFO 2024-09-18 21:14:57,706 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 55658
+INFO 2024-09-18 21:14:57,808 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:15:02,072 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 45016
+INFO 2024-09-18 21:15:02,170 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:15:04,601 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 42244
+INFO 2024-09-18 21:15:04,699 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:15:06,949 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:15:07,032 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:15:14,929 basehttp "GET /admin/UserProfiles/usercred/2bd7fdd7-317f-41a9-bad5-6907f6ba71bb/change/ HTTP/1.1" 200 53093
+INFO 2024-09-18 21:15:15,012 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:15:17,778 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:15:19,742 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53123
+INFO 2024-09-18 21:15:19,830 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:15:21,861 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:15:34,178 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 51458
+INFO 2024-09-18 21:15:34,263 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:15:51,129 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:15:51,241 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 63056
+INFO 2024-09-18 21:15:51,332 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:15:59,208 basehttp "GET /admin/UserProfiles/usercred/4202944d-e3cd-4d78-88f0-d7a094830c03/change/ HTTP/1.1" 200 52903
+INFO 2024-09-18 21:15:59,299 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:16:01,768 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 62713
+INFO 2024-09-18 21:16:28,969 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:16:29,697 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:16:30,843 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 62713
+INFO 2024-09-18 21:16:30,908 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:16:37,533 basehttp "GET /admin/UserProfiles/usercred/4202944d-e3cd-4d78-88f0-d7a094830c03/change/ HTTP/1.1" 200 52832
+INFO 2024-09-18 21:16:37,640 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:16:40,949 basehttp "GET /admin/UserProfiles/usercred/4202944d-e3cd-4d78-88f0-d7a094830c03/delete/ HTTP/1.1" 200 35358
+INFO 2024-09-18 21:16:42,671 basehttp "POST /admin/UserProfiles/usercred/4202944d-e3cd-4d78-88f0-d7a094830c03/delete/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:16:42,794 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58612
+INFO 2024-09-18 21:16:43,000 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:16:51,848 basehttp "GET /admin/UserProfiles/usercred/2bd7fdd7-317f-41a9-bad5-6907f6ba71bb/change/ HTTP/1.1" 200 53032
+INFO 2024-09-18 21:16:51,939 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:18:02,347 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:18:04,090 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53062
+INFO 2024-09-18 21:18:04,178 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:18:05,318 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:18:09,458 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 53062
+INFO 2024-09-18 21:18:09,549 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:18:12,009 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:20:18,114 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:20:18,818 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:20:51,410 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:20:52,101 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:20:58,711 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:20:59,508 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:21:09,981 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:21:12,608 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:21:12,672 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:21:13,988 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:21:14,048 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:21:14,214 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:21:14,271 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:21:15,198 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 43685
+INFO 2024-09-18 21:21:15,271 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:21:25,819 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:21:29,590 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 43685
+INFO 2024-09-18 21:21:29,680 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:21:45,672 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:21:45,758 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:21:47,770 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 43685
+INFO 2024-09-18 21:21:47,868 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:22:58,753 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:23:00,921 basehttp "GET /admin/UserProfiles/usercred/2bd7fdd7-317f-41a9-bad5-6907f6ba71bb/change/ HTTP/1.1" 200 43655
+INFO 2024-09-18 21:23:01,019 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:23:15,588 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:23:17,772 basehttp "GET /admin/UserProfiles/usercred/2bd7fdd7-317f-41a9-bad5-6907f6ba71bb/change/ HTTP/1.1" 200 43655
+INFO 2024-09-18 21:23:17,863 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:23:19,444 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:23:25,064 basehttp "GET /admin/ HTTP/1.1" 200 60789
+INFO 2024-09-18 21:23:27,088 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:23:30,404 basehttp "GET /admin/UserProfiles/usercred/4202944d-e3cd-4d78-88f0-d7a094830c03/delete/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:23:30,512 basehttp "GET /admin/ HTTP/1.1" 200 61102
+INFO 2024-09-18 21:23:36,573 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:23:39,378 basehttp "GET /admin/ HTTP/1.1" 200 60789
+INFO 2024-09-18 21:23:41,698 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 54114
+INFO 2024-09-18 21:23:41,784 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:23:43,551 basehttp "GET /admin/ HTTP/1.1" 200 60789
+INFO 2024-09-18 21:23:45,614 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 42244
+INFO 2024-09-18 21:23:45,704 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:23:48,005 basehttp "GET /admin/UserProfiles/staffs/add/ HTTP/1.1" 200 40414
+INFO 2024-09-18 21:23:48,103 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:23:48,218 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2024-09-18 21:23:48,241 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2024-09-18 21:24:01,358 basehttp "POST /admin/UserProfiles/staffs/add/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:24:01,462 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 48365
+INFO 2024-09-18 21:24:01,548 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:06,108 basehttp "GET /admin/ HTTP/1.1" 200 61830
+INFO 2024-09-18 21:24:08,642 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 142692
+INFO 2024-09-18 21:24:08,742 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:12,779 basehttp "GET /admin/ HTTP/1.1" 200 61830
+INFO 2024-09-18 21:24:14,053 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 47056
+INFO 2024-09-18 21:24:14,151 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:16,090 basehttp "GET /admin/ HTTP/1.1" 200 61830
+INFO 2024-09-18 21:24:17,352 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 55658
+INFO 2024-09-18 21:24:17,439 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:20,851 basehttp "GET /admin/AcademicYear/semester/b8a3eac5-b1f9-4a70-84f3-65ec57dad9e4/change/ HTTP/1.1" 200 42576
+INFO 2024-09-18 21:24:20,933 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:22,205 basehttp "GET /static/unfold/fonts/inter/Inter-Bold.woff2 HTTP/1.1" 200 46552
+INFO 2024-09-18 21:24:24,235 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 55658
+INFO 2024-09-18 21:24:25,958 basehttp "GET /admin/ HTTP/1.1" 200 61830
+INFO 2024-09-18 21:24:27,608 basehttp "GET /admin/Actions/announcement/ HTTP/1.1" 200 41920
+INFO 2024-09-18 21:24:27,695 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:29,620 basehttp "GET /admin/ HTTP/1.1" 200 61830
+INFO 2024-09-18 21:24:31,428 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 45016
+INFO 2024-09-18 21:24:31,518 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:34,564 basehttp "GET /admin/ HTTP/1.1" 200 61830
+INFO 2024-09-18 21:24:39,809 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:24:39,898 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:42,198 basehttp "GET /admin/ HTTP/1.1" 200 61830
+INFO 2024-09-18 21:24:43,902 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 47986
+INFO 2024-09-18 21:24:43,988 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:45,608 basehttp "GET /admin/UserProfiles/staffs/77cb7b60-c7e1-4557-899f-adac3d2b33a2/change/ HTTP/1.1" 200 41954
+INFO 2024-09-18 21:24:45,699 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:48,239 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 47986
+INFO 2024-09-18 21:24:49,684 basehttp "GET /admin/ HTTP/1.1" 200 61830
+INFO 2024-09-18 21:24:53,315 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 47986
+INFO 2024-09-18 21:24:53,398 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:55,178 basehttp "GET /admin/UserProfiles/staffs/77cb7b60-c7e1-4557-899f-adac3d2b33a2/change/ HTTP/1.1" 200 41954
+INFO 2024-09-18 21:24:55,259 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:24:57,824 basehttp "GET /admin/UserProfiles/staffs/77cb7b60-c7e1-4557-899f-adac3d2b33a2/delete/ HTTP/1.1" 200 35487
+INFO 2024-09-18 21:24:59,258 basehttp "POST /admin/UserProfiles/staffs/77cb7b60-c7e1-4557-899f-adac3d2b33a2/delete/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:24:59,378 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 42539
+INFO 2024-09-18 21:24:59,469 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:25:01,230 basehttp "GET /admin/UserProfiles/staffs/77cb7b60-c7e1-4557-899f-adac3d2b33a2/delete/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:25:01,341 basehttp "GET /admin/ HTTP/1.1" 200 63102
+INFO 2024-09-18 21:25:03,838 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:25:03,926 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:25:05,924 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:25:06,013 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:25:09,543 basehttp "GET /admin/ HTTP/1.1" 200 62788
+INFO 2024-09-18 21:25:13,032 basehttp "GET /admin/ HTTP/1.1" 200 62788
+INFO 2024-09-18 21:29:29,839 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:29:31,872 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 21:29:34,478 basehttp "GET /admin/ HTTP/1.1" 200 62788
+INFO 2024-09-18 21:29:39,251 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:29:39,342 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:29:41,340 basehttp "GET /admin/UserProfiles/usercred/2bd7fdd7-317f-41a9-bad5-6907f6ba71bb/change/ HTTP/1.1" 200 43655
+INFO 2024-09-18 21:29:41,426 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:29:43,245 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:35:16,266 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-09-18 21:35:17,168 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:38:41,834 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-09-18 21:38:42,767 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:41:10,098 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:41:10,779 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:41:19,228 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-18 21:41:19,897 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:43:59,270 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:46:41,492 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:47:04,592 autoreload Watching for file changes with StatReloader
+INFO 2024-09-18 21:47:06,387 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-18 21:47:11,957 basehttp "GET /admin/ HTTP/1.1" 200 62788
+INFO 2024-09-18 21:47:16,777 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58355
+INFO 2024-09-18 21:47:16,857 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:47:19,111 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 43685
+INFO 2024-09-18 21:47:19,187 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
