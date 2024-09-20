@@ -1269,3 +1269,25 @@ INFO 2024-09-18 21:47:16,777 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.
 INFO 2024-09-18 21:47:16,857 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-09-18 21:47:19,111 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 43685
 INFO 2024-09-18 21:47:19,187 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-18 21:47:38,747 basehttp "GET /admin/ HTTP/1.1" 200 62788
+INFO 2024-09-18 21:47:52,304 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-18 21:47:53,733 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:47:53,757 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8411
+INFO 2024-09-18 21:48:47,318 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:48:47,327 basehttp "GET /admin/login/?next=/admin/UserProfiles/usercred/ HTTP/1.1" 200 8433
+INFO 2024-09-18 21:48:56,580 basehttp "POST /admin/login/?next=/admin/UserProfiles/usercred/ HTTP/1.1" 302 0
+INFO 2024-09-18 21:48:56,670 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58358
+INFO 2024-09-18 21:48:56,752 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:12:24,530 autoreload Watching for file changes with StatReloader
+INFO 2024-09-20 11:12:28,066 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-20 11:12:38,820 basehttp "GET /admin/ HTTP/1.1" 200 68804
+INFO 2024-09-20 11:12:48,341 basehttp "GET /admin/ HTTP/1.1" 200 68804
+INFO 2024-09-20 11:12:57,299 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-20 11:13:00,140 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-20 11:13:00,181 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8399
+INFO 2024-09-20 11:13:20,056 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-09-20 11:13:20,700 autoreload Watching for file changes with StatReloader
+INFO 2024-09-20 11:13:23,130 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8447
+INFO 2024-09-20 11:13:44,922 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-09-20 11:13:45,639 autoreload Watching for file changes with StatReloader
+INFO 2024-09-20 11:13:45,966 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
