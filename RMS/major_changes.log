@@ -1291,3 +1291,52 @@ INFO 2024-09-20 11:13:23,130 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 
 INFO 2024-09-20 11:13:44,922 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
 INFO 2024-09-20 11:13:45,639 autoreload Watching for file changes with StatReloader
 INFO 2024-09-20 11:13:45,966 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:19:12,252 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:19:14,169 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:19:21,089 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:19:22,615 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:19:32,228 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:19:35,099 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-20 11:19:40,285 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-20 11:19:40,294 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:22:08,228 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:22:09,195 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:22:30,091 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-20 11:22:30,270 basehttp "GET /admin/ HTTP/1.1" 200 68824
+INFO 2024-09-20 11:22:44,548 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 47083
+INFO 2024-09-20 11:22:44,658 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:47,125 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 142719
+INFO 2024-09-20 11:22:47,208 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:48,272 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 142719
+INFO 2024-09-20 11:22:48,368 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:50,766 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 55685
+INFO 2024-09-20 11:22:50,859 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:52,789 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 47410
+INFO 2024-09-20 11:22:52,882 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:54,059 basehttp "GET /admin/Actions/announcement/ HTTP/1.1" 200 41947
+INFO 2024-09-20 11:22:54,158 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:55,091 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 41932
+INFO 2024-09-20 11:22:55,173 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:56,214 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 56785
+INFO 2024-09-20 11:22:56,319 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:56,979 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 45043
+INFO 2024-09-20 11:22:57,067 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:58,448 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 200 66079
+INFO 2024-09-20 11:22:58,559 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:22:59,709 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 83363
+INFO 2024-09-20 11:22:59,800 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:23:01,254 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 500055
+INFO 2024-09-20 11:23:01,361 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:23:05,700 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 44545
+INFO 2024-09-20 11:23:05,789 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:23:08,048 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 54141
+INFO 2024-09-20 11:23:08,145 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 11:23:11,839 basehttp "GET /admin/ HTTP/1.1" 200 68824
+INFO 2024-09-20 11:23:13,362 basehttp "GET /admin/ HTTP/1.1" 200 68824
+INFO 2024-09-20 11:23:14,509 basehttp "GET /admin/ HTTP/1.1" 200 68824
+INFO 2024-09-20 11:28:33,348 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-20 11:28:34,188 autoreload Watching for file changes with StatReloader
+INFO 2024-09-20 11:28:38,682 basehttp "GET /admin/ HTTP/1.1" 200 68824
+INFO 2024-09-20 11:28:49,298 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-20 11:28:50,530 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-20 11:28:50,563 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
