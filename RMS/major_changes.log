@@ -1340,3 +1340,35 @@ INFO 2024-09-20 11:28:38,682 basehttp "GET /admin/ HTTP/1.1" 200 68824
 INFO 2024-09-20 11:28:49,298 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
 INFO 2024-09-20 11:28:50,530 basehttp "GET /admin/ HTTP/1.1" 302 0
 INFO 2024-09-20 11:28:50,563 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 11:59:52,277 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-20 11:59:53,058 autoreload Watching for file changes with StatReloader
+INFO 2024-09-20 11:59:58,467 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-09-20 11:59:58,997 autoreload Watching for file changes with StatReloader
+INFO 2024-09-20 12:05:28,742 autoreload Watching for file changes with StatReloader
+INFO 2024-09-20 12:06:03,346 autoreload Watching for file changes with StatReloader
+INFO 2024-09-20 12:06:06,640 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-20 12:06:10,107 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-20 12:06:10,156 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 12:06:19,305 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-20 12:06:19,399 basehttp "GET /admin/ HTTP/1.1" 200 68824
+INFO 2024-09-20 12:06:27,799 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58382
+INFO 2024-09-20 12:06:27,883 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 12:06:33,457 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 43558
+INFO 2024-09-20 12:06:33,551 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 12:06:42,107 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58382
+INFO 2024-09-20 12:06:44,707 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42024
+INFO 2024-09-20 12:06:44,790 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 12:07:25,081 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-09-20 12:07:25,164 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 63113
+INFO 2024-09-20 12:07:25,234 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 12:07:30,242 basehttp "GET /admin/UserProfiles/usercred/07e93aa6-b1aa-440d-810d-19e7cbc8e712/change/ HTTP/1.1" 200 43585
+INFO 2024-09-20 12:07:30,323 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 12:07:32,557 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 62751
+INFO 2024-09-20 12:07:36,453 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42024
+INFO 2024-09-20 12:07:36,530 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-20 12:07:38,932 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 62751
+INFO 2024-09-20 12:07:42,246 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-20 12:07:43,686 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-20 12:07:43,696 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-20 12:07:58,828 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-20 12:07:58,907 basehttp "GET /admin/ HTTP/1.1" 200 10971

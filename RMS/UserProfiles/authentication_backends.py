@@ -64,13 +64,13 @@
 # authentication_backends.py
 import logging
 from django.contrib.auth.backends import ModelBackend
+from UserProfiles.models import UserCred
 
 # Configure the logger
 logger = logging.getLogger('authentication')
 
 class EmailBackend(ModelBackend):
     def authenticate(self, request, email=None, password=None, **kwargs):
-        from UserProfiles.models import UserCred  # Import here to delay it
         logger.debug(f'Attempting authentication for email: {email}')
         try:
             user = UserCred.objects.get(email=email)
@@ -84,7 +84,6 @@ class EmailBackend(ModelBackend):
         return None
 
     def get_user(self, user_id):
-        from UserProfiles.models import UserCred  # Import here to delay it
         try:
             return UserCred.objects.get(pk=user_id)
         except UserCred.DoesNotExist:
