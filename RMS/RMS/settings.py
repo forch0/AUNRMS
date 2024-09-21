@@ -299,7 +299,7 @@ UNFOLD = {
                         "link": reverse_lazy("admin:Dorms_storage_changelist"),
                     },
                     {
-                        "title": _("Storage Location"),
+                        "title": _("Storage Items"),
                         "icon": "apps",
                         "link": reverse_lazy("admin:Dorms_storageitem_changelist"),
                     },
@@ -320,13 +320,13 @@ UNFOLD = {
                     },
                     {
                         "title": _("Staffs"),
-                        "icon": "groups_2 ",
+                        "icon": "connect_without_contact",
                         "link": reverse_lazy("admin:UserProfiles_staffs_changelist"),
                         # "badge": "formula.utils.badge_callback",
                     },
                     {
                         "title": _("Staff Assignment"),
-                        "icon": "connect_without_contact",
+                        "icon": "social_distance",
                         "link": reverse_lazy("admin:AcademicYear_staffassignment_changelist"),
                         # "badge": "formula.utils.badge_callback",
                     },

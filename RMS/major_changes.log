@@ -2711,3 +2711,125 @@ INFO 2024-09-21 20:01:43,270 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS
 INFO 2024-09-21 20:01:43,999 autoreload Watching for file changes with StatReloader
 INFO 2024-09-21 20:01:53,529 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38846
 INFO 2024-09-21 20:01:53,600 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:02:29,063 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 20:02:29,903 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 20:02:32,609 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38850
+INFO 2024-09-21 20:02:32,672 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:02:41,140 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 20:02:42,114 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 20:03:29,689 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 20:03:50,882 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 39245
+INFO 2024-09-21 20:03:50,967 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:03:52,331 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 38743
+INFO 2024-09-21 20:03:52,403 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:03:53,680 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 45474
+INFO 2024-09-21 20:03:53,741 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:03:56,550 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 38743
+INFO 2024-09-21 20:03:56,749 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:03:59,249 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 39245
+INFO 2024-09-21 20:03:59,347 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:04:00,746 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 38743
+INFO 2024-09-21 20:04:00,840 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:05:25,119 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 20:05:26,039 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 20:05:30,089 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 38750
+INFO 2024-09-21 20:05:30,159 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:11,066 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 20:06:11,849 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 20:06:14,149 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 38749
+INFO 2024-09-21 20:06:14,211 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:20,375 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 38749
+INFO 2024-09-21 20:06:20,461 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:22,119 basehttp "GET /admin/ HTTP/1.1" 200 60448
+INFO 2024-09-21 20:06:23,180 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 38422
+INFO 2024-09-21 20:06:23,272 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:24,244 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 47024
+INFO 2024-09-21 20:06:24,330 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:26,322 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 134058
+INFO 2024-09-21 20:06:26,417 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:28,249 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 74702
+INFO 2024-09-21 20:06:28,340 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:29,690 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 491394
+INFO 2024-09-21 20:06:29,781 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:30,819 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 36129
+INFO 2024-09-21 20:06:30,909 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:32,369 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 37153
+INFO 2024-09-21 20:06:32,469 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:34,439 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 38422
+INFO 2024-09-21 20:06:34,533 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:35,622 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 47024
+INFO 2024-09-21 20:06:35,717 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:38,702 basehttp "GET /admin/AcademicYear/semester/b8a3eac5-b1f9-4a70-84f3-65ec57dad9e4/change/ HTTP/1.1" 200 33012
+INFO 2024-09-21 20:06:38,796 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:41,230 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 47024
+INFO 2024-09-21 20:06:42,975 basehttp "GET /admin/AcademicYear/semester/5b7ba372-e8a0-4dc9-ba3f-70fcbefc0ef2/change/ HTTP/1.1" 200 33018
+INFO 2024-09-21 20:06:43,074 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:45,783 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 47024
+INFO 2024-09-21 20:06:48,437 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 134058
+INFO 2024-09-21 20:06:48,529 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:50,403 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 74702
+INFO 2024-09-21 20:06:50,493 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:51,701 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 491394
+INFO 2024-09-21 20:06:51,800 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:52,512 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 36129
+INFO 2024-09-21 20:06:52,609 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:53,596 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 37153
+INFO 2024-09-21 20:06:53,686 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:06:55,085 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 38749
+INFO 2024-09-21 20:06:55,179 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:07:20,984 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 74702
+INFO 2024-09-21 20:07:21,027 basehttp "GET /static/images/2.png HTTP/1.1" 304 0
+INFO 2024-09-21 20:07:21,083 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:07:44,134 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 38422
+INFO 2024-09-21 20:07:44,229 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:07:46,712 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 134058
+INFO 2024-09-21 20:07:46,802 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:07:49,159 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 74702
+INFO 2024-09-21 20:07:49,244 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:07:50,772 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 491394
+INFO 2024-09-21 20:07:50,880 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:07:52,602 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 36129
+INFO 2024-09-21 20:07:52,702 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:30:44,883 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 20:30:48,716 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-09-21 20:30:49,180 log Not Found: /favicon.ico
+WARNING 2024-09-21 20:30:49,187 basehttp "GET /favicon.ico HTTP/1.1" 404 2806
+INFO 2024-09-21 20:30:52,683 basehttp "GET /admin/ HTTP/1.1" 200 60448
+INFO 2024-09-21 20:31:18,204 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 74702
+INFO 2024-09-21 20:31:18,269 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:31:22,335 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 36129
+INFO 2024-09-21 20:31:22,390 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:31:23,769 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 37153
+INFO 2024-09-21 20:31:23,950 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:31:41,852 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 62878
+INFO 2024-09-21 20:31:42,010 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:31:42,969 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 45480
+INFO 2024-09-21 20:31:43,020 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:31:44,579 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 38422
+INFO 2024-09-21 20:31:44,645 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 22:48:47,329 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 22:48:48,958 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-09-21 22:48:50,215 log Not Found: /favicon.ico
+WARNING 2024-09-21 22:48:50,235 basehttp "GET /favicon.ico HTTP/1.1" 404 2806
+INFO 2024-09-21 22:48:55,206 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-09-21 22:48:55,255 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-21 22:48:55,307 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-21 22:48:55,355 basehttp "GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:55,369 basehttp "GET /static/unfold/js/app.js HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:55,370 basehttp "GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:55,373 basehttp "GET /static/unfold/css/styles.css HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:55,374 basehttp "GET /static/unfold/js/htmx.js HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:55,374 basehttp "GET /static/unfold/js/chart.js HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:55,376 basehttp "GET /static/unfold/css/simplebar.css HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:55,376 basehttp "GET /static/unfold/js/simplebar.js HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:55,440 basehttp "GET /static/unfold/js/alpine.persist.js HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:57,520 basehttp "GET /static/unfold/js/alpine.js HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:57,664 basehttp "GET /static/unfold/fonts/inter/Inter-SemiBold.woff2 HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:57,673 basehttp "GET /static/unfold/fonts/inter/Inter-Regular.woff2 HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:57,673 basehttp "GET /static/unfold/fonts/inter/Inter-Medium.woff2 HTTP/1.1" 304 0
+INFO 2024-09-21 22:48:57,673 basehttp "GET /static/unfold/fonts/material-symbols/Material-Symbols-Outlined.woff2 HTTP/1.1" 304 0
+INFO 2024-09-21 22:49:18,469 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-21 22:49:18,561 basehttp "GET /admin/ HTTP/1.1" 200 60448
+INFO 2024-09-21 22:49:18,640 basehttp "GET /static/images/2.png HTTP/1.1" 200 13127
+INFO 2024-09-21 22:50:04,349 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 22:50:05,046 autoreload Watching for file changes with StatReloader
