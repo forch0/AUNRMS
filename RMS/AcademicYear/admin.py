@@ -34,6 +34,12 @@ class SemesterAdmin(admin.ModelAdmin):
             'js/datepicker_init.js',
         )
 
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        form.base_fields['start_date'].widget.attrs.update({'class': 'datepicker'})
+        form.base_fields['end_date'].widget.attrs.update({'class': 'datepicker'})
+        return form
+
 # Registering the Enrollment model
 @admin.register(Enrollment)
 class EnrollmentAdmin(admin.ModelAdmin):

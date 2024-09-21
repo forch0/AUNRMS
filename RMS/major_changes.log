@@ -1736,3 +1736,978 @@ INFO 2024-09-20 15:56:45,301 basehttp "GET /admin/Actions/announcement/ HTTP/1.1
 INFO 2024-09-20 15:56:45,406 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-09-20 15:56:46,398 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 41932
 INFO 2024-09-20 15:56:46,501 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:47:30,051 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:47:37,619 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-09-21 16:47:41,509 basehttp "GET /admin/ HTTP/1.1" 200 69043
+INFO 2024-09-21 16:47:46,931 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-21 16:47:50,552 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-21 16:47:50,569 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-21 16:48:44,051 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-21 16:48:44,114 basehttp "GET /admin/ HTTP/1.1" 200 69043
+INFO 2024-09-21 16:48:56,452 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 55685
+INFO 2024-09-21 16:48:56,517 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:48:59,952 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 142719
+INFO 2024-09-21 16:49:00,124 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:49:03,231 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 55685
+INFO 2024-09-21 16:49:03,289 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:50:19,351 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:50:19,967 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:50:53,171 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:50:53,651 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:51:23,771 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:51:24,241 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:51:27,171 basehttp "GET /admin/ HTTP/1.1" 200 69043
+INFO 2024-09-21 16:51:30,021 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 142719
+INFO 2024-09-21 16:51:30,081 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:51:31,361 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 55685
+INFO 2024-09-21 16:51:31,421 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:51:54,658 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:51:55,167 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:52:22,056 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:52:22,591 autoreload Watching for file changes with StatReloader
+WARNING 2024-09-21 16:52:24,310 log Not Found: /admin/AcademicYear/semester/
+WARNING 2024-09-21 16:52:24,319 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 404 7190
+INFO 2024-09-21 16:52:28,988 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 140752
+INFO 2024-09-21 16:52:33,391 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 45116
+INFO 2024-09-21 16:52:33,448 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:52:47,822 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:52:48,461 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:52:48,881 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 46085
+INFO 2024-09-21 16:52:48,940 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:52:55,126 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 141721
+INFO 2024-09-21 16:52:55,187 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:52:58,746 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54687
+INFO 2024-09-21 16:52:58,806 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:53:11,521 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:53:12,079 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:53:14,841 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54187
+INFO 2024-09-21 16:53:15,011 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:53:29,988 basehttp "GET /admin/AcademicYear/semester/add/ HTTP/1.1" 200 39572
+INFO 2024-09-21 16:53:30,057 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:53:34,901 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54187
+INFO 2024-09-21 16:53:51,740 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:53:52,391 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:53:54,707 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54444
+INFO 2024-09-21 16:53:54,761 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:54:01,761 basehttp "GET /admin/AcademicYear/semester/add/ HTTP/1.1" 200 39830
+INFO 2024-09-21 16:54:01,931 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:54:05,073 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54444
+INFO 2024-09-21 16:54:11,403 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:54:11,903 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:54:15,773 basehttp "GET /admin/AcademicYear/semester/add/ HTTP/1.1" 200 40073
+INFO 2024-09-21 16:54:15,840 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:54:16,761 basehttp "GET /static/unfold/fonts/inter/Inter-Bold.woff2 HTTP/1.1" 200 46552
+INFO 2024-09-21 16:54:18,711 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54687
+INFO 2024-09-21 16:57:47,264 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:57:47,762 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 16:57:53,026 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54571
+INFO 2024-09-21 16:57:53,086 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:57:56,406 basehttp "GET /admin/AcademicYear/semester/add/ HTTP/1.1" 200 39957
+INFO 2024-09-21 16:57:56,473 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 16:58:06,251 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54571
+INFO 2024-09-21 16:59:58,955 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 16:59:59,623 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:00:09,177 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 17:00:09,725 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:00:13,450 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54571
+INFO 2024-09-21 17:00:13,524 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:00:16,297 basehttp "GET /admin/AcademicYear/semester/add/ HTTP/1.1" 200 39931
+INFO 2024-09-21 17:00:16,356 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:01:34,676 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 17:01:35,350 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:03:10,993 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 17:03:11,520 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:03:13,960 basehttp "GET /admin/AcademicYear/semester/add/ HTTP/1.1" 200 40929
+INFO 2024-09-21 17:03:14,020 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:03:23,770 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 47410
+INFO 2024-09-21 17:03:23,836 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:03:25,321 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 55569
+INFO 2024-09-21 17:03:25,381 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:03:32,557 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-09-21 17:03:33,105 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:03:34,566 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 55685
+INFO 2024-09-21 17:03:34,628 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:03:46,361 basehttp "GET /admin/ HTTP/1.1" 200 69043
+INFO 2024-09-21 17:03:47,850 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 47083
+INFO 2024-09-21 17:03:47,918 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:05:49,520 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:05:50,116 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:06:19,060 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:06:19,600 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:06:30,216 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:06:30,803 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:07:33,658 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:07:34,137 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:08:45,065 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:08:45,631 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:08:55,660 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 47012
+INFO 2024-09-21 17:08:55,724 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:08:55,728 basehttp "GET /static/images/2.png HTTP/1.1" 200 13127
+INFO 2024-09-21 17:09:04,896 basehttp "GET /admin/ HTTP/1.1" 200 68932
+INFO 2024-09-21 17:15:15,164 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:15:15,774 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:15:18,579 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:15:20,230 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:15:31,040 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-09-21 17:15:32,122 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-09-21 17:15:32,139 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8439
+INFO 2024-09-21 17:15:40,820 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-09-21 17:15:40,884 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:16:01,671 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:16:02,250 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:16:02,890 basehttp "GET /admin/ HTTP/1.1" 200 69043
+INFO 2024-09-21 17:16:10,752 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:16:11,245 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:16:24,858 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:16:25,404 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:16:27,520 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:16:28,450 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:16:33,050 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:16:33,618 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:16:38,670 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:16:57,725 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:16:58,465 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:18:21,140 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:18:21,650 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:18:33,520 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:19:22,940 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:19:23,500 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:19:26,001 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:19:29,320 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:19:30,310 basehttp "GET /admin/ HTTP/1.1" 200 69079
+INFO 2024-09-21 17:19:36,340 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:19:36,875 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:20:57,652 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:20:58,287 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:32:15,129 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:32:15,628 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-21 17:35:36,865 log Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 115, in index
+    **self.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 225, in _get_is_active
+    link = str(link)
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\functional.py", line 155, in __text_cast
+    return func(*self.__args, **self.__kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'users_user_changelist' not found. 'users_user_changelist' is not a valid view function or pattern name.
+ERROR 2024-09-21 17:35:36,879 basehttp "GET /admin/ HTTP/1.1" 500 128454
+INFO 2024-09-21 17:39:30,753 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:39:31,560 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:40:30,267 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:40:30,781 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-21 17:40:33,365 log Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 115, in index
+    **self.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 225, in _get_is_active
+    link = str(link)
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\functional.py", line 155, in __text_cast
+    return func(*self.__args, **self.__kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'AcademicYear_AcademicSession_changelist' not found. 'AcademicYear_AcademicSession_changelist' is not a valid view function or pattern name.
+ERROR 2024-09-21 17:40:33,377 basehttp "GET /admin/ HTTP/1.1" 500 128936
+INFO 2024-09-21 17:41:41,443 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:41:42,119 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:41:44,165 basehttp "GET /admin/ HTTP/1.1" 200 50055
+INFO 2024-09-21 17:41:48,995 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 28029
+INFO 2024-09-21 17:41:49,058 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:41:52,132 basehttp "GET /admin/ HTTP/1.1" 200 50055
+INFO 2024-09-21 17:42:48,709 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:42:50,335 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:42:51,659 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:42:52,160 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:42:55,345 basehttp "GET /admin/ HTTP/1.1" 200 50065
+INFO 2024-09-21 17:42:57,311 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 28039
+INFO 2024-09-21 17:42:57,465 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:43:04,886 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:43:05,526 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:43:21,261 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 28039
+INFO 2024-09-21 17:43:21,421 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:45:49,435 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:45:49,945 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:46:23,023 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:46:23,662 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:47:39,887 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:47:40,485 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:47:41,385 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 28914
+INFO 2024-09-21 17:47:41,441 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:47:55,180 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:47:55,773 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:47:58,325 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 28914
+INFO 2024-09-21 17:47:58,386 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:48:36,408 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:48:37,073 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:48:41,510 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 28911
+INFO 2024-09-21 17:48:41,578 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:48:55,395 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 37513
+INFO 2024-09-21 17:48:55,452 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:49:09,684 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:49:10,305 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:49:12,315 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 37514
+INFO 2024-09-21 17:49:12,371 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:49:21,032 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:49:21,595 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:49:26,086 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 37512
+INFO 2024-09-21 17:49:26,160 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:50:22,005 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:50:22,775 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:50:25,375 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 37512
+INFO 2024-09-21 17:50:25,439 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:52:20,391 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:52:21,157 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:53:23,004 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:53:23,684 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:53:24,230 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 38392
+INFO 2024-09-21 17:53:24,297 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:53:38,430 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:53:39,042 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:53:41,438 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 38387
+INFO 2024-09-21 17:53:41,503 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:54:02,246 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:54:02,835 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:54:05,845 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 38392
+INFO 2024-09-21 17:54:05,902 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:54:16,805 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:54:17,372 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:54:19,356 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 38388
+INFO 2024-09-21 17:54:19,412 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:54:23,077 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 125422
+INFO 2024-09-21 17:54:23,136 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:54:32,920 basehttp "GET /admin/ HTTP/1.1" 200 51812
+INFO 2024-09-21 17:54:35,775 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 29786
+INFO 2024-09-21 17:54:35,830 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:54:36,915 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 38388
+INFO 2024-09-21 17:54:36,973 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:54:38,394 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 125422
+INFO 2024-09-21 17:54:38,458 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 17:55:28,034 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:55:28,702 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 17:56:21,755 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 17:56:22,303 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:01:55,017 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:01:55,565 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:06:49,733 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:06:50,289 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-21 18:06:54,288 log Internal Server Error: /admin/AcademicYear/enrollment/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2063, in changelist_view
+    **self.admin_site.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:06:54,294 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 500 125436
+INFO 2024-09-21 18:07:33,183 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:07:33,844 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:07:34,719 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 125794
+INFO 2024-09-21 18:07:34,784 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:07:47,590 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:07:48,134 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:07:49,263 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 125422
+INFO 2024-09-21 18:07:49,329 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:08:49,994 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:08:50,561 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:08:52,959 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:08:53,494 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-21 18:08:54,088 log Internal Server Error: /admin/AcademicYear/enrollment/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2063, in changelist_view
+    **self.admin_site.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:08:54,096 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 500 125125
+INFO 2024-09-21 18:09:28,644 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:09:29,228 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:09:30,824 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 125422
+INFO 2024-09-21 18:09:30,878 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:10:00,434 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:10:01,014 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:10:01,444 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 125422
+INFO 2024-09-21 18:10:01,505 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:11:49,814 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:11:50,492 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:13:57,815 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:13:58,524 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-21 18:15:05,304 log Internal Server Error: /admin/AcademicYear/academicsession/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2063, in changelist_view
+    **self.admin_site.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:15:05,314 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 500 116945
+ERROR 2024-09-21 18:15:08,747 log Internal Server Error: /admin/AcademicYear/enrollment/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2063, in changelist_view
+    **self.admin_site.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:15:08,760 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 500 116787
+ERROR 2024-09-21 18:15:10,359 log Internal Server Error: /admin/AcademicYear/enrollment/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2063, in changelist_view
+    **self.admin_site.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:15:10,368 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 500 116924
+ERROR 2024-09-21 18:15:11,583 log Internal Server Error: /admin/AcademicYear/enrollment/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2063, in changelist_view
+    **self.admin_site.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:15:11,594 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 500 116924
+ERROR 2024-09-21 18:15:14,147 log Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 115, in index
+    **self.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:15:14,156 basehttp "GET /admin/ HTTP/1.1" 500 109097
+INFO 2024-09-21 18:15:42,034 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:15:42,548 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-21 18:15:44,574 log Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 115, in index
+    **self.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:15:44,582 basehttp "GET /admin/ HTTP/1.1" 500 109234
+ERROR 2024-09-21 18:15:46,004 log Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 115, in index
+    **self.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:15:46,004 basehttp "GET /admin/ HTTP/1.1" 500 109234
+ERROR 2024-09-21 18:15:47,048 log Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 115, in index
+    **self.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:15:47,048 basehttp "GET /admin/ HTTP/1.1" 500 109234
+INFO 2024-09-21 18:16:21,105 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:16:21,652 autoreload Watching for file changes with StatReloader
+ERROR 2024-09-21 18:16:23,084 log Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 115, in index
+    **self.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                                    ~~~~^^^^^^^^
+KeyError: 'link'
+ERROR 2024-09-21 18:16:23,098 basehttp "GET /admin/ HTTP/1.1" 500 109234
+INFO 2024-09-21 18:17:50,589 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:17:51,190 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:17:52,398 basehttp "GET /admin/ HTTP/1.1" 200 51812
+INFO 2024-09-21 18:19:13,604 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:19:14,250 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:19:14,917 basehttp "GET /admin/ HTTP/1.1" 200 53857
+INFO 2024-09-21 18:19:15,955 basehttp "GET /admin/ HTTP/1.1" 200 53857
+INFO 2024-09-21 18:22:56,714 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:22:57,327 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:22:59,174 basehttp "GET /admin/ HTTP/1.1" 200 53857
+INFO 2024-09-21 18:23:03,343 basehttp "GET /admin/ HTTP/1.1" 200 53857
+INFO 2024-09-21 18:23:04,482 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 31831
+INFO 2024-09-21 18:23:04,540 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:23:06,822 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 68111
+INFO 2024-09-21 18:23:06,878 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:23:08,440 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 484803
+INFO 2024-09-21 18:23:08,498 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:23:22,519 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:23:23,083 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:23:23,724 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 484802
+INFO 2024-09-21 18:23:23,790 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:23:35,745 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:23:36,313 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:23:43,944 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:23:44,451 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:23:47,807 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 484802
+INFO 2024-09-21 18:23:47,880 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:23:57,282 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:23:57,825 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:24:00,804 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 484801
+INFO 2024-09-21 18:24:00,859 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:28,383 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 68109
+INFO 2024-09-21 18:24:28,445 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:29,664 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 484801
+INFO 2024-09-21 18:24:29,841 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:32,075 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 68109
+INFO 2024-09-21 18:24:32,138 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:33,084 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 484801
+INFO 2024-09-21 18:24:33,142 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:34,434 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 68109
+INFO 2024-09-21 18:24:34,496 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:35,639 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 484801
+INFO 2024-09-21 18:24:35,693 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:38,034 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 68109
+INFO 2024-09-21 18:24:38,194 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:40,775 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 31829
+INFO 2024-09-21 18:24:40,837 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:41,978 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 40431
+INFO 2024-09-21 18:24:42,041 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:44,048 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 40431
+INFO 2024-09-21 18:24:44,106 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:46,219 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 31829
+INFO 2024-09-21 18:24:46,289 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:47,825 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 40431
+INFO 2024-09-21 18:24:47,884 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:49,334 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 127465
+INFO 2024-09-21 18:24:49,501 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:52,675 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 68109
+INFO 2024-09-21 18:24:52,742 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:24:54,634 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 484801
+INFO 2024-09-21 18:24:54,697 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:26:15,266 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:26:15,801 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:26:17,960 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 485671
+INFO 2024-09-21 18:26:18,020 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:26:21,367 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 30406
+INFO 2024-09-21 18:26:21,424 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:26:23,791 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 485671
+INFO 2024-09-21 18:26:23,846 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:26:25,143 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 30406
+INFO 2024-09-21 18:26:25,203 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:29:42,893 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:29:43,411 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:29:45,497 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 31280
+INFO 2024-09-21 18:29:45,558 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:29:59,303 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 18:29:59,833 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 18:30:00,548 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 31285
+INFO 2024-09-21 18:30:00,609 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:58:34,367 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 129214
+INFO 2024-09-21 18:58:34,458 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:58:35,820 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 33578
+INFO 2024-09-21 18:58:35,918 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:58:39,839 basehttp "GET /admin/AcademicYear/academicsession/bcf34f9d-1104-4090-ae44-47831322188b/change/ HTTP/1.1" 200 26187
+INFO 2024-09-21 18:58:39,926 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:58:46,540 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 69858
+INFO 2024-09-21 18:58:46,624 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:58:51,416 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 486550
+INFO 2024-09-21 18:58:51,502 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:59:01,240 basehttp "GET /admin/Dorms/room/?p=3 HTTP/1.1" 200 413411
+INFO 2024-09-21 18:59:01,340 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 18:59:08,537 basehttp "GET /admin/ HTTP/1.1" 200 55604
+INFO 2024-09-21 19:06:54,555 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:06:55,536 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:07:01,102 basehttp "GET /admin/ HTTP/1.1" 200 55607
+INFO 2024-09-21 19:07:19,002 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:07:19,892 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:07:20,581 basehttp "GET /admin/ HTTP/1.1" 200 55603
+INFO 2024-09-21 19:07:25,084 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 486549
+INFO 2024-09-21 19:07:25,161 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:09:01,351 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:09:02,181 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:09:07,754 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 486544
+INFO 2024-09-21 19:09:07,821 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:09:14,297 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 32303
+INFO 2024-09-21 19:09:14,381 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:22:54,093 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:22:54,867 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:23:12,893 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:23:13,791 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:23:14,267 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 32312
+INFO 2024-09-21 19:23:14,341 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:23:19,171 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 129217
+INFO 2024-09-21 19:23:19,238 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:24:58,331 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 31288
+INFO 2024-09-21 19:24:58,427 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:24:59,749 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 486553
+INFO 2024-09-21 19:24:59,851 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:25:01,055 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 32312
+INFO 2024-09-21 19:25:01,151 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:25:04,523 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 69861
+INFO 2024-09-21 19:25:04,613 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:25:06,297 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 486553
+INFO 2024-09-21 19:25:06,401 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:25:07,611 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 31288
+INFO 2024-09-21 19:25:07,701 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:25:09,641 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 32312
+INFO 2024-09-21 19:25:09,731 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:27:51,630 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:27:52,335 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:27:56,839 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 33581
+INFO 2024-09-21 19:27:56,911 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:27:59,042 basehttp "GET /admin/ HTTP/1.1" 200 55607
+INFO 2024-09-21 19:28:00,808 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 33581
+INFO 2024-09-21 19:28:01,006 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:29:08,770 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 69861
+INFO 2024-09-21 19:29:08,863 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:29:13,414 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 486553
+INFO 2024-09-21 19:29:13,504 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:29:15,138 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 31288
+INFO 2024-09-21 19:29:15,231 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:29:24,107 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 32312
+INFO 2024-09-21 19:29:24,223 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:30:33,392 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:30:34,096 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:30:37,426 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 44231
+INFO 2024-09-21 19:30:37,526 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:30:44,971 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 44231
+INFO 2024-09-21 19:30:45,055 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:30:56,159 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:30:56,993 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:30:59,892 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 44231
+INFO 2024-09-21 19:30:59,984 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:31:22,776 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:31:23,524 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:31:29,053 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:31:29,843 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:31:32,063 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 32312
+INFO 2024-09-21 19:31:32,135 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:31:35,212 basehttp "GET /admin/ HTTP/1.1" 200 55607
+INFO 2024-09-21 19:31:39,458 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 33581
+INFO 2024-09-21 19:31:39,544 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:31:41,163 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 129217
+INFO 2024-09-21 19:31:41,253 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:31:41,860 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 69861
+INFO 2024-09-21 19:31:41,941 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:31:43,115 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 486553
+INFO 2024-09-21 19:31:43,211 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:31:44,065 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 31288
+INFO 2024-09-21 19:31:44,151 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:31:45,938 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 32312
+INFO 2024-09-21 19:31:46,021 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:31:50,222 basehttp "GET /admin/ HTTP/1.1" 200 55607
+INFO 2024-09-21 19:31:51,596 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 33581
+INFO 2024-09-21 19:31:51,692 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:31:54,358 basehttp "GET /admin/toggle-sidebar/ HTTP/1.1" 200 0
+INFO 2024-09-21 19:31:56,171 basehttp "GET /admin/toggle-sidebar/ HTTP/1.1" 200 0
+INFO 2024-09-21 19:31:58,462 basehttp "GET /admin/ HTTP/1.1" 200 55608
+INFO 2024-09-21 19:32:00,411 basehttp "GET /admin/toggle-sidebar/ HTTP/1.1" 200 0
+INFO 2024-09-21 19:34:52,281 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:34:53,040 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:34:54,015 basehttp "GET /admin/ HTTP/1.1" 200 59561
+INFO 2024-09-21 19:35:04,991 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 37535
+INFO 2024-09-21 19:35:05,091 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:35:06,999 basehttp "GET /admin/ HTTP/1.1" 200 59561
+INFO 2024-09-21 19:35:46,975 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:35:47,632 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:35:54,250 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:35:54,983 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:35:58,190 basehttp "GET /admin/ HTTP/1.1" 200 59561
+INFO 2024-09-21 19:36:24,384 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:36:25,136 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:39:37,404 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 35202
+INFO 2024-09-21 19:39:37,480 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:40:06,803 basehttp "GET /admin/ HTTP/1.1" 200 59561
+INFO 2024-09-21 19:40:08,696 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 37535
+INFO 2024-09-21 19:40:08,780 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:40:09,872 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 46137
+INFO 2024-09-21 19:40:09,960 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:40:13,137 basehttp "GET /admin/ HTTP/1.1" 200 59561
+INFO 2024-09-21 19:41:11,160 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:41:11,942 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:41:26,930 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:41:27,625 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:41:44,600 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:41:45,224 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:45:40,660 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:45:41,330 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:46:57,828 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:46:58,494 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:47:05,220 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:47:05,994 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:47:08,203 basehttp "GET /admin/ HTTP/1.1" 200 60417
+INFO 2024-09-21 19:47:11,727 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 62847
+INFO 2024-09-21 19:47:11,801 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:47:26,644 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 45449
+INFO 2024-09-21 19:47:26,736 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:47:28,558 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 38718
+INFO 2024-09-21 19:47:28,652 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:47:29,711 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 39220
+INFO 2024-09-21 19:47:29,800 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:47:30,681 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38821
+INFO 2024-09-21 19:47:30,779 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:48:50,922 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38821
+INFO 2024-09-21 19:48:51,040 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:55:57,900 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:55:58,911 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:56:01,610 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38820
+INFO 2024-09-21 19:56:01,680 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:56:23,133 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:56:23,915 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:56:27,119 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38823
+INFO 2024-09-21 19:56:27,196 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:56:29,160 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 39222
+INFO 2024-09-21 19:56:29,360 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:56:30,510 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38823
+INFO 2024-09-21 19:56:30,581 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:56:32,885 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 39222
+INFO 2024-09-21 19:56:32,970 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:56:33,921 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38823
+INFO 2024-09-21 19:56:34,023 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 19:57:48,976 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 19:57:49,841 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 19:57:55,900 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38840
+INFO 2024-09-21 19:57:55,962 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:01:02,834 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 20:01:03,744 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 20:01:27,001 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 20:01:27,690 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 20:01:31,824 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38855
+INFO 2024-09-21 20:01:31,889 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-09-21 20:01:43,270 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-09-21 20:01:43,999 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 20:01:53,529 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 38846
+INFO 2024-09-21 20:01:53,600 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
