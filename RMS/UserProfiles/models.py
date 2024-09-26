@@ -78,6 +78,7 @@ class Residents(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
     guardian_phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
+    address = models.CharField(max_length = 40 ,blank=True)
 
     def __str__(self):
         return f"Resident: {self.user.email}"
