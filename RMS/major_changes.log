@@ -2833,3 +2833,4 @@ INFO 2024-09-21 22:49:18,561 basehttp "GET /admin/ HTTP/1.1" 200 60448
 INFO 2024-09-21 22:49:18,640 basehttp "GET /static/images/2.png HTTP/1.1" 200 13127
 INFO 2024-09-21 22:50:04,349 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
 INFO 2024-09-21 22:50:05,046 autoreload Watching for file changes with StatReloader
+INFO 2024-09-21 22:50:07,083 basehttp "GET /admin/ HTTP/1.1" 200 60445
