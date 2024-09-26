@@ -3,6 +3,7 @@ from django.core.validators import RegexValidator
 from django.db import models
 import uuid
 from django.contrib.auth.models import Permission
+from django.utils.timezone import now
 
 phone_regex = RegexValidator(
     regex=r'^\+?1?\d{9,15}$',
@@ -45,6 +46,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
     objects = UserManager()
+    date_joined = models.DateTimeField(default=now)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
@@ -103,6 +105,8 @@ class Staffs(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staff_profile')
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
+    date_joined = models.DateTimeField(default=now)
+    
 
     def __str__(self):
         return f"{self.role.name} - {self.user.email}"

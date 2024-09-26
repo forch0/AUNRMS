@@ -22,7 +22,6 @@ class Category(models.Model):
         verbose_name = 'Maintenance-Category'
         verbose_name_plural = 'Maintenance-Categories'
 
-
 class SubCategory(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=50)

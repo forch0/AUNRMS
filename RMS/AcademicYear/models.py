@@ -38,13 +38,13 @@ class Semester(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     FALL = 'Fall'
     SPRING = 'Spring'
-    SUMMER = 'Summer'
+    INTERSESSION = 'Intersession'
     SEMESTER_CHOICES = [
         (FALL, 'Fall'),
         (SPRING, 'Spring'),
-        (SUMMER, 'Summer'),
+        (INTERSESSION, 'Intersession'),
     ]
-    semester_type = models.CharField(max_length=10, choices=SEMESTER_CHOICES)
+    semester_type = models.CharField(max_length=20, choices=SEMESTER_CHOICES)
     start_date = models.DateField()
     end_date = models.DateField()
     academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)

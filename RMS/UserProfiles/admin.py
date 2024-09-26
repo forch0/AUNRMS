@@ -74,11 +74,11 @@ class UserCredAdmin(admin.ModelAdmin):
     form = UserCredAdminForm
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal info', {'fields': ('firstname', 'lastname', 'phone_number')}),
+        ('Personal info', {'fields': ('firstname', 'lastname', 'phone_number','date_joined')}),
         ('Permissions', {'fields': ('is_active', 'is_staff')}),
     )
     
-    list_display = ('email', 'firstname', 'lastname', 'phone_number', 'is_staff', 'is_active')
+    list_display = ('email', 'firstname', 'lastname', 'phone_number','date_joined', 'is_staff', 'is_active')
     search_fields = ('email', 'firstname', 'lastname')
     list_filter = ('is_staff', 'is_active')
     ordering = ('email',)
