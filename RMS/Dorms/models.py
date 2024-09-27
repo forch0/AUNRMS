@@ -76,17 +76,30 @@ class Room(models.Model):
     floor = models.IntegerField(choices=FLOOR_CHOICES)
     dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE, related_name='rooms')
     range = models.CharField(max_length=20, choices=RANGE_CHOICES, blank=True, null=True)
+    is_occupied = models.BooleanField(default=False)
+    
 
     def active_residents_count(self, semester):
         return Enrollment.objects.filter(room=self, semester=semester).count()
+    
+    def active_capacity_count(self, semester):
+        """Return the current number of residents assigned to this room."""
+        return self.active_residents_count(semester)
 
     def is_full(self, semester):
         active_count = self.active_residents_count(semester)
         return active_count >= self.capacity
 
     def occupancy_ratio(self, semester):
+        active_count = self.active_capacity_count(semester)
+        self.occupancy_ratio = f"{active_count}/{self.capacity}"
+        self.save()
+    
+    def update_occupation_status(self, semester):
+        """Update the occupancy status based on the active residents."""
         active_count = self.active_residents_count(semester)
-        return f"{active_count}/{self.capacity}"
+        self.is_occupied = active_count > 0
+        self.save()
 
     def __str__(self):
         return f"Room {self.number} - {self.dorm.name}"
@@ -94,6 +107,12 @@ class Room(models.Model):
     @property
     def room_name(self):
         return f"{self.dorm.name}-{self.number}"
+    
+    # @property
+    # def occupancy_ratio(self):
+    #     """Return the occupancy ratio as a string in the format 'current/total'."""
+    #     active_count = self.active_capacity_count(semester)  # Ensure to pass the semester appropriately
+    #     return f"{active_count}/{self.capacity}"
 
 class Storage(models.Model):
     FLOOR_CHOICES = [

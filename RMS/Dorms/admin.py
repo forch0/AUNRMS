@@ -18,7 +18,7 @@ class DormAdmin(admin.ModelAdmin):
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm')
+    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm','is_occupied')
     list_filter = ('dorm__name', 'room_plan', 'floor')
     search_fields = ('number', 'dorm__name')
     ordering = ('id',)
