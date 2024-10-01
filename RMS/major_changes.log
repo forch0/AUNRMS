@@ -6054,3 +6054,5 @@ INFO 2024-10-01 11:24:47,636 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1"
 INFO 2024-10-01 11:24:48,846 basehttp "GET /admin/ HTTP/1.1" 200 44592
 INFO 2024-10-01 11:48:16,882 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
 INFO 2024-10-01 11:48:18,032 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 12:00:08,677 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-10-01 12:00:09,521 autoreload Watching for file changes with StatReloader
