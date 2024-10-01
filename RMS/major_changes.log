@@ -6906,3 +6906,327 @@ INFO 2024-10-01 14:35:14,994 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-10-01 14:35:26,519 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
 INFO 2024-10-01 14:35:26,659 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 63969
 INFO 2024-10-01 14:35:26,759 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:36:10,744 basehttp "GET /admin/UserProfiles/usercred/ede7a97c-6515-4641-92e1-8c96f5aa4d6e/change/ HTTP/1.1" 200 43173
+INFO 2024-10-01 14:36:10,838 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:36:13,564 basehttp "GET /admin/UserProfiles/usercred/ede7a97c-6515-4641-92e1-8c96f5aa4d6e/delete/ HTTP/1.1" 200 33934
+INFO 2024-10-01 14:36:15,302 basehttp "POST /admin/UserProfiles/usercred/ede7a97c-6515-4641-92e1-8c96f5aa4d6e/delete/ HTTP/1.1" 302 0
+INFO 2024-10-01 14:36:15,429 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58990
+INFO 2024-10-01 14:36:15,523 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:36:19,400 basehttp "GET /admin/UserProfiles/usercred/8b1dc113-e6f6-4175-98a9-1f54585763f8/change/ HTTP/1.1" 200 43165
+INFO 2024-10-01 14:36:19,489 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:36:21,253 basehttp "GET /admin/UserProfiles/usercred/8b1dc113-e6f6-4175-98a9-1f54585763f8/delete/ HTTP/1.1" 200 33928
+INFO 2024-10-01 14:36:22,749 basehttp "POST /admin/UserProfiles/usercred/8b1dc113-e6f6-4175-98a9-1f54585763f8/delete/ HTTP/1.1" 302 0
+INFO 2024-10-01 14:36:22,869 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 54066
+INFO 2024-10-01 14:36:22,964 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:36:27,714 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 36133
+INFO 2024-10-01 14:36:27,800 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:36:30,017 basehttp "GET /admin/UserProfiles/roles/add/ HTTP/1.1" 200 45734
+INFO 2024-10-01 14:36:30,117 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:36:34,355 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 36133
+INFO 2024-10-01 14:36:39,761 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42089
+INFO 2024-10-01 14:36:39,841 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:36:45,625 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 53791
+INFO 2024-10-01 14:36:45,709 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:36:51,511 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 55249
+INFO 2024-10-01 14:36:51,602 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:58:51,743 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-10-01 14:58:54,870 basehttp "GET /admin/ HTTP/1.1" 200 30719
+INFO 2024-10-01 14:58:59,748 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 65971
+INFO 2024-10-01 14:58:59,850 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:59:02,072 basehttp "GET /admin_tools_stats/analytics/?show=mygraph HTTP/1.1" 200 5213
+INFO 2024-10-01 14:59:02,155 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-10-01 14:59:02,350 basehttp "GET /admin_tools_stats/analytics/chart/mygraph/?analytics_chart=true HTTP/1.1" 200 3005
+INFO 2024-10-01 14:59:02,593 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=X7NEBEPaclsucfZVyz7mrEjhNsABaiIY1kUdXhMe3ZBbwjTYrRoE5RMfxfPBkJpn&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=discreteBarChart&time_since=2024-08-31&time_until=2024-10-01&_=1727791142208 HTTP/1.1" 200 2176
+INFO 2024-10-01 14:59:12,491 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=X7NEBEPaclsucfZVyz7mrEjhNsABaiIY1kUdXhMe3ZBbwjTYrRoE5RMfxfPBkJpn&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=lineChart&time_since=2024-08-31&time_until=2024-10-01&_=1727791142209 HTTP/1.1" 200 2200
+INFO 2024-10-01 14:59:19,131 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=X7NEBEPaclsucfZVyz7mrEjhNsABaiIY1kUdXhMe3ZBbwjTYrRoE5RMfxfPBkJpn&graph_key=mygraph&select_box_operation=Count&select_box_interval=weeks&select_box_chart_type=lineChart&time_since=2024-08-31&time_until=2024-10-01&_=1727791142210 HTTP/1.1" 200 1414
+INFO 2024-10-01 14:59:25,798 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 36165
+INFO 2024-10-01 14:59:25,890 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:59:27,888 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 53791
+INFO 2024-10-01 14:59:27,978 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:59:30,415 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 14:59:30,510 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:59:56,071 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 14:59:56,176 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 59088
+INFO 2024-10-01 14:59:56,265 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:00:01,227 basehttp "GET /admin/UserProfiles/usercred/2d4a2bf1-50a4-4f3b-a2df-7dc78667485d/change/ HTTP/1.1" 200 43191
+INFO 2024-10-01 15:00:01,338 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:00:07,454 basehttp "POST /admin/UserProfiles/usercred/2d4a2bf1-50a4-4f3b-a2df-7dc78667485d/change/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:00:07,560 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 59092
+INFO 2024-10-01 15:00:07,652 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:00:11,930 basehttp "GET /admin/UserProfiles/usercred/2d4a2bf1-50a4-4f3b-a2df-7dc78667485d/change/ HTTP/1.1" 200 43195
+INFO 2024-10-01 15:00:12,028 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:00:17,350 basehttp "POST /admin/UserProfiles/usercred/2d4a2bf1-50a4-4f3b-a2df-7dc78667485d/change/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:00:17,473 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 59092
+INFO 2024-10-01 15:00:17,560 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:00:24,812 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 15:00:24,903 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:00:55,378 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:00:55,492 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 63972
+INFO 2024-10-01 15:00:55,582 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:01:01,650 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 15:01:01,740 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:01:30,333 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42139
+INFO 2024-10-01 15:01:30,415 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:01:54,122 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:01:54,243 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 68894
+INFO 2024-10-01 15:01:54,329 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:02:00,676 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 36133
+INFO 2024-10-01 15:02:00,760 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:02:03,010 basehttp "GET /admin/UserProfiles/roles/add/ HTTP/1.1" 200 45734
+INFO 2024-10-01 15:02:03,100 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-10-01 15:02:13,932 log Internal Server Error: /admin/UserProfiles/roles/add/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1798, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py", line 87, in save_model
+    self.message_user(request, _("Group created: %s") % group.name, level='success')
+                               ^
+NameError: name '_' is not defined
+ERROR 2024-10-01 15:02:13,951 basehttp "POST /admin/UserProfiles/roles/add/ HTTP/1.1" 500 125693
+INFO 2024-10-01 15:03:19,836 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 15:03:20,980 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 15:03:26,572 basehttp "POST /admin/UserProfiles/roles/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:03:26,701 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 43536
+INFO 2024-10-01 15:03:26,766 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:03:33,441 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 43181
+INFO 2024-10-01 15:03:33,541 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:03:35,730 basehttp "GET /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 200 45969
+INFO 2024-10-01 15:03:35,831 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:03:36,663 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=staff HTTP/1.1" 200 46
+INFO 2024-10-01 15:03:39,711 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 36141
+INFO 2024-10-01 15:03:39,793 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:03:44,785 basehttp "GET /admin/UserProfiles/staffs/add/ HTTP/1.1" 200 39785
+INFO 2024-10-01 15:03:44,870 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:03:51,720 basehttp "POST /admin/UserProfiles/staffs/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:03:51,837 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 43545
+INFO 2024-10-01 15:03:51,932 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:03:54,580 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 43181
+INFO 2024-10-01 15:03:54,660 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:03:56,861 basehttp "GET /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 200 45969
+INFO 2024-10-01 15:03:56,953 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:03:57,978 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=staff HTTP/1.1" 200 140
+INFO 2024-10-01 15:03:59,951 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=dorm HTTP/1.1" 200 700
+INFO 2024-10-01 15:04:02,355 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=role HTTP/1.1" 200 123
+INFO 2024-10-01 15:04:15,166 basehttp "GET /admin/UserProfiles/roles/d50c31b8-4af0-4044-80b8-190a03e5f16f/change/?_to_field=id HTTP/1.1" 200 47359
+INFO 2024-10-01 15:04:15,390 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:04:17,613 basehttp "GET /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 200 45969
+INFO 2024-10-01 15:04:19,360 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=role HTTP/1.1" 200 123
+INFO 2024-10-01 15:04:20,975 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=staff HTTP/1.1" 200 140
+INFO 2024-10-01 15:04:22,453 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=dorm HTTP/1.1" 200 700
+INFO 2024-10-01 15:04:24,974 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=role HTTP/1.1" 200 123
+INFO 2024-10-01 15:04:27,826 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=academic_session HTTP/1.1" 200 113
+INFO 2024-10-01 15:04:30,660 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=semester HTTP/1.1" 200 208
+INFO 2024-10-01 15:04:35,205 basehttp "POST /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:04:35,346 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 59932
+INFO 2024-10-01 15:04:35,440 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:05:13,996 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 141183
+INFO 2024-10-01 15:05:14,227 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:05:16,551 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 68056
+INFO 2024-10-01 15:05:16,760 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:05:38,616 basehttp - Broken pipe from ('127.0.0.1', 65246)
+INFO 2024-10-01 15:05:42,474 basehttp - Broken pipe from ('127.0.0.1', 65336)
+INFO 2024-10-01 15:05:50,435 basehttp "GET /admin/Dorms/dorm/add/?_to_field=id&_popup=1 HTTP/1.1" 200 8403
+INFO 2024-10-01 15:05:51,528 basehttp "GET /admin/Dorms/dorm/add/?_to_field=id&_popup=1 HTTP/1.1" 200 8403
+INFO 2024-10-01 15:05:58,800 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 68056
+INFO 2024-10-01 15:05:58,903 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:06:07,010 basehttp "GET /admin/Dorms/room/1349abdd-c88b-4a73-84d3-1753f4f65047/change/?_to_field=id HTTP/1.1" 200 43186
+INFO 2024-10-01 15:06:07,106 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:06:13,807 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 68056
+INFO 2024-10-01 15:06:34,530 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54167
+INFO 2024-10-01 15:06:34,614 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:06:36,840 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 45547
+INFO 2024-10-01 15:06:36,921 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:06:39,500 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 68532
+INFO 2024-10-01 15:06:39,588 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:06:43,100 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 59471
+INFO 2024-10-01 15:06:43,310 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:06:45,763 basehttp "GET /admin/AcademicYear/staffassignment/4080d6e7-2eaa-4910-8bf2-47576cbc804c/change/ HTTP/1.1" 200 48175
+INFO 2024-10-01 15:06:45,960 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:06:48,490 basehttp "GET /admin/AcademicYear/staffassignment/4080d6e7-2eaa-4910-8bf2-47576cbc804c/delete/ HTTP/1.1" 200 34235
+INFO 2024-10-01 15:06:50,060 basehttp "POST /admin/AcademicYear/staffassignment/4080d6e7-2eaa-4910-8bf2-47576cbc804c/delete/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:06:50,200 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 43549
+INFO 2024-10-01 15:06:50,310 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:06:52,931 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 42956
+INFO 2024-10-01 15:06:53,010 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:06:58,740 basehttp "GET /admin/UserProfiles/roles/d50c31b8-4af0-4044-80b8-190a03e5f16f/change/ HTTP/1.1" 200 47259
+INFO 2024-10-01 15:06:58,824 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:07:02,227 basehttp "GET /admin/UserProfiles/roles/d50c31b8-4af0-4044-80b8-190a03e5f16f/delete/ HTTP/1.1" 200 34143
+INFO 2024-10-01 15:07:03,890 basehttp "POST /admin/UserProfiles/roles/d50c31b8-4af0-4044-80b8-190a03e5f16f/delete/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:07:04,006 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 36409
+INFO 2024-10-01 15:07:04,109 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:07:12,719 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 68532
+INFO 2024-10-01 15:07:12,800 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:07:23,654 basehttp "GET /admin/UserProfiles/usercred/84309d95-0580-43df-bb83-fbc35b687f07/change/ HTTP/1.1" 200 43168
+INFO 2024-10-01 15:07:23,880 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:07:26,382 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 68532
+INFO 2024-10-01 15:10:22,933 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 15:10:23,023 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:10:40,296 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:10:40,430 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 73776
+INFO 2024-10-01 15:10:40,526 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:10:48,504 basehttp "GET /admin/UserProfiles/usercred/a5b05183-ddee-49b4-bb84-d2db3f602381/change/ HTTP/1.1" 200 43131
+INFO 2024-10-01 15:10:48,595 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:10:52,427 basehttp "GET /admin/UserProfiles/usercred/a5b05183-ddee-49b4-bb84-d2db3f602381/delete/ HTTP/1.1" 200 33934
+INFO 2024-10-01 15:10:54,549 basehttp "POST /admin/UserProfiles/usercred/a5b05183-ddee-49b4-bb84-d2db3f602381/delete/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:10:54,762 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 68809
+INFO 2024-10-01 15:10:54,852 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:10:56,600 basehttp "GET /admin/UserProfiles/usercred/84309d95-0580-43df-bb83-fbc35b687f07/change/ HTTP/1.1" 200 43168
+INFO 2024-10-01 15:10:56,690 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:10:59,730 basehttp "POST /admin/UserProfiles/usercred/84309d95-0580-43df-bb83-fbc35b687f07/change/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:10:59,870 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 68896
+INFO 2024-10-01 15:10:59,963 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:11:02,446 basehttp "GET /admin/UserProfiles/usercred/84309d95-0580-43df-bb83-fbc35b687f07/change/ HTTP/1.1" 200 43168
+INFO 2024-10-01 15:11:02,535 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:11:04,776 basehttp "GET /admin/UserProfiles/usercred/84309d95-0580-43df-bb83-fbc35b687f07/delete/ HTTP/1.1" 200 33931
+INFO 2024-10-01 15:11:06,532 basehttp "POST /admin/UserProfiles/usercred/84309d95-0580-43df-bb83-fbc35b687f07/delete/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:11:06,662 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 63890
+INFO 2024-10-01 15:11:06,772 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:11:08,352 basehttp "GET /admin/UserProfiles/usercred/79e13e37-ac12-4cac-b60c-7d0ce793f11b/change/ HTTP/1.1" 200 43169
+INFO 2024-10-01 15:11:08,442 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:11:10,200 basehttp "GET /admin/UserProfiles/usercred/79e13e37-ac12-4cac-b60c-7d0ce793f11b/delete/ HTTP/1.1" 200 33931
+INFO 2024-10-01 15:11:11,910 basehttp "POST /admin/UserProfiles/usercred/79e13e37-ac12-4cac-b60c-7d0ce793f11b/delete/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:11:12,022 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58998
+INFO 2024-10-01 15:11:12,120 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:11:13,930 basehttp "GET /admin/UserProfiles/usercred/2d4a2bf1-50a4-4f3b-a2df-7dc78667485d/change/ HTTP/1.1" 200 43195
+INFO 2024-10-01 15:11:14,020 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:11:16,186 basehttp "GET /admin/UserProfiles/usercred/2d4a2bf1-50a4-4f3b-a2df-7dc78667485d/delete/ HTTP/1.1" 200 33949
+INFO 2024-10-01 15:11:20,258 basehttp "POST /admin/UserProfiles/usercred/2d4a2bf1-50a4-4f3b-a2df-7dc78667485d/delete/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:11:20,362 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 54073
+INFO 2024-10-01 15:11:20,458 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:13:26,761 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 15:13:27,900 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 53791
+INFO 2024-10-01 15:13:28,012 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:13:30,560 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 53791
+INFO 2024-10-01 15:13:30,622 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:13:39,132 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 15:13:39,222 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:14:02,635 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:14:02,777 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 59070
+INFO 2024-10-01 15:14:02,892 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:14:06,091 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 15:14:06,180 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:14:19,860 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42131
+INFO 2024-10-01 15:14:19,960 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:14:30,092 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42190
+INFO 2024-10-01 15:14:30,180 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:14:36,501 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:14:36,599 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 63962
+INFO 2024-10-01 15:14:36,691 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:14:49,995 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 15:14:50,084 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:15:17,874 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:15:18,012 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 68885
+INFO 2024-10-01 15:15:18,110 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:15:23,435 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 15:15:23,523 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:15:44,718 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:15:44,850 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 73778
+INFO 2024-10-01 15:15:44,940 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:15:50,213 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 15:15:50,309 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:16:05,268 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:16:05,399 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 78703
+INFO 2024-10-01 15:16:05,490 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:16:15,154 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 15:16:15,243 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:16:30,540 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:16:30,668 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 83596
+INFO 2024-10-01 15:16:30,770 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:16:36,723 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 65971
+INFO 2024-10-01 15:16:36,818 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:16:39,493 basehttp "GET /admin_tools_stats/analytics/?show=mygraph HTTP/1.1" 200 5213
+INFO 2024-10-01 15:16:39,576 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-10-01 15:16:39,769 basehttp "GET /admin_tools_stats/analytics/chart/mygraph/?analytics_chart=true HTTP/1.1" 200 3005
+INFO 2024-10-01 15:16:39,934 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=FB78ZCmuSFOIyYvbm3GNOSSVA8t0A9cvJOeHlfjyJjXpS2peflX5s5lTkVI0KATU&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=discreteBarChart&time_since=2024-08-31&time_until=2024-10-01&_=1727792199629 HTTP/1.1" 200 2176
+INFO 2024-10-01 15:16:44,220 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=FB78ZCmuSFOIyYvbm3GNOSSVA8t0A9cvJOeHlfjyJjXpS2peflX5s5lTkVI0KATU&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=lineChart&time_since=2024-08-31&time_until=2024-10-01&_=1727792199630 HTTP/1.1" 200 2200
+INFO 2024-10-01 15:16:52,790 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=FB78ZCmuSFOIyYvbm3GNOSSVA8t0A9cvJOeHlfjyJjXpS2peflX5s5lTkVI0KATU&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=multiBarChart&time_since=2024-08-31&time_until=2024-10-01&_=1727792199631 HTTP/1.1" 200 2154
+INFO 2024-10-01 15:16:59,341 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=FB78ZCmuSFOIyYvbm3GNOSSVA8t0A9cvJOeHlfjyJjXpS2peflX5s5lTkVI0KATU&graph_key=mygraph&select_box_operation=Count&select_box_interval=weeks&select_box_chart_type=multiBarChart&time_since=2024-08-31&time_until=2024-10-01&_=1727792199632 HTTP/1.1" 200 1368
+INFO 2024-10-01 15:17:03,247 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=FB78ZCmuSFOIyYvbm3GNOSSVA8t0A9cvJOeHlfjyJjXpS2peflX5s5lTkVI0KATU&graph_key=mygraph&select_box_operation=Count&select_box_interval=months&select_box_chart_type=multiBarChart&time_since=2024-08-31&time_until=2024-10-01&_=1727792199633 HTTP/1.1" 200 1281
+INFO 2024-10-01 15:17:06,996 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=FB78ZCmuSFOIyYvbm3GNOSSVA8t0A9cvJOeHlfjyJjXpS2peflX5s5lTkVI0KATU&graph_key=mygraph&select_box_operation=Count&select_box_interval=months&select_box_chart_type=lineChart&time_since=2024-08-31&time_until=2024-10-01&_=1727792199634 HTTP/1.1" 200 1327
+INFO 2024-10-01 15:18:04,865 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 83231
+INFO 2024-10-01 15:18:04,950 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:18:14,835 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 36133
+INFO 2024-10-01 15:18:14,940 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:18:17,366 basehttp "GET /admin/UserProfiles/roles/add/ HTTP/1.1" 200 45734
+INFO 2024-10-01 15:18:17,571 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:20:36,230 basehttp "POST /admin/UserProfiles/roles/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:20:36,340 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 43534
+INFO 2024-10-01 15:20:36,440 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:20:39,165 basehttp "GET /admin/UserProfiles/roles/681015a1-115f-4e10-afe7-b1545aac52e5/change/ HTTP/1.1" 200 47400
+INFO 2024-10-01 15:20:39,270 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:20:47,920 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 36141
+INFO 2024-10-01 15:20:48,010 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:20:50,340 basehttp "GET /admin/UserProfiles/staffs/add/ HTTP/1.1" 200 40037
+INFO 2024-10-01 15:20:50,420 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:20:56,700 basehttp - Broken pipe from ('127.0.0.1', 49265)
+INFO 2024-10-01 15:21:06,440 basehttp "POST /admin/UserProfiles/staffs/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:21:06,626 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 43551
+INFO 2024-10-01 15:21:06,723 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:21:09,273 basehttp "GET /admin/UserProfiles/staffs/add/ HTTP/1.1" 200 40037
+INFO 2024-10-01 15:21:09,370 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:21:16,910 basehttp "POST /admin/UserProfiles/staffs/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:21:17,018 basehttp "GET /admin/UserProfiles/staffs/add/ HTTP/1.1" 200 40451
+INFO 2024-10-01 15:21:17,100 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:21:25,195 basehttp "POST /admin/UserProfiles/staffs/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:21:25,315 basehttp "GET /admin/UserProfiles/staffs/add/ HTTP/1.1" 200 40451
+INFO 2024-10-01 15:21:25,400 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:21:29,250 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 48111
+INFO 2024-10-01 15:21:29,340 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:23:31,943 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 43181
+INFO 2024-10-01 15:23:32,023 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:23:49,300 basehttp "GET /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 200 45969
+INFO 2024-10-01 15:23:49,491 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:23:52,847 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=staff HTTP/1.1" 200 341
+INFO 2024-10-01 15:23:55,623 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=dorm HTTP/1.1" 200 700
+INFO 2024-10-01 15:23:58,631 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=role HTTP/1.1" 200 123
+INFO 2024-10-01 15:24:05,366 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=academic_session HTTP/1.1" 200 113
+INFO 2024-10-01 15:24:09,691 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=semester HTTP/1.1" 200 208
+INFO 2024-10-01 15:24:14,091 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=semester HTTP/1.1" 200 208
+INFO 2024-10-01 15:24:17,217 basehttp "POST /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:24:17,359 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 59920
+INFO 2024-10-01 15:24:17,450 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:24:21,661 basehttp "GET /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 200 45969
+INFO 2024-10-01 15:24:21,750 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:24:23,126 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=staff HTTP/1.1" 200 341
+INFO 2024-10-01 15:24:27,393 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=dorm HTTP/1.1" 200 700
+INFO 2024-10-01 15:24:29,633 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=dorm HTTP/1.1" 200 700
+INFO 2024-10-01 15:24:30,760 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=role HTTP/1.1" 200 123
+INFO 2024-10-01 15:24:31,760 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=dorm HTTP/1.1" 200 700
+INFO 2024-10-01 15:24:35,044 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=role HTTP/1.1" 200 123
+INFO 2024-10-01 15:24:37,302 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=academic_session HTTP/1.1" 200 113
+INFO 2024-10-01 15:24:39,425 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=semester HTTP/1.1" 200 208
+INFO 2024-10-01 15:24:42,992 basehttp "POST /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 15:24:43,150 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 63991
+INFO 2024-10-01 15:24:43,231 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 15:25:37,979 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 15:25:39,292 autoreload Watching for file changes with StatReloader

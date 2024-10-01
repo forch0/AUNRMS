@@ -4,6 +4,8 @@ from django.contrib.auth.models import Permission
 from .models import UserCred, Residents, Roles, Staffs
 from django.contrib.auth.admin import UserAdmin as DefaultUserAdmin
 from django.contrib.auth.models import Group
+from django.utils.translation import gettext as _
+
 
 # Custom form for UserCred Admin
 class UserCredAdminForm(forms.ModelForm):
@@ -33,37 +35,6 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ('email', 'firstname', 'lastname')
     list_filter = ('is_staff', 'is_active')
     ordering = ('email',)
-# Residents Admin configuration
-# class ResidentsAdmin(admin.ModelAdmin):
-#     list_display = ('user', 'guardian_phone_number')
-#     search_fields = ('user__email', 'guardian_phone_number')
-#     list_filter = ('user__email',)
-#     ordering = ('id',)
-
-# # Roles Admin configuration
-# class RolesAdmin(admin.ModelAdmin):
-#     list_display = ('name', 'abbreviation')
-#     search_fields = ('name', 'abbreviation')
-#     filter_horizontal = ('permissions',)
-
-#     def get_form(self, request, obj=None, **kwargs):
-#         form = super().get_form(request, obj, **kwargs)
-#         # Ensure all permissions are available in the admin interface
-#         form.base_fields['permissions'].queryset = Permission.objects.all()
-#         return form
-
-# # Staffs Admin configuration
-# class StaffsAdmin(admin.ModelAdmin):
-#     list_display = ('user', 'role')
-#     search_fields = ('user__email', 'role__name')
-#     list_filter = ('role',)
-#     ordering = ('id',)
-
-# # Register models with the admin site
-# admin.site.register(UserCred, UserCredAdmin)
-# admin.site.register(Residents, ResidentsAdmin)
-# admin.site.register(Roles, RolesAdmin)
-# admin.site.register(Staffs, StaffsAdmin)
 
 
 class RolesAdmin(admin.ModelAdmin):
