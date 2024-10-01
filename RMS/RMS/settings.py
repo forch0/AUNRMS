@@ -337,12 +337,12 @@ UNFOLD = {
                     {
                         "title": _("Maintenance Categories"),
                         "icon": "Category",
-                        "link": reverse_lazy("admin:Actions_maintenancerequest_changelist"),
+                        "link": reverse_lazy("admin:Actions_category_changelist"),
                     },
                     {
                         "title": _("Maintenance Sub-Categories"),
                         "icon": "Subject",
-                        "link": reverse_lazy("admin:Actions_maintenancerequest_changelist"),
+                        "link": reverse_lazy("admin:Actions_subcategory_changelist"),
                     },
                     
                 ],

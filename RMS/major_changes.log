@@ -6733,3 +6733,176 @@ INFO 2024-10-01 14:19:07,909 basehttp "GET /admin/Actions/maintenancerequest/ HT
 INFO 2024-10-01 14:19:08,009 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-10-01 14:19:10,349 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 55346
 INFO 2024-10-01 14:19:10,434 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:19:19,850 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 55346
+INFO 2024-10-01 14:19:19,949 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:19:21,894 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 55346
+INFO 2024-10-01 14:19:22,009 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:20:17,391 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-10-01 14:20:18,504 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:20:19,069 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 55296
+INFO 2024-10-01 14:20:19,149 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:20:38,188 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-10-01 14:20:39,386 autoreload Watching for file changes with StatReloader
+ERROR 2024-10-01 14:20:39,874 log Internal Server Error: /admin/Actions/maintenancerequest/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2063, in changelist_view
+    **self.admin_site.each_context(request),
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 92, in each_context
+    "sidebar_navigation": self.get_sidebar_list(request)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 239, in get_sidebar_list
+    item["active"] = _get_is_active(item["link"])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\sites.py", line 225, in _get_is_active
+    link = str(link)
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\functional.py", line 155, in __text_cast
+    return func(*self.__args, **self.__kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'Actions_sub-category_changelist' not found. 'Actions_sub-category_changelist' is not a valid view function or pattern name.
+ERROR 2024-10-01 14:20:39,881 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 500 140140
+INFO 2024-10-01 14:21:19,149 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-10-01 14:21:20,019 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:21:20,614 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 55249
+INFO 2024-10-01 14:21:20,679 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:21:22,570 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 200 64543
+INFO 2024-10-01 14:21:22,639 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:21:24,009 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 43507
+INFO 2024-10-01 14:21:24,090 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:21:26,679 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 54167
+INFO 2024-10-01 14:21:26,745 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:21:28,396 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 141183
+INFO 2024-10-01 14:21:28,489 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:21:31,497 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 36165
+INFO 2024-10-01 14:21:31,579 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:21:37,729 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 52521
+INFO 2024-10-01 14:21:37,819 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:21:39,744 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40453
+INFO 2024-10-01 14:21:39,832 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:21:46,489 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40983
+INFO 2024-10-01 14:21:46,576 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:22:38,862 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40983
+INFO 2024-10-01 14:22:38,929 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:25:43,665 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:25:45,362 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-10-01 14:25:49,749 basehttp "GET /admin/ HTTP/1.1" 200 30719
+INFO 2024-10-01 14:25:55,320 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 52521
+INFO 2024-10-01 14:25:55,419 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:25:57,199 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40453
+INFO 2024-10-01 14:25:57,293 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:26:08,419 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41276
+INFO 2024-10-01 14:26:08,499 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:26:08,799 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41276
+INFO 2024-10-01 14:26:08,880 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:26:14,704 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41274
+INFO 2024-10-01 14:26:14,799 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:26:23,352 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40976
+INFO 2024-10-01 14:26:23,443 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:26:31,429 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40749
+INFO 2024-10-01 14:26:31,519 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:26:35,709 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40749
+INFO 2024-10-01 14:26:35,800 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:26:36,289 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40749
+INFO 2024-10-01 14:26:36,379 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:26:46,614 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:26:47,543 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:26:50,329 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40749
+INFO 2024-10-01 14:26:50,399 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:26:55,510 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:26:56,375 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:26:59,543 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40110
+INFO 2024-10-01 14:26:59,609 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:27:09,567 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 52521
+INFO 2024-10-01 14:27:09,674 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:27:11,293 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 39830
+INFO 2024-10-01 14:27:11,382 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:27:16,506 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:27:17,831 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:27:18,805 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 39830
+INFO 2024-10-01 14:27:18,882 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:27:20,101 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 39830
+INFO 2024-10-01 14:27:20,172 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:27:21,260 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 39830
+INFO 2024-10-01 14:27:21,329 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:27:24,719 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:27:25,789 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:27:26,259 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 39830
+INFO 2024-10-01 14:27:26,319 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:27:27,881 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 52521
+INFO 2024-10-01 14:27:29,729 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 39830
+INFO 2024-10-01 14:27:29,804 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:27:44,252 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:27:45,274 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:27:46,194 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 14:27:46,279 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:28:02,675 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42119
+INFO 2024-10-01 14:28:02,749 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:28:19,319 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42206
+INFO 2024-10-01 14:28:19,402 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:28:19,841 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42206
+INFO 2024-10-01 14:28:19,929 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:28:25,599 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 14:28:25,779 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 59074
+INFO 2024-10-01 14:28:25,892 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:28:31,709 basehttp "GET /admin/UserProfiles/usercred/8b1dc113-e6f6-4175-98a9-1f54585763f8/change/ HTTP/1.1" 200 43165
+INFO 2024-10-01 14:28:31,802 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:28:38,339 basehttp "POST /admin/UserProfiles/usercred/8b1dc113-e6f6-4175-98a9-1f54585763f8/change/ HTTP/1.1" 302 0
+INFO 2024-10-01 14:28:38,449 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 59076
+INFO 2024-10-01 14:28:38,540 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:30:41,450 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:30:42,289 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:30:52,299 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:30:53,243 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:30:55,819 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 56929
+INFO 2024-10-01 14:30:55,904 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:30:58,321 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 40453
+INFO 2024-10-01 14:30:58,389 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:31:38,732 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:31:39,780 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:33:09,610 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:33:10,639 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:33:11,239 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 14:33:11,309 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:34:48,176 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-01 14:34:49,079 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:34:51,361 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 14:34:51,449 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:34:58,139 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 58713
+INFO 2024-10-01 14:34:58,230 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:34:59,549 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 41631
+INFO 2024-10-01 14:34:59,636 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:35:14,903 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 42145
+INFO 2024-10-01 14:35:14,994 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:35:26,519 basehttp "POST /admin/UserProfiles/usercred/add/ HTTP/1.1" 302 0
+INFO 2024-10-01 14:35:26,659 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 63969
+INFO 2024-10-01 14:35:26,759 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
