@@ -6724,3 +6724,12 @@ INFO 2024-10-01 14:17:53,803 basehttp "GET /admin/Actions/maintenancerequest/ HT
 INFO 2024-10-01 14:17:53,901 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-10-01 14:18:18,389 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
 INFO 2024-10-01 14:18:19,284 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:18:54,299 autoreload Watching for file changes with StatReloader
+INFO 2024-10-01 14:18:56,449 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-10-01 14:19:00,419 basehttp "GET /admin/ HTTP/1.1" 200 30736
+INFO 2024-10-01 14:19:04,559 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 55346
+INFO 2024-10-01 14:19:04,781 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:19:07,909 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 55346
+INFO 2024-10-01 14:19:08,009 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-01 14:19:10,349 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 55346
+INFO 2024-10-01 14:19:10,434 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
