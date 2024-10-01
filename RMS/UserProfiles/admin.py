@@ -4,57 +4,7 @@ from django.contrib.auth.models import Permission
 from .models import UserCred, Residents, Roles, Staffs
 from django.contrib.auth.admin import UserAdmin as DefaultUserAdmin
 
-# def transition_to_resident_only(modeladmin, request, queryset):
-#     for staff in queryset:
-#         user = staff.user
-#         if hasattr(user, 'staff_profile'):  # Corrected related_name
-#             user.staff_profile.delete()  # Remove the staff profile
-#         user.is_staff = False
-#         user.save()
-#     modeladmin.message_user(request, "Selected users have been transitioned to resident only.")
-
-# transition_to_resident_only.short_description = "Transition selected users to Resident Only"
-
-# def transition_to_staff(modeladmin, request, queryset):
-#     for resident in queryset:
-#         user = resident.user
-#         if not user.is_staff:
-#             user.is_staff = True
-#             user.save()
-#             # Create the Staff profile for the user
-#             Staffs.objects.create(
-#                 user=user,
-#                 role=Roles.objects.first()  # Assign a default role; adjust as needed
-#             )
-#     modeladmin.message_user(request, "Selected users have been transitioned to staff.")
-
-# transition_to_staff.short_description = "Transition selected users to Staff"
-
-# class UserCredAdmin(admin.ModelAdmin):
-#     model = UserCred
-#     fieldsets = (
-#         (None, {'fields': ('email', 'password')}),
-#         ('Personal info', {'fields': ('firstname', 'lastname', 'phone_number')}),
-#         ('Permissions', {'fields': ('is_active', 'is_staff')}),
-
-
-#     )
-    
-#     list_display = ('email', 'firstname', 'lastname', 'phone_number', 'is_staff', 'is_active')
-#     search_fields = ('email', 'firstname', 'lastname')
-#     list_filter = ('is_staff', 'is_active')
-#     ordering = ('email',)
-
-#     # readonly_fields = ('email',)  # Example of making the email field read-only
-
-#     def get_changeform_initial_data(self, request):
-#         """
-#         Return the initial data to be used when rendering the form for changing a user's password.
-#         """
-#         user = self.get_object(request, self.get_changeform_initial_data(request))
-#         return {'password': user.password}
-
-
+# Custom form for UserCred Admin
 class UserCredAdminForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput, required=False)
 
@@ -73,23 +23,23 @@ class UserCredAdminForm(forms.ModelForm):
 class UserCredAdmin(admin.ModelAdmin):
     form = UserCredAdminForm
     fieldsets = (
-        (None, {'fields': ('email', 'password')}),
-        ('Personal info', {'fields': ('firstname', 'lastname', 'phone_number','date_joined')}),
+        (None, {'fields': ('email', 'password')}),  # Ensure 'username' is not here
+        ('Personal info', {'fields': ('firstname', 'lastname', 'phone_number', 'date_joined')}),
         ('Permissions', {'fields': ('is_active', 'is_staff')}),
     )
     
-    list_display = ('email', 'firstname', 'lastname', 'phone_number','date_joined', 'is_staff', 'is_active')
+    list_display = ('email', 'firstname', 'lastname', 'phone_number', 'date_joined', 'is_staff', 'is_active')
     search_fields = ('email', 'firstname', 'lastname')
     list_filter = ('is_staff', 'is_active')
     ordering = ('email',)
-
+# Residents Admin configuration
 class ResidentsAdmin(admin.ModelAdmin):
     list_display = ('user', 'guardian_phone_number')
-    search_fields = ('user__email', 'guardian_phone_number')  # Updated to use 'user__email'
-    list_filter = ('user__email',)  # Updated to use 'user__email'
+    search_fields = ('user__email', 'guardian_phone_number')
+    list_filter = ('user__email',)
     ordering = ('id',)
-    # actions = [transition_to_staff]
 
+# Roles Admin configuration
 class RolesAdmin(admin.ModelAdmin):
     list_display = ('name', 'abbreviation')
     search_fields = ('name', 'abbreviation')
@@ -97,16 +47,18 @@ class RolesAdmin(admin.ModelAdmin):
 
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
+        # Ensure all permissions are available in the admin interface
         form.base_fields['permissions'].queryset = Permission.objects.all()
         return form
 
+# Staffs Admin configuration
 class StaffsAdmin(admin.ModelAdmin):
     list_display = ('user', 'role')
-    search_fields = ('user__email', 'role__name')  # Updated to use 'user__email'
+    search_fields = ('user__email', 'role__name')
     list_filter = ('role',)
     ordering = ('id',)
-    # actions = [transition_to_resident_only]
 
+# Register models with the admin site
 admin.site.register(UserCred, UserCredAdmin)
 admin.site.register(Residents, ResidentsAdmin)
 admin.site.register(Roles, RolesAdmin)
