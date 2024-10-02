@@ -14,18 +14,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.urls import path, include
 from django.contrib import admin
-from django.urls import path,include
+# from ratelimit.decorators import ratelimit
 
-
+# Rate-limit admin login attempts: 5 POST requests per minute
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/login/', ratelimit(key='user', rate='5/m', method='POST')(admin.site.login), name='login'),  # Apply rate limiting to admin login
+    path('admin/', admin.site.urls),  # Admin path remains intact
     path('admin_tools_stats/', include('admin_tools_stats.urls')),
-    path('', include('Home.urls')),
-    path('users/', include('UserProfiles.urls')),
-    path('dorms/', include('Dorms.urls')),
-    path('dashboard/', include('Dashboard.urls')),
-    path('year/', include('AcademicYear.urls')),
-    path('operations/', include('Actions.urls')),
-    # path('actions/', include('Actions.urls')),
+    path('', include('Home.urls')),  # Home app URLs
+    path('users/', include('UserProfiles.urls')),  # User profiles URLs
+    path('dorms/', include('Dorms.urls')),  # Dorms-related URLs
+    path('dashboard/', include('Dashboard.urls')),  # Dashboard-related URLs
+    path('year/', include('AcademicYear.urls')),  # Academic year-related URLs
+    # path('operations/', include('Actions.urls')),  # Actions-related URLs
 ]

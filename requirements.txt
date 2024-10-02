@@ -9,7 +9,10 @@ psycopg2-binary
 heroicons==2.8.0
 django-admin-charts
 django-cache-cleaner
+django-ratelimit
+django-auto-logout
+
 
 # python manage.py clear_cache --defailt| ... news product (app/model) -- individual caches | --all (clear all caches)
 
-addd guadrdian 2c qnd address
+# addd guadrdian 2c qnd address

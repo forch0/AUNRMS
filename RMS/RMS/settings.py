@@ -86,7 +86,7 @@ INSTALLED_APPS = [
     "unfold",
     'admin_tools_stats',  # this must be BEFORE 'admin_tools' and 'django.contrib.admin'
     'django_nvd3',
-    'cache_cleaner'
+    'cache_cleaner',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -99,6 +99,7 @@ INSTALLED_APPS = [
     'Actions',
     'Home',
     'Dashboard',
+    # 'django_ratelimit',
 
 ]
 
@@ -110,6 +111,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_auto_logout.middleware.auto_logout',
+    # 'UserProfiles.middleware.RatelimitMiddleware',
 ]
 
 
@@ -135,6 +138,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
+                'django_auto_logout.context_processors.auto_logout_client',
             ],
         },
     },
@@ -251,7 +255,7 @@ UNFOLD = {
 
     "SIDEBAR": {
         "show_search": True,  # Search in applications and models names
-        "show_all_applications": False,  # Dropdown with all applications and models
+        "show_all_applications": True,  # Dropdown with all applications and models
         "navigation": [
             {
                 "title": _("Dashboard"),
@@ -389,4 +393,14 @@ UNFOLD = {
 
     
 
+}
+
+
+from datetime import timedelta
+
+AUTO_LOGOUT = {
+    'IDLE_TIME': timedelta(minutes=5),
+    'SESSION_TIME': timedelta(minutes=30),
+    'MESSAGE': 'The session has expired. Please login again to continue.',
+    'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
 }
