@@ -11,4 +11,3 @@ django-admin-charts
 
 
 
-addd guadrdian 2c qnd address
