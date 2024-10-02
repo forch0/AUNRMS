@@ -86,6 +86,7 @@ INSTALLED_APPS = [
     "unfold",
     'admin_tools_stats',  # this must be BEFORE 'admin_tools' and 'django.contrib.admin'
     'django_nvd3',
+    'cache_cleaner'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
