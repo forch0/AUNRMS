@@ -20,7 +20,29 @@ class AcademicSessionAdmin(admin.ModelAdmin):
         """Checks if the user is a Django superuser."""
         return request.user.is_superuser
     
+    def _has_selected_roles(self, request: HttpRequest) -> bool:
+        """Checks if the user has one of the allowed roles."""
+        allowed_roles = ['ResLife Directors',]  # Add the role names you want here
+        staff = Staffs.objects.filter(user=request.user).first()
+        if staff:
+            return staff.role.name in allowed_roles
+        return False
+    
+    def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Allows selected roles and superuser to view the model."""
+        return self._is_superuser(request) or self._has_selected_roles(request)
 
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        """Only superuser can add."""
+        return self._is_superuser(request)
+
+    def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can change."""
+        return self._is_superuser(request)
+
+    def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can delete."""
+        return self._is_superuser(request)
 
 # Registering the Semester model
 @admin.register(Semester)
@@ -31,6 +53,40 @@ class SemesterAdmin(admin.ModelAdmin):
     fields = ('semester_type', 'start_date', 'end_date', 'academic_session')
     search_fields = ('semester_type', 'academic_session__name')
     ordering = ('start_date',)
+
+    def _is_superuser(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Django superuser."""
+        return request.user.is_superuser
+    
+    def _has_selected_roles(self, request: HttpRequest) -> bool:
+        """Checks if the user has one of the allowed roles."""
+        allowed_roles = ['ResLife Directors',]  # Add the role names you want here
+        staff = Staffs.objects.filter(user=request.user).first()
+        if staff:
+            return staff.role.name in allowed_roles
+        return False
+    
+    # def has_module_permission(self, request: HttpRequest) -> bool:
+    #     return self._is_superuser(request) or self._has_selected_roles(request)
+    
+    def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Allows selected roles and superuser to view the model."""
+        return self._is_superuser(request) or self._has_selected_roles(request)
+
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        """Only superuser can add."""
+        return self._is_superuser(request)
+
+    def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can change."""
+        return self._is_superuser(request)
+
+    def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can delete."""
+        return self._is_superuser(request)
+    
+
+    
 
     class Media:
         css = {
@@ -45,10 +101,24 @@ class SemesterAdmin(admin.ModelAdmin):
             'js/datepicker_init.js',
         )
 
+    # def get_form(self, request, obj=None, **kwargs):
+    #     form = super().get_form(request, obj, **kwargs)
+    #     form.base_fields['start_date'].widget.attrs.update({'class': 'datepicker'})
+    #     form.base_fields['end_date'].widget.attrs.update({'class': 'datepicker'})
+    #     return form
+
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
-        form.base_fields['start_date'].widget.attrs.update({'class': 'datepicker'})
-        form.base_fields['end_date'].widget.attrs.update({'class': 'datepicker'})
+        
+        # Use .get() to avoid KeyError
+        start_date_field = form.base_fields.get('start_date')
+        end_date_field = form.base_fields.get('end_date')
+
+        if start_date_field:
+            start_date_field.widget.attrs.update({'class': 'datepicker'})
+        if end_date_field:
+            end_date_field.widget.attrs.update({'class': 'datepicker'})
+        
         return form
 
 # Registering the Enrollment model
@@ -58,7 +128,124 @@ class EnrollmentAdmin(admin.ModelAdmin):
     list_filter = ('semester', 'academic_session', 'dorm', 'room')
     # search_fields = ('resident__user__username', 'dorm__name', 'room__number')
     ordering = ('date_enrolled',)
+    confirmation_fields = ['resident',]
 
+    def _is_superuser(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Django superuser."""
+        return request.user.is_superuser
+    
+    def _is_reslife_directors(self, request: HttpRequest) -> bool:
+        """Checks if the user is a ResLife Director."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'ResLife Directors'
+
+    def _is_residence_director(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Residence Director."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'Residence Director'
+    
+    def _is_residence_assistant(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Residence Assistant."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'Residence Assistant'
+    
+    def has_view_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
+        """Allows superusers, residents, and specific roles to view their enrollments."""
+        
+        # Allow superuser to view all enrollments
+        if self._is_superuser(request):
+            return True
+
+        # Allow ResLife Directors and Dean of Student Affairs to view all enrollments
+        allowed_roles_all = ['ResLife Director', 'Dean of Student Affairs']
+        if request.user.is_authenticated:
+            staff = Staffs.objects.filter(user=request.user).first()
+            if staff and staff.role.name in allowed_roles_all:
+                return True
+
+        # Allow residents to view their own enrollments
+        if request.user.is_authenticated and hasattr(request.user, 'resident'):
+            return True  # Allow residents to view their enrollments
+
+        # For Residence Assistant and Residence Director, check if they can view enrollments
+        if request.user.is_authenticated:
+            staff = Staffs.objects.filter(user=request.user).first()
+            if staff and staff.role.name in ['Residence Assistant', 'Residence Director']:
+                return True  # Allow them to view, but filtering will occur in get_queryset
+
+        return False  # No other roles can view enrollments
+    
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+
+        # Allow superusers to see all enrollments
+        if self._is_superuser(request):
+            return qs  
+
+        # Allow ResLife Directors and Dean of Student Affairs to see all enrollments
+        allowed_roles_all = ['ResLife Director', 'Dean of Student Affairs']
+        if request.user.is_authenticated:
+            staff = Staffs.objects.filter(user=request.user).first()
+            if staff and staff.role.name in allowed_roles_all:
+                return qs  # Return all enrollments for these roles
+
+            # Allow residents to see their enrollments
+            if hasattr(request.user, 'resident'):
+                return qs.filter(resident=request.user.resident)  # Filter for the resident's enrollments
+
+            # For Residence Assistant and Residence Director, filter by assigned dorm for the current semester
+            if staff and staff.role.name in ['Residence Assistant', 'Residence Director']:
+                current_semester = Semester.objects.filter(is_current=True).first()  # Adjust based on your logic for getting the current semester
+                if current_semester:
+                    return qs.filter(dorm=staff.dorm, semester=current_semester)  # Filter by their assigned dorm and current semester
+
+        return qs.none()  # No access for other users
+
+    def has_add_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
+        """Only superuser and ResLife Directors can add; Residence Directors can add for their assigned dorm."""
+        if self._is_superuser(request) or self._is_reslife_director(request):
+            return True
+    
+        if (self._is_residence_director(request) or self._is_residence_assistant(request)) and obj:
+            staff = Staffs.objects.filter(user=request.user).first()
+            # Check if the enrollment is for their assigned dorm
+            return obj.dorm in StaffAssignment.objects.filter(staff=staff).values_list('dorm', flat=True)
+        return False
+
+    def has_change_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
+        """Only superuser and ResLife Directors can change; Residence Directors can change for their assigned dorm."""
+        if self._is_superuser(request) or self._is_reslife_director(request):
+            return True
+        if (self._is_residence_director(request) or self._is_residence_assistant(request)) and obj:
+            staff = Staffs.objects.filter(user=request.user).first()
+            # Check if the enrollment is for their assigned dorm
+            return obj.dorm in StaffAssignment.objects.filter(staff=staff).values_list('dorm', flat=True)
+        return False
+    
+    def has_delete_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
+        """Only superuser and ResLife Directors can delete; Residence Directors can delete for their assigned dorm."""
+        if self._is_superuser(request) or self._is_reslife_director(request):
+            return True
+        if self._is_residence_director(request) and obj:
+            staff = Staffs.objects.filter(user=request.user).first()
+            return obj.dorm in StaffAssignment.objects.filter(staff=staff).values_list('dorm', flat=True)
+        return False
+    
+    # def has_module_permission(self, request: HttpRequest) -> bool:
+    #     """Check if the user has permission to view the enrollment module."""
+    #     if self._is_superuser(request):
+    #         return True  # Superuser can view all modules
+
+    #     # Allow ResLife Directors and Dean of Student Affairs to access the module
+    #     allowed_roles = ['ResLife Director', 'Dean of Student Affairs']
+    #     if request.user.is_authenticated:
+    #         staff = Staffs.objects.filter(user=request.user).first()
+    #         if staff and staff.role.name in allowed_roles:
+    #             return True
+
+    #     return False  # No access for other users
+        
+    
 # Registering the Dorm model
 class StaffAssignmentAdmin(admin.ModelAdmin):
     list_display = ('id','staff', 'dorm', 'role', 'academic_session', 'semester')
@@ -75,6 +262,39 @@ class StaffAssignmentAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         obj.clean()  # Ensure validation is performed
         super().save_model(request, obj, form, change)
+
+    def has_view_permission(self, request: HttpRequest, obj: StaffAssignment | None = None) -> bool:
+        """Allows all staff members to view all staff assignments."""
+        return request.user.is_authenticated and hasattr(request.user, 'staff')
+
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        """Only superuser and ResLife Directors can add staff assignments."""
+        return self._is_superuser(request) or self._is_reslife_director(request)
+
+    def has_change_permission(self, request: HttpRequest, obj: StaffAssignment | None = None) -> bool:
+        """Only superuser and ResLife Directors can change staff assignments."""
+        return self._is_superuser(request) or self._is_reslife_director(request)
+
+    def has_delete_permission(self, request: HttpRequest, obj: StaffAssignment | None = None) -> bool:
+        """Only superuser and ResLife Directors can delete staff assignments."""
+        return self._is_superuser(request) or self._is_reslife_director(request)
+
+    def _is_superuser(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Django superuser."""
+        return request.user.is_superuser
+
+    def _is_reslife_director(self, request: HttpRequest) -> bool:
+        """Checks if the user is a ResLife Director."""
+        return request.user.is_authenticated and hasattr(request.user, 'staff') and request.user.staff.role.name == 'ResLife Directors'
+
+    def get_queryset(self, request):
+        """Customize the queryset based on the user's role."""
+        qs = super().get_queryset(request)
+        if self._is_superuser(request) or self._is_reslife_director(request):
+            return qs  # Allow superusers and ResLife Directors to see all assignments
+        elif request.user.is_authenticated and hasattr(request.user, 'staff'):
+            return qs.filter(dorm__in=request.user.staff.dorms.all())  # Only show assignments for their assigned dorms
+        return qs.none()  # No assignments for others
 
 # Register StaffAssignmentAdmin
 admin.site.register(StaffAssignment, StaffAssignmentAdmin)

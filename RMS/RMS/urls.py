@@ -17,7 +17,14 @@ Including another URLconf
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.contrib import admin
+from django.conf.urls import handler403
+from django.shortcuts import render
 # from ratelimit.decorators import ratelimit
+
+def custom_403_view(request, exception=None):
+    return render(request, '403.html', status=403)
+
+handler403 = custom_403_view
 
 # Rate-limit admin login attempts: 5 POST requests per minute
 urlpatterns = [
