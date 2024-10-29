@@ -1,0 +1,14 @@
+{% extends "admin/login.html" %}
+
+{% block content %}
+    {{ block.super }}  <!-- This will display the default login form -->
+    
+    <!-- Add link for password reset -->
+    <div style="margin-top: 15px;">
+        <p>
+            <a href="{% url 'admin_password_reset' %}">
+                Forgot your passwordXXX?
+            </a>
+        </p>
+    </div>
+{% endblock %}

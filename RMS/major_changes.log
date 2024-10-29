@@ -7343,3 +7343,505 @@ INFO 2024-10-02 22:48:28,879 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS
 INFO 2024-10-02 22:48:29,745 autoreload Watching for file changes with StatReloader
 INFO 2024-10-02 22:48:55,810 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
 INFO 2024-10-02 22:48:56,714 autoreload Watching for file changes with StatReloader
+INFO 2024-10-04 02:20:22,259 autoreload Watching for file changes with StatReloader
+INFO 2024-10-04 02:20:24,940 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-10-04 02:20:25,122 log Not Found: /favicon.ico
+WARNING 2024-10-04 02:20:25,124 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-10-04 02:20:29,572 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-10-04 02:20:29,648 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:20:35,328 basehttp "GET /admin/password_reset/ HTTP/1.1" 200 3635
+INFO 2024-10-04 02:20:40,787 basehttp "GET /admin/password_reset/ HTTP/1.1" 200 3363
+INFO 2024-10-04 02:20:43,091 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:20:51,717 basehttp "GET /admin/password_reset/ HTTP/1.1" 200 3363
+INFO 2024-10-04 02:21:04,828 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-10-04 02:21:04,845 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:21:17,957 basehttp "GET /admin/password_reset/ HTTP/1.1" 200 3363
+INFO 2024-10-04 02:23:37,494 autoreload Watching for file changes with StatReloader
+INFO 2024-10-04 02:23:40,948 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:23:42,157 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:23:43,142 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:23:47,406 basehttp "GET /admin/password_reset/ HTTP/1.1" 200 3363
+ERROR 2024-10-04 02:24:43,071 log Internal Server Error: /admin/password_reset/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\views.py", line 242, in dispatch
+    return super().dispatch(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\views.py", line 256, in form_valid
+    return super().form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\edit.py", line 59, in get_success_url
+    if not self.success_url:
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\functional.py", line 149, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'password_reset_done' not found. 'password_reset_done' is not a valid view function or pattern name.
+ERROR 2024-10-04 02:24:43,080 basehttp "POST /admin/password_reset/ HTTP/1.1" 500 130963
+ERROR 2024-10-04 02:25:57,672 log Internal Server Error: /admin/password_reset/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\views.py", line 242, in dispatch
+    return super().dispatch(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\auth\views.py", line 256, in form_valid
+    return super().form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\generic\edit.py", line 59, in get_success_url
+    if not self.success_url:
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\functional.py", line 149, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'password_reset_done' not found. 'password_reset_done' is not a valid view function or pattern name.
+ERROR 2024-10-04 02:25:57,679 basehttp "POST /admin/password_reset/ HTTP/1.1" 500 130963
+INFO 2024-10-04 02:26:20,810 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:26:56,251 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:26:57,830 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:27:03,571 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:27:04,675 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-04 02:29:42,351 autoreload Watching for file changes with StatReloader
+INFO 2024-10-04 02:29:45,662 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-10-04 02:29:45,759 basehttp "GET /admin/ HTTP/1.1" 200 44565
+INFO 2024-10-04 02:29:45,794 basehttp "GET /static/images/2.png HTTP/1.1" 304 0
+INFO 2024-10-04 02:29:47,622 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 68013
+INFO 2024-10-04 02:29:47,650 basehttp "GET /static/js/datepicker_init.js HTTP/1.1" 304 0
+INFO 2024-10-04 02:29:47,682 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:29:51,962 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 155029
+INFO 2024-10-04 02:29:52,021 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:29:53,562 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 95673
+INFO 2024-10-04 02:29:53,622 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:29:54,742 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 57100
+INFO 2024-10-04 02:29:54,796 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:29:55,992 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 585421
+INFO 2024-10-04 02:29:56,167 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:29:56,812 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 58932
+INFO 2024-10-04 02:29:56,893 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:29:58,252 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 57100
+INFO 2024-10-04 02:29:58,305 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:00,101 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 58932
+INFO 2024-10-04 02:30:00,157 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:00,917 basehttp "GET /admin/Actions/announcement/ HTTP/1.1" 200 54257
+INFO 2024-10-04 02:30:00,975 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:01,772 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 54242
+INFO 2024-10-04 02:30:01,838 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:06,012 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 57353
+INFO 2024-10-04 02:30:06,078 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:07,662 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 69095
+INFO 2024-10-04 02:30:07,728 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:09,961 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 50011
+INFO 2024-10-04 02:30:10,015 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:12,612 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 61957
+INFO 2024-10-04 02:30:12,670 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:18,871 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 77373
+INFO 2024-10-04 02:30:18,927 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:26,162 basehttp "GET /admin/AcademicYear/staffassignment/?o=-2.5.6.3 HTTP/1.1" 200 77750
+INFO 2024-10-04 02:30:26,218 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:27,456 basehttp "GET /admin/AcademicYear/staffassignment/?o=2.5.6.3 HTTP/1.1" 200 77723
+INFO 2024-10-04 02:30:27,519 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:29,923 basehttp "GET /admin/AcademicYear/staffassignment/?o=5.6.3 HTTP/1.1" 200 76312
+INFO 2024-10-04 02:30:29,982 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:30,972 basehttp "GET /admin/AcademicYear/staffassignment/?o=2.5.6.3 HTTP/1.1" 200 77723
+INFO 2024-10-04 02:30:31,026 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:40,438 basehttp "GET /admin/AcademicYear/staffassignment/55df278f-6d3a-47f9-bfb3-4fef53899a4a/change/?_changelist_filters=o%3D2.5.6.3 HTTP/1.1" 200 62135
+INFO 2024-10-04 02:30:40,498 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:50,642 basehttp "GET /admin/AcademicYear/staffassignment/?o=2.5.6.3 HTTP/1.1" 200 77723
+INFO 2024-10-04 02:30:57,340 basehttp "GET /admin/AcademicYear/staffassignment/?o=4.2.5.6.3 HTTP/1.1" 200 79142
+INFO 2024-10-04 02:30:57,396 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:30:58,737 basehttp "GET /admin/AcademicYear/staffassignment/?o=-5.4.2.6.3 HTTP/1.1" 200 79171
+INFO 2024-10-04 02:30:58,795 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:31:01,042 basehttp "GET /admin/AcademicYear/staffassignment/?o=-6.-5.4.2.3 HTTP/1.1" 200 79200
+INFO 2024-10-04 02:31:01,102 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-04 02:31:52,634 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97077
+INFO 2024-10-04 02:31:52,803 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:46:50,174 autoreload Watching for file changes with StatReloader
+INFO 2024-10-08 16:46:52,165 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-10-08 16:46:52,285 log Not Found: /favicon.ico
+WARNING 2024-10-08 16:46:52,285 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-10-08 16:47:14,971 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-10-08 16:47:15,037 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-08 16:47:15,063 basehttp "GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,063 basehttp "GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,063 basehttp "GET /static/unfold/css/styles.css HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,100 basehttp "GET /static/unfold/css/simplebar.css HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,102 basehttp "GET /static/unfold/js/htmx.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,102 basehttp "GET /static/unfold/js/chart.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,102 basehttp "GET /static/unfold/js/app.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,111 basehttp "GET /static/unfold/js/simplebar.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,115 basehttp "GET /static/unfold/js/alpine.persist.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,118 basehttp "GET /static/unfold/js/alpine.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,165 basehttp "GET /static/unfold/fonts/inter/Inter-SemiBold.woff2 HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,165 basehttp "GET /static/unfold/fonts/inter/Inter-Medium.woff2 HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,165 basehttp "GET /static/unfold/fonts/inter/Inter-Regular.woff2 HTTP/1.1" 304 0
+INFO 2024-10-08 16:47:15,186 basehttp "GET /static/unfold/fonts/material-symbols/Material-Symbols-Outlined.woff2 HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:41,510 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-10-08 16:49:41,573 basehttp "GET /admin/ HTTP/1.1" 200 44837
+INFO 2024-10-08 16:49:41,581 basehttp "GET /static/images/2.png HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:47,658 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 59393
+INFO 2024-10-08 16:49:47,680 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:47,680 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:47,690 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:47,690 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:47,690 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:47,695 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:47,700 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:47,700 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:47,730 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:49:55,919 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 68013
+INFO 2024-10-08 16:49:55,939 basehttp "GET /static/js/datepicker_init.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:49:55,985 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:50:05,391 basehttp "GET /admin/AcademicYear/semester/b8a3eac5-b1f9-4a70-84f3-65ec57dad9e4/change/ HTTP/1.1" 200 54899
+INFO 2024-10-08 16:50:05,426 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2024-10-08 16:50:05,426 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-10-08 16:50:05,431 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2024-10-08 16:50:05,431 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:50:05,434 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-10-08 16:50:05,466 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:50:19,220 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 155029
+INFO 2024-10-08 16:50:19,280 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:50:21,420 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 81902
+INFO 2024-10-08 16:50:21,475 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:50:44,034 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 50011
+INFO 2024-10-08 16:50:44,083 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:50:48,270 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 155029
+INFO 2024-10-08 16:50:48,325 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:50:51,316 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 81902
+INFO 2024-10-08 16:50:51,375 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:51:24,605 basehttp "POST /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 82351
+INFO 2024-10-08 16:51:24,660 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:51:31,643 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 50011
+INFO 2024-10-08 16:51:31,700 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:51:33,630 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 54047
+INFO 2024-10-08 16:51:33,691 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:51:46,920 basehttp "POST /admin/UserProfiles/residents/add/ HTTP/1.1" 200 54813
+INFO 2024-10-08 16:51:46,970 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:51:53,727 basehttp "POST /admin/UserProfiles/residents/add/ HTTP/1.1" 302 0
+INFO 2024-10-08 16:51:53,780 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 58679
+INFO 2024-10-08 16:51:53,935 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:51:58,805 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 155029
+INFO 2024-10-08 16:51:58,857 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:52:00,703 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 81995
+INFO 2024-10-08 16:52:00,765 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-10-08 16:52:26,378 log Internal Server Error: /admin/AcademicYear/enrollment/add/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1804, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 926, in log_addition
+    object_repr=str(obj),
+                ^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\models.py", line 75, in __str__
+    return f"{self.resident.user.username} - {self.semester.semester_type} ({self.academic_session.name})"
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserCred' object has no attribute 'username'
+ERROR 2024-10-08 16:52:26,380 basehttp "POST /admin/AcademicYear/enrollment/add/ HTTP/1.1" 500 132055
+INFO 2024-10-08 16:52:34,650 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 81995
+INFO 2024-10-08 16:53:46,850 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-10-08 16:53:47,462 autoreload Watching for file changes with StatReloader
+INFO 2024-10-08 16:53:53,253 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 81995
+INFO 2024-10-08 16:53:53,310 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:53:57,090 basehttp "GET /admin/UserProfiles/residents/b5491093-0369-4dd3-b3b3-6ab13baa4f9f/change/?_to_field=id HTTP/1.1" 200 55680
+INFO 2024-10-08 16:53:57,160 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:53:59,846 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 81995
+ERROR 2024-10-08 16:54:25,335 log Internal Server Error: /admin/AcademicYear/enrollment/add/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1804, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 926, in log_addition
+    object_repr=str(obj),
+                ^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\models.py", line 75, in __str__
+    return f"{self.resident.user.username} - {self.semester.semester_type} ({self.academic_session.name})"
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserCred' object has no attribute 'username'
+ERROR 2024-10-08 16:54:25,340 basehttp "POST /admin/AcademicYear/enrollment/add/ HTTP/1.1" 500 132055
+INFO 2024-10-08 16:54:31,740 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 81995
+INFO 2024-10-08 16:54:35,196 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 95673
+INFO 2024-10-08 16:54:35,264 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:54:37,505 basehttp "GET /admin/Dorms/dorm/?o=2.1 HTTP/1.1" 200 97727
+INFO 2024-10-08 16:54:37,560 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:54:44,830 basehttp "GET /admin/Dorms/dorm/?o=3.2.1 HTTP/1.1" 200 99128
+INFO 2024-10-08 16:54:44,885 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:54:48,746 basehttp "GET /admin/Dorms/dorm/?gender__exact=M&o=3.2.1 HTTP/1.1" 200 79170
+INFO 2024-10-08 16:54:48,798 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:54:53,200 basehttp "GET /admin/Dorms/dorm/?gender__exact=F&o=3.2.1 HTTP/1.1" 200 82628
+INFO 2024-10-08 16:54:53,260 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:54:58,165 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 585421
+INFO 2024-10-08 16:54:58,230 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:55:09,370 basehttp "GET /admin/Dorms/room/?q=EE%20216 HTTP/1.1" 200 74115
+INFO 2024-10-08 16:55:09,436 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:55:37,905 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 57100
+INFO 2024-10-08 16:55:37,959 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:55:39,132 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 58932
+INFO 2024-10-08 16:55:39,185 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:55:41,395 basehttp "GET /admin/Dorms/storageitem/add/ HTTP/1.1" 200 88865
+INFO 2024-10-08 16:55:41,431 basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2024-10-08 16:55:41,451 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:56:43,405 basehttp "GET /admin/Actions/announcement/ HTTP/1.1" 200 54257
+INFO 2024-10-08 16:56:43,470 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:56:45,783 basehttp "GET /admin/Actions/announcement/add/ HTTP/1.1" 200 58213
+INFO 2024-10-08 16:56:45,832 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:57:12,333 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 54242
+INFO 2024-10-08 16:57:12,380 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:57:43,268 basehttp "GET /admin/Actions/complaint/add/ HTTP/1.1" 200 58744
+INFO 2024-10-08 16:57:43,426 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:58:11,707 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97077
+INFO 2024-10-08 16:58:11,756 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:58:14,867 basehttp "GET /admin/UserProfiles/usercred/aedb62f1-725d-49b4-a5b0-c62a2d6ab966/change/ HTTP/1.1" 200 57039
+INFO 2024-10-08 16:58:14,912 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:58:22,451 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97077
+INFO 2024-10-08 16:59:27,653 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 69095
+INFO 2024-10-08 16:59:27,705 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 16:59:29,490 basehttp "GET /admin/Actions/maintenancerequest/add/ HTTP/1.1" 200 91621
+INFO 2024-10-08 16:59:29,646 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 17:00:38,226 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 58304
+INFO 2024-10-08 17:00:38,280 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 17:00:47,130 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 61957
+INFO 2024-10-08 17:00:47,180 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 17:01:26,955 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 79817
+INFO 2024-10-08 17:01:27,004 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-08 17:01:44,343 basehttp "GET /admin_tools_stats/analytics/?show=mygraph HTTP/1.1" 200 5213
+INFO 2024-10-08 17:01:44,440 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-10-08 17:01:44,530 basehttp "GET /admin_tools_stats/analytics/chart/mygraph/?analytics_chart=true HTTP/1.1" 200 3005
+INFO 2024-10-08 17:01:44,620 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=discreteBarChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304433 HTTP/1.1" 200 2176
+INFO 2024-10-08 17:01:52,600 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=discreteBarChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304434 HTTP/1.1" 200 23536
+INFO 2024-10-08 17:01:56,200 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=weeks&select_box_chart_type=discreteBarChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304435 HTTP/1.1" 200 1396
+INFO 2024-10-08 17:01:58,272 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=months&select_box_chart_type=discreteBarChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304436 HTTP/1.1" 200 1276
+INFO 2024-10-08 17:02:07,550 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=years&select_box_chart_type=discreteBarChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304437 HTTP/1.1" 200 1246
+INFO 2024-10-08 17:02:12,797 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=years&select_box_chart_type=lineChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304438 HTTP/1.1" 200 1264
+INFO 2024-10-08 17:02:15,813 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=quarters&select_box_chart_type=lineChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304439 HTTP/1.1" 200 1297
+INFO 2024-10-08 17:02:17,905 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=months&select_box_chart_type=lineChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304440 HTTP/1.1" 200 1297
+INFO 2024-10-08 17:02:19,985 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=weeks&select_box_chart_type=lineChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304441 HTTP/1.1" 200 1414
+INFO 2024-10-08 17:02:23,645 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=lineChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304442 HTTP/1.1" 200 2200
+INFO 2024-10-08 17:02:36,535 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=lineChart&time_since=2024-09-07&time_until=2024-10-08&_=1728403304443 HTTP/1.1" 200 23554
+INFO 2024-10-08 17:02:57,960 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=lineChart&time_since=2024-09-08&time_until=2024-10-08&_=1728403304444 HTTP/1.1" 200 22834
+INFO 2024-10-08 17:03:02,100 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=lineChart&time_since=2024-09-16&time_until=2024-10-08&_=1728403304445 HTTP/1.1" 200 17074
+INFO 2024-10-08 17:03:08,384 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=lineChart&time_since=2024-09-16&time_until=2024-10-01&_=1728403304446 HTTP/1.1" 200 12034
+INFO 2024-10-08 17:03:13,737 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=cumulativeLineChart&time_since=2024-09-16&time_until=2024-10-01&_=1728403304447 HTTP/1.1" 200 11994
+INFO 2024-10-08 17:03:18,656 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=multiBarHorizontalChart&time_since=2024-09-16&time_until=2024-10-01&_=1728403304448 HTTP/1.1" 200 11777
+INFO 2024-10-08 17:03:22,423 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=scatterChart&time_since=2024-09-16&time_until=2024-10-01&_=1728403304449 HTTP/1.1" 200 11915
+INFO 2024-10-08 17:03:25,200 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=stackedAreaChart&time_since=2024-09-16&time_until=2024-10-01&_=1728403304450 HTTP/1.1" 200 12040
+INFO 2024-10-08 17:03:33,064 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=hours&select_box_chart_type=multiBarChart&time_since=2024-09-16&time_until=2024-10-01&_=1728403304451 HTTP/1.1" 200 11988
+INFO 2024-10-08 17:03:38,073 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=weeks&select_box_chart_type=lineChart&time_since=2024-09-16&time_until=2024-10-01&_=1728403304452 HTTP/1.1" 200 1324
+INFO 2024-10-08 17:03:41,255 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=months&select_box_chart_type=lineChart&time_since=2024-09-16&time_until=2024-10-01&_=1728403304453 HTTP/1.1" 200 1297
+INFO 2024-10-08 17:03:43,040 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=TNNY6S3KxeIATGjpnAl8yx9k0nYume9gK7En0uGOqAdYrVt15IRwfby8Qdwx6dow&graph_key=mygraph&select_box_operation=Count&select_box_interval=months&select_box_chart_type=discreteBarChart&time_since=2024-09-16&time_until=2024-10-01&_=1728403304454 HTTP/1.1" 200 1276
+INFO 2024-10-09 14:50:24,597 autoreload Watching for file changes with StatReloader
+INFO 2024-10-09 14:50:27,738 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-10-09 14:50:28,838 log Not Found: /favicon.ico
+WARNING 2024-10-09 14:50:28,843 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-10-09 14:50:33,452 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-10-09 14:50:33,518 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-10-09 14:50:33,613 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-09 14:50:33,817 basehttp "GET /static/unfold/fonts/inter/Inter-SemiBold.woff2 HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:40,208 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-10-09 14:50:40,271 basehttp "GET /admin/ HTTP/1.1" 200 44837
+INFO 2024-10-09 14:50:40,300 basehttp "GET /static/images/2.png HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:44,182 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 79817
+INFO 2024-10-09 14:50:44,211 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:44,217 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:44,217 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:44,217 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:44,217 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:44,217 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:44,222 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:44,227 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-10-09 14:50:44,258 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-09 14:51:03,466 basehttp "GET /admin_tools_stats/analytics/?show=mygraph HTTP/1.1" 200 5213
+INFO 2024-10-09 14:51:03,587 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-10-09 14:51:03,888 basehttp "GET /admin_tools_stats/analytics/chart/mygraph/?analytics_chart=true HTTP/1.1" 200 3005
+INFO 2024-10-09 14:51:03,993 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=T5flWHYnT0hDCEFxmE7FRazJGBVkYRaDHYZMe0HtLueMbUpIkxUPowzKNJnmcWnp&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=discreteBarChart&time_since=2024-09-08&time_until=2024-10-09&_=1728481863685 HTTP/1.1" 200 2176
+INFO 2024-10-09 14:51:08,393 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=T5flWHYnT0hDCEFxmE7FRazJGBVkYRaDHYZMe0HtLueMbUpIkxUPowzKNJnmcWnp&graph_key=mygraph&select_box_operation=Count&select_box_interval=weeks&select_box_chart_type=discreteBarChart&time_since=2024-09-08&time_until=2024-10-09&_=1728481863686 HTTP/1.1" 200 1396
+INFO 2024-10-09 14:51:17,318 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=T5flWHYnT0hDCEFxmE7FRazJGBVkYRaDHYZMe0HtLueMbUpIkxUPowzKNJnmcWnp&graph_key=mygraph&select_box_operation=Count&select_box_interval=months&select_box_chart_type=discreteBarChart&time_since=2024-09-08&time_until=2024-10-09&_=1728481863687 HTTP/1.1" 200 1276
+INFO 2024-10-09 14:51:20,301 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=T5flWHYnT0hDCEFxmE7FRazJGBVkYRaDHYZMe0HtLueMbUpIkxUPowzKNJnmcWnp&graph_key=mygraph&select_box_operation=Count&select_box_interval=months&select_box_chart_type=lineChart&time_since=2024-09-08&time_until=2024-10-09&_=1728481863688 HTTP/1.1" 200 1297
+INFO 2024-10-09 14:51:23,377 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=T5flWHYnT0hDCEFxmE7FRazJGBVkYRaDHYZMe0HtLueMbUpIkxUPowzKNJnmcWnp&graph_key=mygraph&select_box_operation=Count&select_box_interval=quarters&select_box_chart_type=lineChart&time_since=2024-09-08&time_until=2024-10-09&_=1728481863689 HTTP/1.1" 200 1297
+INFO 2024-10-09 14:51:25,667 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=T5flWHYnT0hDCEFxmE7FRazJGBVkYRaDHYZMe0HtLueMbUpIkxUPowzKNJnmcWnp&graph_key=mygraph&select_box_operation=Count&select_box_interval=years&select_box_chart_type=lineChart&time_since=2024-09-08&time_until=2024-10-09&_=1728481863690 HTTP/1.1" 200 1264
+INFO 2024-10-09 14:51:28,051 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=T5flWHYnT0hDCEFxmE7FRazJGBVkYRaDHYZMe0HtLueMbUpIkxUPowzKNJnmcWnp&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=lineChart&time_since=2024-09-08&time_until=2024-10-09&_=1728481863691 HTTP/1.1" 200 2200
+INFO 2024-10-09 16:07:56,770 autoreload Watching for file changes with StatReloader
+INFO 2024-10-09 16:07:58,333 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-10-09 16:08:02,539 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-10-09 16:08:02,587 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-10-09 16:08:02,619 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-09 16:08:02,640 basehttp "GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,660 basehttp "GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,660 basehttp "GET /static/unfold/css/styles.css HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,660 basehttp "GET /static/unfold/css/simplebar.css HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,660 basehttp "GET /static/unfold/js/app.js HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,660 basehttp "GET /static/unfold/js/htmx.js HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,660 basehttp "GET /static/unfold/js/simplebar.js HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,664 basehttp "GET /static/unfold/js/chart.js HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,761 basehttp "GET /static/unfold/js/alpine.persist.js HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,799 basehttp "GET /static/unfold/js/alpine.js HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,918 basehttp "GET /static/unfold/fonts/inter/Inter-Regular.woff2 HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,918 basehttp "GET /static/unfold/fonts/inter/Inter-Medium.woff2 HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:02,918 basehttp "GET /static/unfold/fonts/material-symbols/Material-Symbols-Outlined.woff2 HTTP/1.1" 304 0
+INFO 2024-10-09 16:08:11,510 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-10-09 16:08:11,581 basehttp "GET /admin/ HTTP/1.1" 200 44837
+INFO 2024-10-09 16:08:15,478 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 585421
+INFO 2024-10-09 16:08:15,570 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-09 16:08:29,131 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 69095
+INFO 2024-10-09 16:08:29,214 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-09 16:08:33,879 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 79817
+INFO 2024-10-09 16:08:33,945 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-09 16:08:35,737 basehttp "GET /admin_tools_stats/analytics/?show=mygraph HTTP/1.1" 200 5213
+INFO 2024-10-09 16:08:35,882 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-10-09 16:08:36,181 basehttp "GET /admin_tools_stats/analytics/chart/mygraph/?analytics_chart=true HTTP/1.1" 200 3005
+INFO 2024-10-09 16:08:36,309 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=oj1p2Tpsb9P7CnRseqDxcCQrzeIKxrPaAR8Ujxj00sW5sqL9AaMW76PcBVtlJC5h&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=discreteBarChart&time_since=2024-09-08&time_until=2024-10-09&_=1728486515976 HTTP/1.1" 200 2176
+INFO 2024-10-09 16:08:39,434 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=oj1p2Tpsb9P7CnRseqDxcCQrzeIKxrPaAR8Ujxj00sW5sqL9AaMW76PcBVtlJC5h&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=lineChart&time_since=2024-09-08&time_until=2024-10-09&_=1728486515977 HTTP/1.1" 200 2200
+INFO 2024-10-29 10:49:20,696 autoreload Watching for file changes with StatReloader
+INFO 2024-10-29 10:49:23,886 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-10-29 10:49:24,041 log Not Found: /favicon.ico
+WARNING 2024-10-29 10:49:24,041 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-10-29 10:49:28,394 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-10-29 10:49:28,434 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-10-29 10:49:28,491 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-10-29 10:49:28,771 basehttp "GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 200 608
+INFO 2024-10-29 10:49:28,772 basehttp "GET /static/unfold/js/app.js HTTP/1.1" 200 5768
+INFO 2024-10-29 10:49:28,776 basehttp "GET /static/unfold/js/simplebar.js HTTP/1.1" 200 27176
+INFO 2024-10-29 10:49:28,781 basehttp "GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 200 557
+INFO 2024-10-29 10:49:28,788 basehttp "GET /static/unfold/css/styles.css HTTP/1.1" 200 94176
+INFO 2024-10-29 10:49:28,791 basehttp "GET /static/unfold/css/simplebar.css HTTP/1.1" 200 4647
+INFO 2024-10-29 10:49:28,791 basehttp "GET /static/unfold/js/htmx.js HTTP/1.1" 200 42820
+INFO 2024-10-29 10:49:28,791 basehttp "GET /static/unfold/js/chart.js HTTP/1.1" 200 200633
+INFO 2024-10-29 10:49:28,796 basehttp "GET /static/unfold/js/alpine.persist.js HTTP/1.1" 200 626
+INFO 2024-10-29 10:49:28,804 basehttp "GET /static/unfold/js/alpine.js HTTP/1.1" 200 41071
+INFO 2024-10-29 10:49:28,854 basehttp "GET /static/unfold/fonts/inter/Inter-SemiBold.woff2 HTTP/1.1" 200 46552
+INFO 2024-10-29 10:49:28,854 basehttp "GET /static/unfold/fonts/inter/Inter-Regular.woff2 HTTP/1.1" 200 46552
+INFO 2024-10-29 10:49:28,854 basehttp "GET /static/unfold/fonts/inter/Inter-Medium.woff2 HTTP/1.1" 200 46552
+INFO 2024-10-29 10:49:28,861 basehttp "GET /static/unfold/fonts/material-symbols/Material-Symbols-Outlined.woff2 HTTP/1.1" 200 349864
+INFO 2024-10-29 10:49:37,206 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-10-29 10:49:37,281 basehttp "GET /admin/ HTTP/1.1" 200 44565
+INFO 2024-10-29 10:49:37,298 basehttp "GET /static/images/2.png HTTP/1.1" 200 13127
+INFO 2024-10-29 10:49:43,641 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 79817
+INFO 2024-10-29 10:49:43,671 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-10-29 10:49:43,671 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2024-10-29 10:49:43,671 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2024-10-29 10:49:43,671 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2024-10-29 10:49:43,675 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2024-10-29 10:49:43,681 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-10-29 10:49:43,683 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-10-29 10:49:43,683 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2024-10-29 10:49:43,741 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 10:49:48,226 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 59393
+INFO 2024-10-29 10:49:48,336 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 10:49:50,556 basehttp "GET /admin/AcademicYear/academicsession/bcf34f9d-1104-4090-ae44-47831322188b/change/ HTTP/1.1" 200 52913
+INFO 2024-10-29 10:49:50,584 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-10-29 10:49:50,584 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2024-10-29 10:49:50,584 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2024-10-29 10:49:50,601 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-10-29 10:49:50,657 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 10:49:59,341 basehttp "POST /admin/AcademicYear/academicsession/bcf34f9d-1104-4090-ae44-47831322188b/change/ HTTP/1.1" 302 0
+INFO 2024-10-29 10:49:59,411 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 59766
+INFO 2024-10-29 10:49:59,594 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343

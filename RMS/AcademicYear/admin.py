@@ -3,13 +3,17 @@ from .models import AcademicSession, Semester, Enrollment, StaffAssignment
 from .forms import SemesterForm
 from Dorms.models import Dorm
 from UserProfiles.models import Staffs, Roles
+from admin_confirm import AdminConfirmMixin
 
 # Registering the AcademicSession model
-@admin.register(AcademicSession)
+@admin.register(AdminConfirmMixin,AcademicSession)
 class AcademicSessionAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'start_year', 'end_year')
     search_fields = ('name', 'start_year', 'end_year')
     ordering = ('start_year',)
+    confirm_change= True
+    confirmation_fields = ['email', 'security_code']
+
 
 # Registering the Semester model
 @admin.register(Semester)
@@ -45,7 +49,7 @@ class SemesterAdmin(admin.ModelAdmin):
 class EnrollmentAdmin(admin.ModelAdmin):
     list_display = ('id', 'resident', 'semester', 'academic_session', 'dorm', 'room', 'date_enrolled')
     list_filter = ('semester', 'academic_session', 'dorm', 'room')
-    search_fields = ('resident__user__username', 'dorm__name', 'room__number')
+    # search_fields = ('resident__user__username', 'dorm__name', 'room__number')
     ordering = ('date_enrolled',)
 
 # Registering the Dorm model

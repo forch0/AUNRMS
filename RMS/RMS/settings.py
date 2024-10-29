@@ -20,6 +20,7 @@ from django.utils.translation import gettext_lazy as _
 import logging
 from logging.handlers import RotatingFileHandler
 
+'''1. LOGGING'''
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -63,7 +64,6 @@ LOGGING = {
 }
 # Load environment variables from .env file
 load_dotenv()
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -118,10 +118,6 @@ MIDDLEWARE = [
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # Default backend
-    # 'UserProfiles.authentication_backends.EmailBackend',
-    # 'UserProfiles.auth_backends.StaffBackend',    # Custom staff backend
-    # 'UserProfiles.auth_backends.ResidentBackend', # Custom resident backend
-    # Add other backends as needed
 ]
 
 ROOT_URLCONF = 'RMS.urls'
@@ -404,3 +400,12 @@ AUTO_LOGOUT = {
     'MESSAGE': 'The session has expired. Please login again to continue.',
     'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
 }
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.your-email-provider.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'your-email@example.com'
+EMAIL_HOST_PASSWORD = 'your-email-password'
+DEFAULT_FROM_EMAIL = 'webmaster@yourdomain.com'
