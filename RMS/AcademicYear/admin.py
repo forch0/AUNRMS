@@ -120,7 +120,6 @@ class SemesterAdmin(admin.ModelAdmin):
             end_date_field.widget.attrs.update({'class': 'datepicker'})
         
         return form
-
 # Registering the Enrollment model
 @admin.register(Enrollment)
 class EnrollmentAdmin(admin.ModelAdmin):
@@ -244,8 +243,6 @@ class EnrollmentAdmin(admin.ModelAdmin):
     #             return True
 
     #     return False  # No access for other users
-        
-    
 # Registering the Dorm model
 class StaffAssignmentAdmin(admin.ModelAdmin):
     list_display = ('id','staff', 'dorm', 'role', 'academic_session', 'semester')
