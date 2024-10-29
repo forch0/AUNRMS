@@ -14,9 +14,17 @@ cipher = Fernet(key)
 class Category(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=20, unique=True)
+    
 
     def __str__(self):
         return self.name
+    
+    my_order = models.PositiveIntegerField(
+        default=0,
+        blank=False,
+        null=False,
+
+    )
     
     class Meta:
         verbose_name = 'Maintenance-Category'
@@ -26,6 +34,13 @@ class SubCategory(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=50)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='subcategories')
+
+    my_order = models.PositiveIntegerField(
+        default=0,
+        blank=False,
+        null=False,
+
+    )
 
     def __str__(self):
         return f"{self.name} ({self.category.name})"
@@ -65,13 +80,6 @@ class MaintenanceRequest(models.Model):
             self.completion_date = timezone.now()
         super().save(*args, **kwargs)
 
-    def clean(self):
-        if self.updated_by:
-            if self.updated_by.role.name not in ['Residence Assistant', 'Residence Director']:
-                raise ValidationError("Only staff with the role of Residence Assistant or Residence Director can change the status.")
-            if self.updated_by.dorm != self.dorm:
-                raise ValidationError("Only staff assigned to the dorm can update the maintenance request.")
-
     def __str__(self):
         return f"Request {self.id} by {self.resident.user.username} - {self.status}"
     
@@ -110,11 +118,25 @@ class Announcement(models.Model):
         verbose_name_plural = 'announcements'
 
 class Complaint(models.Model):
+
+    COMPLAINT_TYPE_CHOICES = [
+            ('wifi', 'Wi-Fi'),
+            ('television', 'Television'),
+            ('noise', 'Noise Complaint'),
+            ('fight', 'Physical Abuse'),
+            ('sex', 'Sexual Abuse'),
+            ('drug', 'Drugs'),
+            ('residence staff', 'Residence Staffs'),
+            ('cleaners', 'Cleaning Staffs'),
+
+    ]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='complaints', null=True, blank=True)
     enrollment = models.ForeignKey(Enrollment, on_delete=models.CASCADE, related_name='complaints')
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='complaints')
     academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE, related_name='complaints')
+    complaint_type = models.CharField(max_length=20, choices=COMPLAINT_TYPE_CHOICES)
     description = models.TextField()
     is_anonymous = models.BooleanField(default=False)
     created_at = models.DateTimeField(default=timezone.now)

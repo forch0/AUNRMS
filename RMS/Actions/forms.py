@@ -1,6 +1,6 @@
 from django import forms
 from .models import Category, SubCategory, MaintenanceRequest, Announcement, Complaint
-
+from AcademicYear.models import Enrollment
 class CategoryForm(forms.ModelForm):
     class Meta:
         model = Category
@@ -30,4 +30,23 @@ class AnnouncementForm(forms.ModelForm):
 class ComplaintForm(forms.ModelForm):
     class Meta:
         model = Complaint
-        fields = ['user', 'enrollment', 'semester', 'academic_session', 'description', 'is_anonymous']
+        fields = '__all__'
+
+    def clean(self):
+        cleaned_data = super().clean()
+        user = cleaned_data.get('user')
+        enrollment = cleaned_data.get('enrollment')
+        semester = cleaned_data.get('semester')
+
+        # Validation: User must be enrolled in the dorm for the given semester
+        if user and enrollment and semester:
+            if not Enrollment.objects.filter(
+                user=user, 
+                dorm=enrollment.dorm, 
+                semester=semester
+            ).exists():
+                raise forms.ValidationError(
+                    "You can only submit complaints for the dorm you are enrolled in during this semester."
+                )
+
+        return cleaned_data
