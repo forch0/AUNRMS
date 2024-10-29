@@ -75,13 +75,20 @@ class Roles(models.Model):
     abbreviation = models.CharField(max_length=5, blank=True, unique=True)
     permissions = models.ManyToManyField(Permission, blank=True)
 
+    my_order = models.PositiveIntegerField(
+        default=0,
+        blank=False,
+        null=False,
+
+    )
+
     def __str__(self):
         return self.name
 
     class Meta:
         verbose_name = 'role'
         verbose_name_plural = 'roles'
-        ordering = ['name']
+        ordering = ['my_order']
 
 # Staffs Model
 class Staffs(models.Model):

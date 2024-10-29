@@ -99,6 +99,7 @@ INSTALLED_APPS = [
     'Actions',
     'Home',
     'Dashboard',
+    'adminsortable2',
     # 'django_ratelimit',
 
 ]

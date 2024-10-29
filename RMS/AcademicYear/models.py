@@ -14,6 +14,7 @@ class AcademicSession(models.Model):
     name = models.CharField(max_length=100, blank=True, editable=False, help_text="Automatically formatted as start_year/end_year")
     created_at = models.DateTimeField(default=timezone.now)
     
+
     def clean(self):
         current_year = timezone.now().year
         last_year = current_year - 1
@@ -28,6 +29,8 @@ class AcademicSession(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+    
+    
     
 
     class Meta:

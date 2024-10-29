@@ -5,7 +5,7 @@ from .models import UserCred, Residents, Roles, Staffs
 from django.contrib.auth.admin import UserAdmin as DefaultUserAdmin
 from django.contrib.auth.models import Group
 from django.utils.translation import gettext as _
-
+from adminsortable2.admin import SortableAdminMixin
 
 # Custom form for UserCred Admin
 class UserCredAdminForm(forms.ModelForm):
@@ -37,10 +37,11 @@ class UserAdmin(admin.ModelAdmin):
     ordering = ('email',)
 
 
-class RolesAdmin(admin.ModelAdmin):
-    list_display = ('name', 'abbreviation')
+class RolesAdmin(SortableAdminMixin,admin.ModelAdmin):
+    list_display = ('name', 'abbreviation','my_order')
     search_fields = ('name', 'abbreviation')
-    filter_horizontal = ('permissions',)  # Use horizontal filter for permissions
+    filter_horizontal = ('permissions',)
+    ordering = ['my_order']  # Use horizontal filter for permissions
 
     def save_model(self, request, obj, form, change):
         super().save_model(request, obj, form, change)

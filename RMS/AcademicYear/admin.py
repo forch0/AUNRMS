@@ -1,9 +1,11 @@
 from django.contrib import admin
+from django.http import HttpRequest
 from .models import AcademicSession, Semester, Enrollment, StaffAssignment
 from .forms import SemesterForm
 from Dorms.models import Dorm
-from UserProfiles.models import Staffs, Roles
+from UserProfiles.models import Staffs, Roles, UserCred
 from admin_confirm import AdminConfirmMixin
+from typing import Any
 
 # Registering the AcademicSession model
 @admin.register(AdminConfirmMixin,AcademicSession)
@@ -12,7 +14,12 @@ class AcademicSessionAdmin(admin.ModelAdmin):
     search_fields = ('name', 'start_year', 'end_year')
     ordering = ('start_year',)
     confirm_change= True
-    confirmation_fields = ['email', 'security_code']
+    confirmation_fields = ['start_year', 'end_year']
+
+    def _is_superuser(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Django superuser."""
+        return request.user.is_superuser
+    
 
 
 # Registering the Semester model

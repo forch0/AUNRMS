@@ -7853,3 +7853,281 @@ INFO 2024-10-29 10:56:39,940 basehttp "GET /admin/ HTTP/1.1" 200 44565
 INFO 2024-10-29 10:56:44,599 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 58304
 INFO 2024-10-29 10:56:44,664 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-10-29 10:56:46,901 basehttp "GET /admin/ HTTP/1.1" 200 44565
+INFO 2024-10-29 11:22:09,035 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-10-29 11:22:09,827 autoreload Watching for file changes with StatReloader
+INFO 2024-10-29 11:30:28,890 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-10-29 11:30:29,457 autoreload Watching for file changes with StatReloader
+INFO 2024-10-29 11:34:37,335 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-10-29 11:34:38,000 autoreload Watching for file changes with StatReloader
+INFO 2024-10-29 11:35:09,409 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-10-29 11:35:09,990 autoreload Watching for file changes with StatReloader
+INFO 2024-10-29 11:37:28,493 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 302 0
+INFO 2024-10-29 11:37:28,519 basehttp "GET /admin/login/?next=/admin/UserProfiles/roles/ HTTP/1.1" 200 8732
+INFO 2024-10-29 11:37:37,328 basehttp "POST /admin/login/?next=/admin/UserProfiles/roles/ HTTP/1.1" 302 0
+INFO 2024-10-29 11:37:37,418 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 57072
+INFO 2024-10-29 11:37:37,593 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:37:45,821 basehttp "GET /admin/UserProfiles/roles/681015a1-115f-4e10-afe7-b1545aac52e5/change/ HTTP/1.1" 200 61533
+INFO 2024-10-29 11:37:45,901 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:37:45,933 basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2024-10-29 11:37:45,933 basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15292
+INFO 2024-10-29 11:38:01,429 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 56800
+INFO 2024-10-29 11:38:16,583 basehttp "GET /admin/UserProfiles/roles/add/ HTTP/1.1" 200 59867
+INFO 2024-10-29 11:38:16,641 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:38:23,687 basehttp "POST /admin/UserProfiles/roles/add/ HTTP/1.1" 200 60363
+INFO 2024-10-29 11:38:23,748 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:38:29,303 basehttp "POST /admin/UserProfiles/roles/add/ HTTP/1.1" 302 0
+INFO 2024-10-29 11:38:29,359 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 59319
+INFO 2024-10-29 11:38:29,428 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:38:32,883 basehttp "GET /admin/UserProfiles/roles/681015a1-115f-4e10-afe7-b1545aac52e5/change/ HTTP/1.1" 200 61533
+INFO 2024-10-29 11:38:33,048 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:38:36,711 basehttp "POST /admin/UserProfiles/roles/681015a1-115f-4e10-afe7-b1545aac52e5/change/ HTTP/1.1" 302 0
+INFO 2024-10-29 11:38:36,778 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 59325
+INFO 2024-10-29 11:38:36,838 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:38:46,169 basehttp "GET /admin/UserProfiles/roles/add/ HTTP/1.1" 200 59867
+INFO 2024-10-29 11:38:46,234 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:38:59,978 basehttp "POST /admin/UserProfiles/roles/add/ HTTP/1.1" 302 0
+INFO 2024-10-29 11:39:00,052 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 61199
+INFO 2024-10-29 11:39:00,107 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:45:36,457 autoreload Watching for file changes with StatReloader
+INFO 2024-10-29 11:45:40,860 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 302 0
+INFO 2024-10-29 11:45:40,892 basehttp "GET /admin/login/?next=/admin/UserProfiles/roles/ HTTP/1.1" 200 8732
+INFO 2024-10-29 11:45:47,886 basehttp "POST /admin/login/?next=/admin/UserProfiles/roles/ HTTP/1.1" 302 0
+ERROR 2024-10-29 11:45:48,036 log Internal Server Error: /admin/UserProfiles/roles/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column UserProfiles_roles.my_order does not exist
+LINE 1: ...les"."name", "UserProfiles_roles"."abbreviation", "UserProfi...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\adminsortable2\admin.py", line 431, in changelist_view
+    return super().changelist_view(request, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column UserProfiles_roles.my_order does not exist
+LINE 1: ...les"."name", "UserProfiles_roles"."abbreviation", "UserProfi...
+                                                             ^
+
+ERROR 2024-10-29 11:45:48,049 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 500 171264
+INFO 2024-10-29 11:46:50,665 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-29 11:46:51,497 autoreload Watching for file changes with StatReloader
+ERROR 2024-10-29 11:46:54,630 log Internal Server Error: /admin/UserProfiles/roles/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column UserProfiles_roles.my_order does not exist
+LINE 1: ...les"."name", "UserProfiles_roles"."abbreviation", "UserProfi...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\adminsortable2\admin.py", line 431, in changelist_view
+    return super().changelist_view(request, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column UserProfiles_roles.my_order does not exist
+LINE 1: ...les"."name", "UserProfiles_roles"."abbreviation", "UserProfi...
+                                                             ^
+
+ERROR 2024-10-29 11:46:54,645 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 500 171264
+INFO 2024-10-29 11:47:21,041 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-29 11:47:21,831 autoreload Watching for file changes with StatReloader
+ERROR 2024-10-29 11:47:24,554 log Internal Server Error: /admin/UserProfiles/roles/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column UserProfiles_roles.my_order does not exist
+LINE 1: ...les"."name", "UserProfiles_roles"."abbreviation", "UserProfi...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\adminsortable2\admin.py", line 431, in changelist_view
+    return super().changelist_view(request, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column UserProfiles_roles.my_order does not exist
+LINE 1: ...les"."name", "UserProfiles_roles"."abbreviation", "UserProfi...
+                                                             ^
+
+ERROR 2024-10-29 11:47:24,565 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 500 171264
+INFO 2024-10-29 11:48:12,271 autoreload Watching for file changes with StatReloader
+INFO 2024-10-29 11:48:14,365 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 64056
+INFO 2024-10-29 11:48:14,445 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:48:14,482 basehttp "GET /static/adminsortable2/css/sortable.css HTTP/1.1" 200 1297
+INFO 2024-10-29 11:48:14,485 basehttp "GET /static/adminsortable2/js/adminsortable2.js HTTP/1.1" 200 116253
+INFO 2024-10-29 11:48:14,522 basehttp "GET /static/adminsortable2/icons/drag.png HTTP/1.1" 200 1653
+INFO 2024-10-29 11:48:20,505 basehttp "GET /admin/UserProfiles/roles/b153878a-fd79-4357-a2c7-31c88320cc34/change/ HTTP/1.1" 200 61497
+INFO 2024-10-29 11:48:20,575 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-29 11:48:22,376 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 63784
+WARNING 2024-10-29 11:48:30,255 log Bad Request: /admin/UserProfiles/roles/adminsortable2_update/
+WARNING 2024-10-29 11:48:30,260 basehttp "POST /admin/UserProfiles/roles/adminsortable2_update/ HTTP/1.1" 400 213
+WARNING 2024-10-29 11:48:35,921 log Bad Request: /admin/UserProfiles/roles/adminsortable2_update/
+WARNING 2024-10-29 11:48:35,925 basehttp "POST /admin/UserProfiles/roles/adminsortable2_update/ HTTP/1.1" 400 225
