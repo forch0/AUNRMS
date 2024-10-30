@@ -13822,3 +13822,4 @@ Traceback (most recent call last):
     raise PermissionDenied
 django.core.exceptions.PermissionDenied
 WARNING 2024-10-30 21:35:31,347 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 403 3778
+INFO 2024-10-30 21:35:34,440 basehttp "GET /admin/ HTTP/1.1" 200 31893
