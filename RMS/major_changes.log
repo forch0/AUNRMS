@@ -12212,3 +12212,135 @@ INFO 2024-10-30 20:11:43,847 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS
 INFO 2024-10-30 20:11:44,499 autoreload Watching for file changes with StatReloader
 INFO 2024-10-30 20:11:44,951 basehttp "GET /admin/UserProfiles/roles/b153878a-fd79-4357-a2c7-31c88320cc34/change/ HTTP/1.1" 200 61497
 INFO 2024-10-30 20:11:45,006 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:16:12,086 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-10-30 20:16:12,779 autoreload Watching for file changes with StatReloader
+INFO 2024-10-30 20:16:15,997 basehttp "GET /admin/UserProfiles/roles/b153878a-fd79-4357-a2c7-31c88320cc34/change/ HTTP/1.1" 200 25790
+INFO 2024-10-30 20:16:16,109 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:16:16,115 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8953
+INFO 2024-10-30 20:16:16,144 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11952
+INFO 2024-10-30 20:16:16,260 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2024-10-30 20:16:16,260 basehttp "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2024-10-30 20:16:20,134 basehttp "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO 2024-10-30 20:16:20,134 basehttp "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+INFO 2024-10-30 20:16:41,168 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19624
+INFO 2024-10-30 20:16:41,207 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6584
+INFO 2024-10-30 20:16:41,239 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2024-10-30 20:16:41,268 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:16:41,288 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2024-10-30 20:16:41,301 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2024-10-30 20:16:44,628 basehttp "GET /admin/UserProfiles/roles/b153878a-fd79-4357-a2c7-31c88320cc34/change/ HTTP/1.1" 200 25790
+INFO 2024-10-30 20:16:44,694 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:18:19,564 basehttp "POST /admin/UserProfiles/roles/b153878a-fd79-4357-a2c7-31c88320cc34/change/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:18:19,644 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19937
+INFO 2024-10-30 20:18:19,729 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:18:19,750 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2024-10-30 20:18:22,014 basehttp "GET /admin/UserProfiles/roles/b153878a-fd79-4357-a2c7-31c88320cc34/change/ HTTP/1.1" 200 25880
+INFO 2024-10-30 20:18:22,076 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:18:26,212 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19624
+INFO 2024-10-30 20:21:36,040 basehttp "GET /admin/UserProfiles/roles/681015a1-115f-4e10-afe7-b1545aac52e5/change/ HTTP/1.1" 200 25989
+INFO 2024-10-30 20:21:36,110 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:23:48,554 basehttp "POST /admin/UserProfiles/roles/681015a1-115f-4e10-afe7-b1545aac52e5/change/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:23:48,614 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19959
+INFO 2024-10-30 20:23:48,679 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:23:50,317 basehttp "GET /admin/UserProfiles/roles/681015a1-115f-4e10-afe7-b1545aac52e5/change/ HTTP/1.1" 200 25917
+INFO 2024-10-30 20:23:50,373 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:25:03,259 basehttp "POST /admin/UserProfiles/roles/681015a1-115f-4e10-afe7-b1545aac52e5/change/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:25:03,319 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19959
+INFO 2024-10-30 20:25:03,379 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:25:14,291 basehttp "POST /admin/UserProfiles/roles/adminsortable2_update/ HTTP/1.1" 200 15
+INFO 2024-10-30 20:25:15,749 basehttp "GET /admin/UserProfiles/roles/73a1e823-eb84-485d-9092-5b0371e9b763/change/ HTTP/1.1" 200 25832
+INFO 2024-10-30 20:25:15,809 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:27:39,588 basehttp "POST /admin/UserProfiles/roles/73a1e823-eb84-485d-9092-5b0371e9b763/change/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:27:39,598 basehttp "GET /admin/login/?next=/admin/UserProfiles/roles/73a1e823-eb84-485d-9092-5b0371e9b763/change/ HTTP/1.1" 200 4892
+INFO 2024-10-30 20:27:54,218 basehttp "POST /admin/login/?next=/admin/UserProfiles/roles/73a1e823-eb84-485d-9092-5b0371e9b763/change/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:27:54,345 basehttp "GET /admin/UserProfiles/roles/73a1e823-eb84-485d-9092-5b0371e9b763/change/ HTTP/1.1" 200 25832
+INFO 2024-10-30 20:27:54,398 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:27:59,788 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19624
+INFO 2024-10-30 20:27:59,848 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:28:04,098 basehttp "GET /admin/UserProfiles/roles/73a1e823-eb84-485d-9092-5b0371e9b763/change/ HTTP/1.1" 200 25832
+INFO 2024-10-30 20:28:04,263 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:28:07,378 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19624
+INFO 2024-10-30 20:28:08,969 basehttp "GET /admin/UserProfiles/roles/681015a1-115f-4e10-afe7-b1545aac52e5/change/ HTTP/1.1" 200 25989
+INFO 2024-10-30 20:28:09,028 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:28:15,448 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19624
+INFO 2024-10-30 20:28:24,861 basehttp "POST /admin/UserProfiles/roles/adminsortable2_update/ HTTP/1.1" 200 15
+INFO 2024-10-30 20:28:28,628 basehttp "GET /admin/UserProfiles/roles/73a1e823-eb84-485d-9092-5b0371e9b763/change/ HTTP/1.1" 200 25832
+INFO 2024-10-30 20:28:28,680 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:29:46,936 basehttp "POST /admin/UserProfiles/roles/73a1e823-eb84-485d-9092-5b0371e9b763/change/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:29:47,098 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19957
+INFO 2024-10-30 20:29:47,153 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:29:49,847 basehttp "GET /admin/UserProfiles/roles/348f4298-7fe0-4a72-930c-76baf0b1bb3d/change/ HTTP/1.1" 200 25847
+INFO 2024-10-30 20:29:49,902 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:29:59,979 basehttp "POST /admin/UserProfiles/roles/348f4298-7fe0-4a72-930c-76baf0b1bb3d/change/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:30:00,059 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19955
+INFO 2024-10-30 20:30:00,117 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:30:01,661 basehttp "GET /admin/UserProfiles/roles/348f4298-7fe0-4a72-930c-76baf0b1bb3d/change/ HTTP/1.1" 200 25829
+INFO 2024-10-30 20:30:01,717 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:33:51,551 basehttp "POST /admin/UserProfiles/roles/348f4298-7fe0-4a72-930c-76baf0b1bb3d/change/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:33:51,607 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 19955
+INFO 2024-10-30 20:33:51,666 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:34:08,736 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-10-30 20:34:09,479 autoreload Watching for file changes with StatReloader
+INFO 2024-10-30 20:34:09,891 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 73820
+INFO 2024-10-30 20:34:09,956 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:34:12,066 basehttp "GET /admin/UserProfiles/roles/b153878a-fd79-4357-a2c7-31c88320cc34/change/ HTTP/1.1" 200 61587
+INFO 2024-10-30 20:34:12,119 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:36:43,130 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 73820
+INFO 2024-10-30 20:36:44,530 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 73820
+INFO 2024-10-30 20:36:44,585 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:36:47,118 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 73820
+INFO 2024-10-30 20:36:47,198 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:36:55,288 basehttp "GET /admin/UserProfiles/roles/63923c5d-3022-4a83-9507-3ad981c6796d/change/ HTTP/1.1" 200 61505
+INFO 2024-10-30 20:36:55,345 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:42:00,797 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:42:00,814 basehttp "GET /admin/login/?next=/admin/UserProfiles/roles/ HTTP/1.1" 200 8732
+INFO 2024-10-30 20:42:08,829 basehttp "POST /admin/login/?next=/admin/UserProfiles/roles/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:42:08,897 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 74092
+INFO 2024-10-30 20:42:08,959 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:43:33,974 basehttp "GET /admin/UserProfiles/ HTTP/1.1" 200 50583
+INFO 2024-10-30 20:43:41,194 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 54813
+INFO 2024-10-30 20:43:41,348 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:43:43,426 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 54527
+INFO 2024-10-30 20:43:43,594 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:43:50,617 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 54813
+INFO 2024-10-30 20:46:56,155 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-30 20:46:56,836 autoreload Watching for file changes with StatReloader
+INFO 2024-10-30 20:47:24,673 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-30 20:47:25,323 autoreload Watching for file changes with StatReloader
+INFO 2024-10-30 20:48:08,996 autoreload Watching for file changes with StatReloader
+INFO 2024-10-30 20:49:22,897 autoreload Watching for file changes with StatReloader
+INFO 2024-10-30 20:49:26,465 basehttp "GET /admin/UserProfiles/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:49:26,505 basehttp "GET /admin/login/?next=/admin/UserProfiles/ HTTP/1.1" 200 8726
+INFO 2024-10-30 20:49:34,383 basehttp "POST /admin/login/?next=/admin/UserProfiles/ HTTP/1.1" 302 0
+INFO 2024-10-30 20:49:34,462 basehttp "GET /admin/UserProfiles/ HTTP/1.1" 200 50855
+INFO 2024-10-30 20:49:38,204 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 54813
+INFO 2024-10-30 20:49:38,272 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:49:40,275 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 54527
+INFO 2024-10-30 20:49:40,347 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:49:49,085 basehttp - Broken pipe from ('127.0.0.1', 53412)
+INFO 2024-10-30 20:50:00,747 basehttp - Broken pipe from ('127.0.0.1', 53413)
+INFO 2024-10-30 20:50:01,724 basehttp - Broken pipe from ('127.0.0.1', 53431)
+INFO 2024-10-30 20:50:02,680 basehttp - Broken pipe from ('127.0.0.1', 53433)
+INFO 2024-10-30 20:50:03,945 basehttp "GET /admin/UserProfiles/usercred/ce600e19-28c3-40a0-b0d8-2d8ab5f4a022/change/?_to_field=id HTTP/1.1" 200 57097
+INFO 2024-10-30 20:50:04,022 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:50:07,102 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 54527
+INFO 2024-10-30 20:51:07,654 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 54527
+INFO 2024-10-30 20:51:07,712 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:51:30,652 basehttp - Broken pipe from ('127.0.0.1', 53435)
+INFO 2024-10-30 20:51:31,627 basehttp - Broken pipe from ('127.0.0.1', 53461)
+INFO 2024-10-30 20:51:32,483 basehttp "GET /admin/UserProfiles/usercred/ce600e19-28c3-40a0-b0d8-2d8ab5f4a022/change/?_to_field=id HTTP/1.1" 200 57097
+INFO 2024-10-30 20:51:32,644 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:51:34,485 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 54527
+INFO 2024-10-30 20:54:21,014 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\forms.py changed, reloading.
+INFO 2024-10-30 20:54:21,832 autoreload Watching for file changes with StatReloader
+INFO 2024-10-30 20:54:23,856 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 54527
+INFO 2024-10-30 20:54:23,916 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:54:44,987 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-10-30 20:54:45,696 autoreload Watching for file changes with StatReloader
+INFO 2024-10-30 20:54:46,641 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 54570
+INFO 2024-10-30 20:54:46,705 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-30 20:54:47,910 basehttp "GET /admin/autocomplete/?app_label=UserProfiles&model_name=residents&field_name=user HTTP/1.1" 200 581
+INFO 2024-10-30 20:54:49,832 basehttp - Broken pipe from ('127.0.0.1', 53539)
+INFO 2024-10-30 20:54:50,145 basehttp "GET /admin/autocomplete/?term=SS&app_label=UserProfiles&model_name=residents&field_name=user HTTP/1.1" 200 46
+INFO 2024-10-30 20:54:50,995 basehttp "GET /admin/autocomplete/?term=S&app_label=UserProfiles&model_name=residents&field_name=user HTTP/1.1" 200 581
+INFO 2024-10-30 20:54:51,701 basehttp "GET /admin/autocomplete/?term=&app_label=UserProfiles&model_name=residents&field_name=user HTTP/1.1" 200 581

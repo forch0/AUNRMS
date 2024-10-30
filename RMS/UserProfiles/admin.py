@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django import forms
+from .forms import ResidentsForm
 from django.contrib.auth.models import Permission
 from .models import UserCred, Residents, Roles, Staffs
 from django.contrib.auth.admin import UserAdmin as DefaultUserAdmin
@@ -129,9 +130,11 @@ class RolesAdmin(SortableAdminMixin,admin.ModelAdmin):
         return self._is_superuser(request)
 
 class ResidentsAdmin(admin.ModelAdmin):
+    form = ResidentsForm
     list_display = ('user', 'guardian_phone_number', 'address', 'role')
     search_fields = ('user__email', 'guardian_phone_number', 'address')
     list_filter = ('role',)
+    autocomplete_fields = ['user']
 
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
