@@ -69,5 +69,17 @@ class ResidentsForm(forms.ModelForm):
     # Override the __init__ method to add the search functionality
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        self.fields['user'].queryset = UserCred.objects.all()  # Adjust the queryset if necessary
+        self.fields['user'].widget.attrs.update({'class': 'select2'})  # Optional: use a JavaScript library for a better UI
+
+class StaffForm(forms.ModelForm):
+    class Meta:
+        model = Staffs
+        fields = '__all__'  # Include all fields or specify the ones you want
+
+    # Override the __init__ method to add the search functionality
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.fields['user'].queryset = UserCred.objects.all()  # Adjust the queryset if necessary
         self.fields['user'].widget.attrs.update({'class': 'select2'})  # Optional: use a JavaScript library for a better UI

@@ -1,6 +1,7 @@
 from django import forms
 from .models import *
 
+
 class RoomGenerationForm(forms.Form):
     dorm = forms.ModelChoiceField(queryset=Dorm.objects.all(), label="Dorm")
     range = forms.ChoiceField(choices=Room.RANGE_CHOICES, label="Predefined Range", required=False)
@@ -47,12 +48,19 @@ class StorageForm(forms.ModelForm):
 class StorageItemForm(forms.ModelForm):
     class Meta:
         model = StorageItem
-        fields = ['description', 'quantity', 'storage', 'room', 'resident', 'semester', 'academic_session', 'status', 'approved_by', 'approval_date', 'collected_at', 'collected_by']
+        fields = fields = '__all__'
         widgets = {
             'description': forms.Textarea(attrs={'rows': 2}),
             'approval_date': forms.DateInput(attrs={'type': 'date'}),
             'collected_at': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
         }
+
+        # Override the __init__ method to add the search functionality
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['room'].queryset = Room.objects.all()  # Adjust the queryset if necessary
+        self.fields['room'].widget.attrs.update({'class': 'select2'})  # Optional: use a JavaScript library for a better UI
+
 
 
 class StorageItemApprovalForm(forms.ModelForm):

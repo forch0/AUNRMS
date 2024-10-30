@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django import forms
-from .forms import ResidentsForm
+from .forms import ResidentsForm, StaffForm
 from django.contrib.auth.models import Permission
 from .models import UserCred, Residents, Roles, Staffs
 from django.contrib.auth.admin import UserAdmin as DefaultUserAdmin
@@ -136,6 +136,12 @@ class ResidentsAdmin(admin.ModelAdmin):
     list_filter = ('role',)
     autocomplete_fields = ['user']
 
+    # def get_form(self, request, obj=None, **kwargs):
+    #     form = super().get_form(request, obj, **kwargs)
+    #     # Optionally hide the role field in the form
+    #     form.base_fields['role'].widget = forms.HiddenInput()
+    #     return form
+
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
         return request.user.is_superuser
@@ -172,9 +178,11 @@ class ResidentsAdmin(admin.ModelAdmin):
         return qs.filter(role__permissions__user=request.user)
 
 class StaffsAdmin(admin.ModelAdmin):
+    form = StaffForm
     list_display = ('user', 'role', 'date_joined')
     search_fields = ('user__email', 'role__name')
     list_filter = ('role',)
+    autocomplete_fields = ['user']
 
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from .models import Dorm, Room, Storage, StorageItem
-from .forms import RoomGenerationForm
+from .forms import RoomGenerationForm, StorageItemForm
 from AcademicYear.models import Semester,Enrollment,StaffAssignment
 from typing import Any
 from django.http import HttpRequest
@@ -14,6 +14,7 @@ class DormAdmin(admin.ModelAdmin):
     list_filter = ('gender', 'campus_status')
     search_fields = ('name', 'address')
     ordering = ('name',)
+    
     
     def get_room_count(self, obj):
         return obj.room_count()
@@ -153,6 +154,7 @@ class StorageAdmin(admin.ModelAdmin):
 
 @admin.register(StorageItem)
 class StorageItemAdmin(admin.ModelAdmin):
+    form = StorageItemForm
     list_display = (
         'id', 
         'description', 
@@ -171,6 +173,7 @@ class StorageItemAdmin(admin.ModelAdmin):
     list_filter = ('storage__dorm__name', 'status', 'approved_by')
     search_fields = ('description', 'storage__dorm__name', 'resident__name')
     ordering = ('id',)
+    autocomplete_fields = ['room']
 
     def collected_by(self, obj):
         return obj.collected_by.name if obj.collected_by else 'Not Collected'
