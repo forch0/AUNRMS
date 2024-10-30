@@ -204,7 +204,6 @@ class ComplaintAdmin(admin.ModelAdmin):
         if request.user.is_superuser:
             return True  # Superuser, Deans, and ResLife Directors can delete anything
 
-    
 @admin.register(MaintenanceRequest)
 class MaintenanceRequestAdmin(admin.ModelAdmin):
     list_display = ['id', 'resident', 'dorm', 'room', 'category', 'sub_category','description', 'status', 'created_at', 'updated_at', 'completion_date', 'updated_by']
