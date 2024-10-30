@@ -230,7 +230,7 @@ class StorageItemAdmin(admin.ModelAdmin):
 
         return qs.none()  # Deny access to all other users
 
-    def has_module_permission(self, request: HttpRequest) -> bool:
+    # def has_module_permission(self, request: HttpRequest) -> bool:
         """Allows access to the StorageItem admin based on roles."""
         return (
             self._is_superuser(request) 

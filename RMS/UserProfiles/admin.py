@@ -38,33 +38,33 @@ class UserAdmin(admin.ModelAdmin):
     list_filter = ('is_staff', 'is_active')
     ordering = ('email',)
 
-    # def _is_superuser(self, request: HttpRequest) -> bool:
-    #     """Checks if the user is a Django superuser."""
-    #     return request.user.is_superuser
+    def _is_superuser(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Django superuser."""
+        return request.user.is_superuser
     
-    # def _has_selected_roles(self, request: HttpRequest) -> bool:
-    #     """Checks if the user has one of the allowed roles."""
-    #     allowed_roles = ['ResLife Directors',]  # Add the role names you want here
-    #     staff = Staffs.objects.filter(user=request.user).first()
-    #     if staff:
-    #         return staff.role.name in allowed_roles
-    #     return False
+    def _has_selected_roles(self, request: HttpRequest) -> bool:
+        """Checks if the user has one of the allowed roles."""
+        allowed_roles = ['ResLife Directors',]  # Add the role names you want here
+        staff = Staffs.objects.filter(user=request.user).first()
+        if staff:
+            return staff.role.name in allowed_roles
+        return False
     
-    # def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Allows selected roles and superuser to view the model."""
-    #     return self._is_superuser(request) or self._has_selected_roles(request)
+    def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Allows selected roles and superuser to view the model."""
+        return self._is_superuser(request) or self._has_selected_roles(request)
 
-    # def has_add_permission(self, request: HttpRequest) -> bool:
-    #     """Only superuser can add."""
-    #     return self._is_superuser(request)
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        """Only superuser can add."""
+        return self._is_superuser(request)
 
-    # def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Only superuser can change."""
-    #     return self._is_superuser(request)
+    def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can change."""
+        return self._is_superuser(request)
 
-    # def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Only superuser can delete."""
-    #     return self._is_superuser(request)
+    def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can delete."""
+        return self._is_superuser(request)
 
 class RolesAdmin(SortableAdminMixin,admin.ModelAdmin):
     list_display = ('name', 'abbreviation','my_order')
@@ -72,6 +72,13 @@ class RolesAdmin(SortableAdminMixin,admin.ModelAdmin):
     filter_horizontal = ('permissions',)
     ordering = ['my_order']  # Use horizontal filter for permissions
 
+
+    def change_view(self, request, object_id, form_url='', extra_context=None):
+        # Load custom CSS
+        extra_context = extra_context or {}
+        extra_context['custom_css'] = 'css/admin_custom.css'
+        return super().change_view(request, object_id, form_url, extra_context=extra_context)
+    
     def save_model(self, request, obj, form, change):
         super().save_model(request, obj, form, change)
 
@@ -93,102 +100,106 @@ class RolesAdmin(SortableAdminMixin,admin.ModelAdmin):
             """Checks if the user is a Django superuser."""
         return request.user.is_superuser
     
-    # def _has_selected_roles(self, request: HttpRequest) -> bool:
-    #     """Checks if the user has one of the allowed roles."""
-    #     allowed_roles = ['ResLife Directors',]  # Add the role names you want here
-    #     staff = Staffs.objects.filter(user=request.user).first()
-    #     if staff:
-    #         return staff.role.name in allowed_roles
-    #     return False
+    def _is_superuser(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Django superuser."""
+        return request.user.is_superuser
     
-    # def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Allows selected roles and superuser to view the model."""
-    #     return self._is_superuser(request) or self._has_selected_roles(request)
+    def _has_selected_roles(self, request: HttpRequest) -> bool:
+        """Checks if the user has one of the allowed roles."""
+        allowed_roles = ['ResLife Directors',]  # Add the role names you want here
+        staff = Staffs.objects.filter(user=request.user).first()
+        if staff:
+            return staff.role.name in allowed_roles
+        return False
+    
+    def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Allows selected roles and superuser to view the model."""
+        return self._is_superuser(request) or self._has_selected_roles(request)
 
-    # def has_add_permission(self, request: HttpRequest) -> bool:
-    #     """Only superuser can add."""
-    #     return self._is_superuser(request)
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        """Only superuser can add."""
+        return self._is_superuser(request)
 
-    # def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Only superuser can change."""
-    #     return self._is_superuser(request)
+    def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can change."""
+        return self._is_superuser(request)
 
-    # def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Only superuser can delete."""
-    #     return self._is_superuser(request)
+    def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can delete."""
+        return self._is_superuser(request)
 
 class ResidentsAdmin(admin.ModelAdmin):
     list_display = ('user', 'guardian_phone_number', 'address', 'role')
     search_fields = ('user__email', 'guardian_phone_number', 'address')
     list_filter = ('role',)
 
-    # def _is_superuser(self, request: HttpRequest) -> bool:
-    #     """Checks if the user is a Django superuser."""
-    #     return request.user.is_superuser
+    def _is_superuser(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Django superuser."""
+        return request.user.is_superuser
     
-    # def _has_selected_roles(self, request: HttpRequest) -> bool:
-    #     """Checks if the user has one of the allowed roles."""
-    #     allowed_roles = ['ResLife Directors',]  # Add the role names you want here
-    #     staff = Staffs.objects.filter(user=request.user).first()
-    #     if staff:
-    #         return staff.role.name in allowed_roles
-    #     return False
+    def _has_selected_roles(self, request: HttpRequest) -> bool:
+        """Checks if the user has one of the allowed roles."""
+        allowed_roles = ['ResLife Directors',]  # Add the role names you want here
+        staff = Staffs.objects.filter(user=request.user).first()
+        if staff:
+            return staff.role.name in allowed_roles
+        return False
     
-    # def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Allows selected roles and superuser to view the model."""
-    #     return self._is_superuser(request) or self._has_selected_roles(request)
+    def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Allows selected roles and superuser to view the model."""
+        return self._is_superuser(request) or self._has_selected_roles(request)
 
-    # def has_add_permission(self, request: HttpRequest) -> bool:
-    #     """Only superuser can add."""
-    #     return self._is_superuser(request)
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        """Only superuser can add."""
+        return self._is_superuser(request)
 
-    # def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Only superuser can change."""
-    #     return self._is_superuser(request)
+    def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can change."""
+        return self._is_superuser(request)
 
-    # def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Only superuser can delete."""
-    #     return self._is_superuser(request)
+    def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can delete."""
+        return self._is_superuser(request)
 
-    # def get_queryset(self, request):
-    #     qs = super().get_queryset(request)
-    #     # Dynamically filter based on user permissions
-    #     if request.user.is_superuser:
-    #         return qs
-    #     return qs.filter(role__permissions__user=request.user)
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        # Dynamically filter based on user permissions
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(role__permissions__user=request.user)
 
 class StaffsAdmin(admin.ModelAdmin):
     list_display = ('user', 'role', 'date_joined')
     search_fields = ('user__email', 'role__name')
     list_filter = ('role',)
 
-    # def _is_superuser(self, request: HttpRequest) -> bool:
-    #     """Checks if the user is a Django superuser."""
-    #     return request.user.is_superuser
+    def _is_superuser(self, request: HttpRequest) -> bool:
+        """Checks if the user is a Django superuser."""
+        return request.user.is_superuser
     
-    # def _has_selected_roles(self, request: HttpRequest) -> bool:
-    #     """Checks if the user has one of the allowed roles."""
-    #     allowed_roles = ['ResLife Directors',]  # Add the role names you want here
-    #     staff = Staffs.objects.filter(user=request.user).first()
-    #     if staff:
-    #         return staff.role.name in allowed_roles
-    #     return False
+    def _has_selected_roles(self, request: HttpRequest) -> bool:
+        """Checks if the user has one of the allowed roles."""
+        allowed_roles = ['ResLife Directors',]  # Add the role names you want here
+        staff = Staffs.objects.filter(user=request.user).first()
+        if staff:
+            return staff.role.name in allowed_roles
+        return False
     
-    # def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Allows selected roles and superuser to view the model."""
-    #     return self._is_superuser(request) or self._has_selected_roles(request)
+    def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Allows selected roles and superuser to view the model."""
+        return self._is_superuser(request) or self._has_selected_roles(request)
 
-    # def has_add_permission(self, request: HttpRequest) -> bool:
-    #     """Only superuser can add."""
-    #     return self._is_superuser(request)
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        """Only superuser can add."""
+        return self._is_superuser(request)
 
-    # def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Only superuser can change."""
-    #     return self._is_superuser(request)
+    def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can change."""
+        return self._is_superuser(request)
 
-    # def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-    #     """Only superuser can delete."""
-    #     return self._is_superuser(request)
+    def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
+        """Only superuser can delete."""
+        return self._is_superuser(request)
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)

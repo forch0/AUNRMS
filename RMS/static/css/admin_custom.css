@@ -1,0 +1,6 @@
+/* admin_custom.css */
+
+/* Increase the width of the permissions list */
+.multiselect {
+    width: 700px;  /* Adjust this value as needed */
+}

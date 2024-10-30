@@ -1,5 +1,7 @@
 {% extends "admin/base_site.html" %}
 
+{% comment %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/admin_custom.css' %}"> {% endcomment %}
 
 
 {% block extrahead %}
@@ -7,6 +9,9 @@
 
     <!-- Include Bootstrap Datepicker CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-datepicker.min.css' %}">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin_custom.css' %}">
 
     <!-- Custom CSS to Increase Width of Permissions Select Box -->
     <style>
@@ -54,3 +59,4 @@
     </script>
     <script src="{% static 'js/permission_counter.js' %}"></script>
 {% endblock %}
+
