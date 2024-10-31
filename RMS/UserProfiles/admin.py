@@ -25,7 +25,6 @@ class UserCredAdminForm(forms.ModelForm):
         if commit:
             user.save()
         return user
-
 class UserAdmin(admin.ModelAdmin):
     form = UserCredAdminForm
     fieldsets = (
@@ -66,7 +65,6 @@ class UserAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """Only superuser can delete."""
         return self._is_superuser(request)
-
 class RolesAdmin(SortableAdminMixin,admin.ModelAdmin):
     list_display = ('name', 'abbreviation','my_order')
     search_fields = ('name', 'abbreviation')
@@ -128,19 +126,12 @@ class RolesAdmin(SortableAdminMixin,admin.ModelAdmin):
     def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """Only superuser can delete."""
         return self._is_superuser(request)
-
 class ResidentsAdmin(admin.ModelAdmin):
     form = ResidentsForm
     list_display = ('user', 'guardian_phone_number', 'address', 'role')
     search_fields = ('user__email', 'guardian_phone_number', 'address')
     list_filter = ('role',)
     autocomplete_fields = ['user']
-
-    # def get_form(self, request, obj=None, **kwargs):
-    #     form = super().get_form(request, obj, **kwargs)
-    #     # Optionally hide the role field in the form
-    #     form.base_fields['role'].widget = forms.HiddenInput()
-    #     return form
 
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
@@ -169,13 +160,6 @@ class ResidentsAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """Only superuser can delete."""
         return self._is_superuser(request)
-
-    def get_queryset(self, request):
-        qs = super().get_queryset(request)
-        # Dynamically filter based on user permissions
-        if request.user.is_superuser:
-            return qs
-        return qs.filter(role__permissions__user=request.user)
 
 class StaffsAdmin(admin.ModelAdmin):
     form = StaffForm
@@ -211,13 +195,12 @@ class StaffsAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """Only superuser can delete."""
         return self._is_superuser(request)
-
-    def get_queryset(self, request):
-        qs = super().get_queryset(request)
-        # Dynamically filter based on user permissions
-        if request.user.is_superuser:
-            return qs
-        return qs.filter(role__permissions__user=request.user)
+    # def get_queryset(self, request):
+    #     qs = super().get_queryset(request)
+    #     # Dynamically filter based on user permissions
+    #     if request.user.is_superuser or self._has_selected_roles(request):
+    #         return qs
+    #     return qs.filter(role__permissions__user=request.user)
 
 # Unregister the default Group admin
 admin.site.unregister(Group)

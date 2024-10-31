@@ -247,150 +247,150 @@ UNFOLD = {
 
     "SHOW_HISTORY": True,
     
-    "SIDEBAR": {
-        "show_search": True,  # Search in applications and models names
-        "show_all_applications": True,  # Dropdown with all applications and models
-        "navigation":lambda request: get_navigation(request),   # Use the context processor
-    },
-
     # "SIDEBAR": {
     #     "show_search": True,  # Search in applications and models names
     #     "show_all_applications": True,  # Dropdown with all applications and models
-    #     # "navigation": get_navigation(request),
-    #     "navigation": [
-    #         {
-    #             "title": _("Dashboard"),
-    #             "separator": True,  # Top border
-    #             "collapsible": True,  # Collapsible group of links
-    #             "items": [
-    #                 {
-    #                     "title": _("Home"),
-    #                     "icon": "dashboard",  # Supported icon set: https://fonts.google.com/icons
-    #                     "link": reverse_lazy("admin:index"),     
-    #                 },
-    #                 {
-    #                     "title": _("Analytics"),
-    #                     "icon": "Timeline",  # Supported icon set: https://fonts.google.com/icons
-    #                     "link": reverse_lazy("admin:admin_tools_stats_dashboardstats_changelist"), 
-    #                     # "link": reverse_lazy("admin:AcademicYear_academicsession_changelist"),    
-    #                 },
-    #                 {
-    #                     "title": _("Academic Sessions"),
-    #                     "icon": "school",
-    #                     "link": reverse_lazy("admin:AcademicYear_academicsession_changelist"),
-    #                     # "badge": "formula.utils.badge_callback",
-    #                 },
-    #                 {
-    #                     "title": _("Semesters"),
-    #                     "icon": "book",
-    #                     "link": reverse_lazy("admin:AcademicYear_semester_changelist"),
-    #                 },
-    #                 {
-    #                     "title": _("Enrollments"),
-    #                     "icon": "calendar_today",
-    #                     "link": reverse_lazy("admin:AcademicYear_enrollment_changelist"),
-    #                 },
-    #             ],
-    #         },
-    #         {
-    #             "title": _("Housing"),
-    #             "separator": True,
-    #             "collapsible": True,
-    #             "items": [
-    #                 {
-    #                     "title": _("Dorms"),
-    #                     "icon": "House",
-    #                     "link": reverse_lazy("admin:Dorms_dorm_changelist"),
-    #                 },
-    #                 {
-    #                     "title": _("Rooms"),
-    #                     "icon": "Bed",
-    #                     "link": reverse_lazy("admin:Dorms_room_changelist"),
-    #                 },
-    #                 {
-    #                     "title": _("Storage Location"),
-    #                     "icon": "Room",
-    #                     "link": reverse_lazy("admin:Dorms_storage_changelist"),
-    #                 },
-    #                 {
-    #                     "title": _("Storage Items"),
-    #                     "icon": "apps",
-    #                     "link": reverse_lazy("admin:Dorms_storageitem_changelist"),
-    #                 },
-    #                 {
-    #                     "title": _("Announcements"),
-    #                     "icon": "Notifications",
-    #                     "link": reverse_lazy("admin:Actions_announcement_changelist"),
-    #                 },
-    #                 {
-    #                     "title": _("Complaints"),
-    #                     "icon": "Transcribe",
-    #                     "link": reverse_lazy("admin:Actions_complaint_changelist"),
-    #                 },
-                    
-    #             ],
-    #         },
-    #                     {
-    #             "title": _("Maintenance"),
-    #             "separator": True,  # Top border
-    #             "collapsible": True,  # Collapsible group of links
-    #             "items": [
-    #                 {
-    #                     "title": _("Maintenance Requests"),
-    #                     "icon": "Report",
-    #                     "link": reverse_lazy("admin:Actions_maintenancerequest_changelist"),
-    #                 },
-    #                 {
-    #                     "title": _("Maintenance Categories"),
-    #                     "icon": "Category",
-    #                     "link": reverse_lazy("admin:Actions_category_changelist"),
-    #                 },
-    #                 {
-    #                     "title": _("Maintenance Sub-Categories"),
-    #                     "icon": "Subject",
-    #                     "link": reverse_lazy("admin:Actions_subcategory_changelist"),
-    #                 },
-                    
-    #             ],
-    #         },
-    #         {
-    #             "title": _("People"),
-    #             "separator": True,  # Top border
-    #             "collapsible": True,  # Collapsible group of links
-    #             "items": [
-    #                 {
-    #                     "title": _("Residents"),
-    #                     "icon": "groups_3",  # Supported icon set: https://fonts.google.com/icons
-    #                     "link": reverse_lazy("admin:UserProfiles_residents_changelist"),   
-                        
-    #                 },
-    #                 {
-    #                     "title": _("Staffs"),
-    #                     "icon": "connect_without_contact",
-    #                     "link": reverse_lazy("admin:UserProfiles_staffs_changelist"),
-    #                     # "badge": "formula.utils.badge_callback",
-    #                 },
-    #                 {
-    #                     "title": _("Staff Assignment"),
-    #                     "icon": "social_distance",
-    #                     "link": reverse_lazy("admin:AcademicYear_staffassignment_changelist"),
-    #                     # "badge": "formula.utils.badge_callback",
-    #                 },
-    #                 {
-    #                     "title": _("Roles"),
-    #                     "icon": "hotel_class",
-    #                     "link": reverse_lazy("admin:UserProfiles_roles_changelist"),
-    #                 },
-    #                 {
-    #                     "title": _("Users"),
-    #                     "icon": "person_search",
-    #                     "link": reverse_lazy("admin:UserProfiles_usercred_changelist"),
-    #                 },
-    #             ],
-    #         },
-            
-    #     ],
+    #     "navigation":lambda request: get_navigation(request),   # Use the context processor
     # },
+
+    "SIDEBAR": {
+        "show_search": True,  # Search in applications and models names
+        "show_all_applications": True,  # Dropdown with all applications and models
+        # "navigation": get_navigation(request),
+        "navigation": [
+            {
+                "title": _("Dashboard"),
+                "separator": True,  # Top border
+                "collapsible": True,  # Collapsible group of links
+                "items": [
+                    {
+                        "title": _("Home"),
+                        "icon": "dashboard",  # Supported icon set: https://fonts.google.com/icons
+                        "link": reverse_lazy("admin:index"),     
+                    },
+                    {
+                        "title": _("Analytics"),
+                        "icon": "Timeline",  # Supported icon set: https://fonts.google.com/icons
+                        "link": reverse_lazy("admin:admin_tools_stats_dashboardstats_changelist"), 
+                        # "link": reverse_lazy("admin:AcademicYear_academicsession_changelist"),    
+                    },
+                    {
+                        "title": _("Academic Sessions"),
+                        "icon": "school",
+                        "link": reverse_lazy("admin:AcademicYear_academicsession_changelist"),
+                        # "badge": "formula.utils.badge_callback",
+                    },
+                    {
+                        "title": _("Semesters"),
+                        "icon": "book",
+                        "link": reverse_lazy("admin:AcademicYear_semester_changelist"),
+                    },
+                    {
+                        "title": _("Enrollments"),
+                        "icon": "calendar_today",
+                        "link": reverse_lazy("admin:AcademicYear_enrollment_changelist"),
+                    },
+                ],
+            },
+            {
+                "title": _("Housing"),
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": _("Dorms"),
+                        "icon": "House",
+                        "link": reverse_lazy("admin:Dorms_dorm_changelist"),
+                    },
+                    {
+                        "title": _("Rooms"),
+                        "icon": "Bed",
+                        "link": reverse_lazy("admin:Dorms_room_changelist"),
+                    },
+                    {
+                        "title": _("Storage Location"),
+                        "icon": "Room",
+                        "link": reverse_lazy("admin:Dorms_storage_changelist"),
+                    },
+                    {
+                        "title": _("Storage Items"),
+                        "icon": "apps",
+                        "link": reverse_lazy("admin:Dorms_storageitem_changelist"),
+                    },
+                    {
+                        "title": _("Announcements"),
+                        "icon": "Notifications",
+                        "link": reverse_lazy("admin:Actions_announcement_changelist"),
+                    },
+                    {
+                        "title": _("Complaints"),
+                        "icon": "Transcribe",
+                        "link": reverse_lazy("admin:Actions_complaint_changelist"),
+                    },
+                    
+                ],
+            },
+                        {
+                "title": _("Maintenance"),
+                "separator": True,  # Top border
+                "collapsible": True,  # Collapsible group of links
+                "items": [
+                    {
+                        "title": _("Maintenance Requests"),
+                        "icon": "Report",
+                        "link": reverse_lazy("admin:Actions_maintenancerequest_changelist"),
+                    },
+                    {
+                        "title": _("Maintenance Categories"),
+                        "icon": "Category",
+                        "link": reverse_lazy("admin:Actions_category_changelist"),
+                    },
+                    {
+                        "title": _("Maintenance Sub-Categories"),
+                        "icon": "Subject",
+                        "link": reverse_lazy("admin:Actions_subcategory_changelist"),
+                    },
+                    
+                ],
+            },
+            {
+                "title": _("People"),
+                "separator": True,  # Top border
+                "collapsible": True,  # Collapsible group of links
+                "items": [
+                    {
+                        "title": _("Residents"),
+                        "icon": "groups_3",  # Supported icon set: https://fonts.google.com/icons
+                        "link": reverse_lazy("admin:UserProfiles_residents_changelist"),   
+                        
+                    },
+                    {
+                        "title": _("Staffs"),
+                        "icon": "connect_without_contact",
+                        "link": reverse_lazy("admin:UserProfiles_staffs_changelist"),
+                        # "badge": "formula.utils.badge_callback",
+                    },
+                    {
+                        "title": _("Staff Assignment"),
+                        "icon": "social_distance",
+                        "link": reverse_lazy("admin:AcademicYear_staffassignment_changelist"),
+                        # "badge": "formula.utils.badge_callback",
+                    },
+                    {
+                        "title": _("Roles"),
+                        "icon": "hotel_class",
+                        "link": reverse_lazy("admin:UserProfiles_roles_changelist"),
+                    },
+                    {
+                        "title": _("Users"),
+                        "icon": "person_search",
+                        "link": reverse_lazy("admin:UserProfiles_usercred_changelist"),
+                    },
+                ],
+            },
+            
+        ],
+    },
 
 }
 
