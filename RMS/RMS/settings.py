@@ -136,6 +136,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
                 'django_auto_logout.context_processors.auto_logout_client',
+                'Dashboard.context_processors.sidebar_context',
             ],
         },
     },
@@ -207,13 +208,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -226,13 +223,13 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 # Custom user model
 AUTH_USER_MODEL = 'UserProfiles.UserCred'
 
-
-
+from Dashboard.context_processors import get_navigation
 UNFOLD = {
+    "ENABLE_THEMING": True,  # Optional customization options
+    "THEME": "default",
     "SITE_HEADER": "Appears in sidebar at the top",
     "SITE_ICON": {
         "light": lambda request: static("images/2.png"),  # light mode
@@ -249,149 +246,153 @@ UNFOLD = {
     ],
 
     "SHOW_HISTORY": True,
-
+    
     "SIDEBAR": {
         "show_search": True,  # Search in applications and models names
         "show_all_applications": True,  # Dropdown with all applications and models
-        "navigation": [
-            {
-                "title": _("Dashboard"),
-                "separator": True,  # Top border
-                "collapsible": True,  # Collapsible group of links
-                "items": [
-                    {
-                        "title": _("Home"),
-                        "icon": "dashboard",  # Supported icon set: https://fonts.google.com/icons
-                        "link": reverse_lazy("admin:index"),     
-                    },
-                    {
-                        "title": _("Analytics"),
-                        "icon": "Timeline",  # Supported icon set: https://fonts.google.com/icons
-                        "link": reverse_lazy("admin:admin_tools_stats_dashboardstats_changelist"), 
-                        # "link": reverse_lazy("admin:AcademicYear_academicsession_changelist"),    
-                    },
-                    {
-                        "title": _("Academic Sessions"),
-                        "icon": "school",
-                        "link": reverse_lazy("admin:AcademicYear_academicsession_changelist"),
-                        # "badge": "formula.utils.badge_callback",
-                    },
-                    {
-                        "title": _("Semesters"),
-                        "icon": "book",
-                        "link": reverse_lazy("admin:AcademicYear_semester_changelist"),
-                    },
-                    {
-                        "title": _("Enrollments"),
-                        "icon": "calendar_today",
-                        "link": reverse_lazy("admin:AcademicYear_enrollment_changelist"),
-                    },
-                ],
-            },
-            {
-                "title": _("Housing"),
-                "separator": True,
-                "collapsible": True,
-                "items": [
-                    {
-                        "title": _("Dorms"),
-                        "icon": "House",
-                        "link": reverse_lazy("admin:Dorms_dorm_changelist"),
-                    },
-                    {
-                        "title": _("Rooms"),
-                        "icon": "Bed",
-                        "link": reverse_lazy("admin:Dorms_room_changelist"),
-                    },
-                    {
-                        "title": _("Storage Location"),
-                        "icon": "Room",
-                        "link": reverse_lazy("admin:Dorms_storage_changelist"),
-                    },
-                    {
-                        "title": _("Storage Items"),
-                        "icon": "apps",
-                        "link": reverse_lazy("admin:Dorms_storageitem_changelist"),
-                    },
-                    {
-                        "title": _("Announcements"),
-                        "icon": "Notifications",
-                        "link": reverse_lazy("admin:Actions_announcement_changelist"),
-                    },
-                    {
-                        "title": _("Complaints"),
-                        "icon": "Transcribe",
-                        "link": reverse_lazy("admin:Actions_complaint_changelist"),
-                    },
-                    
-                ],
-            },
-                        {
-                "title": _("Maintenance"),
-                "separator": True,  # Top border
-                "collapsible": True,  # Collapsible group of links
-                "items": [
-                    {
-                        "title": _("Maintenance Requests"),
-                        "icon": "Report",
-                        "link": reverse_lazy("admin:Actions_maintenancerequest_changelist"),
-                    },
-                    {
-                        "title": _("Maintenance Categories"),
-                        "icon": "Category",
-                        "link": reverse_lazy("admin:Actions_category_changelist"),
-                    },
-                    {
-                        "title": _("Maintenance Sub-Categories"),
-                        "icon": "Subject",
-                        "link": reverse_lazy("admin:Actions_subcategory_changelist"),
-                    },
-                    
-                ],
-            },
-            {
-                "title": _("People"),
-                "separator": True,  # Top border
-                "collapsible": True,  # Collapsible group of links
-                "items": [
-                    {
-                        "title": _("Residents"),
-                        "icon": "groups_3",  # Supported icon set: https://fonts.google.com/icons
-                        "link": reverse_lazy("admin:UserProfiles_residents_changelist"),   
-                        
-                    },
-                    {
-                        "title": _("Staffs"),
-                        "icon": "connect_without_contact",
-                        "link": reverse_lazy("admin:UserProfiles_staffs_changelist"),
-                        # "badge": "formula.utils.badge_callback",
-                    },
-                    {
-                        "title": _("Staff Assignment"),
-                        "icon": "social_distance",
-                        "link": reverse_lazy("admin:AcademicYear_staffassignment_changelist"),
-                        # "badge": "formula.utils.badge_callback",
-                    },
-                    {
-                        "title": _("Roles"),
-                        "icon": "hotel_class",
-                        "link": reverse_lazy("admin:UserProfiles_roles_changelist"),
-                    },
-                    {
-                        "title": _("Users"),
-                        "icon": "person_search",
-                        "link": reverse_lazy("admin:UserProfiles_usercred_changelist"),
-                    },
-                ],
-            },
-            
-        ],
+        "navigation":lambda request: get_navigation(request),   # Use the context processor
     },
 
-    
+    # "SIDEBAR": {
+    #     "show_search": True,  # Search in applications and models names
+    #     "show_all_applications": True,  # Dropdown with all applications and models
+    #     # "navigation": get_navigation(request),
+    #     "navigation": [
+    #         {
+    #             "title": _("Dashboard"),
+    #             "separator": True,  # Top border
+    #             "collapsible": True,  # Collapsible group of links
+    #             "items": [
+    #                 {
+    #                     "title": _("Home"),
+    #                     "icon": "dashboard",  # Supported icon set: https://fonts.google.com/icons
+    #                     "link": reverse_lazy("admin:index"),     
+    #                 },
+    #                 {
+    #                     "title": _("Analytics"),
+    #                     "icon": "Timeline",  # Supported icon set: https://fonts.google.com/icons
+    #                     "link": reverse_lazy("admin:admin_tools_stats_dashboardstats_changelist"), 
+    #                     # "link": reverse_lazy("admin:AcademicYear_academicsession_changelist"),    
+    #                 },
+    #                 {
+    #                     "title": _("Academic Sessions"),
+    #                     "icon": "school",
+    #                     "link": reverse_lazy("admin:AcademicYear_academicsession_changelist"),
+    #                     # "badge": "formula.utils.badge_callback",
+    #                 },
+    #                 {
+    #                     "title": _("Semesters"),
+    #                     "icon": "book",
+    #                     "link": reverse_lazy("admin:AcademicYear_semester_changelist"),
+    #                 },
+    #                 {
+    #                     "title": _("Enrollments"),
+    #                     "icon": "calendar_today",
+    #                     "link": reverse_lazy("admin:AcademicYear_enrollment_changelist"),
+    #                 },
+    #             ],
+    #         },
+    #         {
+    #             "title": _("Housing"),
+    #             "separator": True,
+    #             "collapsible": True,
+    #             "items": [
+    #                 {
+    #                     "title": _("Dorms"),
+    #                     "icon": "House",
+    #                     "link": reverse_lazy("admin:Dorms_dorm_changelist"),
+    #                 },
+    #                 {
+    #                     "title": _("Rooms"),
+    #                     "icon": "Bed",
+    #                     "link": reverse_lazy("admin:Dorms_room_changelist"),
+    #                 },
+    #                 {
+    #                     "title": _("Storage Location"),
+    #                     "icon": "Room",
+    #                     "link": reverse_lazy("admin:Dorms_storage_changelist"),
+    #                 },
+    #                 {
+    #                     "title": _("Storage Items"),
+    #                     "icon": "apps",
+    #                     "link": reverse_lazy("admin:Dorms_storageitem_changelist"),
+    #                 },
+    #                 {
+    #                     "title": _("Announcements"),
+    #                     "icon": "Notifications",
+    #                     "link": reverse_lazy("admin:Actions_announcement_changelist"),
+    #                 },
+    #                 {
+    #                     "title": _("Complaints"),
+    #                     "icon": "Transcribe",
+    #                     "link": reverse_lazy("admin:Actions_complaint_changelist"),
+    #                 },
+                    
+    #             ],
+    #         },
+    #                     {
+    #             "title": _("Maintenance"),
+    #             "separator": True,  # Top border
+    #             "collapsible": True,  # Collapsible group of links
+    #             "items": [
+    #                 {
+    #                     "title": _("Maintenance Requests"),
+    #                     "icon": "Report",
+    #                     "link": reverse_lazy("admin:Actions_maintenancerequest_changelist"),
+    #                 },
+    #                 {
+    #                     "title": _("Maintenance Categories"),
+    #                     "icon": "Category",
+    #                     "link": reverse_lazy("admin:Actions_category_changelist"),
+    #                 },
+    #                 {
+    #                     "title": _("Maintenance Sub-Categories"),
+    #                     "icon": "Subject",
+    #                     "link": reverse_lazy("admin:Actions_subcategory_changelist"),
+    #                 },
+                    
+    #             ],
+    #         },
+    #         {
+    #             "title": _("People"),
+    #             "separator": True,  # Top border
+    #             "collapsible": True,  # Collapsible group of links
+    #             "items": [
+    #                 {
+    #                     "title": _("Residents"),
+    #                     "icon": "groups_3",  # Supported icon set: https://fonts.google.com/icons
+    #                     "link": reverse_lazy("admin:UserProfiles_residents_changelist"),   
+                        
+    #                 },
+    #                 {
+    #                     "title": _("Staffs"),
+    #                     "icon": "connect_without_contact",
+    #                     "link": reverse_lazy("admin:UserProfiles_staffs_changelist"),
+    #                     # "badge": "formula.utils.badge_callback",
+    #                 },
+    #                 {
+    #                     "title": _("Staff Assignment"),
+    #                     "icon": "social_distance",
+    #                     "link": reverse_lazy("admin:AcademicYear_staffassignment_changelist"),
+    #                     # "badge": "formula.utils.badge_callback",
+    #                 },
+    #                 {
+    #                     "title": _("Roles"),
+    #                     "icon": "hotel_class",
+    #                     "link": reverse_lazy("admin:UserProfiles_roles_changelist"),
+    #                 },
+    #                 {
+    #                     "title": _("Users"),
+    #                     "icon": "person_search",
+    #                     "link": reverse_lazy("admin:UserProfiles_usercred_changelist"),
+    #                 },
+    #             ],
+    #         },
+            
+    #     ],
+    # },
 
 }
-
 
 from datetime import timedelta
 
@@ -401,8 +402,6 @@ AUTO_LOGOUT = {
     'MESSAGE': 'The session has expired. Please login again to continue.',
     'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
 }
-
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.your-email-provider.com'
 EMAIL_PORT = 587
@@ -410,3 +409,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'your-email@example.com'
 EMAIL_HOST_PASSWORD = 'your-email-password'
 DEFAULT_FROM_EMAIL = 'webmaster@yourdomain.com'
+
