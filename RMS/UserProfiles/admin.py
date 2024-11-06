@@ -194,12 +194,12 @@ class StaffsAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """Only superuser can delete."""
         return self._is_superuser(request)
-    # def get_queryset(self, request):
-    #     qs = super().get_queryset(request)
-    #     # Dynamically filter based on user permissions
-    #     if request.user.is_superuser or self._has_selected_roles(request):
-    #         return qs
-    #     return qs.filter(role__permissions__user=request.user)
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        # Dynamically filter based on user permissions
+        if request.user.is_superuser or self._has_selected_roles(request):
+            return qs
+        return qs.filter(role__permissions__user=request.user)
 
 # Unregister the default Group admin
 admin.site.unregister(Group)

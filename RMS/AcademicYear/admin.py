@@ -130,93 +130,78 @@ class EnrollmentAdmin(admin.ModelAdmin):
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
         return request.user.is_superuser
-    
-    def _is_reslife_director(self, request: HttpRequest) -> bool:
-        """Checks if the user is a ResLife Director."""
-        staff = Staffs.objects.filter(user=request.user).first()
-        return staff and staff.role.name == 'ResLife Director'
 
-    def _is_residence_director(self, request: HttpRequest) -> bool:
-        """Checks if the user is a Residence Director."""
+    def _is_reslife_director(self, request: HttpRequest) -> bool:
+        """Checks if the user has the 'ResLife Director' role."""
         staff = Staffs.objects.filter(user=request.user).first()
-        return staff and staff.role.name == 'Residence Director'
-    
-    def _is_residence_assistant(self, request: HttpRequest) -> bool:
-        """Checks if the user is a Residence Assistant."""
+        return staff and staff.role.name == 'ResLife Directors'
+
+    def _is_dean_of_student_affairs(self, request: HttpRequest) -> bool:
+        """Checks if the user has the 'Dean of Student Affairs' role."""
         staff = Staffs.objects.filter(user=request.user).first()
-        return staff and staff.role.name == 'Residence Assistant'
-    
+        return staff and staff.role.name == 'Dean of Student Affairs'
+
+    def _is_resident(self, request: HttpRequest) -> bool:
+        """Checks if the user is a resident."""
+        return hasattr(request.user, 'resident')
+
+    def _is_residence_assistant_or_director(self, request: HttpRequest) -> bool:
+        """Checks if the user is a 'Residence Assistant' or 'Residence Director'."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name in ['Residence Assistant', 'Residence Director']
+
     def has_view_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
-        """Allows superusers, residents, and specific roles to view their enrollments."""
-        if self._is_superuser(request):
+        """Allows superusers, residents, and specific roles to view enrollments."""
+        if self._is_superuser(request) or self._is_reslife_director(request) or self._is_dean_of_student_affairs(request):
             return True
 
-        allowed_roles_all = ['ResLife Director', 'Dean of Student Affairs']
-        if request.user.is_authenticated:
-            staff = Staffs.objects.filter(user=request.user).first()
-            if staff and staff.role.name in allowed_roles_all:
-                return True
+        if self._is_resident(request):
+            return True
 
-            if hasattr(request.user, 'resident'):
-                return True  # Allow residents to view their enrollments
+        if self._is_residence_assistant_or_director(request):
+            return True
 
-            if staff and staff.role.name in ['Residence Assistant', 'Residence Director']:
-                return True  # Allow them to view, but filtering will occur in get_queryset
+        return False
 
-        return False  # No other roles can view enrollments
-    
-    def get_queryset(self, request):
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        """Allows superusers and specific roles to add enrollments."""
+        # Restrict to superuser, ResLife Director, and Dean of Student Affairs
+        return self._is_superuser(request) or self._is_reslife_director(request) or self._is_dean_of_student_affairs(request)
+
+    def has_change_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
+        """Allows superusers and specific roles to change enrollments."""
+        # Restrict to superuser, ResLife Director, Dean of Student Affairs, Residence Assistant, and Residence Director
+        return (self._is_superuser(request) or self._is_reslife_director(request) or
+                self._is_dean_of_student_affairs(request) or self._is_residence_assistant_or_director(request))
+
+    def has_delete_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
+        """Allows only superusers and specific roles to delete enrollments."""
+        # Restrict deletion to superuser and ResLife Director only
+        return self._is_superuser(request) or self._is_reslife_director(request)
+
+    def get_queryset(self, request: HttpRequest):
+        """
+        Restricts the queryset based on user roles and assignments.
+        """
         qs = super().get_queryset(request)
+        
+        if self._is_superuser(request) or self._is_reslife_director(request) or self._is_dean_of_student_affairs(request):
+            return qs  # Superusers, ResLife Directors, and Deans see all
 
-        if self._is_superuser(request):
-            return qs  
+        # For residents, filter to their enrollments only
+        if self._is_resident(request):
+            return qs.filter(resident=request.user.resident)
 
-        allowed_roles_all = ['ResLife Director', 'Dean of Student Affairs']
-        if request.user.is_authenticated:
-            staff = Staffs.objects.filter(user=request.user).first()
-            if staff and staff.role.name in allowed_roles_all:
-                return qs  # Return all enrollments for these roles
-
-            if hasattr(request.user, 'resident'):
-                return qs.filter(resident=request.user.resident)  # Filter for the resident's enrollments
-
-            if staff and staff.role.name in ['Residence Assistant', 'Residence Director']:
-                current_semester = Semester.objects.filter(is_current=True).first()  # Get the current semester
-                if current_semester:
-                    return qs.filter(dorm=staff.dorm, semester=current_semester)  # Filter by assigned dorm and current semester
+        # For Residence Assistant and Residence Director, filter by assigned dorm and current semester
+        if self._is_residence_assistant_or_director(request):
+            current_semester = Semester.objects.filter(is_current=True).first()
+            if current_semester:
+                return qs.filter(dorm__in=self._assigned_dorms(request), semester=current_semester)
 
         return qs.none()  # No access for other users
 
-    def has_add_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
-        """Only superuser and ResLife Directors can add; Residence Directors can add for their assigned dorm."""
-        if self._is_superuser(request) or self._is_reslife_director(request):
-            return True
-    
-        if (self._is_residence_director(request) or self._is_residence_assistant(request)) and obj:
-            staff = Staffs.objects.filter(user=request.user).first()
-            return obj.dorm in StaffAssignment.objects.filter(staff=staff).values_list('dorm', flat=True)
-        return False
-
-    def has_change_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
-        """Only superuser and ResLife Directors can change; Residence Directors can change for their assigned dorm."""
-        if self._is_superuser(request) or self._is_reslife_director(request):
-            return True
-        if (self._is_residence_director(request) or self._is_residence_assistant(request)) and obj:
-            staff = Staffs.objects.filter(user=request.user).first()
-            return obj.dorm in StaffAssignment.objects.filter(staff=staff).values_list('dorm', flat=True)
-        return False
-    
-    def has_delete_permission(self, request: HttpRequest, obj: Enrollment | None = None) -> bool:
-        """Only superuser and ResLife Directors can delete; Residence Directors can delete for their assigned dorm."""
-        if self._is_superuser(request) or self._is_reslife_director(request):
-            return True
-        if self._is_residence_director(request) and obj:
-            staff = Staffs.objects.filter(user=request.user).first()
-            return obj.dorm in StaffAssignment.objects.filter(staff=staff).values_list('dorm', flat=True)
-        return False
-
 class StaffAssignmentAdmin(admin.ModelAdmin):
-    list_display = ('id','staff', 'dorm', 'role', 'academic_session', 'semester')
+    list_display = ('id', 'staff', 'dorm', 'role', 'academic_session', 'semester')
     search_fields = (
         'staff__user__username', 'dorm__name', 
         'role__name', 'academic_session__name', 
@@ -227,42 +212,87 @@ class StaffAssignmentAdmin(admin.ModelAdmin):
     list_select_related = ('staff', 'dorm', 'role', 'academic_session', 'semester')
     autocomplete_fields = ('staff', 'dorm', 'role', 'academic_session', 'semester')
 
-    def save_model(self, request, obj, form, change):
-        obj.clean()  # Ensure validation is performed
-        super().save_model(request, obj, form, change)
-
-    def has_view_permission(self, request: HttpRequest, obj: StaffAssignment | None = None) -> bool:
-        """Allows all staff members to view all staff assignments."""
-        return request.user.is_authenticated and hasattr(request.user, 'staff')
-
-    def has_add_permission(self, request: HttpRequest) -> bool:
-        """Only superuser and ResLife Directors can add staff assignments."""
-        return self._is_superuser(request) or self._is_reslife_director(request)
-
-    def has_change_permission(self, request: HttpRequest, obj: StaffAssignment | None = None) -> bool:
-        """Only superuser and ResLife Directors can change staff assignments."""
-        return self._is_superuser(request) or self._is_reslife_director(request)
-
-    def has_delete_permission(self, request: HttpRequest, obj: StaffAssignment | None = None) -> bool:
-        """Only superuser and ResLife Directors can delete staff assignments."""
-        return self._is_superuser(request) or self._is_reslife_director(request)
-
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
         return request.user.is_superuser
 
     def _is_reslife_director(self, request: HttpRequest) -> bool:
-        """Checks if the user is a ResLife Director."""
-        return request.user.is_authenticated and hasattr(request.user, 'staff') and request.user.staff.role.name == 'ResLife Directors'
+        """Checks if the user has the 'ResLife Director' role."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'ResLife Directors'
 
-    def get_queryset(self, request):
-        """Customize the queryset based on the user's role."""
-        qs = super().get_queryset(request)
-        if self._is_superuser(request) or self._is_reslife_director(request):
-            return qs  # Allow superusers and ResLife Directors to see all assignments
-        elif request.user.is_authenticated and hasattr(request.user, 'staff'):
-            return qs.filter(dorm__in=request.user.staff.dorms.all())  # Only show assignments for their assigned dorms
-        return qs.none()  # No assignments for others
+    def _is_dean_of_student_affairs(self, request: HttpRequest) -> bool:
+        """Checks if the user has the 'Dean of Student Affairs' role."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'Dean of Student Affairs'
+
+    def _is_residence_assistant(self, request: HttpRequest) -> bool:
+        """Checks if the user has the 'Residence Assistant' role."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'Residence Assistant'
+
+    def _is_residence_director(self, request: HttpRequest) -> bool:
+        """Checks if the user has the 'Residence Director' role."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'Residence Director'
+
+    def has_view_permission(self, request: HttpRequest, obj=None) -> bool:
+        """Allows superusers, ResLife Directors, Deans of Student Affairs, Residence Assistants, and Residence Directors to view assignments."""
+        if self._is_superuser(request):
+            return True
+        if self._is_reslife_director(request):
+            return True
+        if self._is_dean_of_student_affairs(request):
+            return True
+        if self._is_residence_assistant(request):
+            # RAs can only view assignments in their dorm
+            staff = Staffs.objects.filter(user=request.user).first()
+            if staff and obj and obj.dorm == staff.dorm:
+                return True
+        if self._is_residence_director(request):
+            # Residence Directors can view assignments for their dorm
+            staff = Staffs.objects.filter(user=request.user).first()
+            if staff and obj and obj.dorm == staff.dorm:
+                return True
+        return False
+
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        """Allows only superusers, ResLife Directors, and Residence Directors to add assignments."""
+        if self._is_superuser(request):
+            return True
+        if self._is_reslife_director(request):
+            return True
+        if self._is_residence_director(request):
+            return True
+        return False
+
+    def has_change_permission(self, request: HttpRequest, obj=None) -> bool:
+        """Allows superusers, ResLife Directors, Residence Directors, and Deans of Student Affairs to change assignments."""
+        if self._is_superuser(request):
+            return True
+        if self._is_reslife_director(request):
+            return True
+        if self._is_dean_of_student_affairs(request):
+            return True
+        if self._is_residence_director(request):
+            # Residence Directors can change assignments only in their dorm
+            staff = Staffs.objects.filter(user=request.user).first()
+            if staff and obj and obj.dorm == staff.dorm:
+                return True
+        return False
+
+    def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
+        """Allows only superusers, ResLife Directors, and Residence Directors to delete assignments."""
+        if self._is_superuser(request):
+            return True
+        if self._is_reslife_director(request):
+            return True
+        if self._is_residence_director(request):
+            # Residence Directors can delete assignments in their dorm
+            staff = Staffs.objects.filter(user=request.user).first()
+            if staff and obj and obj.dorm == staff.dorm:
+                return True
+        return False
 
 # Register StaffAssignmentAdmin
 admin.site.register(StaffAssignment, StaffAssignmentAdmin)

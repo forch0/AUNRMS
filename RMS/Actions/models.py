@@ -164,4 +164,18 @@ class Complaint(models.Model):
         verbose_name = 'complaint'
         verbose_name_plural = 'complaints'
 
-    
+class Vendor(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    business_name = models.CharField(max_length=200)
+    owner_name = models.CharField(max_length=200)
+    phone_number = models.CharField(max_length=15)
+    dorm = models.ForeignKey(Dorm, on_delete=models.CASCADE, null=True, blank=True, related_name='vendors')
+    is_off_campus = models.BooleanField(default=False)  # If the vendor is off-campus
+    product = models.CharField(max_length=200)  # A description or name of the product
+
+    def __str__(self):
+        return f"{self.business_name} by {self.owner_name}"
+
+    class Meta:
+        verbose_name = 'Vendor'
+        verbose_name_plural = 'Vendors'

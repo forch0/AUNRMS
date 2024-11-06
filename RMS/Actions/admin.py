@@ -1,6 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.contrib import admin
-from .models import MaintenanceRequest, Category, SubCategory, Announcement, Complaint
+from .models import MaintenanceRequest, Category, SubCategory, Announcement, Complaint, Vendor
 from adminsortable2.admin import SortableAdminMixin
 from .forms import ComplaintForm
 from UserProfiles.models import Staffs
@@ -106,103 +106,93 @@ class AnnouncementAdmin(admin.ModelAdmin):
             # Allow Residence Directors to delete announcements for their dorm
             return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
         return False  # Deny access otherwise
+ # No delete permission otherwise
 
 @admin.register(Complaint)
 class ComplaintAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'enrollment', 'semester', 'academic_session', 'is_anonymous')
-    list_filter = ('semester', 'academic_session', 'is_anonymous')
-    search_fields = ('user__username', 'description')
-    # ordering = ('created_at',)
-    form = ComplaintForm
+    list_display = ('id', 'user', 'complaint_type', 'created_at', 'is_anonymous', 'semester', 'academic_session')
+    list_filter = ('complaint_type', 'semester', 'academic_session', 'is_anonymous')
+    search_fields = ('description', 'user__username', 'semester__name', 'academic_session__name')
+    ordering = ('created_at',)
 
     def _is_reslife_directors(self, request: HttpRequest) -> bool:
         """Checks if the user is a ResLife Director."""
         staff = Staffs.objects.filter(user=request.user).first()
         return staff and staff.role.name == 'ResLife Directors'
 
-    def get_queryset(self, request: HttpRequest):
-        """Restrict complaints based on user roles and access permissions."""
-        queryset = super().get_queryset(request)
-        
-        # Check if the user is a superuser
-        if request.user.is_superuser:
-            return queryset  # Superusers can see all complaints
-
-        # Check if the user has the 'Judicial Affairs' role
-        if request.user.staffs.filter(role__name='Judicial Affairs').exists():
-            return queryset  # Judicial Affairs can see all complaints, including anonymous
-
-        # Allow Dean of Student Affairs to view all complaints
-        if request.user.staffs.filter(role__name='Dean of Student Affairs').exists():
-            return queryset  # Deans can see all complaints, including anonymous
-
-        # Allow President to view all complaints
-        if request.user.staffs.filter(role__name='President').exists():
-            return queryset  # President can see all complaints, including anonymous
-
-        # Allow ResLife Directors to view complaints for their assigned dorms
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name in ['ResLife Director', 'Residence Assistant']:
-            # Return complaints related to the dorms the staff is assigned to
-            assigned_dorms = staff.staffassignment_set.values_list('dorm', flat=True)
-            return queryset.filter(dorm__in=assigned_dorms)
-
-        # For residents, allow viewing only their own complaints
-        if hasattr(request.user, 'resident'):
-            return queryset.filter(resident__user=request.user)  # Residents see their own complaints
-
-        return queryset.none()  # No access for anyone else
-    
     def has_view_permission(self, request: HttpRequest, obj: Complaint | None = None) -> bool:
-        """Define view permissions."""
-        if request.user.is_superuser:
-            return True  # Superusers can view any complaint
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can view all complaints
 
-        # Allow Dean of Student Affairs to view any complaints
-        if request.user.staffs.filter(role__name='Dean of Student Affairs').exists():
-            return True
-
-        # Allow President to view any complaints
-        if request.user.staffs.filter(role__name='President').exists():
-            return True
-
-        # Allow ResLife Directors to view complaints for their assigned dorms
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name in ['ResLife Director', 'Residence Assistant']:
-            if obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True):
-                return True  # Assigned staff can view complaints in their dorm
+        # Allow all staff to view complaints in certain statuses (e.g., 'Pending' or 'Resolved')
+        if request.user.is_staff:
+            if obj and obj.status in ['Pending', 'Resolved']:  # Modify status based on your needs
+                return True
 
         # Allow residents to view their own complaints
         if hasattr(request.user, 'resident'):
-            return obj is None or (obj.resident.user == request.user)  # Residents see their own complaints
+            if obj and obj.resident.user == request.user:
+                return True  # Resident can view their own complaint
 
         return False  # No access otherwise
 
     def has_add_permission(self, request: HttpRequest) -> bool:
-        """Define add permissions."""
-        if request.user.is_superuser:
-            return True  # Superusers can add complaints
+        """Restrict add permission based on user roles."""
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can add any complaint
 
-        # Residents can add their own complaints
-        if hasattr(request.user, 'resident'):
-            return True  # Residents can add complaints for themselves
-
-        # ResLife Directors and Residence Assistants can add complaints for their dorms
         staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name in ['ResLife Director', 'Residence Assistant']:
-            return True  # They can add complaints for their assigned dorms
+        if staff and staff.role.name in ['Residence Director', 'Residence Assistant']:
+            return True  # Residence Directors and Assistants can add complaints for their dorms
+        return False  # Deny add permissions for everyone else
 
-        return False  # No other roles can add complaint
-    
+    def save_model(self, request, obj: Complaint, form, change):
+        """Override save_model to set the created_by field."""
+        if not change:  # If the complaint is new
+            staff = Staffs.objects.filter(user=request.user).first()
+            if staff:
+                obj.created_by = staff  # Set the creator of the complaint
+        super().save_model(request, obj, form, change)
+
+    def get_queryset(self, request: HttpRequest):
+        """Filter the queryset based on user roles."""
+        queryset = super().get_queryset(request)
+
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return queryset  # Superusers see everything
+
+        staff = Staffs.objects.filter(user=request.user).first()
+        if staff:
+            # Allow Residence Directors and Residence Assistants to see complaints for their assigned dorms
+            return queryset.filter(dorm__in=staff.staffassignment_set.values_list('dorm', flat=True))
+
+        if hasattr(request.user, 'resident'):
+            # Allow residents to see their own complaints
+            return queryset.filter(resident__user=request.user)
+
+        return queryset.none()
+
     def has_change_permission(self, request: HttpRequest, obj: Complaint | None = None) -> bool:
         """Allow only authorized staff to update complaints."""
-        if request.user.is_superuser or self._is_dean_of_student_affairs(request) or self._is_reslife_director(request):
-            return True  # Superuser, Deans, and ResLife Directors can update anything
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can change any complaint
+
+        staff = Staffs.objects.filter(user=request.user).first()
+        if staff and staff.role.name in ['Residence Director', 'Residence Assistant']:
+            # Allow staff to change complaints for their assigned dorm
+            return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
+        return False  # Deny access otherwise
 
     def has_delete_permission(self, request: HttpRequest, obj: Complaint | None = None) -> bool:
-        """Allow only superusers and authorized staff to delete complaints."""
-        if request.user.is_superuser:
-            return True  # Superuser, Deans, and ResLife Directors can delete anything
+        """Allow only superusers and Residence Directors to delete complaints."""
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can delete any complaint
+
+        staff = Staffs.objects.filter(user=request.user).first()
+        if staff and staff.role.name == 'Residence Director':
+            # Allow Residence Directors to delete complaints for their dorm
+            return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
+        return False  # Deny access otherwise
 
 @admin.register(MaintenanceRequest)
 class MaintenanceRequestAdmin(admin.ModelAdmin):
@@ -326,7 +316,12 @@ class CategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
     search_fields = ('name',)
     ordering = ['my_order']
 
+class VendorAdmin(admin.ModelAdmin):
+    list_display = ('business_name', 'owner_name', 'phone_number', 'dorm', 'is_off_campus', 'product')
+    search_fields = ('business_name', 'owner_name', 'product')
+    list_filter = ('dorm', 'is_off_campus')
 
+admin.site.register(Vendor, VendorAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(SubCategory)
 

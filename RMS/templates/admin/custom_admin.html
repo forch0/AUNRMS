@@ -1,42 +1,30 @@
 {% extends "admin/base_site.html" %}
-
-{% comment %} {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'styles/admin_custom.css' %}"> {% endcomment %}
-
+{% load static %}
 
 {% block extrahead %}
     {{ block.super }}
-
     <!-- Include Bootstrap Datepicker CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-datepicker.min.css' %}">
-
-    {% load static %}
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/admin_custom.css' %}">
 
     <!-- Custom CSS to Increase Width of Permissions Select Box -->
     <style>
-        /* Target the permissions select box and force it to be wider */
         .form-row .field-box select[multiple],
         .form-row .field-box select.filtered {
             width: 100% !important;
-            min-width: 600px !important; /* Adjust this width as needed */
+            min-width: 600px !important;
         }
-        
-        /* Ensure the container is also wide enough */
         .form-row .field-box {
             width: 100% !important;
         }
-        
-        /* If django-unfold uses specific classes, try targeting them */
         .unfold-field--permissions select {
             width: 100% !important;
             min-width: 600px !important;
         }
-        
         .unfold-field--permissions {
             width: 100% !important;
         }
-
         .selector {
             max-width: 80rem !important;
         }
@@ -44,7 +32,7 @@
 
     <!-- Include Bootstrap Datepicker JS -->
     <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
-
+    <!-- Datepicker initialization script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var datepickers = document.querySelectorAll('.datepicker');
@@ -57,12 +45,9 @@
             });
         });
     </script>
+    <!-- Include your custom JS script -->
     <script src="{% static 'js/permission_counter.js' %}"></script>
-{% endblock %}
-
-{% extends "admin/base_site.html" %}
-
-{% block extrahead %}
+    <!-- Include Select2 CSS and JS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
@@ -72,10 +57,58 @@
         });
     </script>
 {% endblock %}
+{% comment %} Very IMPORTANT {% endcomment %}
+{% comment %} {% block sidebar %}
+    {% if request.user.has_perm('is_residence_assistant') %}
+        <div class="sidebar-content">
+            <!-- Content for Residence Assistant -->
+            <ul>
+                <li><a href="#">RA Menu Option</a></li>
+                <!-- Add more menu items specific to Residence Assistant -->
+            </ul>
+        </div>
+    {% elif request.user.has_perm('is_residence_director') %}
+        <div class="sidebar-content">
+            <!-- Content for Residence Director -->
+            <ul>
+                <li><a href="#">RD Menu Option</a></li>
+                <!-- Add more menu items specific to Residence Director -->
+            </ul>
+        </div>
+    {% else %}
+        <div class="sidebar-content">
+            <!-- Default content for other users -->
+            <ul>
+                <li><a href="#">General Menu Option</a></li>
+                <!-- Add additional general menu items -->
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}
 
+{% block extrahead %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the user's role from a custom attribute or from the request
+            var userRole = '{{ request.user.role.name }}';  // Assuming user role is passed to the template
 
-{% block content %}
-    {{ block.super }}  {# Keep existing content #}
+            if (userRole === 'Residence Assistant') {
+                // Show/Hide elements for Residence Assistant
+                document.querySelector('.sidebar').style.display = 'block';
+            } else if (userRole === 'Residence Director') {
+                // Show/Hide elements for Residence Director
+                document.querySelector('.sidebar').style.display = 'block';
+            } else {
+                // Hide the sidebar for other users
+                document.querySelector('.sidebar').style.display = 'none';
+            }
+        });
+    </script>
+{% endblock %}
+ {% endcomment %}
+
+{% comment %} {% block content %}
+    {{ block.super }} <!-- Keep existing content -->
     <div class="global-go-button">
         <form method="post" action="">
             {% csrf_token %}
@@ -87,4 +120,4 @@
             <input type="submit" value="Go" class="button" />
         </form>
     </div>
-{% endblock %}
+{% endblock %} {% endcomment %}
