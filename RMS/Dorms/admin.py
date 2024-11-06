@@ -66,7 +66,7 @@ class DormAdmin(admin.ModelAdmin):
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm','is_occupied')
+    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm', 'is_occupied')
     list_filter = ('dorm__name', 'room_plan', 'floor')
     search_fields = ('number', 'dorm__name')
     ordering = ('id',)
@@ -76,8 +76,9 @@ class RoomAdmin(admin.ModelAdmin):
         """Checks if the user is a Django superuser."""
         return request.user.is_superuser
 
-    def _has_selected_roles(self, request: HttpRequest, allowed_roles=['ResLife Director']) -> bool:
+    def _has_selected_roles(self, request: HttpRequest) -> bool:
         """Checks if the user has one of the allowed roles."""
+        allowed_roles = ['ResLife Directors']  # Add other allowed role names as needed
         staff = Staffs.objects.filter(user=request.user).first()
         return staff and staff.role.name in allowed_roles
 
@@ -96,54 +97,51 @@ class RoomAdmin(admin.ModelAdmin):
         return None
 
     def _assigned_dorms(self, request: HttpRequest):
-        """Gets the dorms assigned to the Residence Director for the current semester."""
+        """Gets the dorms assigned to the Residence Director and Residence Assistant for the current semester."""
         current_semester = Semester.objects.latest('start_date')
         staff = Staffs.objects.filter(user=request.user).first()
-        if staff:
+        
+        # Check if the user is a Residence Director or Residence Assistant
+        if staff and staff.role.name in ['Residence Director', 'Residence Assistant']:
             assignments = StaffAssignment.objects.filter(staff=staff, semester=current_semester)
             return [assignment.dorm for assignment in assignments]
         return []
-
+    
     # Permissions
     def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """
         Allows:
-        - Superusers and ResLife Directors to view rooms based on dorm assignments.
+        - Superusers to view all rooms.
+        - All ResLife Directors to view all rooms.
+        - Residence Assistants to view rooms assigned to them for the current semester.
         - Residents to view only their assigned room.
         """
         if self._is_superuser(request):
             return True
 
+        # Check if the user is a ResLife Director
         if self._has_selected_roles(request):
-            assigned_dorms = self._assigned_dorms(request)
-            return obj is None or (obj.dorm in assigned_dorms)
+            return True  # Allow all ResLife Directors to view all rooms
 
+        # Check if the user is a resident
         if self._is_resident(request):
             resident_room = self._resident_room(request)
+            # Allow resident to view only their assigned room
             return obj is None or obj == resident_room
 
-        return False  # All other users are denied access.
+        return False  # Deny access for other users
 
     def has_add_permission(self, request: HttpRequest) -> bool:
-        """Only superuser and ResLife Director can add rooms."""
+        """Only superuser and ResLife Directors can add rooms."""
         return self._is_superuser(request) or self._has_selected_roles(request)
 
     def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-        """Only superuser and ResLife Director can change rooms."""
+        """Only superuser and ResLife Directors can change rooms."""
         return self._is_superuser(request) or self._has_selected_roles(request)
 
     def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-        """Only superuser and ResLife Director can delete rooms."""
+        """Only superuser and ResLife Directors can delete rooms."""
         return self._is_superuser(request) or self._has_selected_roles(request)
-
-    # def has_module_permission(self, request: HttpRequest) -> bool:
-    #     """Grants module access to superusers, ResLife Directors, and residents."""
-    #     return (
-    #         self._is_superuser(request)
-    #         or self._has_selected_roles(request)
-    #         or self._is_resident(request)
-    #     )
-    
 
 @admin.register(Storage)
 class StorageAdmin(admin.ModelAdmin):

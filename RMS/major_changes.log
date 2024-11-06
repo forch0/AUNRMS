@@ -15564,3 +15564,513 @@ Traceback (most recent call last):
     super().__init__(
 TypeError: BaseFormSet.__init__() got an unexpected keyword argument 'default_order_direction'
 ERROR 2024-10-31 19:01:28,492 basehttp "GET /admin/Actions/category/90477257-8d85-4317-af2c-dcffcac0525d/change/ HTTP/1.1" 500 141479
+INFO 2024-10-31 19:01:30,339 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 59138
+INFO 2024-10-31 19:03:16,509 basehttp "POST /admin/logout/ HTTP/1.1" 200 3183
+INFO 2024-10-31 19:03:18,300 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-10-31 19:03:18,304 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-10-31 19:03:27,168 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-10-31 19:03:27,234 basehttp "GET /admin/ HTTP/1.1" 200 29465
+INFO 2024-10-31 19:03:31,245 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 46013
+INFO 2024-10-31 19:03:31,304 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:03:33,173 basehttp "GET /admin/UserProfiles/residents/6c65d7cf-676b-4c77-a271-b338ef090016/change/ HTTP/1.1" 200 36782
+INFO 2024-10-31 19:03:33,240 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:03:34,904 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 46013
+INFO 2024-10-31 19:03:36,614 basehttp "GET /admin/ HTTP/1.1" 200 29465
+WARNING 2024-10-31 19:03:40,039 log Forbidden (Permission denied): /admin/AcademicYear/staffassignment/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-10-31 19:03:40,044 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 403 3778
+INFO 2024-10-31 19:03:54,168 basehttp "GET /admin/ HTTP/1.1" 200 29465
+INFO 2024-10-31 19:04:02,406 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 46216
+INFO 2024-10-31 19:04:02,469 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:04:06,668 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 46013
+INFO 2024-10-31 19:04:06,833 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:04:41,962 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 46013
+INFO 2024-10-31 19:04:42,024 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-10-31 19:05:26,192 log Not Found: /admin/UserProfiles/
+WARNING 2024-10-31 19:05:26,193 basehttp "GET /admin/UserProfiles/ HTTP/1.1" 404 8665
+INFO 2024-10-31 19:07:11,793 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 46013
+INFO 2024-10-31 19:07:15,944 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+INFO 2024-10-31 19:07:15,999 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:07:20,533 basehttp "GET /admin/Dorms/dorm/aa4d9151-d778-4d1a-8f8c-6e592954be8a/change/ HTTP/1.1" 200 36282
+INFO 2024-10-31 19:07:20,596 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:07:24,622 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+INFO 2024-10-31 19:07:24,678 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:07:28,453 basehttp "GET /admin/Dorms/dorm/?o=2.0 HTTP/1.1" 200 91308
+INFO 2024-10-31 19:07:28,621 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:34:04,988 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 302 0
+INFO 2024-10-31 19:34:04,997 basehttp "GET /admin/login/?next=/admin/Dorms/dorm/ HTTP/1.1" 200 6286
+INFO 2024-10-31 19:34:14,105 basehttp "POST /admin/login/?next=/admin/Dorms/dorm/ HTTP/1.1" 302 0
+INFO 2024-10-31 19:34:14,236 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89554
+INFO 2024-10-31 19:34:14,291 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:34:16,045 basehttp "GET /admin/Dorms/dorm/b23cad42-225e-4eb7-a6a9-3f45565676b4/change/ HTTP/1.1" 200 36318
+INFO 2024-10-31 19:34:16,103 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 19:34:19,674 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+WARNING 2024-10-31 19:34:23,499 log Forbidden (Permission denied): /admin/Dorms/room/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-10-31 19:34:23,509 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 403 3778
+INFO 2024-10-31 19:34:43,515 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+INFO 2024-10-31 19:45:06,897 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 19:45:07,241 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 19:45:07,902 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 19:45:08,133 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:19:01,594 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-10-31 20:19:01,642 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-10-31 20:19:02,349 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:19:02,413 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:19:32,711 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-10-31 20:19:32,744 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-10-31 20:19:33,545 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:19:33,561 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:20:45,769 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:20:48,155 basehttp "GET /admin/UserProfiles/residents/6c65d7cf-676b-4c77-a271-b338ef090016/change/ HTTP/1.1" 302 0
+INFO 2024-10-31 20:20:48,180 basehttp "GET /admin/login/?next=/admin/UserProfiles/residents/6c65d7cf-676b-4c77-a271-b338ef090016/change/ HTTP/1.1" 200 6342
+INFO 2024-10-31 20:20:59,202 basehttp "POST /admin/login/?next=/admin/UserProfiles/residents/6c65d7cf-676b-4c77-a271-b338ef090016/change/ HTTP/1.1" 302 0
+INFO 2024-10-31 20:20:59,301 basehttp "GET /admin/UserProfiles/residents/6c65d7cf-676b-4c77-a271-b338ef090016/change/ HTTP/1.1" 200 37054
+INFO 2024-10-31 20:20:59,361 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 20:21:03,511 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 46216
+INFO 2024-10-31 20:21:03,571 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 20:21:05,086 basehttp "GET /admin/UserProfiles/staffs/603223a5-e1b1-4aaf-876a-cfe91db1bfb7/change/ HTTP/1.1" 200 36122
+INFO 2024-10-31 20:21:05,246 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 20:21:06,848 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 46216
+INFO 2024-10-31 20:27:15,511 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:27:15,741 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:27:16,171 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:27:16,454 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:28:44,238 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:28:44,360 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:28:45,127 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:28:45,227 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:31:00,744 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:31:00,751 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:31:01,545 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:31:01,559 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:34:16,484 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:34:16,557 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:34:17,263 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:34:17,305 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:34:28,054 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:34:28,084 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:34:28,848 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:34:28,854 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:34:32,644 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 302 0
+INFO 2024-10-31 20:34:32,661 basehttp "GET /admin/login/?next=/admin/Dorms/dorm/ HTTP/1.1" 200 6286
+INFO 2024-10-31 20:34:56,145 basehttp "POST /admin/login/?next=/admin/Dorms/dorm/ HTTP/1.1" 302 0
+INFO 2024-10-31 20:34:56,319 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89554
+INFO 2024-10-31 20:34:56,373 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-10-31 20:35:00,798 log Internal Server Error: /admin/Dorms/room/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1922, in changelist_view
+    if not self.has_view_or_change_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 596, in has_view_or_change_permission
+    return self.has_view_permission(request, obj) or self.has_change_permission(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py", line 121, in has_view_permission
+    if self._has_selected_roles(request, allowed_roles=['Residence Director', 'Residence Assistant']):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RoomAdmin._has_selected_roles() got an unexpected keyword argument 'allowed_roles'
+ERROR 2024-10-31 20:35:00,807 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 500 118557
+INFO 2024-10-31 20:37:28,739 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:37:29,378 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 20:37:29,438 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 20:37:30,058 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 22:51:05,482 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 22:51:05,487 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 22:51:06,289 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 22:51:06,298 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 22:51:10,273 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 302 0
+INFO 2024-10-31 22:51:10,296 basehttp "GET /admin/login/?next=/admin/UserProfiles/staffs/ HTTP/1.1" 200 6295
+INFO 2024-10-31 22:51:18,500 basehttp "POST /admin/login/?next=/admin/UserProfiles/staffs/ HTTP/1.1" 302 0
+INFO 2024-10-31 22:51:18,574 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 46488
+INFO 2024-10-31 22:51:18,645 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-10-31 22:51:22,339 log Forbidden (Permission denied): /admin/Dorms/room/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-10-31 22:51:22,351 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 403 3778
+INFO 2024-10-31 22:51:24,267 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 46216
+WARNING 2024-10-31 22:51:25,877 log Forbidden (Permission denied): /admin/Dorms/storage/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-10-31 22:51:25,887 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 403 3778
+INFO 2024-10-31 22:51:27,347 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 46216
+ERROR 2024-10-31 22:51:28,712 log Internal Server Error: /admin/Actions/complaint/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1922, in changelist_view
+    if not self.has_view_or_change_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 596, in has_view_or_change_permission
+    return self.has_view_permission(request, obj) or self.has_change_permission(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\admin.py", line 162, in has_view_permission
+    if request.user.staffs.filter(role__name='Dean of Student Affairs').exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Staffs' object has no attribute 'filter'
+ERROR 2024-10-31 22:51:28,717 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 500 118378
+INFO 2024-10-31 22:51:31,374 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 46216
+INFO 2024-10-31 22:51:33,632 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 46013
+INFO 2024-10-31 22:51:33,797 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-10-31 22:51:37,155 log Internal Server Error: /admin/Actions/complaint/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1922, in changelist_view
+    if not self.has_view_or_change_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 596, in has_view_or_change_permission
+    return self.has_view_permission(request, obj) or self.has_change_permission(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\admin.py", line 162, in has_view_permission
+    if request.user.staffs.filter(role__name='Dean of Student Affairs').exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Staffs' object has no attribute 'filter'
+ERROR 2024-10-31 22:51:37,164 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 500 118381
+INFO 2024-10-31 22:51:38,852 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 46013
+INFO 2024-10-31 22:51:40,212 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+INFO 2024-10-31 22:51:40,282 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-10-31 22:51:41,737 log Forbidden (Permission denied): /admin/Dorms/room/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-10-31 22:51:41,748 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 403 3778
+INFO 2024-10-31 22:51:43,397 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+WARNING 2024-10-31 22:51:44,897 log Forbidden (Permission denied): /admin/Dorms/storage/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-10-31 22:51:44,908 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 403 3778
+INFO 2024-10-31 22:51:46,562 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+WARNING 2024-10-31 22:51:47,802 log Forbidden (Permission denied): /admin/Dorms/storage/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-10-31 22:51:47,814 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 403 3778
+INFO 2024-10-31 22:51:49,582 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+INFO 2024-10-31 22:53:31,067 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 22:53:31,216 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-10-31 22:53:31,958 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 22:53:32,141 autoreload Watching for file changes with StatReloader
+INFO 2024-10-31 22:53:33,221 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+INFO 2024-10-31 22:53:33,303 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:53:37,186 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 570280
+INFO 2024-10-31 22:53:37,254 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:53:42,217 basehttp "GET /admin/Dorms/room/0305623d-22eb-4c96-b991-29274cad0fb4/change/ HTTP/1.1" 200 41227
+INFO 2024-10-31 22:53:42,297 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:53:44,658 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 570280
+INFO 2024-10-31 22:53:47,226 basehttp "GET /admin/Dorms/room/0305623d-22eb-4c96-b991-29274cad0fb4/change/ HTTP/1.1" 200 41227
+INFO 2024-10-31 22:53:47,315 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:53:49,377 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 570280
+INFO 2024-10-31 22:53:51,809 basehttp "GET /admin/Dorms/room/04799dc4-3fb0-41f9-ad93-fec19c2e5b2a/change/ HTTP/1.1" 200 41227
+INFO 2024-10-31 22:53:52,002 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:53:53,587 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 570280
+INFO 2024-10-31 22:54:01,637 basehttp "GET /admin/Dorms/room/?p=3 HTTP/1.1" 200 484850
+INFO 2024-10-31 22:54:01,715 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:54:04,546 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+INFO 2024-10-31 22:54:04,638 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:54:06,182 basehttp "GET /admin/Dorms/dorm/b23cad42-225e-4eb7-a6a9-3f45565676b4/change/ HTTP/1.1" 200 36318
+INFO 2024-10-31 22:54:06,252 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:54:08,326 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 89282
+INFO 2024-10-31 22:54:10,375 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 570280
+INFO 2024-10-31 22:54:10,445 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:54:11,981 basehttp "GET /admin/Dorms/room/0305623d-22eb-4c96-b991-29274cad0fb4/change/ HTTP/1.1" 200 41227
+INFO 2024-10-31 22:54:12,059 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-10-31 22:54:14,021 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 570280
+INFO 2024-11-04 13:32:10,627 autoreload Watching for file changes with StatReloader
+INFO 2024-11-04 13:32:15,539 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-11-04 13:32:17,530 log Not Found: /favicon.ico
+WARNING 2024-11-04 13:32:17,533 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-11-04 13:32:23,814 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-04 13:32:23,867 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-04 13:32:23,970 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-04 13:32:24,312 basehttp "GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 200 557
+INFO 2024-11-04 13:32:24,319 basehttp "GET /static/unfold/js/app.js HTTP/1.1" 200 5768
+INFO 2024-11-04 13:32:24,324 basehttp "GET /static/unfold/css/simplebar.css HTTP/1.1" 200 4647
+INFO 2024-11-04 13:32:24,351 basehttp "GET /static/unfold/js/simplebar.js HTTP/1.1" 200 27176
+INFO 2024-11-04 13:32:24,398 basehttp "GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 200 608
+INFO 2024-11-04 13:32:24,412 basehttp "GET /static/unfold/js/htmx.js HTTP/1.1" 200 42820
+INFO 2024-11-04 13:32:24,419 basehttp "GET /static/unfold/css/styles.css HTTP/1.1" 200 94176
+INFO 2024-11-04 13:32:24,420 basehttp "GET /static/unfold/js/chart.js HTTP/1.1" 200 200633
+INFO 2024-11-04 13:32:24,426 basehttp "GET /static/unfold/js/alpine.persist.js HTTP/1.1" 200 626
+INFO 2024-11-04 13:32:24,439 basehttp "GET /static/unfold/js/alpine.js HTTP/1.1" 200 41071
+INFO 2024-11-04 13:32:24,496 basehttp "GET /static/unfold/fonts/inter/Inter-Medium.woff2 HTTP/1.1" 200 46552
+INFO 2024-11-04 13:32:24,497 basehttp "GET /static/unfold/fonts/inter/Inter-Regular.woff2 HTTP/1.1" 200 46552
+INFO 2024-11-04 13:32:24,498 basehttp "GET /static/unfold/fonts/inter/Inter-SemiBold.woff2 HTTP/1.1" 200 46552
+INFO 2024-11-04 13:32:24,500 basehttp "GET /static/unfold/fonts/material-symbols/Material-Symbols-Outlined.woff2 HTTP/1.1" 200 349864
+INFO 2024-11-06 21:00:54,429 autoreload Watching for file changes with StatReloader
+INFO 2024-11-06 21:04:59,249 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-11-06 21:04:59,363 log Not Found: /favicon.ico
+WARNING 2024-11-06 21:04:59,368 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-11-06 21:05:02,819 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-06 21:05:02,867 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-06 21:05:02,937 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-06 21:05:19,850 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-06 21:05:19,939 basehttp "GET /admin/ HTTP/1.1" 200 83906
+INFO 2024-11-06 21:05:19,962 basehttp "GET /static/images/2.png HTTP/1.1" 304 0
+INFO 2024-11-06 21:06:15,899 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 94643
+INFO 2024-11-06 21:06:15,972 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-06 21:06:22,772 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 110886
+INFO 2024-11-06 21:06:22,831 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-06 21:06:28,682 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 582991
+INFO 2024-11-06 21:06:28,737 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-06 21:06:31,182 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 110886
+INFO 2024-11-06 21:06:31,238 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-06 21:06:32,287 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 582991
+INFO 2024-11-06 21:06:32,340 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-06 21:06:34,335 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 54670
+INFO 2024-11-06 21:06:34,437 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-06 21:06:35,717 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 582991
+INFO 2024-11-06 21:06:35,780 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-06 21:06:37,517 basehttp "GET /admin/Dorms/room/042d0fdb-439e-403b-8d7c-85e2c7d2ee60/change/ HTTP/1.1" 200 54502
+INFO 2024-11-06 21:06:37,579 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-06 21:06:39,677 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 582991
+INFO 2024-11-06 21:06:42,119 basehttp "GET /admin/ HTTP/1.1" 200 83634

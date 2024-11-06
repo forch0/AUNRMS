@@ -160,7 +160,6 @@ class ResidentsAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """Only superuser can delete."""
         return self._is_superuser(request)
-
 class StaffsAdmin(admin.ModelAdmin):
     form = StaffForm
     list_display = ('user', 'role', 'date_joined')

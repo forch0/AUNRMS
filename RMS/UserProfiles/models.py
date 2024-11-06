@@ -55,7 +55,7 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
 # Residents Model
 class Residents(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='resident_profile')
+    user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='residents')
     guardian_phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
     address = models.CharField(max_length=40, blank=True)
     role = models.ForeignKey('Roles', default=None, on_delete=models.CASCADE)  # Link to Roles model
@@ -93,7 +93,7 @@ class Roles(models.Model):
 # Staffs Model
 class Staffs(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staff_profile')
+    user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='staffs')
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
     date_joined = models.DateTimeField(default=now)
 
