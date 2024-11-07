@@ -66,11 +66,22 @@ class DormAdmin(admin.ModelAdmin):
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm', 'is_occupied')
+    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm', 'is_occupied', 'occupancy_ratio_display')
     list_filter = ('dorm__name', 'room_plan', 'floor')
     search_fields = ('number', 'dorm__name')
     ordering = ('id',)
 
+    def occupancy_ratio_display(self, obj):
+        # Set a default semester or handle no semester case
+        semester = Semester.objects.first()  # Adjust based on the logic for your default semester
+        if not semester:
+            return "No Semester Available"
+        
+        # Return occupancy ratio without saving
+        active_count = obj.active_capacity_count(semester)
+        return f"{active_count}/{obj.capacity}"
+
+    occupancy_ratio_display.short_description = 'Occupancy Ratio'
     # Helper Methods for Permissions
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
@@ -180,9 +191,9 @@ class StorageAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
         return self._is_superuser(request) or self._has_reslife_director_role(request) or self._has_residence_director_role(request)
 
+
 @admin.register(StorageItem)
 class StorageItemAdmin(admin.ModelAdmin):
-    form = StorageItemForm
     list_display = (
         'id', 
         'description', 
@@ -195,69 +206,59 @@ class StorageItemAdmin(admin.ModelAdmin):
         'status', 
         'approved_by', 
         'approval_date', 
-        'collected_at', 
-        'collected_by'
+        'display_collected_at', 
+        'display_collected_by'
     )
-    list_filter = ('storage__dorm__name', 'status', 'approved_by')
+    list_filter = ('status', 'approved_by')
     search_fields = ('description', 'storage__dorm__name', 'resident__name')
     ordering = ('id',)
     autocomplete_fields = ['room']
 
-    def collected_by(self, obj):
+    # Displaying fields safely
+    def display_collected_at(self, obj):
+        return obj.collected_at or "Not Collected"
+    display_collected_at.short_description = 'Collected At'
+
+    def display_collected_by(self, obj):
         return obj.collected_by.name if obj.collected_by else 'Not Collected'
-    collected_by.short_description = 'Collected By'
+    display_collected_by.short_description = 'Collected By'
 
     # Helper Methods for Permissions
     def _is_superuser(self, request: HttpRequest) -> bool:
-        """Checks if the user is a superuser."""
         return request.user.is_superuser
 
     def _has_selected_roles(self, request: HttpRequest, allowed_roles=['ResLife Directors']) -> bool:
-        """Checks if the user has one of the allowed roles."""
         staff = Staffs.objects.filter(user=request.user).first()
         return staff and staff.role.name in allowed_roles
 
     def _is_resident(self, request: HttpRequest) -> bool:
-        """Checks if the user is a resident."""
         return hasattr(request.user, 'residents')
 
     def _resident_storage_items(self, request: HttpRequest):
-        """Filters storage items to those belonging to the logged-in resident."""
         resident = Residents.objects.filter(user=request.user).first()
-        if resident:
-            return StorageItem.objects.filter(resident=resident)
-        return StorageItem.objects.none()
+        return StorageItem.objects.filter(resident=resident) if resident else StorageItem.objects.none()
 
     # Permissions
-    def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-        """Allows superuser, ResLife Director, and residents to view relevant storage items."""
+    def has_view_permission(self, request: HttpRequest, obj=None) -> bool:
         if self._is_superuser(request) or self._has_selected_roles(request):
             return True
         if self._is_resident(request):
             return obj is None or obj.resident.user == request.user
-        return False  # All other users are denied access.
+        return False
 
     def has_add_permission(self, request: HttpRequest) -> bool:
-        """Only superuser and ResLife Directors can add storage items."""
         return self._is_superuser(request) or self._has_selected_roles(request)
 
-    def has_change_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-        """Only superuser and ResLife Directors can change storage items."""
+    def has_change_permission(self, request: HttpRequest, obj=None) -> bool:
         return self._is_superuser(request) or self._has_selected_roles(request)
 
-    def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
-        """Only superuser and ResLife Directors can delete storage items."""
+    def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
         return self._is_superuser(request) or self._has_selected_roles(request)
 
     def get_queryset(self, request: HttpRequest):
-        """Filters the queryset based on the user’s role."""
         qs = super().get_queryset(request)
-
         if self._is_superuser(request) or self._has_selected_roles(request):
-            return qs  # Full access for superusers and ResLife Directors
-
+            return qs
         if self._is_resident(request):
-            return self._resident_storage_items(request)  # Only resident’s storage items
-
-        return qs.none()  # Deny access to all other users
-
+            return self._resident_storage_items(request)
+        return qs.none()

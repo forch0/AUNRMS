@@ -126,6 +126,7 @@ class EnrollmentAdmin(admin.ModelAdmin):
     list_filter = ('semester', 'academic_session', 'dorm', 'room')
     ordering = ('date_enrolled',)
     confirmation_fields = ['resident',]
+    search_fields = ['resident__user__username', 'academic_session__name', 'semester__semester_type', 'dorm__name', 'room__room_number']
 
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""

@@ -112,8 +112,12 @@ class AnnouncementAdmin(admin.ModelAdmin):
 class ComplaintAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'complaint_type', 'created_at', 'is_anonymous', 'semester', 'academic_session')
     list_filter = ('complaint_type', 'semester', 'academic_session', 'is_anonymous')
-    search_fields = ('description', 'user__username', 'semester__name', 'academic_session__name')
+    search_fields = (
+        'description', 'user__username', 'semester__name', 'academic_session__name',
+        'enrollment__student__user__username'
+    )
     ordering = ('created_at',)
+    autocomplete_fields = ('user', 'semester', 'academic_session', 'enrollment')  # Related fields for autocomplete
 
     def _is_reslife_directors(self, request: HttpRequest) -> bool:
         """Checks if the user is a ResLife Director."""
@@ -198,9 +202,9 @@ class ComplaintAdmin(admin.ModelAdmin):
 class MaintenanceRequestAdmin(admin.ModelAdmin):
     list_display = [
         'id', 'resident', 'dorm', 'room', 
-        'category', 'sub_category', 'description', 
+        'category','sub_category', 'description', 
         'status', 'created_at', 'updated_at', 
-        'completion_date', 'updated_by'
+        'completion_date', 'updated_by','semester', 'academic_session'
     ]
     
     # Search fields mapped to fields in the model and foreign keys
@@ -211,7 +215,9 @@ class MaintenanceRequestAdmin(admin.ModelAdmin):
         'room__room_number',        # Room number
         'category__name',           # Category name
         'sub_category__name',       # Subcategory name
-        'updated_by__user__email'   # Updated by staff's email through the user model
+        'updated_by__user__email',
+        'academic_session__name', 
+        'semester__semester_type',   # Updated by staff's email through the user model
     ]
     
     list_filter = ['status', 'category', 'sub_category', 'created_at', 'updated_at', 'completion_date']
@@ -220,13 +226,13 @@ class MaintenanceRequestAdmin(admin.ModelAdmin):
     
     # Optimizing database queries by prefetching related models
     list_select_related = [
-        'resident', 'dorm', 'room', 'category', 'sub_category', 'updated_by'
+        'resident', 'dorm', 'room', 'category', 'sub_category', 'updated_by','semester', 'academic_session'
     ]
     
     # Autocomplete fields for foreign keys
-    # autocomplete_fields = [
-    #     'resident', 'dorm', 'room', 'category', 'sub_category', 'updated_by'
-    # ]
+    autocomplete_fields = (
+        'resident', 'dorm', 'room', 'category','semester', 'academic_session'
+    )
 
 
     def _is_staff_assigned_to_dorm(self, request: HttpRequest, obj: MaintenanceRequest) -> bool:
@@ -332,11 +338,15 @@ class MaintenanceRequestAdmin(admin.ModelAdmin):
         return False  # Deny access otherwise
 
 class SubCategoryInline(SortableAdminMixin,admin.TabularInline):
-    list_display = ('name','my_order')
-    search_fields = ('name',)
+    list_display = ('name','my_order','category')
+    search_fields = ('name','category')
     model = SubCategory
     extra = 1  # Number of empty subcategory forms to display
     ordering = ['my_order']
+
+    autocomplete_fields = (
+       'category',
+    )
     
 
     def _is_reslife_directors(self, request: HttpRequest) -> bool:
@@ -367,7 +377,6 @@ class SubCategoryInline(SortableAdminMixin,admin.TabularInline):
         if request.user.is_superuser or self._is_reslife_directors(request):
             return True  # Superusers and ResLife Directors can delete categories
         return False  # All others are restricted from deleting
-
 class CategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
     inlines = [SubCategoryInline]
     list_display = ('name','my_order')
@@ -403,8 +412,6 @@ class CategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
         if request.user.is_superuser or self._is_reslife_directors(request):
             return True  # Superusers and ResLife Directors can delete categories
         return False  # All others are restricted from deleting
-
-
 class VendorAdmin(admin.ModelAdmin):
     list_display = ('business_name', 'owner_name', 'phone_number', 'dorm', 'is_off_campus', 'product')
     search_fields = ('business_name', 'owner_name', 'product')
