@@ -19871,3 +19871,29 @@ INFO 2024-11-07 20:39:54,748 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-11-07 20:40:23,055 basehttp "POST /admin/AcademicYear/enrollment/add/ HTTP/1.1" 302 0
 INFO 2024-11-07 20:40:23,329 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 171200
 INFO 2024-11-07 20:40:23,412 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:18:55,947 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 302 0
+INFO 2024-11-07 21:18:55,953 basehttp "GET /admin/login/?next=/admin/Dorms/dorm/ HTTP/1.1" 200 6286
+INFO 2024-11-07 21:19:04,363 basehttp "POST /admin/login/?next=/admin/Dorms/dorm/ HTTP/1.1" 302 0
+INFO 2024-11-07 21:19:04,502 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 111629
+INFO 2024-11-07 21:19:04,676 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:19:13,002 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 636241
+INFO 2024-11-07 21:19:13,072 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:23:07,733 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-11-07 21:23:08,396 autoreload Watching for file changes with StatReloader
+INFO 2024-11-07 21:23:21,000 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dorms\admin.py changed, reloading.
+INFO 2024-11-07 21:23:21,583 autoreload Watching for file changes with StatReloader
+INFO 2024-11-07 21:24:57,207 basehttp "GET /admin/Dorms/room/?q=103 HTTP/1.1" 302 0
+INFO 2024-11-07 21:24:57,238 basehttp "GET /admin/login/?next=/admin/Dorms/room/%3Fq%3D103 HTTP/1.1" 200 6296
+INFO 2024-11-07 21:25:07,652 basehttp "POST /admin/login/?next=/admin/Dorms/room/%3Fq%3D103 HTTP/1.1" 302 0
+INFO 2024-11-07 21:25:07,786 basehttp "GET /admin/Dorms/room/?q=103 HTTP/1.1" 200 112195
+INFO 2024-11-07 21:25:07,858 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:27:05,103 basehttp "GET /admin/ HTTP/1.1" 200 85404
+INFO 2024-11-07 21:27:10,300 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 170815
+INFO 2024-11-07 21:27:10,485 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:27:18,672 basehttp "GET /admin/ HTTP/1.1" 200 85404
+INFO 2024-11-07 21:27:24,931 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 687809
+INFO 2024-11-07 21:27:25,032 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:27:29,420 basehttp "GET /admin/Dorms/room/?q=204 HTTP/1.1" 200 111923
+INFO 2024-11-07 21:27:29,527 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:29:57,166 basehttp "GET /admin/Dorms/room/?q=204 HTTP/1.1" 200 111923
+INFO 2024-11-07 21:29:57,229 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343

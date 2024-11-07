@@ -66,7 +66,7 @@ class DormAdmin(admin.ModelAdmin):
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm', 'is_occupied', 'occupancy_ratio_display')
+    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm', 'is_occupied', 'occupancy_ratio_display','is_full_display')
     list_filter = ('dorm__name', 'room_plan', 'floor')
     search_fields = ('number', 'dorm__name')
     ordering = ('id',)
@@ -82,6 +82,17 @@ class RoomAdmin(admin.ModelAdmin):
         return f"{active_count}/{obj.capacity}"
 
     occupancy_ratio_display.short_description = 'Occupancy Ratio'
+
+    def is_full_display(self, obj):
+        # Set a default semester or handle no semester case
+        semester = Semester.objects.first()
+        if not semester:
+            return "No Semester Available"
+        
+        # Check if the room is fully occupied
+        return "Yes" if obj.is_full(semester) else "No"
+
+    is_full_display.short_description = 'Room is Full'
     # Helper Methods for Permissions
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
