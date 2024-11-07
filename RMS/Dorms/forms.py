@@ -48,19 +48,45 @@ class StorageForm(forms.ModelForm):
 class StorageItemForm(forms.ModelForm):
     class Meta:
         model = StorageItem
-        fields = fields = '__all__'
+        fields = '__all__'  # Include all fields from the model
         widgets = {
             'description': forms.Textarea(attrs={'rows': 2}),
             'approval_date': forms.DateInput(attrs={'type': 'date'}),
             'collected_at': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
         }
 
-        # Override the __init__ method to add the search functionality
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['room'].queryset = Room.objects.all()  # Adjust the queryset if necessary
-        self.fields['room'].widget.attrs.update({'class': 'select2'})  # Optional: use a JavaScript library for a better UI
 
+        # Filter rooms based on the resident's dorm enrollment for the current semester
+        if self.instance and self.instance.resident:
+            # Fetch the enrolled dorms for the current academic session and semester
+            enrolled_dorms = self.instance.resident.enrollment_set.filter(
+                semester__current=True, 
+                academic_session__current=True
+            ).values_list('dorm', flat=True)
+            
+            # Filter rooms by the dorms the resident is enrolled in
+            self.fields['room'].queryset = Room.objects.filter(dorm__id__in=enrolled_dorms)
+            
+            # Optionally use the select2 widget for a better UI experience
+            self.fields['room'].widget.attrs.update({'class': 'select2'})
+        elif 'resident' in self.data:
+            resident_id = self.data.get('resident')
+            resident = Residents.objects.get(id=resident_id)
+            enrolled_dorms = resident.enrollment_set.filter(
+                semester__current=True,
+                academic_session__current=True
+            ).values_list('dorm', flat=True)
+            
+            # Filter rooms by the dorms the resident is enrolled in
+            self.fields['room'].queryset = Room.objects.filter(dorm__id__in=enrolled_dorms)
+            
+            # Optionally use the select2 widget for a better UI experience
+            self.fields['room'].widget.attrs.update({'class': 'select2'})
+        else:
+            # If no resident is assigned yet, we will leave the room queryset unfiltered
+            self.fields['room'].queryset = Room.objects.none()
 
 
 class StorageItemApprovalForm(forms.ModelForm):

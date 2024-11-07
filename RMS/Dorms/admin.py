@@ -150,6 +150,36 @@ class StorageAdmin(admin.ModelAdmin):
     search_fields = ('description', 'dorm__name')
     ordering = ('id',)
 
+    # Helper method to check if user is a superuser
+    def _is_superuser(self, request: HttpRequest) -> bool:
+        return request.user.is_superuser
+
+    # Helper method to check if the user has the 'ResLife Director' role
+    def _has_reslife_director_role(self, request: HttpRequest) -> bool:
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'ResLife Directors'
+
+    # Helper method to check if the user has the 'Residence Director' role
+    def _has_residence_director_role(self, request: HttpRequest) -> bool:
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'Residence Director'
+
+    # Check if user has permission to view storage
+    def has_view_permission(self, request: HttpRequest, obj=None) -> bool:
+        return self._is_superuser(request) or self._has_reslife_director_role(request) or self._has_residence_director_role(request)
+
+    # Check if user has permission to add a storage item
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        return self._is_superuser(request) or self._has_reslife_director_role(request) or self._has_residence_director_role(request)
+
+    # Check if user has permission to change a storage item
+    def has_change_permission(self, request: HttpRequest, obj=None) -> bool:
+        return self._is_superuser(request) or self._has_reslife_director_role(request) or self._has_residence_director_role(request)
+
+    # Check if user has permission to delete a storage item
+    def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
+        return self._is_superuser(request) or self._has_reslife_director_role(request) or self._has_residence_director_role(request)
+
 @admin.register(StorageItem)
 class StorageItemAdmin(admin.ModelAdmin):
     form = StorageItemForm
@@ -182,7 +212,7 @@ class StorageItemAdmin(admin.ModelAdmin):
         """Checks if the user is a superuser."""
         return request.user.is_superuser
 
-    def _has_selected_roles(self, request: HttpRequest, allowed_roles=['ResLife Director']) -> bool:
+    def _has_selected_roles(self, request: HttpRequest, allowed_roles=['ResLife Directors']) -> bool:
         """Checks if the user has one of the allowed roles."""
         staff = Staffs.objects.filter(user=request.user).first()
         return staff and staff.role.name in allowed_roles
@@ -231,10 +261,3 @@ class StorageItemAdmin(admin.ModelAdmin):
 
         return qs.none()  # Deny access to all other users
 
-    # def has_module_permission(self, request: HttpRequest) -> bool:
-        """Allows access to the StorageItem admin based on roles."""
-        return (
-            self._is_superuser(request) 
-            or self._has_selected_roles(request) 
-            or self._is_resident(request)
-        )

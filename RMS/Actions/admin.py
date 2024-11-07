@@ -196,10 +196,38 @@ class ComplaintAdmin(admin.ModelAdmin):
 
 @admin.register(MaintenanceRequest)
 class MaintenanceRequestAdmin(admin.ModelAdmin):
-    list_display = ['id', 'resident', 'dorm', 'room', 'category', 'sub_category','description', 'status', 'created_at', 'updated_at', 'completion_date', 'updated_by']
+    list_display = [
+        'id', 'resident', 'dorm', 'room', 
+        'category', 'sub_category', 'description', 
+        'status', 'created_at', 'updated_at', 
+        'completion_date', 'updated_by'
+    ]
+    
+    # Search fields mapped to fields in the model and foreign keys
+    search_fields = [
+        'id',                      # UUID of the request
+        'resident__user__email',    # Resident's email through the user model
+        'dorm__name',               # Dorm name
+        'room__room_number',        # Room number
+        'category__name',           # Category name
+        'sub_category__name',       # Subcategory name
+        'updated_by__user__email'   # Updated by staff's email through the user model
+    ]
+    
     list_filter = ['status', 'category', 'sub_category', 'created_at', 'updated_at', 'completion_date']
-    search_fields = ['id', 'resident__user__username', 'dorm__name', 'room__room_number', 'category', 'sub_category']
     readonly_fields = ['created_at', 'updated_at', 'completion_date']
+    ordering = ['created_at', 'dorm', 'resident']
+    
+    # Optimizing database queries by prefetching related models
+    list_select_related = [
+        'resident', 'dorm', 'room', 'category', 'sub_category', 'updated_by'
+    ]
+    
+    # Autocomplete fields for foreign keys
+    # autocomplete_fields = [
+    #     'resident', 'dorm', 'room', 'category', 'sub_category', 'updated_by'
+    # ]
+
 
     def _is_staff_assigned_to_dorm(self, request: HttpRequest, obj: MaintenanceRequest) -> bool:
         """Check if the staff is assigned to the dorm for the semester and session."""
@@ -240,7 +268,7 @@ class MaintenanceRequestAdmin(admin.ModelAdmin):
 
         staff = Staffs.objects.filter(user=request.user).first()
         if staff:
-            if staff.role.name in ['ResLife Director', 'Dean of Student Affairs']:
+            if staff.role.name in ['ResLife Directors', 'Dean of Student Affairs']:
                 return True  # Can view all requests
 
             if obj and self._is_staff_assigned_to_dorm(request, obj):
@@ -257,7 +285,7 @@ class MaintenanceRequestAdmin(admin.ModelAdmin):
 
         staff = Staffs.objects.filter(user=request.user).first()
         if staff:
-            if staff.role.name == 'ResLife Director':
+            if staff.role.name == 'ResLife Directors':
                 return True  # ResLife Directors can create requests
 
             # Check if the staff is assigned to a dorm for the semester
@@ -277,7 +305,7 @@ class MaintenanceRequestAdmin(admin.ModelAdmin):
             return True  # Superuser can update anything
 
         staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name in ['ResLife Director', 'Dean of Student Affairs']:
+        if staff and staff.role.name in ['ResLife Directors', 'Dean of Student Affairs']:
             return True  # ResLife Directors and Dean can update all requests
 
         # Check if the staff is assigned to the dorm
@@ -293,7 +321,7 @@ class MaintenanceRequestAdmin(admin.ModelAdmin):
             return True  # Superuser can delete anything
 
         staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name in ['ResLife Director', 'Dean of Student Affairs']:
+        if staff and staff.role.name in ['ResLife Directors', 'Dean of Student Affairs']:
             return True  # ResLife Directors and Dean can update all requests
 
         # Check if the staff is assigned to the dorm
@@ -309,6 +337,36 @@ class SubCategoryInline(SortableAdminMixin,admin.TabularInline):
     model = SubCategory
     extra = 1  # Number of empty subcategory forms to display
     ordering = ['my_order']
+    
+
+    def _is_reslife_directors(self, request: HttpRequest) -> bool:
+        """Checks if the user is a ResLife Director."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'ResLife Directors'
+
+    # Overriding has_view_permission to allow viewing for superusers and ResLife Directors
+    def has_view_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can view categories
+        return False  # All others are restricted from viewing
+
+    # Overriding has_add_permission to allow adding for superusers and ResLife Directors
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can add categories
+        return False  # All others are restricted from adding
+
+    # Overriding has_change_permission to allow changing for superusers and ResLife Directors
+    def has_change_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can change categories
+        return False  # All others are restricted from changing
+
+    # Overriding has_delete_permission to allow deleting for superusers and ResLife Directors
+    def has_delete_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can delete categories
+        return False  # All others are restricted from deleting
 
 class CategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
     inlines = [SubCategoryInline]
@@ -316,11 +374,72 @@ class CategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
     search_fields = ('name',)
     ordering = ['my_order']
 
+    # Helper function to check if the user is a ResLife Director
+    def _is_reslife_directors(self, request: HttpRequest) -> bool:
+        """Checks if the user is a ResLife Director."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'ResLife Directors'
+
+    # Overriding has_view_permission to allow viewing for superusers and ResLife Directors
+    def has_view_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can view categories
+        return False  # All others are restricted from viewing
+
+    # Overriding has_add_permission to allow adding for superusers and ResLife Directors
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can add categories
+        return False  # All others are restricted from adding
+
+    # Overriding has_change_permission to allow changing for superusers and ResLife Directors
+    def has_change_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can change categories
+        return False  # All others are restricted from changing
+
+    # Overriding has_delete_permission to allow deleting for superusers and ResLife Directors
+    def has_delete_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can delete categories
+        return False  # All others are restricted from deleting
+
+
 class VendorAdmin(admin.ModelAdmin):
     list_display = ('business_name', 'owner_name', 'phone_number', 'dorm', 'is_off_campus', 'product')
     search_fields = ('business_name', 'owner_name', 'product')
     list_filter = ('dorm', 'is_off_campus')
 
+    def _is_reslife_directors(self, request: HttpRequest) -> bool:
+        """Checks if the user is a ResLife Director."""
+        staff = Staffs.objects.filter(user=request.user).first()
+        return staff and staff.role.name == 'ResLife Directors'
+
+    # Overriding has_view_permission to allow viewing for superusers and ResLife Directors
+    def has_view_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can view categories
+        return False  # All others are restricted from viewing
+
+    # Overriding has_add_permission to allow adding for superusers and ResLife Directors
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can add categories
+        return False  # All others are restricted from adding
+
+    # Overriding has_change_permission to allow changing for superusers and ResLife Directors
+    def has_change_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can change categories
+        return False  # All others are restricted from changing
+
+    # Overriding has_delete_permission to allow deleting for superusers and ResLife Directors
+    def has_delete_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+        if request.user.is_superuser or self._is_reslife_directors(request):
+            return True  # Superusers and ResLife Directors can delete categories
+        return False  # All others are restricted from deleting
+
+    
 admin.site.register(Vendor, VendorAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(SubCategory)

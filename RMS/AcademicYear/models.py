@@ -75,7 +75,7 @@ class Enrollment(models.Model):
     date_enrolled = models.DateField(auto_now_add=True)
     created_at = models.DateTimeField(default=timezone.now)
     def __str__(self):
-        return f"{self.resident.user.username} - {self.semester.semester_type} ({self.academic_session.name})"
+        return f"{self.resident.user.email} - {self.semester.semester_type} ({self.academic_session.name})"
 
 class StaffAssignment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -85,11 +85,7 @@ class StaffAssignment(models.Model):
     academic_session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE)
     created_at = models.DateTimeField(default=timezone.now)
-    def clean(self):
-        allowed_roles = ['Residence Assistant', 'Residence Director']
-        if self.role.name not in allowed_roles:
-            raise ValidationError(f"Staff can only be assigned if they have roles: {', '.join(allowed_roles)}")
-
+    
     def __str__(self):
         return f"{self.staff} assigned to {self.dorm} for {self.semester} in {self.academic_session}"
 

@@ -6,7 +6,7 @@ import uuid
 from cryptography.fernet import Fernet
 from AcademicYear.models import AcademicSession, Semester,Enrollment  # Adjust import path as needed
 from Dorms.models import Dorm, Room 
-from UserProfiles.models import Staffs  # Adjust import path as needed
+from UserProfiles.models import Staffs,Residents  # Adjust import path as needed
 
 key = Fernet.generate_key()
 cipher = Fernet(key)
@@ -63,7 +63,7 @@ class MaintenanceRequest(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     dorm = models.ForeignKey('Dorms.Dorm', on_delete=models.CASCADE, related_name='maintenance_requests')
     room = models.ForeignKey('Dorms.Room', on_delete=models.CASCADE, related_name='maintenance_requests', blank=True, null=True)
-    resident = models.ForeignKey('UserProfiles.Residents', on_delete=models.CASCADE, related_name='maintenance_requests')
+    resident = models.ForeignKey(Residents, on_delete=models.CASCADE, related_name='maintenance_requests')
     semester = models.ForeignKey('AcademicYear.Semester', on_delete=models.CASCADE, related_name='maintenance_requests')
     academic_session = models.ForeignKey('AcademicYear.AcademicSession', on_delete=models.CASCADE, related_name='maintenance_requests')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -81,7 +81,7 @@ class MaintenanceRequest(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"Request {self.id} by {self.resident.user.username} - {self.status}"
+        return f"Request {self.id} by {self.resident.user.email} - {self.status}"
     
     class Meta:
         verbose_name = 'Maintenance Request'
