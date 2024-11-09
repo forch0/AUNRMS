@@ -21127,3 +21127,4 @@ Traceback (most recent call last):
     raise NoReverseMatch("%s is not a registered namespace" % key)
 django.urls.exceptions.NoReverseMatch: 'the_django_plotly_dash' is not a registered namespace
 ERROR 2024-11-09 10:53:16,156 basehttp "GET /admin/django_plotly_dash/statelessapp/ HTTP/1.1" 500 612701
+INFO 2024-11-09 10:53:21,051 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 98585
