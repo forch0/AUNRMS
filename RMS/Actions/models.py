@@ -131,6 +131,12 @@ class Complaint(models.Model):
 
     ]
 
+    STATUS_CHOICES = [
+        ('open', 'Open'),
+        ('closed', 'Closed'),
+        ('pending', 'Pending'),
+    ]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='complaints', null=True, blank=True)
     enrollment = models.ForeignKey(Enrollment, on_delete=models.CASCADE, related_name='complaints')
@@ -140,7 +146,8 @@ class Complaint(models.Model):
     description = models.TextField()
     is_anonymous = models.BooleanField(default=False)
     created_at = models.DateTimeField(default=timezone.now)
-
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='open')
+    
     def save(self, *args, **kwargs):
         if self.is_anonymous:
             self.description = cipher.encrypt(self.description.encode()).decode()

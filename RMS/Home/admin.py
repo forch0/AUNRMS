@@ -1,3 +1,7 @@
-from django.contrib import admin
+# from django.contrib import admin
+# from .charts_config import setup_charts
 
-# Register your models here.
+# # Call the setup_charts function to initialize chart configurations
+# # setup_charts()
+
+# # Your admin classes go here

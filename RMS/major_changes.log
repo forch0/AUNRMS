@@ -19897,3 +19897,402 @@ INFO 2024-11-07 21:27:29,420 basehttp "GET /admin/Dorms/room/?q=204 HTTP/1.1" 20
 INFO 2024-11-07 21:27:29,527 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-11-07 21:29:57,166 basehttp "GET /admin/Dorms/room/?q=204 HTTP/1.1" 200 111923
 INFO 2024-11-07 21:29:57,229 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:30:18,605 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 78403
+INFO 2024-11-07 21:30:18,668 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:30:43,986 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 77858
+INFO 2024-11-07 21:30:44,051 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:30:46,879 basehttp "GET /admin_tools_stats/analytics/?show=mygraph HTTP/1.1" 200 5213
+INFO 2024-11-07 21:30:47,004 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-07 21:30:48,119 basehttp "GET /admin_tools_stats/analytics/chart/mygraph?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-07 21:30:48,171 basehttp "GET /admin_tools_stats/analytics/chart/mygraph/?analytics_chart=true HTTP/1.1" 200 3005
+INFO 2024-11-07 21:30:48,260 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=8bERKTBXdJRxfciXSuJ7Oox6pE6PGHZ9fIfG33OhnSTI8kLpxscaC6OLoQ3kBaYF&graph_key=mygraph&select_box_operation=Count&select_box_interval=days&select_box_chart_type=discreteBarChart&time_since=2024-10-07&time_until=2024-11-07&_=1731011446987 HTTP/1.1" 200 2176
+INFO 2024-11-07 21:30:58,631 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=8bERKTBXdJRxfciXSuJ7Oox6pE6PGHZ9fIfG33OhnSTI8kLpxscaC6OLoQ3kBaYF&graph_key=mygraph&select_box_operation=Count&select_box_interval=months&select_box_chart_type=discreteBarChart&time_since=2024-10-07&time_until=2024-11-07&_=1731011446988 HTTP/1.1" 200 1276
+INFO 2024-11-07 21:31:02,446 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=8bERKTBXdJRxfciXSuJ7Oox6pE6PGHZ9fIfG33OhnSTI8kLpxscaC6OLoQ3kBaYF&graph_key=mygraph&select_box_operation=Count&select_box_interval=years&select_box_chart_type=discreteBarChart&time_since=2024-10-07&time_until=2024-11-07&_=1731011446989 HTTP/1.1" 200 1246
+INFO 2024-11-07 21:31:05,166 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=8bERKTBXdJRxfciXSuJ7Oox6pE6PGHZ9fIfG33OhnSTI8kLpxscaC6OLoQ3kBaYF&graph_key=mygraph&select_box_operation=Count&select_box_interval=years&select_box_chart_type=lineChart&time_since=2024-10-07&time_until=2024-11-07&_=1731011446990 HTTP/1.1" 200 1264
+INFO 2024-11-07 21:31:07,946 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=8bERKTBXdJRxfciXSuJ7Oox6pE6PGHZ9fIfG33OhnSTI8kLpxscaC6OLoQ3kBaYF&graph_key=mygraph&select_box_operation=Count&select_box_interval=years&select_box_chart_type=multiBarChart&time_since=2024-10-07&time_until=2024-11-07&_=1731011446991 HTTP/1.1" 200 1218
+INFO 2024-11-07 21:31:31,780 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=8bERKTBXdJRxfciXSuJ7Oox6pE6PGHZ9fIfG33OhnSTI8kLpxscaC6OLoQ3kBaYF&graph_key=mygraph&select_box_operation=Count&select_box_interval=years&select_box_chart_type=linePlusBarChart&time_since=2024-10-07&time_until=2024-11-07&_=1731011446992 HTTP/1.1" 200 1537
+INFO 2024-11-07 21:31:52,170 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=8bERKTBXdJRxfciXSuJ7Oox6pE6PGHZ9fIfG33OhnSTI8kLpxscaC6OLoQ3kBaYF&graph_key=mygraph&select_box_operation=Count&select_box_interval=years&select_box_chart_type=cumulativeLineChart&time_since=2024-10-07&time_until=2024-11-07&_=1731011446993 HTTP/1.1" 200 1224
+INFO 2024-11-07 21:31:54,601 basehttp "GET /admin_tools_stats/chart_data/mygraph/?csrfmiddlewaretoken=8bERKTBXdJRxfciXSuJ7Oox6pE6PGHZ9fIfG33OhnSTI8kLpxscaC6OLoQ3kBaYF&graph_key=mygraph&select_box_operation=Count&select_box_interval=years&select_box_chart_type=lineWithFocusChart&time_since=2024-10-07&time_until=2024-11-07&_=1731011446994 HTTP/1.1" 200 1423
+INFO 2024-11-07 21:33:12,960 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 95114
+INFO 2024-11-07 21:33:13,015 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:33:55,621 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 64800
+INFO 2024-11-07 21:33:55,670 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:36:05,724 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 64106
+INFO 2024-11-07 21:36:05,785 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 21:51:11,795 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Home\admin.py changed, reloading.
+INFO 2024-11-07 21:51:12,471 autoreload Watching for file changes with StatReloader
+INFO 2024-11-07 21:53:13,848 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-07 21:53:14,222 autoreload Watching for file changes with StatReloader
+INFO 2024-11-07 21:53:48,104 autoreload Watching for file changes with StatReloader
+INFO 2024-11-07 21:54:58,869 autoreload Watching for file changes with StatReloader
+INFO 2024-11-07 22:01:26,285 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Home\charts_config.py changed, reloading.
+INFO 2024-11-07 22:01:26,906 autoreload Watching for file changes with StatReloader
+INFO 2024-11-07 22:03:18,013 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Home\charts_config.py changed, reloading.
+INFO 2024-11-07 22:03:18,618 autoreload Watching for file changes with StatReloader
+INFO 2024-11-07 22:03:28,027 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Home\admin.py changed, reloading.
+INFO 2024-11-07 22:03:28,622 autoreload Watching for file changes with StatReloader
+INFO 2024-11-07 22:03:39,535 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:03:39,557 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 6308
+INFO 2024-11-07 22:03:46,807 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 7050
+INFO 2024-11-07 22:03:52,146 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:03:52,242 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 78130
+INFO 2024-11-07 22:03:52,297 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:04:04,986 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 96943
+INFO 2024-11-07 22:04:05,052 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:04:05,057 basehttp "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2024-11-07 22:07:48,015 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97652
+INFO 2024-11-07 22:07:48,079 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:08:26,146 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 98252
+INFO 2024-11-07 22:08:26,205 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:09:00,066 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 98025
+INFO 2024-11-07 22:09:00,123 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:09:40,015 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 98025
+INFO 2024-11-07 22:09:40,076 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:13:12,994 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97686
+INFO 2024-11-07 22:13:13,051 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:13:37,493 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 98418
+INFO 2024-11-07 22:13:37,554 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:14:04,269 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97822
+INFO 2024-11-07 22:14:04,331 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:17:21,532 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:17:21,604 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87850
+INFO 2024-11-07 22:17:21,669 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:17:24,473 basehttp "GET /admin_tools_stats/analytics/?show=assignment_trends HTTP/1.1" 200 5349
+INFO 2024-11-07 22:17:24,588 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-07 22:17:24,680 basehttp "GET /admin_tools_stats/analytics/chart/assignment_trends?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-07 22:17:24,738 basehttp "GET /admin_tools_stats/analytics/chart/assignment_trends/?analytics_chart=true HTTP/1.1" 200 1944
+INFO 2024-11-07 22:17:24,868 basehttp "GET /admin_tools_stats/chart_data/assignment_trends/?csrfmiddlewaretoken=hw3MYgFvkbxtvW749f0KsrfL2Hqv14fIS4qed3B1WNUrfrfzrHHUwHYlxBIdwnSy&graph_key=assignment_trends&select_box_interval=days&time_since=2024-10-07&time_until=2024-11-07&_=1731014244580 HTTP/1.1" 200 2230
+INFO 2024-11-07 22:17:31,921 basehttp "GET /admin_tools_stats/chart_data/assignment_trends/?csrfmiddlewaretoken=hw3MYgFvkbxtvW749f0KsrfL2Hqv14fIS4qed3B1WNUrfrfzrHHUwHYlxBIdwnSy&graph_key=assignment_trends&select_box_interval=weeks&time_since=2024-10-07&time_until=2024-11-07&_=1731014244581 HTTP/1.1" 200 1414
+INFO 2024-11-07 22:17:34,484 basehttp "GET /admin_tools_stats/chart_data/assignment_trends/?csrfmiddlewaretoken=hw3MYgFvkbxtvW749f0KsrfL2Hqv14fIS4qed3B1WNUrfrfzrHHUwHYlxBIdwnSy&graph_key=assignment_trends&select_box_interval=months&time_since=2024-10-07&time_until=2024-11-07&_=1731014244582 HTTP/1.1" 200 1327
+INFO 2024-11-07 22:17:39,670 basehttp "GET /admin_tools_stats/chart_data/assignment_trends/?csrfmiddlewaretoken=hw3MYgFvkbxtvW749f0KsrfL2Hqv14fIS4qed3B1WNUrfrfzrHHUwHYlxBIdwnSy&graph_key=assignment_trends&select_box_interval=years&time_since=2024-10-07&time_until=2024-11-07&_=1731014244583 HTTP/1.1" 200 1294
+INFO 2024-11-07 22:17:55,338 basehttp "GET /admin_tools_stats/chart_data/assignment_trends/?csrfmiddlewaretoken=hw3MYgFvkbxtvW749f0KsrfL2Hqv14fIS4qed3B1WNUrfrfzrHHUwHYlxBIdwnSy&graph_key=assignment_trends&select_box_interval=quarters&time_since=2024-10-07&time_until=2024-11-07&_=1731014244584 HTTP/1.1" 200 1297
+INFO 2024-11-07 22:24:40,788 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:24:40,799 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 6312
+INFO 2024-11-07 22:24:48,521 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:24:48,636 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97215
+INFO 2024-11-07 22:24:48,699 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:33:28,583 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:33:28,593 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 6312
+INFO 2024-11-07 22:33:35,805 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:33:35,914 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97215
+INFO 2024-11-07 22:33:35,979 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:37:24,143 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:37:24,210 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97378
+INFO 2024-11-07 22:37:24,275 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:37:30,195 basehttp "GET /admin_tools_stats/analytics/?show=staff_distribution HTTP/1.1" 200 5647
+INFO 2024-11-07 22:37:30,313 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-07 22:37:30,396 basehttp "GET /admin_tools_stats/analytics/chart/staff_distribution?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-07 22:37:30,452 basehttp "GET /admin_tools_stats/analytics/chart/staff_distribution/?analytics_chart=true HTTP/1.1" 200 2683
+INFO 2024-11-07 22:37:30,522 basehttp "GET /admin_tools_stats/chart_data/staff_distribution/?csrfmiddlewaretoken=zG3FSoAslgyOXeE7SRwDifEJ5yc0GFb6A5jh51LagvJdM5VCNCtP88EaAGT6exc7&graph_key=staff_distribution&select_box_interval=days&select_box_chart_type=discreteBarChart&time_since=2024-10-07&time_until=2024-11-07&_=1731015450307 HTTP/1.1" 200 2209
+INFO 2024-11-07 22:37:51,631 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/change/ HTTP/1.1" 200 98479
+INFO 2024-11-07 22:37:51,898 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:39:07,364 basehttp "POST /admin/admin_tools_stats/dashboardstats/5/change/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:39:07,440 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97386
+INFO 2024-11-07 22:39:07,520 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:39:09,718 basehttp "GET /admin_tools_stats/analytics/?show=staff_distribution HTTP/1.1" 200 5647
+INFO 2024-11-07 22:39:09,874 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-07 22:39:09,986 basehttp "GET /admin_tools_stats/analytics/chart/staff_distribution/?analytics_chart=true HTTP/1.1" 200 1874
+INFO 2024-11-07 22:39:10,092 basehttp "GET /admin_tools_stats/chart_data/staff_distribution/?csrfmiddlewaretoken=1VnvAkXqJie30D3y8awXtrKyxrGdm4ht2kD7NX88ExpsPuk33Vt9jkKZ2znjUWiu&graph_key=staff_distribution&select_box_interval=days&time_since=2024-10-07&time_until=2024-11-07&_=1731015549852 HTTP/1.1" 200 2209
+INFO 2024-11-07 22:39:22,978 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/change/ HTTP/1.1" 200 98416
+INFO 2024-11-07 22:39:23,066 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:39:47,423 basehttp "POST /admin/admin_tools_stats/dashboardstats/5/change/ HTTP/1.1" 200 98999
+INFO 2024-11-07 22:39:47,492 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:40:15,518 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/change/ HTTP/1.1" 200 98416
+INFO 2024-11-07 22:40:16,655 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97036
+INFO 2024-11-07 22:40:23,723 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/change/ HTTP/1.1" 200 98416
+INFO 2024-11-07 22:40:23,920 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:40:26,356 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/delete/ HTTP/1.1" 200 45860
+INFO 2024-11-07 22:40:26,379 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2024-11-07 22:40:28,719 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/change/ HTTP/1.1" 200 98416
+INFO 2024-11-07 22:40:32,884 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/delete/ HTTP/1.1" 200 45860
+INFO 2024-11-07 22:40:36,638 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/change/ HTTP/1.1" 200 98416
+INFO 2024-11-07 22:40:43,430 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97036
+INFO 2024-11-07 22:40:52,515 basehttp "GET /admin/admin_tools_stats/dashboardstats/4/change/ HTTP/1.1" 200 98515
+INFO 2024-11-07 22:40:52,588 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:42:19,508 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97036
+INFO 2024-11-07 22:42:23,173 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/change/ HTTP/1.1" 200 98416
+INFO 2024-11-07 22:42:23,256 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:42:26,718 basehttp "GET /admin/admin_tools_stats/dashboardstats/5/delete/ HTTP/1.1" 200 45860
+INFO 2024-11-07 22:42:28,345 basehttp "POST /admin/admin_tools_stats/dashboardstats/5/delete/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:42:28,420 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87789
+INFO 2024-11-07 22:42:28,504 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:42:31,848 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 96943
+INFO 2024-11-07 22:42:31,926 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:50:41,014 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:50:41,019 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 6312
+INFO 2024-11-07 22:50:54,630 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:50:54,731 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97215
+INFO 2024-11-07 22:50:54,923 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:54:18,523 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97734
+INFO 2024-11-07 22:54:18,599 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:54:28,238 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 98060
+INFO 2024-11-07 22:54:28,306 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:57:05,192 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97734
+INFO 2024-11-07 22:57:05,291 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:57:07,892 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 96943
+INFO 2024-11-07 22:57:08,963 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:57:09,046 basehttp "GET /admin/ HTTP/1.1" 200 85255
+INFO 2024-11-07 22:57:12,830 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87503
+INFO 2024-11-07 22:57:12,901 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:57:22,220 basehttp "GET /admin/admin_tools_stats/dashboardstats/2/change/ HTTP/1.1" 200 98471
+INFO 2024-11-07 22:57:22,287 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:57:30,323 basehttp "POST /admin/admin_tools_stats/dashboardstats/2/change/ HTTP/1.1" 200 98971
+INFO 2024-11-07 22:57:30,387 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:57:40,079 basehttp "POST /admin/admin_tools_stats/dashboardstats/2/change/ HTTP/1.1" 302 0
+INFO 2024-11-07 22:57:40,152 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87854
+INFO 2024-11-07 22:57:40,222 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-07 22:57:55,297 basehttp "GET /admin/admin_tools_stats/dashboardstats/4/change/ HTTP/1.1" 200 98515
+INFO 2024-11-07 22:57:55,372 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:16:16,981 autoreload Watching for file changes with StatReloader
+INFO 2024-11-08 15:16:19,305 basehttp "GET /admin/admin_tools_stats/dashboardstats/4/change/ HTTP/1.1" 302 0
+INFO 2024-11-08 15:16:19,335 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/4/change/ HTTP/1.1" 200 6317
+INFO 2024-11-08 15:16:27,109 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/4/change/ HTTP/1.1" 302 0
+INFO 2024-11-08 15:16:27,250 basehttp "GET /admin/admin_tools_stats/dashboardstats/4/change/ HTTP/1.1" 200 98787
+INFO 2024-11-08 15:16:27,314 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:16:33,845 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/4/change/ HTTP/1.1" 302 0
+INFO 2024-11-08 15:16:33,904 basehttp "GET /admin/ HTTP/1.1" 200 85143
+INFO 2024-11-08 15:16:39,705 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87511
+INFO 2024-11-08 15:16:39,786 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:31:49,801 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-08 15:31:49,811 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 6312
+INFO 2024-11-08 15:31:57,310 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-08 15:31:57,432 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97215
+INFO 2024-11-08 15:31:57,514 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:40:01,811 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-08 15:40:01,825 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 6312
+INFO 2024-11-08 15:40:12,578 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 7054
+INFO 2024-11-08 15:40:18,210 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-08 15:40:18,298 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97215
+INFO 2024-11-08 15:40:18,360 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:43:22,467 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97989
+INFO 2024-11-08 15:43:22,528 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-11-08 15:44:08,409 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/add/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 465, in get_queryset
+    method_name = list(modifier.keys())[0]
+                       ^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+ERROR 2024-11-08 15:44:08,417 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 500 168334
+INFO 2024-11-08 15:44:16,140 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97989
+INFO 2024-11-08 15:44:16,229 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:44:36,627 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 98047
+INFO 2024-11-08 15:44:36,683 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:45:16,752 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 98348
+INFO 2024-11-08 15:45:16,807 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:45:38,750 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 98432
+INFO 2024-11-08 15:45:38,823 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:46:05,964 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97996
+INFO 2024-11-08 15:46:06,021 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-11-08 15:46:36,898 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/add/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count('id').
+ERROR 2024-11-08 15:46:36,912 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 500 179993
+INFO 2024-11-08 15:46:43,059 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97996
+INFO 2024-11-08 15:46:43,137 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:47:46,594 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 98491
+INFO 2024-11-08 15:47:46,652 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:48:58,331 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97888
+INFO 2024-11-08 15:48:58,400 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-11-08 15:49:30,518 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/add/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count('id').
+ERROR 2024-11-08 15:49:30,525 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 500 179828
+INFO 2024-11-08 15:51:26,410 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97996
+INFO 2024-11-08 15:51:26,527 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:51:28,895 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97996
+INFO 2024-11-08 15:51:29,060 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:51:35,325 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97996
+INFO 2024-11-08 15:51:35,420 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:51:48,830 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87511
+INFO 2024-11-08 15:51:48,888 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:51:52,575 basehttp "GET /admin/admin_tools_stats/dashboardstats/2/change/ HTTP/1.1" 200 98487
+INFO 2024-11-08 15:51:52,727 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:51:59,642 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87511
+INFO 2024-11-08 15:54:23,968 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87511
+INFO 2024-11-08 15:54:24,026 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:54:26,444 basehttp "GET /admin/admin_tools_stats/dashboardstats/2/change/ HTTP/1.1" 200 98487
+INFO 2024-11-08 15:54:26,501 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:54:31,256 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87511
+INFO 2024-11-08 15:54:37,349 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-08 15:54:37,406 basehttp "GET /admin/ HTTP/1.1" 200 85143
+INFO 2024-11-08 15:54:53,772 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-11-08 15:55:11,436 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87511
+INFO 2024-11-08 15:55:11,494 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-08 15:55:31,790 basehttp "GET /admin/admin_tools_stats/dashboardstats/2/change/ HTTP/1.1" 200 98487
+INFO 2024-11-08 15:55:31,864 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
