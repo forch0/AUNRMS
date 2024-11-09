@@ -22682,3 +22682,33 @@ INFO 2024-11-09 14:30:14,708 basehttp "GET /users/analytics/enrollment_trends/ H
 INFO 2024-11-09 14:30:24,062 basehttp "GET /users/analytics/resident_room_occupancy/ HTTP/1.1" 200 9815773
 INFO 2024-11-09 14:30:33,542 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 9805907
 INFO 2024-11-09 14:30:44,938 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 9806183
+INFO 2024-11-09 14:31:48,309 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-09 14:31:48,471 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:31:52,696 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 14:32:07,931 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-09 14:32:07,995 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:34:38,816 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:34:39,136 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:34:39,889 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:34:40,136 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:34:45,337 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:34:45,486 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:34:46,357 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:34:46,526 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:35:59,330 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 14:35:59,339 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 14:36:00,566 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:36:00,577 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:36:54,961 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\urls.py changed, reloading.
+INFO 2024-11-09 14:36:54,969 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\urls.py changed, reloading.
+INFO 2024-11-09 14:36:56,162 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:37:17,205 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 9806183
+INFO 2024-11-09 14:37:19,286 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:37:19,305 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 14:37:20,901 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-09 14:37:22,846 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9805755
+INFO 2024-11-09 14:38:39,762 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:38:39,819 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:38:41,080 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:38:41,080 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:38:45,115 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9806043

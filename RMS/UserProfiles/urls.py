@@ -15,6 +15,7 @@ urlpatterns = [
     path('analytics/complaint_trends/', views.complaint_trends_view, name='complaint_trends'),
     path('analytics/staff_assignment_by_role/', views.staff_assignment_by_role_view, name='staff_assignment_by_role'),
     path('analytics/semester_based_dorm_usage/', views.semester_based_dorm_usage_view, name='semester_based_dorm_usage'),
+    path('analytics/vendors-per-dorm/', views.vendors_per_dorm_view, name='vendors_per_dorm'),
 #     path('usercreds/', UserCredListView.as_view(), name='usercred_list'),
 #     path('usercreds/<uuid:pk>/', UserCredDetailView.as_view(), name='usercred_detail'),
 #     path('usercreds/create/', UserCredCreateView.as_view(), name='usercred_create'),

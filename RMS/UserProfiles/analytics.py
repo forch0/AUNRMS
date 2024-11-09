@@ -4,7 +4,7 @@ import plotly.express as px
 import uuid
 import pandas as pd
 from Dorms.models import Dorm, Room
-from Actions.models import MaintenanceRequest, Complaint, Category
+from Actions.models import *
 from AcademicYear.models import * 
 from django.db.models import Count
 from .models import Residents, Roles
@@ -263,4 +263,24 @@ def semester_based_dorm_usage():
     
     df = pd.DataFrame(data)
     fig = px.line(df, x='semester', y='dorm_usage', title="Semester-based Dorm and Room Usage")
+    return fig
+
+def vendors_per_dorm():
+    # Get all dorms and annotate the count of vendors, including those with zero vendors
+    dorms_data = Dorm.objects.annotate(vendor_count=Count('vendors')).order_by('name')
+
+    # Prepare the data for display
+    data = []
+    for dorm in dorms_data:
+        data.append({
+            'dorm': dorm.name,  # Dorm name
+            'vendor_count': dorm.vendor_count  # Number of vendors in the dorm (including zero)
+        })
+    
+    # Convert the data to a pandas DataFrame
+    df = pd.DataFrame(data)
+    
+    # Create a bar chart using Plotly
+    fig = px.bar(df, x='dorm', y='vendor_count', title="Vendors Per Dorm", labels={'vendor_count': 'Number of Vendors'})
+    
     return fig

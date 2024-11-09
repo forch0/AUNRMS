@@ -252,7 +252,7 @@ from .analytics import (
     anonymous_vs_non_anonymous_complaints,
     complaint_trends,
     staff_assignment_by_role,
-    semester_based_dorm_usage,
+    semester_based_dorm_usage,vendors_per_dorm
 )
 
 def analytics_dashboard(request):
@@ -298,6 +298,11 @@ def staff_assignment_by_role_view(request):
 def semester_based_dorm_usage_view(request):
     chart = semester_based_dorm_usage()
     return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def vendors_per_dorm_view(request):
+    chart = vendors_per_dorm()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
 
 def index(request):
     return HttpResponse("Welcome to AUN ResLife App.")
