@@ -181,25 +181,21 @@ class EnrollmentAdmin(admin.ModelAdmin):
         return self._is_superuser(request) or self._is_reslife_director(request)
 
     def get_queryset(self, request: HttpRequest):
-        """
-        Restricts the queryset based on user roles and assignments.
-        """
         qs = super().get_queryset(request)
         
         if self._is_superuser(request) or self._is_reslife_director(request) or self._is_dean_of_student_affairs(request):
             return qs  # Superusers, ResLife Directors, and Deans see all
 
-        # For residents, filter to their enrollments only
         if self._is_resident(request):
-            return qs.filter(resident=request.user.resident)
+            return qs.filter(resident=request.user.resident, status="active")
 
-        # For Residence Assistant and Residence Director, filter by assigned dorm and current semester
         if self._is_residence_assistant_or_director(request):
             current_semester = Semester.objects.filter(is_current=True).first()
             if current_semester:
-                return qs.filter(dorm__in=self._assigned_dorms(request), semester=current_semester)
+                return qs.filter(dorm__in=self._assigned_dorms(request), semester=current_semester, status="active")
 
         return qs.none()  # No access for other users
+    # No access for other users
 
 class StaffAssignmentAdmin(admin.ModelAdmin):
     list_display = ('id', 'staff', 'dorm', 'role', 'academic_session', 'semester')

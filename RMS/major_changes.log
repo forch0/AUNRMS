@@ -20296,3 +20296,834 @@ INFO 2024-11-08 15:55:11,436 basehttp "GET /admin/admin_tools_stats/dashboardsta
 INFO 2024-11-08 15:55:11,494 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-11-08 15:55:31,790 basehttp "GET /admin/admin_tools_stats/dashboardstats/2/change/ HTTP/1.1" 200 98487
 INFO 2024-11-08 15:55:31,864 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 09:45:54,492 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 09:46:00,299 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-11-09 09:46:00,461 log Not Found: /favicon.ico
+WARNING 2024-11-09 09:46:00,461 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-11-09 09:47:41,054 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-09 09:47:41,114 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 09:47:41,215 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 09:47:56,586 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 09:47:56,689 basehttp "GET /admin/ HTTP/1.1" 200 85415
+INFO 2024-11-09 09:48:47,024 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 87511
+INFO 2024-11-09 09:48:47,109 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 09:48:49,944 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 96943
+INFO 2024-11-09 09:48:50,022 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 09:53:14,143 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\models.py changed, reloading.
+INFO 2024-11-09 09:53:14,965 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 09:53:25,743 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\models.py changed, reloading.
+INFO 2024-11-09 09:53:26,492 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 09:55:03,227 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-11-09 09:55:03,839 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 09:55:56,307 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 09:58:33,771 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-09 09:58:33,796 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 6312
+INFO 2024-11-09 09:58:41,699 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-09 09:58:41,823 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97215
+INFO 2024-11-09 09:58:41,897 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 09:59:47,381 basehttp "GET /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 96943
+INFO 2024-11-09 09:59:47,446 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:01:50,192 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97825
+INFO 2024-11-09 10:01:50,264 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:02:39,095 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97774
+INFO 2024-11-09 10:02:39,156 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:03:20,000 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97793
+INFO 2024-11-09 10:03:20,061 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-11-09 10:03:30,440 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/add/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 465, in get_queryset
+    method_name = list(modifier.keys())[0]
+                       ^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+ERROR 2024-11-09 10:03:30,449 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 500 166637
+INFO 2024-11-09 10:04:01,355 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 200 97793
+INFO 2024-11-09 10:04:01,443 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:04:06,084 basehttp "POST /admin/admin_tools_stats/dashboardstats/add/ HTTP/1.1" 302 0
+INFO 2024-11-09 10:04:06,160 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97532
+INFO 2024-11-09 10:04:06,241 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:04:13,881 basehttp "GET /admin_tools_stats/analytics/?show=resident_enrollment_by_dorm HTTP/1.1" 200 5694
+INFO 2024-11-09 10:04:14,005 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-09 10:04:14,096 basehttp "GET /admin_tools_stats/analytics/chart/resident_enrollment_by_dorm?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-09 10:04:14,155 basehttp "GET /admin_tools_stats/analytics/chart/resident_enrollment_by_dorm/?analytics_chart=true HTTP/1.1" 200 1854
+INFO 2024-11-09 10:04:14,269 basehttp "GET /admin_tools_stats/chart_data/resident_enrollment_by_dorm/?csrfmiddlewaretoken=6nQJZA6h0BFw1YltpL3OQRC4VZTiqIqYhujM207OSnJXxHzWRo8Ayje78cE6x5v7&graph_key=resident_enrollment_by_dorm&select_box_interval=months&time_since=2024-10-09&time_until=2024-11-09&_=1731143053984 HTTP/1.1" 200 1336
+INFO 2024-11-09 10:06:36,659 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+INFO 2024-11-09 10:06:36,726 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-11-09 10:07:13,534 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/6/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count(resident).
+ERROR 2024-11-09 10:07:13,547 basehttp "POST /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 500 180802
+INFO 2024-11-09 10:09:31,893 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+ERROR 2024-11-09 10:09:37,708 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/6/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count(resident__id).
+ERROR 2024-11-09 10:09:37,716 basehttp "POST /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 500 180856
+INFO 2024-11-09 10:09:51,804 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+ERROR 2024-11-09 10:10:02,988 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/6/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count(resident__user).
+ERROR 2024-11-09 10:10:03,000 basehttp "POST /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 500 180878
+INFO 2024-11-09 10:10:42,313 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+ERROR 2024-11-09 10:10:51,518 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/6/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count(resident).
+ERROR 2024-11-09 10:10:51,528 basehttp "POST /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 500 180812
+INFO 2024-11-09 10:10:56,153 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+INFO 2024-11-09 10:15:30,312 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+INFO 2024-11-09 10:15:30,475 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-11-09 10:15:41,482 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/6/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count(resident).
+ERROR 2024-11-09 10:15:41,497 basehttp "POST /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 500 181513
+INFO 2024-11-09 10:16:27,964 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+ERROR 2024-11-09 10:16:35,339 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/6/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count('resident').
+ERROR 2024-11-09 10:16:35,350 basehttp "POST /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 500 181647
+INFO 2024-11-09 10:16:43,724 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+ERROR 2024-11-09 10:16:48,181 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/6/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count('resident').
+ERROR 2024-11-09 10:16:48,198 basehttp "POST /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 500 181647
+INFO 2024-11-09 10:17:42,221 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+INFO 2024-11-09 10:17:43,394 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+INFO 2024-11-09 10:17:43,456 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-11-09 10:17:50,831 log Internal Server Error: /admin/admin_tools_stats/dashboardstats/6/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 497, in clean
+    self.get_operation_field(operation)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 474, in get_operation_field
+    query = self.get_queryset().all().query
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\models.py", line 468, in get_queryset
+    qs = getattr(qs, method_name)(**method_args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1600, in _annotate
+    self._validate_values_are_expressions(
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1950, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): Count('enrollments__resident').
+ERROR 2024-11-09 10:17:50,836 basehttp "POST /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 500 181808
+INFO 2024-11-09 10:22:14,112 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+INFO 2024-11-09 10:22:15,519 basehttp "GET /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 200 98571
+INFO 2024-11-09 10:22:15,585 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:22:17,170 basehttp "POST /admin/admin_tools_stats/dashboardstats/6/change/ HTTP/1.1" 302 0
+INFO 2024-11-09 10:22:17,341 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97534
+INFO 2024-11-09 10:22:17,407 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:22:27,719 basehttp "GET /admin_tools_stats/analytics/?show=assignment_trends HTTP/1.1" 200 5684
+INFO 2024-11-09 10:22:27,848 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-09 10:22:27,945 basehttp "GET /admin_tools_stats/analytics/chart/assignment_trends?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-09 10:22:27,997 basehttp "GET /admin_tools_stats/analytics/chart/assignment_trends/?analytics_chart=true HTTP/1.1" 200 1944
+INFO 2024-11-09 10:22:28,075 basehttp "GET /admin_tools_stats/chart_data/assignment_trends/?csrfmiddlewaretoken=MJCH8QOaR1AJwxGydanbf0S5U0nnbE72XQ5KbgPHJNEa2gU1FNsXXsu87d8bi1cb&graph_key=assignment_trends&select_box_interval=days&time_since=2024-10-09&time_until=2024-11-09&_=1731144147831 HTTP/1.1" 200 2230
+INFO 2024-11-09 10:46:30,200 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\models.py changed, reloading.
+INFO 2024-11-09 10:46:32,691 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 10:51:54,816 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 10:52:07,295 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-09 10:52:07,586 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-09 10:52:08,601 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 10:52:35,796 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 10:52:37,296 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-09 10:52:37,361 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-09 10:52:38,301 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 10:52:38,361 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 10:52:43,355 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-09 10:52:43,378 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 6308
+INFO 2024-11-09 10:52:49,541 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-09 10:52:49,641 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 98857
+INFO 2024-11-09 10:52:49,709 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:53:01,591 basehttp "GET /admin/django_plotly_dash/dashapp/ HTTP/1.1" 200 55877
+INFO 2024-11-09 10:53:01,771 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:53:03,666 basehttp "GET /admin/django_plotly_dash/dashapp/add/ HTTP/1.1" 200 52994
+INFO 2024-11-09 10:53:03,737 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 10:53:08,331 basehttp "GET /admin/django_plotly_dash/dashapp/ HTTP/1.1" 200 55877
+INFO 2024-11-09 10:53:09,841 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 98585
+ERROR 2024-11-09 10:53:16,116 log Internal Server Error: /admin/django_plotly_dash/statelessapp/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'the_django_plotly_dash'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\unfold\templatetags\unfold.py", line 65, in render
+    output = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'the_django_plotly_dash' is not a registered namespace
+ERROR 2024-11-09 10:53:16,156 basehttp "GET /admin/django_plotly_dash/statelessapp/ HTTP/1.1" 500 612701

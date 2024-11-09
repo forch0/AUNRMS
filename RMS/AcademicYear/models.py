@@ -6,7 +6,6 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 from UserProfiles.models import Residents, Staffs, Roles
 
-
 class AcademicSession(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     start_year = models.IntegerField()
@@ -66,6 +65,12 @@ class Semester(models.Model):
         return f"{self.get_semester_type_display()} {self.start_date.year} - {self.academic_session.name}"
 
 class Enrollment(models.Model):
+    STATUS_CHOICES = [
+            ('active', 'Active'),
+            ('inactive', 'Inactive'),
+            ('pending', 'Pending')
+        ]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     resident = models.ForeignKey(Residents, on_delete=models.CASCADE, related_name='enrollments')
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='enrollments')
@@ -74,6 +79,7 @@ class Enrollment(models.Model):
     room = models.ForeignKey('Dorms.Room', on_delete=models.CASCADE, related_name='enrollments')
     date_enrolled = models.DateField(auto_now_add=True)
     created_at = models.DateTimeField(default=timezone.now)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='active')  # New status field
     def __str__(self):
         return f"{self.resident.user.email} - {self.semester.semester_type} ({self.academic_session.name})"
 

@@ -13,6 +13,10 @@ django-ratelimit
 django-admin-confirm
 django-auto-logout
 django-admin-sortable2
+plotly
+django-plotly-dash
+pandas
+
 
 
 # python manage.py clear_cache --defailt| ... news product (app/model) -- individual caches | --all (clear all caches)
