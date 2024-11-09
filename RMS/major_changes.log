@@ -21128,3 +21128,47 @@ Traceback (most recent call last):
 django.urls.exceptions.NoReverseMatch: 'the_django_plotly_dash' is not a registered namespace
 ERROR 2024-11-09 10:53:16,156 basehttp "GET /admin/django_plotly_dash/statelessapp/ HTTP/1.1" 500 612701
 INFO 2024-11-09 10:53:21,051 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 98585
+INFO 2024-11-09 11:02:32,718 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:02:32,749 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:02:33,839 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:02:33,880 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:03:25,878 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:03:25,880 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:03:28,213 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:03:28,213 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:06:04,808 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:06:04,887 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:06:06,282 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:06:06,325 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:06:24,216 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:06:24,248 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:06:25,658 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:06:25,659 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:06:45,762 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:06:45,785 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:06:47,208 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:06:47,212 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:07:43,890 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:07:44,048 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:07:45,757 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:07:45,821 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:08:49,792 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:08:49,877 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:08:51,307 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:08:51,421 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:09:08,837 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:09:08,992 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:09:10,207 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:09:10,359 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:09:49,083 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:09:49,102 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:09:50,170 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:09:50,170 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:10:21,466 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:10:21,494 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:10:23,247 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:10:23,249 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:11:51,648 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:11:51,693 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:11:52,761 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:11:52,775 autoreload Watching for file changes with StatReloader
