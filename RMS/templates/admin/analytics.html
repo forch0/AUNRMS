@@ -1,0 +1,18 @@
+{% block content %}
+<h1>Analytics Dashboard</h1>
+
+<!-- Links to each analytics metric -->
+<ul>
+    <li><a href="{% url 'total_enrollment_by_dorm' %}">Total Enrollment by Dorm</a></li>
+    <li><a href="{% url 'enrollment_trends' %}">Enrollment Trends</a></li>
+    <li><a href="{% url 'resident_room_occupancy' %}">Resident Room Occupancy</a></li>
+    <li><a href="{% url 'maintenance_requests_by_category' %}">Maintenance Requests by Category</a></li>
+    <li><a href="{% url 'request_completion_rate' %}">Request Completion Rate</a></li>
+    <li><a href="{% url 'complaint_status_analysis' %}">Complaints by Type and Status</a></li>
+    <li><a href="{% url 'anonymous_vs_non_anonymous_complaints' %}">Anonymous vs Non-Anonymous Complaints</a></li>
+    <li><a href="{% url 'complaint_trends' %}">Complaint Trends</a></li>
+    <li><a href="{% url 'staff_assignment_by_role' %}">Staff Assignment by Role</a></li>
+    <li><a href="{% url 'semester_based_dorm_usage' %}">Semester-based Dorm Usage</a></li>
+</ul>
+
+{% endblock %}

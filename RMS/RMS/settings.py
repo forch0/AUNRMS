@@ -84,7 +84,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "unfold",
-    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'django_plotly_dash.apps',
     # 'django_admin_charts',
     'admin_tools_stats',  # this must be BEFORE 'admin_tools' and 'django.contrib.admin'
     'django_nvd3',
@@ -116,6 +116,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_auto_logout.middleware.auto_logout',
     # 'UserProfiles.middleware.RatelimitMiddleware',
+    'django_plotly_dash.middleware.BaseMiddleware',
 ]
 
 

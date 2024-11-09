@@ -21172,3 +21172,1512 @@ INFO 2024-11-09 11:11:51,648 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS
 INFO 2024-11-09 11:11:51,693 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
 INFO 2024-11-09 11:11:52,761 autoreload Watching for file changes with StatReloader
 INFO 2024-11-09 11:11:52,775 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:13:18,247 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:13:25,690 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-09 11:13:25,714 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 6308
+INFO 2024-11-09 11:13:33,016 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-09 11:13:33,113 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 98857
+INFO 2024-11-09 11:13:33,189 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 11:14:21,741 basehttp "GET /admin_tools_stats/analytics/?show=resident_enrollment_by_dorm HTTP/1.1" 200 5694
+INFO 2024-11-09 11:14:21,877 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-09 11:14:21,985 basehttp "GET /admin_tools_stats/analytics/chart/resident_enrollment_by_dorm?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-09 11:14:22,045 basehttp "GET /admin_tools_stats/analytics/chart/resident_enrollment_by_dorm/?analytics_chart=true HTTP/1.1" 200 1854
+INFO 2024-11-09 11:14:22,167 basehttp "GET /admin_tools_stats/chart_data/resident_enrollment_by_dorm/?csrfmiddlewaretoken=Z738LSuc95QcwW2djobLcUUQHB9i82ck4hcuMULBvNNVhLJ71885sLMrmj5RHIoR&graph_key=resident_enrollment_by_dorm&select_box_interval=months&time_since=2024-10-09&time_until=2024-11-09&_=1731147261856 HTTP/1.1" 200 1336
+INFO 2024-11-09 11:19:51,997 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-09 11:19:52,479 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-09 11:19:52,972 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:19:53,421 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:20:22,989 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:20:23,808 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:20:31,797 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:20:44,705 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-09 11:20:45,131 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-09 11:20:45,588 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:20:46,092 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:31:56,508 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:31:56,815 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:31:57,511 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:31:57,886 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:32:06,716 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:32:07,401 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:32:07,766 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:32:09,856 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:32:16,450 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:32:16,760 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:32:17,344 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:32:17,685 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:35:00,175 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:35:00,230 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:35:01,365 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:35:01,380 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:36:40,457 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:36:40,520 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:36:41,669 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:36:41,754 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:37:37,369 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:37:37,458 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 11:37:38,429 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:37:38,494 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:37:42,799 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\urls.py changed, reloading.
+INFO 2024-11-09 11:37:42,821 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\urls.py changed, reloading.
+INFO 2024-11-09 11:37:43,854 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:37:43,861 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:40:41,033 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:40:41,094 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:40:42,123 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:40:42,144 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:40:45,496 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:40:45,496 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:40:46,614 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:40:46,614 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:41:03,727 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:41:03,746 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:41:05,460 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:41:05,478 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:41:20,926 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:41:20,992 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:41:22,638 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:41:22,693 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:42:09,958 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:42:09,958 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:42:11,542 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:42:11,553 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:44:48,272 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:44:48,297 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-09 11:44:49,572 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:44:49,595 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:45:11,021 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:45:11,038 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:45:12,659 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:45:12,663 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:45:16,608 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:45:16,619 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:45:18,151 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:45:18,151 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:45:59,070 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:45:59,087 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:46:00,568 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:46:00,610 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:46:57,236 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:46:57,236 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:46:58,825 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:46:58,825 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:49:24,837 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:49:26,881 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-09 11:49:27,720 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:52:27,085 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-09 11:52:27,119 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 11:52:27,139 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+WARNING 2024-11-09 11:52:27,309 log Not Found: /favicon.ico
+WARNING 2024-11-09 11:52:27,309 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-11-09 11:52:33,346 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 11:52:33,416 basehttp "GET /admin/ HTTP/1.1" 200 85169
+ERROR 2024-11-09 11:52:40,645 log Internal Server Error: /users/admin/analytics-dashboard/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 277, in analytics_dashboard
+    selected_fig = metric_functions.get(selected_metric, total_enrollment_by_dorm)()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 16, in total_enrollment_by_dorm
+    enrolled_residents = Residents.objects.filter(room__dorm=dorm).count()  # Updated to use Residents
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room' into field. Choices are: address, collected_items, enrollments, guardian_phone_number, id, maintenance_requests, role, role_id, storage_items, user, user_id
+ERROR 2024-11-09 11:52:40,649 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 500 130761
+INFO 2024-11-09 11:54:39,310 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:54:39,897 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:54:40,311 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:54:41,014 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:54:46,939 basehttp "GET /admin/ HTTP/1.1" 200 85169
+ERROR 2024-11-09 11:54:49,304 log Internal Server Error: /users/admin/analytics-dashboard/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 277, in analytics_dashboard
+    selected_fig = metric_functions.get(selected_metric, total_enrollment_by_dorm)()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 17, in total_enrollment_by_dorm
+    enrolled_residents = Residents.objects.filter(room__dorm=dorm).count()  # Correct query for enrolled residents
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room' into field. Choices are: address, collected_items, enrollments, guardian_phone_number, id, maintenance_requests, role, role_id, storage_items, user, user_id
+ERROR 2024-11-09 11:54:49,314 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 500 130913
+INFO 2024-11-09 11:56:44,729 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:56:45,049 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 11:56:45,919 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:56:46,214 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 11:56:47,924 basehttp "GET /admin/ HTTP/1.1" 200 85169
+INFO 2024-11-09 11:56:49,145 basehttp "GET /admin/ HTTP/1.1" 200 85169
+ERROR 2024-11-09 11:56:53,240 log Internal Server Error: /users/admin/analytics-dashboard/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: unfold/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 284, in analytics_dashboard
+    return render(request, 'admin/analytics.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: unfold/base.html
+ERROR 2024-11-09 11:56:53,249 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 500 220146
+INFO 2024-11-09 11:58:33,468 basehttp "GET /admin/ HTTP/1.1" 200 85169
+INFO 2024-11-09 11:58:36,047 basehttp "GET /admin/ HTTP/1.1" 200 85169
+ERROR 2024-11-09 11:58:38,346 log Internal Server Error: /users/admin/analytics-dashboard/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 284, in analytics_dashboard
+    return render(request, 'admin/analytics.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-11-09 11:58:38,358 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 500 219844
+ERROR 2024-11-09 12:01:26,812 log Internal Server Error: /users/admin/analytics-dashboard/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 284, in analytics_dashboard
+    return render(request, 'admin/analytics.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-11-09 12:01:26,816 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 500 219829
+INFO 2024-11-09 12:01:35,466 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568721
+INFO 2024-11-09 12:02:17,135 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-09 12:02:17,222 basehttp "GET /admin/ HTTP/1.1" 200 85169
+INFO 2024-11-09 12:02:23,484 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-09 12:02:23,563 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 12:02:38,094 basehttp "GET /admin_tools_stats/analytics/?show=resident_enrollment_by_dorm HTTP/1.1" 200 5694
+INFO 2024-11-09 12:02:38,220 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-09 12:02:38,314 basehttp "GET /admin_tools_stats/analytics/chart/resident_enrollment_by_dorm?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-09 12:02:38,383 basehttp "GET /admin_tools_stats/analytics/chart/resident_enrollment_by_dorm/?analytics_chart=true HTTP/1.1" 200 1854
+INFO 2024-11-09 12:02:38,496 basehttp "GET /admin_tools_stats/chart_data/resident_enrollment_by_dorm/?csrfmiddlewaretoken=tsHKrEt2VuXalt2jiyn1TGmKrZJttygG3FLdkHOqK74sNaNlrjnRNyH3GczyPc8U&graph_key=resident_enrollment_by_dorm&select_box_interval=months&time_since=2024-10-09&time_until=2024-11-09&_=1731150158190 HTTP/1.1" 200 1336
+INFO 2024-11-09 12:02:49,426 basehttp "GET /admin_tools_stats/analytics/?show=assignment_trends HTTP/1.1" 200 5684
+INFO 2024-11-09 12:02:49,536 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-09 12:02:49,620 basehttp "GET /admin_tools_stats/analytics/chart/assignment_trends?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-09 12:02:49,719 basehttp "GET /admin_tools_stats/analytics/chart/assignment_trends/?analytics_chart=true HTTP/1.1" 200 1944
+INFO 2024-11-09 12:02:49,814 basehttp "GET /admin_tools_stats/chart_data/assignment_trends/?csrfmiddlewaretoken=q8h9nYj2BhrC7HThzZ2SLcx665wEUKJE0llCg1EqqUyUzoEjIK2IF4SplimJgoBS&graph_key=assignment_trends&select_box_interval=days&time_since=2024-10-09&time_until=2024-11-09&_=1731150169519 HTTP/1.1" 200 2230
+INFO 2024-11-09 12:02:58,271 basehttp "GET /admin_tools_stats/analytics/?show=resident_enrollment_by_dorm HTTP/1.1" 200 5694
+INFO 2024-11-09 12:02:58,388 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-09 12:02:58,480 basehttp "GET /admin_tools_stats/analytics/chart/resident_enrollment_by_dorm/?analytics_chart=true HTTP/1.1" 200 1854
+INFO 2024-11-09 12:02:58,561 basehttp "GET /admin_tools_stats/chart_data/resident_enrollment_by_dorm/?csrfmiddlewaretoken=4C2CyokeZIl7AkhOiJZ2eGGyoJXeqm4vEP65rrFCOlsp212QruZS8y1RDWNjM0WJ&graph_key=resident_enrollment_by_dorm&select_box_interval=months&time_since=2024-10-09&time_until=2024-11-09&_=1731150178378 HTTP/1.1" 200 1336
+INFO 2024-11-09 12:03:55,490 basehttp "GET /?metric=enrollment_trends HTTP/1.1" 200 24
+INFO 2024-11-09 12:03:57,925 basehttp "GET /?metric=resident_room_occupancy HTTP/1.1" 200 24
+INFO 2024-11-09 12:04:00,508 basehttp "GET /?metric=maintenance_requests_by_category HTTP/1.1" 200 24
+INFO 2024-11-09 12:04:02,343 basehttp "GET /?metric=request_completion_rate HTTP/1.1" 200 24
+INFO 2024-11-09 12:04:04,757 basehttp "GET /?metric=semester_based_dorm_usage HTTP/1.1" 200 24
+INFO 2024-11-09 12:04:06,922 basehttp "GET /?metric=staff_assignment_by_role HTTP/1.1" 200 24
+INFO 2024-11-09 12:04:09,590 basehttp "GET /?metric=total_enrollment_by_dorm HTTP/1.1" 200 24
+INFO 2024-11-09 12:04:12,382 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568721
+INFO 2024-11-09 12:04:17,373 basehttp "GET /?metric=enrollment_trends HTTP/1.1" 200 24
+INFO 2024-11-09 12:04:19,762 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568721
+INFO 2024-11-09 12:04:24,472 basehttp "GET /?metric=request_completion_rate HTTP/1.1" 200 24
+INFO 2024-11-09 12:04:36,706 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568721
+INFO 2024-11-09 12:08:52,161 basehttp "GET /?metric=enrollment_trends HTTP/1.1" 200 24
+INFO 2024-11-09 12:08:54,360 basehttp "GET /?metric=resident_room_occupancy HTTP/1.1" 200 24
+INFO 2024-11-09 12:08:57,027 basehttp "GET /?metric=total_enrollment_by_dorm HTTP/1.1" 200 24
+INFO 2024-11-09 12:09:00,898 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568721
+INFO 2024-11-09 12:24:53,896 basehttp "GET /?metric=enrollment_trends HTTP/1.1" 200 24
+INFO 2024-11-09 12:25:03,826 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568721
+INFO 2024-11-09 12:26:14,676 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:26:15,686 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:26:16,022 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:26:16,925 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:27:56,146 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:27:56,541 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:27:57,280 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:27:57,735 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:27:59,590 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:27:59,827 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:28:00,700 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:28:00,930 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 12:28:05,212 log Internal Server Error: /users/admin/analytics-dashboard/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 284, in analytics_dashboard
+    if request.is_ajax():
+       ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+ERROR 2024-11-09 12:28:05,213 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 500 81222
+INFO 2024-11-09 12:29:37,080 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:29:37,346 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:29:38,215 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:29:38,370 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:29:42,849 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568925
+INFO 2024-11-09 12:29:45,169 basehttp "GET /?metric=enrollment_trends HTTP/1.1" 200 24
+INFO 2024-11-09 12:29:49,621 basehttp "GET /?metric=resident_room_occupancy HTTP/1.1" 200 24
+INFO 2024-11-09 12:29:51,607 basehttp "GET /?metric=complaint_status_analysis HTTP/1.1" 200 24
+INFO 2024-11-09 12:29:53,605 basehttp "GET /?metric=semester_based_dorm_usage HTTP/1.1" 200 24
+INFO 2024-11-09 12:29:55,505 basehttp "GET /?metric=enrollment_trends HTTP/1.1" 200 24
+INFO 2024-11-09 12:29:57,657 basehttp "GET /?metric=total_enrollment_by_dorm HTTP/1.1" 200 24
+INFO 2024-11-09 12:30:07,286 basehttp "GET /?metric=enrollment_trends HTTP/1.1" 200 24
+INFO 2024-11-09 12:30:10,736 basehttp "GET /?metric=semester_based_dorm_usage HTTP/1.1" 200 24
+INFO 2024-11-09 12:30:12,219 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568925
+INFO 2024-11-09 12:31:56,047 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568925
+INFO 2024-11-09 12:31:58,387 basehttp "GET /?metric=enrollment_trends HTTP/1.1" 200 24
+INFO 2024-11-09 12:32:00,277 basehttp "GET /?metric=maintenance_requests_by_category HTTP/1.1" 200 24
+INFO 2024-11-09 12:32:05,159 basehttp "GET /?metric=total_enrollment_by_dorm HTTP/1.1" 200 24
+INFO 2024-11-09 12:33:36,046 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:33:36,337 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:33:37,288 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:33:37,544 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:34:12,468 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 12:34:12,489 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 12:34:19,014 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 7017
+INFO 2024-11-09 12:34:23,238 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 12:34:23,309 basehttp "GET /admin/ HTTP/1.1" 200 85441
+INFO 2024-11-09 12:34:28,849 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4568848
+INFO 2024-11-09 12:34:31,471 basehttp "GET /?metric=enrollment_trends HTTP/1.1" 200 24
+INFO 2024-11-09 12:34:36,302 basehttp "GET /?metric=resident_room_occupancy HTTP/1.1" 200 24
+INFO 2024-11-09 12:34:38,719 basehttp "GET /?metric=total_enrollment_by_dorm HTTP/1.1" 200 24
+INFO 2024-11-09 12:37:47,838 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\urls.py changed, reloading.
+INFO 2024-11-09 12:37:47,922 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\urls.py changed, reloading.
+INFO 2024-11-09 12:37:48,948 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:37:49,153 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:38:17,037 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:38:17,293 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:38:17,932 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:38:18,237 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 12:38:51,987 log Internal Server Error: /users/admin/analytics-dashboard/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 259, in analytics_dashboard
+    return render(request, 'admin/analytics_dashboard.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: admin/analytics_dashboard.html
+ERROR 2024-11-09 12:38:51,992 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 500 94429
+INFO 2024-11-09 12:39:09,716 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:39:09,727 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 12:39:10,917 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:39:10,917 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:39:11,730 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1050
+ERROR 2024-11-09 12:39:14,095 log Internal Server Error: /users/analytics/total_enrollment_by_dorm/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 264, in total_enrollment_by_dorm_view
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: admin/chart_view.html
+ERROR 2024-11-09 12:39:14,097 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 500 107837
+INFO 2024-11-09 12:40:02,002 basehttp "GET /admin/ HTTP/1.1" 200 85169
+INFO 2024-11-09 12:40:03,333 basehttp "GET /admin/ HTTP/1.1" 200 85169
+INFO 2024-11-09 12:40:07,057 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1050
+INFO 2024-11-09 12:40:08,839 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806031
+ERROR 2024-11-09 12:41:25,961 log Internal Server Error: /users/analytics/enrollment_trends/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 267, in enrollment_trends_view
+    chart = enrollment_trends()
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 34, in enrollment_trends
+    enrolled_residents = Residents.objects.filter(academic_session=session).count()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'academic_session' into field. Choices are: address, collected_items, enrollments, guardian_phone_number, id, maintenance_requests, role, role_id, storage_items, user, user_id
+ERROR 2024-11-09 12:41:25,967 basehttp "GET /users/analytics/enrollment_trends/ HTTP/1.1" 500 129448
+ERROR 2024-11-09 12:41:43,926 log Internal Server Error: /users/analytics/resident_room_occupancy/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 271, in resident_room_occupancy_view
+    chart = resident_room_occupancy()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 45, in resident_room_occupancy
+    residents_in_room = room.residents.count()  # Ensure the related residents count is correct
+                        ^^^^^^^^^^^^^^
+AttributeError: 'Room' object has no attribute 'residents'
+ERROR 2024-11-09 12:41:43,931 basehttp "GET /users/analytics/resident_room_occupancy/ HTTP/1.1" 500 85319
+ERROR 2024-11-09 12:41:50,835 log Internal Server Error: /users/analytics/enrollment_trends/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 267, in enrollment_trends_view
+    chart = enrollment_trends()
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 34, in enrollment_trends
+    enrolled_residents = Residents.objects.filter(academic_session=session).count()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'academic_session' into field. Choices are: address, collected_items, enrollments, guardian_phone_number, id, maintenance_requests, role, role_id, storage_items, user, user_id
+ERROR 2024-11-09 12:41:50,841 basehttp "GET /users/analytics/enrollment_trends/ HTTP/1.1" 500 129448
+INFO 2024-11-09 12:45:13,091 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:45:13,395 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:45:14,196 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:45:14,440 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:45:17,203 basehttp "GET /users/analytics/enrollment_trends/ HTTP/1.1" 200 9805623
+INFO 2024-11-09 12:52:10,953 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1050
+ERROR 2024-11-09 12:52:12,811 log Internal Server Error: /users/analytics/resident_room_occupancy/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 271, in resident_room_occupancy_view
+    chart = resident_room_occupancy()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 58, in resident_room_occupancy
+    residents_in_room = room.residents.count()  # Ensure the related residents count is correct
+                        ^^^^^^^^^^^^^^
+AttributeError: 'Room' object has no attribute 'residents'
+ERROR 2024-11-09 12:52:12,819 basehttp "GET /users/analytics/resident_room_occupancy/ HTTP/1.1" 500 82678
+INFO 2024-11-09 12:53:01,359 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:53:01,598 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:53:02,594 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:53:02,783 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:53:05,277 basehttp "GET /users/analytics/resident_room_occupancy/ HTTP/1.1" 200 9815773
+INFO 2024-11-09 12:54:42,468 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:54:43,122 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:54:43,703 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:54:44,244 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 12:54:45,024 log Internal Server Error: /users/analytics/maintenance_requests_by_category/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 276, in maintenance_requests_by_category_view
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\basedatatypes.py", line 3602, in to_html
+    return pio.to_html(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\io\_html.py", line 142, in to_html
+    jdata = to_json_plotly(fig_dict.get("data", []))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django_plotly_dash\_patches.py", line 129, in to_json_django_plotly
+    return json.dumps(plotly_object, cls=DjangoPlotlyJSONEncoder, **opts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\_plotly_utils\utils.py", line 56, in encode
+    encoded_o = super(PlotlyJSONEncoder, self).encode(o)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django_plotly_dash\_patches.py", line 45, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\_plotly_utils\utils.py", line 133, in default
+    return _json.JSONEncoder.default(self, obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type UUID is not JSON serializable
+ERROR 2024-11-09 12:54:45,031 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 500 135976
+INFO 2024-11-09 12:55:20,238 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:55:20,500 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:55:21,395 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:55:21,690 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:55:30,137 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:55:30,987 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:55:31,200 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:55:32,203 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 12:55:33,573 log Internal Server Error: /users/analytics/maintenance_requests_by_category/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 275, in maintenance_requests_by_category_view
+    chart = maintenance_requests_by_category()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 86, in maintenance_requests_by_category
+    'date_reported': request.date_reported
+                     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MaintenanceRequest' object has no attribute 'date_reported'
+ERROR 2024-11-09 12:55:33,573 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 500 82431
+INFO 2024-11-09 12:56:49,252 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:56:49,677 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:56:50,249 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:56:50,850 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:56:54,617 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 9805789
+INFO 2024-11-09 12:58:47,787 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:58:48,412 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 12:58:48,893 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:58:49,832 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 12:58:51,136 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 9805823
+INFO 2024-11-09 13:00:14,568 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:00:15,445 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:00:15,897 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:00:16,980 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:00:17,856 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 9805823
+INFO 2024-11-09 13:01:51,230 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:01:51,719 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:01:52,480 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:01:53,101 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:01:53,900 log Internal Server Error: /users/analytics/maintenance_requests_by_category/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 275, in maintenance_requests_by_category_view
+    chart = maintenance_requests_by_category()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 77, in maintenance_requests_by_category
+    categories = Category.objects.all()
+                 ^^^^^^^^
+NameError: name 'Category' is not defined
+ERROR 2024-11-09 13:01:53,902 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 500 81098
+INFO 2024-11-09 13:03:12,506 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:03:12,905 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:03:13,536 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:03:14,000 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:03:43,505 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:03:44,187 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:03:44,668 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:03:45,295 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:03:47,965 log Internal Server Error: /users/analytics/maintenance_requests_by_category/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 276, in maintenance_requests_by_category_view
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\basedatatypes.py", line 3602, in to_html
+    return pio.to_html(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\io\_html.py", line 142, in to_html
+    jdata = to_json_plotly(fig_dict.get("data", []))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django_plotly_dash\_patches.py", line 129, in to_json_django_plotly
+    return json.dumps(plotly_object, cls=DjangoPlotlyJSONEncoder, **opts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\_plotly_utils\utils.py", line 56, in encode
+    encoded_o = super(PlotlyJSONEncoder, self).encode(o)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django_plotly_dash\_patches.py", line 45, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\_plotly_utils\utils.py", line 133, in default
+    return _json.JSONEncoder.default(self, obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type UUID is not JSON serializable
+ERROR 2024-11-09 13:03:47,970 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 500 140903
+INFO 2024-11-09 13:05:08,215 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:05:08,798 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:05:09,627 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:05:10,028 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:05:18,145 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:05:18,570 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:05:19,302 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:05:19,675 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:05:22,018 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 9805907
+ERROR 2024-11-09 13:08:35,649 log Internal Server Error: /users/analytics/request_completion_rate/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 279, in request_completion_rate_view
+    chart = request_completion_rate()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 115, in request_completion_rate
+    completion_time = (req.completed_at - req.created_at).days
+                       ^^^^^^^^^^^^^^^^
+AttributeError: 'MaintenanceRequest' object has no attribute 'completed_at'
+ERROR 2024-11-09 13:08:35,654 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 500 82109
+INFO 2024-11-09 13:09:04,977 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:09:05,139 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:09:06,093 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:09:06,199 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:09:07,244 log Internal Server Error: /users/analytics/request_completion_rate/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 279, in request_completion_rate_view
+    chart = request_completion_rate()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 115, in request_completion_rate
+    completion_time = (req.completion_date - req.created_at).days
+                       ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+ERROR 2024-11-09 13:09:07,249 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 500 82302
+INFO 2024-11-09 13:09:52,812 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:09:52,860 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:09:54,239 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:09:54,319 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:10:39,857 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:10:39,922 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:10:41,099 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:10:41,179 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:12:44,088 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:12:44,141 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:12:45,303 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:12:45,303 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:12:46,303 log Internal Server Error: /users/analytics/request_completion_rate/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 279, in request_completion_rate_view
+    chart = request_completion_rate()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 115, in request_completion_rate
+    completion_time = (req.completion_date - req.created_at).days
+                       ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+ERROR 2024-11-09 13:12:46,308 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 500 82302
+INFO 2024-11-09 13:12:51,216 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 9805907
+ERROR 2024-11-09 13:13:01,673 log Internal Server Error: /users/analytics/request_completion_rate/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 279, in request_completion_rate_view
+    chart = request_completion_rate()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 115, in request_completion_rate
+    completion_time = (req.completion_date - req.created_at).days
+                       ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+ERROR 2024-11-09 13:13:01,674 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 500 82165
+INFO 2024-11-09 13:14:23,692 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:14:23,986 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:14:24,937 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:14:25,349 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:14:26,242 log Internal Server Error: /users/analytics/request_completion_rate/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 280, in request_completion_rate_view
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+                                                              ^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'to_html'
+ERROR 2024-11-09 13:14:26,248 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 500 78238
+INFO 2024-11-09 13:15:02,154 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:15:02,319 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:15:03,349 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:15:03,505 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:17:22,632 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:17:23,453 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:17:23,707 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:17:24,576 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:17:37,329 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:17:37,475 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:17:38,491 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:17:38,680 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:17:40,344 log Internal Server Error: /users/analytics/request_completion_rate/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 279, in request_completion_rate_view
+    chart = request_completion_rate()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 124, in request_completion_rate
+    return px.bar(x=[], y=[], title="No Completion Data Available")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_chart_types.py", line 373, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 2117, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1393, in build_dataframe
+    raise ValueError(
+ValueError: Cannot accept list of column references or list of columns for both `x` and `y`.
+ERROR 2024-11-09 13:17:40,347 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 500 106373
+INFO 2024-11-09 13:18:07,681 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:18:07,718 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:18:08,817 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:18:08,836 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:18:14,571 log Internal Server Error: /users/analytics/request_completion_rate/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 279, in request_completion_rate_view
+    chart = request_completion_rate()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 124, in request_completion_rate
+    return px.bar(x=[], y=[], title="No Completion Data Available")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_chart_types.py", line 373, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 2117, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1393, in build_dataframe
+    raise ValueError(
+ValueError: Cannot accept list of column references or list of columns for both `x` and `y`.
+ERROR 2024-11-09 13:18:14,571 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 500 106327
+INFO 2024-11-09 13:19:03,726 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:19:04,276 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:19:04,812 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:19:05,355 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:19:11,650 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1050
+ERROR 2024-11-09 13:19:14,046 log Internal Server Error: /users/analytics/request_completion_rate/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 279, in request_completion_rate_view
+    chart = request_completion_rate()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 124, in request_completion_rate
+    return px.bar(x=[], y=[], title="No Completion Data Available")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_chart_types.py", line 373, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 2117, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1393, in build_dataframe
+    raise ValueError(
+ValueError: Cannot accept list of column references or list of columns for both `x` and `y`.
+ERROR 2024-11-09 13:19:14,046 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 500 106120
+INFO 2024-11-09 13:19:46,006 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 13:19:46,019 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 13:19:52,766 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 13:19:52,840 basehttp "GET /admin/ HTTP/1.1" 200 85441
+INFO 2024-11-09 13:19:58,591 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 92232
+INFO 2024-11-09 13:19:58,666 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 13:20:00,646 basehttp "GET /admin/Actions/maintenancerequest/a0043a37-0c29-439e-9ec7-1aebb5835a6a/change/ HTTP/1.1" 200 69715
+INFO 2024-11-09 13:20:00,672 basehttp "GET /static/admin/css/autocomplete.css HTTP/1.1" 200 9114
+INFO 2024-11-09 13:20:00,672 basehttp "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+INFO 2024-11-09 13:20:00,684 basehttp "GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 200 844
+INFO 2024-11-09 13:20:00,685 basehttp "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+INFO 2024-11-09 13:20:00,690 basehttp "GET /static/admin/js/autocomplete.js HTTP/1.1" 200 1060
+INFO 2024-11-09 13:20:00,705 basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2024-11-09 13:20:00,726 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 13:20:00,819 basehttp "GET /static/unfold/fonts/inter/Inter-Bold.woff2 HTTP/1.1" 200 46552
+INFO 2024-11-09 13:20:06,027 basehttp "POST /admin/Actions/maintenancerequest/a0043a37-0c29-439e-9ec7-1aebb5835a6a/change/ HTTP/1.1" 302 0
+INFO 2024-11-09 13:20:06,103 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 92689
+INFO 2024-11-09 13:20:06,168 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 13:20:24,854 basehttp "GET /admin/Actions/maintenancerequest/a0043a37-0c29-439e-9ec7-1aebb5835a6a/change/ HTTP/1.1" 200 69738
+INFO 2024-11-09 13:20:26,426 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 92257
+INFO 2024-11-09 13:20:29,388 basehttp "GET /admin/ HTTP/1.1" 200 85245
+INFO 2024-11-09 13:20:31,842 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1050
+INFO 2024-11-09 13:20:33,922 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 9805755
+INFO 2024-11-09 13:21:46,838 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:21:46,911 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:21:48,247 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:21:48,354 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:22:55,968 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:22:56,012 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:22:57,115 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:22:57,130 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:23:12,860 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 13:23:12,862 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 13:23:13,988 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:23:13,990 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:23:16,372 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 13:23:16,405 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-09 13:23:17,515 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:23:17,560 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:23:21,082 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 9805859
+INFO 2024-11-09 13:24:26,335 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:24:26,412 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:24:27,495 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:24:27,660 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:24:32,091 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 9806183
+INFO 2024-11-09 13:26:49,859 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:26:50,123 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:26:51,984 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:26:51,989 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:54:10,837 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 9806183
+INFO 2024-11-09 13:54:13,869 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1050
+ERROR 2024-11-09 13:54:18,021 log Internal Server Error: /users/analytics/complaint_status_analysis/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 2114, in add_fields
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: academic_session, academic_session_id, complaint_type, created_at, description, enrollment, enrollment_id, id, is_anonymous, semester, semester_id, status, user, user_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 283, in complaint_status_analysis_view
+    chart = complaint_status_analysis()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 153, in complaint_status_analysis
+    complaint_types = Complaint.objects.values('category').distinct()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1313, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1308, in _values
+    clone.query.set_values(fields)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 2413, in set_values
+    self.add_fields(field_names, True)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 2147, in add_fields
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: academic_session, academic_session_id, complaint_type, created_at, description, enrollment, enrollment_id, id, is_anonymous, semester, semester_id, status, user, user_id
+ERROR 2024-11-09 13:54:18,030 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 500 122066
+INFO 2024-11-09 13:55:49,341 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:55:49,466 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:55:52,636 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:55:59,206 log Internal Server Error: /users/analytics/complaint_status_analysis/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 283, in complaint_status_analysis_view
+    chart = complaint_status_analysis()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 177, in complaint_status_analysis
+    fig = px.bar(
+          ^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_chart_types.py", line 373, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 2117, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1513, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1234, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of [] but received: complaint_type
+ERROR 2024-11-09 13:55:59,206 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 500 115604
+INFO 2024-11-09 13:56:38,992 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:56:39,201 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:56:40,091 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:56:40,337 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:56:42,236 log Internal Server Error: /users/analytics/complaint_status_analysis/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 283, in complaint_status_analysis_view
+    chart = complaint_status_analysis()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 180, in complaint_status_analysis
+    fig = px.bar(df, x='complaint_type', y='count', color='status', title="Complaints by Type and Status")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_chart_types.py", line 373, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 2117, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1513, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1234, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of [] but received: complaint_type
+ERROR 2024-11-09 13:56:42,241 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 500 116173
+INFO 2024-11-09 13:57:51,630 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:57:51,681 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:57:52,806 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:57:52,844 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:57:57,276 log Internal Server Error: /users/analytics/complaint_status_analysis/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 283, in complaint_status_analysis_view
+    chart = complaint_status_analysis()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 182, in complaint_status_analysis
+    fig = px.bar(df, x='complaint_type', y='count', color='status', title="Complaints by Type and Status")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_chart_types.py", line 373, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 2117, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1513, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1234, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of [] but received: complaint_type
+ERROR 2024-11-09 13:57:57,283 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 500 116060
+INFO 2024-11-09 13:59:19,622 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:59:19,915 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 13:59:20,695 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 13:59:21,137 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 13:59:23,140 log Internal Server Error: /users/analytics/complaint_status_analysis/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 283, in complaint_status_analysis_view
+    chart = complaint_status_analysis()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 182, in complaint_status_analysis
+    fig = px.bar(df, x='complaint_type', y='count', color='status', title="Complaints by Type and Status")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_chart_types.py", line 373, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 2117, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1513, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1234, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of [] but received: complaint_type
+ERROR 2024-11-09 13:59:23,146 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 500 117100
+INFO 2024-11-09 14:00:45,070 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:00:45,076 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:00:46,330 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:00:46,358 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 14:00:49,852 log Internal Server Error: /users/analytics/complaint_status_analysis/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 283, in complaint_status_analysis_view
+    chart = complaint_status_analysis()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 181, in complaint_status_analysis
+    fig = px.bar(df, x='complaint_type', y='count', color='status', title="Complaints by Type and Status")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_chart_types.py", line 373, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 2117, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1513, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\plotly\express\_core.py", line 1234, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of [] but received: complaint_type
+ERROR 2024-11-09 14:00:49,855 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 500 117003
+INFO 2024-11-09 14:01:02,108 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:01:02,136 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 14:01:09,365 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 7017
+INFO 2024-11-09 14:01:15,700 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:01:15,780 basehttp "GET /admin/ HTTP/1.1" 200 85517
+INFO 2024-11-09 14:01:20,255 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 55392
+INFO 2024-11-09 14:01:20,342 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:01:21,865 basehttp "GET /admin/Actions/complaint/add/ HTTP/1.1" 200 59118
+INFO 2024-11-09 14:01:21,928 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:01:23,390 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=complaint&field_name=user HTTP/1.1" 200 581
+INFO 2024-11-09 14:01:25,326 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=complaint&field_name=enrollment HTTP/1.1" 200 232
+INFO 2024-11-09 14:01:28,520 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=complaint&field_name=semester HTTP/1.1" 200 208
+INFO 2024-11-09 14:01:57,819 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=complaint&field_name=semester HTTP/1.1" 200 208
+INFO 2024-11-09 14:02:01,869 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=complaint&field_name=academic_session HTTP/1.1" 200 113
+ERROR 2024-11-09 14:02:14,440 log Internal Server Error: /admin/Actions/complaint/add/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1804, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 926, in log_addition
+    object_repr=str(obj),
+                ^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\models.py", line 168, in __str__
+    return f"Complaint by {'Anonymous' if self.is_anonymous else self.user.username} - {self.id}"
+                                                                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserCred' object has no attribute 'username'
+ERROR 2024-11-09 14:02:14,445 basehttp "POST /admin/Actions/complaint/add/ HTTP/1.1" 500 132474
+INFO 2024-11-09 14:03:49,426 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\models.py changed, reloading.
+INFO 2024-11-09 14:03:49,459 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\models.py changed, reloading.
+INFO 2024-11-09 14:03:50,594 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:03:50,647 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:05:18,233 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\models.py changed, reloading.
+INFO 2024-11-09 14:05:19,128 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\models.py changed, reloading.
+INFO 2024-11-09 14:05:19,294 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:05:20,798 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:05:22,780 basehttp "POST /admin/Actions/complaint/add/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:05:22,904 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 69227
+INFO 2024-11-09 14:05:22,984 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:05:30,579 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 14:05:32,884 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1050
+INFO 2024-11-09 14:05:37,513 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 200 9805919
+INFO 2024-11-09 14:07:13,619 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:07:13,833 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:07:14,718 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:07:14,890 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:08:14,243 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:08:15,103 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:08:15,176 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:08:16,235 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:08:16,371 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 14:08:23,348 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-09 14:08:23,403 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:15:11,912 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:15:11,923 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 6308
+INFO 2024-11-09 14:15:27,744 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:15:28,344 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:15:28,806 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:15:29,446 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:15:38,581 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:15:38,696 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97447
+INFO 2024-11-09 14:15:38,751 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:15:44,883 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 14:15:47,306 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1050
+INFO 2024-11-09 14:15:49,611 basehttp "GET /users/analytics/anonymous_vs_non_anonymous_complaints/ HTTP/1.1" 200 9804989
+INFO 2024-11-09 14:16:34,225 basehttp "GET /users/analytics/complaint_trends/ HTTP/1.1" 200 9805621
+ERROR 2024-11-09 14:17:04,056 log Internal Server Error: /users/analytics/staff_assignment_by_role/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 295, in staff_assignment_by_role_view
+    chart = staff_assignment_by_role()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 219, in staff_assignment_by_role
+    roles = Role.objects.all()  # Ensure Role is properly imported
+            ^^^^
+NameError: name 'Role' is not defined
+ERROR 2024-11-09 14:17:04,061 basehttp "GET /users/analytics/staff_assignment_by_role/ HTTP/1.1" 500 83324
+INFO 2024-11-09 14:17:37,612 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:17:37,691 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:17:38,831 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:17:38,831 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:17:40,367 basehttp "GET /users/analytics/staff_assignment_by_role/ HTTP/1.1" 200 9806089
+INFO 2024-11-09 14:19:15,792 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:19:16,360 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:19:16,896 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:19:17,553 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:19:23,232 basehttp "GET /users/analytics/staff_assignment_by_role/ HTTP/1.1" 200 9805983
+INFO 2024-11-09 14:20:09,270 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-09 14:20:09,305 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:20:09,320 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 14:20:19,520 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:20:19,600 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 14:20:23,526 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 78403
+INFO 2024-11-09 14:20:23,583 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:20:25,670 basehttp "GET /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 200 57856
+INFO 2024-11-09 14:20:25,730 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:20:26,850 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=staff HTTP/1.1" 200 338
+INFO 2024-11-09 14:20:29,932 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 78403
+INFO 2024-11-09 14:20:35,221 basehttp "GET /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 200 57856
+INFO 2024-11-09 14:20:35,292 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:20:36,677 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=staff HTTP/1.1" 200 338
+INFO 2024-11-09 14:20:44,829 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=role HTTP/1.1" 200 571
+INFO 2024-11-09 14:20:48,645 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 78403
+INFO 2024-11-09 14:21:02,644 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:21:03,284 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:21:03,581 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:21:04,459 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 14:21:05,694 log Internal Server Error: /users/analytics/semester_based_dorm_usage/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 299, in semester_based_dorm_usage_view
+    chart = semester_based_dorm_usage()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 255, in semester_based_dorm_usage
+    dorm_usage = Residents.objects.filter(semester=semester).count()  # Correct relationship
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'semester' into field. Choices are: address, collected_items, enrollments, guardian_phone_number, id, maintenance_requests, role, role_id, storage_items, user, user_id
+ERROR 2024-11-09 14:21:05,704 basehttp "GET /users/analytics/semester_based_dorm_usage/ HTTP/1.1" 500 126833
+INFO 2024-11-09 14:23:40,389 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:23:40,818 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:23:41,679 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:23:42,042 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 14:23:43,019 log Internal Server Error: /users/analytics/semester_based_dorm_usage/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 299, in semester_based_dorm_usage_view
+    chart = semester_based_dorm_usage()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 257, in semester_based_dorm_usage
+    dorm_usage = Residents.objects.filter(semester=semester).count()  # Now this should work
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'semester' into field. Choices are: address, collected_items, enrollments, guardian_phone_number, id, maintenance_requests, role, role_id, storage_items, user, user_id
+ERROR 2024-11-09 14:23:43,026 basehttp "GET /users/analytics/semester_based_dorm_usage/ HTTP/1.1" 500 126999
+INFO 2024-11-09 14:24:58,499 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:24:58,775 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:24:59,568 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:24:59,858 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-09 14:25:01,468 log Internal Server Error: /users/analytics/semester_based_dorm_usage/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py", line 299, in semester_based_dorm_usage_view
+    chart = semester_based_dorm_usage()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py", line 259, in semester_based_dorm_usage
+    data.append({'semester': semester.name, 'dorm_usage': dorm_usage})
+                             ^^^^^^^^^^^^^
+AttributeError: 'Semester' object has no attribute 'name'
+ERROR 2024-11-09 14:25:01,474 basehttp "GET /users/analytics/semester_based_dorm_usage/ HTTP/1.1" 500 81835
+INFO 2024-11-09 14:27:01,605 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:27:01,733 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\analytics.py changed, reloading.
+INFO 2024-11-09 14:27:02,858 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:27:02,928 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 14:27:04,228 basehttp "GET /users/analytics/semester_based_dorm_usage/ HTTP/1.1" 200 9805703
+INFO 2024-11-09 14:28:40,832 basehttp "GET /admin/AcademicYear/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:28:40,850 basehttp "GET /admin/login/?next=/admin/AcademicYear/ HTTP/1.1" 200 6288
+INFO 2024-11-09 14:28:51,320 basehttp "POST /admin/login/?next=/admin/AcademicYear/ HTTP/1.1" 302 0
+INFO 2024-11-09 14:28:51,387 basehttp "GET /admin/AcademicYear/ HTTP/1.1" 200 48980
+INFO 2024-11-09 14:29:02,387 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-09 14:29:02,437 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 14:29:18,302 basehttp "GET /admin_tools_stats/analytics/?show=total_users HTTP/1.1" 200 5678
+INFO 2024-11-09 14:29:18,408 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-09 14:29:18,492 basehttp "GET /admin_tools_stats/analytics/chart/total_users?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-09 14:29:18,566 basehttp "GET /admin_tools_stats/analytics/chart/total_users/?analytics_chart=true HTTP/1.1" 200 3021
+INFO 2024-11-09 14:29:18,661 basehttp "GET /admin_tools_stats/chart_data/total_users/?csrfmiddlewaretoken=MMec4RlWbW0sCOaINUtxF3FTPhSXxXstkRerSPMmRaOWgfayROjCPIx27TAj2oYW&graph_key=total_users&select_box_operation=Count&select_box_interval=days&select_box_chart_type=discreteBarChart&time_since=2024-10-09&time_until=2024-11-09&_=1731158958394 HTTP/1.1" 200 2188
+INFO 2024-11-09 14:29:35,378 basehttp "GET /admin_tools_stats/analytics/?show=resident_enrollment_by_dorm HTTP/1.1" 200 5694
+INFO 2024-11-09 14:29:35,482 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-09 14:29:35,561 basehttp "GET /admin_tools_stats/analytics/chart/resident_enrollment_by_dorm?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-09 14:29:35,605 basehttp "GET /admin_tools_stats/analytics/chart/resident_enrollment_by_dorm/?analytics_chart=true HTTP/1.1" 200 1854
+INFO 2024-11-09 14:29:35,667 basehttp "GET /admin_tools_stats/chart_data/resident_enrollment_by_dorm/?csrfmiddlewaretoken=kdHKzdjgexryRrC5P7AMcc3IrH0zhvpVSiHZnbKGULf2vSCVT1qRmRVRJjIVMWVo&graph_key=resident_enrollment_by_dorm&select_box_interval=months&time_since=2024-10-09&time_until=2024-11-09&_=1731158975471 HTTP/1.1" 200 1336
+INFO 2024-11-09 14:29:41,122 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806031
+INFO 2024-11-09 14:30:14,708 basehttp "GET /users/analytics/enrollment_trends/ HTTP/1.1" 200 9805623
+INFO 2024-11-09 14:30:24,062 basehttp "GET /users/analytics/resident_room_occupancy/ HTTP/1.1" 200 9815773
+INFO 2024-11-09 14:30:33,542 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 9805907

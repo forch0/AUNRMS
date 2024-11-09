@@ -224,10 +224,6 @@ from django.conf import settings
 # class LogoutView(LogoutView):
 #     next_page = reverse_lazy('login')
 
-def index(request):
-    return HttpResponse("Welcome to AUN ResLife App.")
-
-
 # '''DJANGO ADMIN'''
 # class CustomAdminLoginView(LoginView):
 #     template_name = 'registration/admin_login.html'
@@ -243,3 +239,67 @@ def index(request):
 #         else:
 #             form.add_error(None, 'Invalid email or password.')
 #             return self.form_invalid(form)
+# views.py
+
+from django.shortcuts import render
+from .analytics import (
+    total_enrollment_by_dorm,
+    enrollment_trends,
+    resident_room_occupancy,
+    maintenance_requests_by_category,
+    request_completion_rate_per_dorm,
+    complaint_status_analysis,
+    anonymous_vs_non_anonymous_complaints,
+    complaint_trends,
+    staff_assignment_by_role,
+    semester_based_dorm_usage,
+)
+
+def analytics_dashboard(request):
+    return render(request, 'admin/analytics.html')
+
+# Each of these view functions will generate a specific chart
+def total_enrollment_by_dorm_view(request):
+    chart = total_enrollment_by_dorm()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def enrollment_trends_view(request):
+    chart = enrollment_trends()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def resident_room_occupancy_view(request):
+    chart = resident_room_occupancy()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def maintenance_requests_by_category_view(request):
+    chart = maintenance_requests_by_category()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def request_completion_rate_view(request):
+    chart = request_completion_rate_per_dorm()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def complaint_status_analysis_view(request):
+    chart = complaint_status_analysis()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def anonymous_vs_non_anonymous_complaints_view(request):
+    chart = anonymous_vs_non_anonymous_complaints()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def complaint_trends_view(request):
+    chart = complaint_trends()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def staff_assignment_by_role_view(request):
+    chart = staff_assignment_by_role()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def semester_based_dorm_usage_view(request):
+    chart = semester_based_dorm_usage()
+    return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
+
+def index(request):
+    return HttpResponse("Welcome to AUN ResLife App.")
+
+

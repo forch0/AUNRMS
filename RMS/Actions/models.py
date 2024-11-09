@@ -165,8 +165,9 @@ class Complaint(models.Model):
         return self.description
 
     def __str__(self):
-        return f"Complaint by {'Anonymous' if self.is_anonymous else self.user.username} - {self.id}"
-
+        user_name = self.user.email if self.user else 'Anonymous'  # Safely check if user exists
+        return f"Complaint by {user_name} - {self.id}"
+        
     class Meta:
         verbose_name = 'complaint'
         verbose_name_plural = 'complaints'
