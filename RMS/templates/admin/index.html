@@ -13,51 +13,8 @@
             <h2>Personal Details</h2>
             <p><strong>Full Name:</strong> {{ user.firstname }} {{ user.lastname }}</p>
             <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Email:</strong> {{ user.phone_number }}</p>
         </div>
-
-        {% if user.staffs.all.exists %}
-            <!-- Staff Info -->
-            <div class="profile-section">
-                <h2>Staff Dashboard</h2>
-                <h3>Assigned Dorms</h3>
-                {% with staff_assignments=user.staffs.assignments.all %}
-                    {% if staff_assignments.exists %}
-                        {% for assignment in staff_assignments %}
-                            <p><strong>Dorm Assigned:</strong> {{ assignment.dorm.name }} (Role: {{ assignment.role.name }})</p>
-                            <p><strong>Semester:</strong> {{ assignment.semester.name }} - Academic Session: {{ assignment.academic_session.name }}</p>
-                        {% endfor %}
-                    {% else %}
-                        <p>No dorms assigned to you yet.</p>
-                    {% endif %}
-                {% endwith %}
-            </div>
-        {% endif %}
-
-        {% if user.residents.all.exists %}
-            <!-- Resident Info -->
-            <div class="profile-section">
-                <h2>Resident Dashboard</h2>
-                <h3>Enrollment Info</h3>
-                {% with enrollments=user.residents.all %}
-                    {% for enrollment in enrollments %}
-                        <p><strong>Enrolled in Dorm:</strong> {{ enrollment.dorm.name }} (Room: {{ enrollment.room.room_name }})</p>
-                        <p><strong>Status:</strong> {{ enrollment.get_status_display }}</p>
-                        
-                        <h4>Assigned Staff:</h4>
-                        {% with staff_assignments=enrollment.dorm.staffassignment_set.all %}
-                            {% for staff in staff_assignments %}
-                                <p>{{ staff.staff.user.first_name }} {{ staff.staff.user.last_name }} - Role: {{ staff.role.name }}</p>
-                            {% endfor %}
-                        {% endwith %}
-                    {% endfor %}
-                {% endwith %}
-            </div>
-        {% endif %}
-        
-        <!-- For non-staff and non-residents -->
-        {% if not user.staffs.all.exists and not user.residents.all.exists %}
-            <p>Access denied. You are not authorized to view this page.</p>
-        {% endif %}
 
     </div>
 

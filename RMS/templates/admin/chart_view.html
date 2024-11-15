@@ -1,10 +1,20 @@
-{% comment %} {% extends "admin/base_site.html" %} {% endcomment %}
+{% comment %}
+  {% extends "admin/base_site.html" %}
+{% endcomment %}
 
-{% comment %} {% load i18n unfold %} {% endcomment %}
+{% load i18n unfold %}
 
 {% block content %}
-    <h1>{{ chart.title }}</h1>
+    <!-- Load Plotly's JavaScript library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Custom Plotly Configuration (e.g., Mathjax) -->
+    <script type="text/javascript">
+        window.PlotlyConfig = {MathjaxConfig: 'Local'};
+    </script>
+
+    <!-- Div container for the interactive chart -->
     <div id="chart-container">
-        {{ chart|safe }}
+        {{ chart|safe }}  <!-- Render only the Plotly chart, no extra HTML/JS code -->
     </div>
 {% endblock %}

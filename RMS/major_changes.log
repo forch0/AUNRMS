@@ -23717,3 +23717,65 @@ ERROR 2024-11-15 16:07:18,512 basehttp "GET /admin/ HTTP/1.1" 500 219901
 INFO 2024-11-15 16:08:37,380 basehttp "GET /admin/ HTTP/1.1" 200 35086
 INFO 2024-11-15 16:08:52,432 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378
 INFO 2024-11-15 16:08:54,997 basehttp "GET /admin/ HTTP/1.1" 200 35086
+INFO 2024-11-15 16:13:13,947 basehttp "GET /admin/ HTTP/1.1" 200 35086
+INFO 2024-11-15 16:19:04,052 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 16:19:04,061 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 16:19:11,271 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 16:19:11,320 basehttp "GET /admin/ HTTP/1.1" 200 48562
+INFO 2024-11-15 16:34:16,130 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 16:34:16,145 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 16:34:24,380 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 16:34:24,533 basehttp "GET /admin/ HTTP/1.1" 200 48390
+INFO 2024-11-15 16:34:26,305 basehttp "GET /admin/ HTTP/1.1" 200 48118
+INFO 2024-11-15 16:34:35,876 basehttp "GET /admin/ HTTP/1.1" 200 48118
+INFO 2024-11-15 16:36:04,377 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97537
+INFO 2024-11-15 16:36:04,442 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 16:36:53,255 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97537
+INFO 2024-11-15 16:36:53,313 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 16:36:54,940 basehttp "GET /admin/ HTTP/1.1" 200 48171
+INFO 2024-11-15 16:58:12,029 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-15 16:58:13,078 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 16:59:10,851 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\urls.py changed, reloading.
+INFO 2024-11-15 16:59:11,704 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 16:59:13,028 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-15 16:59:13,988 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 16:59:58,329 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\views.py changed, reloading.
+INFO 2024-11-15 16:59:59,352 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:00:42,673 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\views.py changed, reloading.
+INFO 2024-11-15 17:00:43,633 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:01:47,339 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\views.py changed, reloading.
+INFO 2024-11-15 17:01:48,119 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:04:02,402 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\views.py changed, reloading.
+INFO 2024-11-15 17:04:03,178 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:04:31,038 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\admin.py changed, reloading.
+INFO 2024-11-15 17:04:31,822 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:04:48,322 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Dashboard\views.py changed, reloading.
+INFO 2024-11-15 17:04:49,140 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:04:53,246 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 17:04:53,273 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 17:04:59,122 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 17:04:59,186 basehttp "GET /admin/ HTTP/1.1" 200 48443
+INFO 2024-11-15 17:07:31,718 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378
+INFO 2024-11-15 17:07:34,448 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806035
+INFO 2024-11-15 17:08:44,558 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-15 17:08:45,514 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:08:46,989 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806231
+INFO 2024-11-15 17:08:58,345 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\views.py changed, reloading.
+INFO 2024-11-15 17:08:59,318 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:09:00,545 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806035
+INFO 2024-11-15 17:17:22,882 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9809175
+INFO 2024-11-15 17:17:36,643 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806035
+INFO 2024-11-15 17:18:37,282 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806150
+INFO 2024-11-15 17:19:11,817 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806299
+INFO 2024-11-15 17:20:46,764 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 4567494
+INFO 2024-11-15 17:20:51,667 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378
+INFO 2024-11-15 17:20:52,365 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 17:20:52,379 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 17:20:54,557 basehttp "GET /users/analytics/enrollment_trends/ HTTP/1.1" 200 4567355
+INFO 2024-11-15 17:20:58,500 basehttp "GET /users/analytics/resident_room_occupancy/ HTTP/1.1" 200 4571000
+INFO 2024-11-15 17:21:02,202 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 4567467
+INFO 2024-11-15 17:21:06,728 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 4567570
+INFO 2024-11-15 17:21:11,682 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 200 4567465
+INFO 2024-11-15 17:21:15,732 basehttp "GET /users/analytics/complaint_trends/ HTTP/1.1" 200 4567354
+INFO 2024-11-15 17:21:20,075 basehttp "GET /users/analytics/staff_assignment_by_role/ HTTP/1.1" 200 4567492
+INFO 2024-11-15 17:21:24,717 basehttp "GET /users/analytics/semester_based_dorm_usage/ HTTP/1.1" 200 4567390
