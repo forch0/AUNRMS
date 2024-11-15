@@ -23779,3 +23779,4 @@ INFO 2024-11-15 17:21:11,682 basehttp "GET /users/analytics/complaint_status_ana
 INFO 2024-11-15 17:21:15,732 basehttp "GET /users/analytics/complaint_trends/ HTTP/1.1" 200 4567354
 INFO 2024-11-15 17:21:20,075 basehttp "GET /users/analytics/staff_assignment_by_role/ HTTP/1.1" 200 4567492
 INFO 2024-11-15 17:21:24,717 basehttp "GET /users/analytics/semester_based_dorm_usage/ HTTP/1.1" 200 4567390
+INFO 2024-11-15 17:21:29,737 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 4567500
