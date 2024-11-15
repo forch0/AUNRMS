@@ -23716,3 +23716,4 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'e
 ERROR 2024-11-15 16:07:18,512 basehttp "GET /admin/ HTTP/1.1" 500 219901
 INFO 2024-11-15 16:08:37,380 basehttp "GET /admin/ HTTP/1.1" 200 35086
 INFO 2024-11-15 16:08:52,432 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378
+INFO 2024-11-15 16:08:54,997 basehttp "GET /admin/ HTTP/1.1" 200 35086
