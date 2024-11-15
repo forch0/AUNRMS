@@ -1,14 +1,181 @@
-{% extends 'admin/index.html' %}
-
+{% extends "admin/base_site.html" %}
+{% load static %}
 {% block content %}
 
+<div class="profile-container">
+    <h1>Welcome back, {{ user.first_name }} {{ user.last_name }} 👋</h1>
+    <p class="intro-text">Here is a summary of your profile and activities.</p>
+    
+    <!-- Profile Details -->
+    <div class="profile-info">
+        <div class="profile-section">
+            <h2>Personal Details</h2>
+            <p><strong>Full Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Guardian Phone Number:</strong> {{ user.resident.guardian_phone_number }}</p>
+            <p><strong>Address:</strong> {{ user.resident.address }}</p>
+            <p><strong>Role:</strong> {{ user.resident.role }}</p>
+        </div>
+
+        <div class="profile-section">
+            <h2>Room Information</h2>
+            <p><strong>Dorm:</strong> {{ user.resident.dorm.name }}</p>
+            <p><strong>Room Number:</strong> {{ user.resident.room.number }}</p>
+            <p><strong>Capacity:</strong> {{ user.resident.room.capacity }}</p>
+            <p><strong>Floor:</strong> {{ user.resident.room.floor }}</p>
+        </div>
+    </div>
+
+    <!-- Maintenance Requests -->
+    <div class="activity-section">
+        <h2>Recent Maintenance Requests</h2>
+        <ul class="activity-list">
+            {% for request in maintenance_requests %}
+                <li>
+                    <strong>{{ request.category }} - {{ request.sub_category }}</strong>: {{ request.description }}
+                    <span class="status {{ request.status|lower }}">{{ request.status }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Announcements -->
+    <div class="activity-section">
+        <h2>Recent Announcements</h2>
+        <ul class="activity-list">
+            {% for announcement in announcements %}
+                <li>
+                    <strong>{{ announcement.title }}</strong> ({{ announcement.created_at|date:"F j, Y" }})
+                    {% if announcement.is_global %}<span class="tag global">Global</span>{% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Enrollment Details -->
+    <div class="profile-section">
+        <h2>Enrollment Details</h2>
+        <p><strong>Academic Session:</strong> {{ enrollment.academic_session.name }}</p>
+        <p><strong>Semester:</strong> {{ enrollment.semester.semester_type }}</p>
+        <p><strong>Date Enrolled:</strong> {{ enrollment.date_enrolled }}</p>
+    </div>
+</div>
+
 <style>
+
     /* Optional: Add styles to hide certain elements if necessary */
     .app { display: none; }
     .module { display: none; }
     .dashboard { display: none; }
+
+
+    :root {
+        --color-primary-600: 147, 51, 234; /* Primary color in RGB */
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .profile-container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        color: rgb(var(--color-primary-600));
+        {% comment %} font-size: 2rem; {% endcomment %}
+        margin-bottom: 10px;
+    }
+
+    .intro-text {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .profile-info, .activity-section {
+        margin-bottom: 30px;
+    }
+
+    .profile-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-section h2, .activity-section h2 {
+        color: rgb(var(--color-primary-600));
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .profile-section p, .activity-list li {
+        margin: 5px 0;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .profile-section p strong {
+        color: rgb(var(--color-primary-600));
+    }
+
+    .activity-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .activity-list li {
+        padding: 10px;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .activity-list li:hover {
+        background-color: rgba(var(--color-primary-600), 0.1);
+    }
+
+    .status {
+        margin-left: 10px;
+        font-size: 0.9rem;
+        padding: 3px 8px;
+        border-radius: 5px;
+    }
+
+    .status.open { background-color: #ffc107; color: #fff; }
+    .status.closed { background-color: #28a745; color: #fff; }
+    .status.pending { background-color: #17a2b8; color: #fff; }
+
+    .tag.global {
+        background-color: rgb(var(--color-primary-600));
+        color: #fff;
+        padding: 3px 6px;
+        font-size: 0.8rem;
+        border-radius: 5px;
+    }
+
+    a {
+        color: rgb(var(--color-primary-600));
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: rgba(var(--color-primary-600), 0.8);
+    }
 </style>
-    {{ block.super }}
-    <h2>Analytics Dashboard</h2>
-    <a href="{% url 'analytics_dashboard' %}">View Analytics Dashboard</a>
 {% endblock %}

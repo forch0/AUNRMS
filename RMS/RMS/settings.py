@@ -232,7 +232,7 @@ AUTH_USER_MODEL = 'UserProfiles.UserCred'
 from Dashboard.context_processors import get_navigation
 UNFOLD = {
     "ENABLE_THEMING": True,  # Optional customization options
-    "THEME": "default",
+    # "THEME": "default",
     "SITE_HEADER": "Appears in sidebar at the top",
     "SITE_ICON": {
         "light": lambda request: static("images/2.png"),  # light mode
