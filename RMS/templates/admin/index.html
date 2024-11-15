@@ -1,6 +1,13 @@
 {% extends 'admin/index.html' %}
 
 {% block content %}
+
+<style>
+    /* Optional: Add styles to hide certain elements if necessary */
+    .app { display: none; }
+    .module { display: none; }
+    .dashboard { display: none; }
+</style>
     {{ block.super }}
     <h2>Analytics Dashboard</h2>
     <a href="{% url 'analytics_dashboard' %}">View Analytics Dashboard</a>

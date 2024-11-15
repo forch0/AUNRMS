@@ -22712,3 +22712,415 @@ INFO 2024-11-09 14:38:39,819 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS
 INFO 2024-11-09 14:38:41,080 autoreload Watching for file changes with StatReloader
 INFO 2024-11-09 14:38:41,080 autoreload Watching for file changes with StatReloader
 INFO 2024-11-09 14:38:45,115 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9806043
+INFO 2024-11-09 20:39:05,903 autoreload Watching for file changes with StatReloader
+INFO 2024-11-09 20:39:09,937 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-11-09 20:39:10,957 log Not Found: /favicon.ico
+WARNING 2024-11-09 20:39:10,957 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-11-09 20:39:17,856 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-09 20:39:17,897 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 20:39:17,933 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 20:39:30,474 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 20:39:30,555 basehttp "GET /admin/ HTTP/1.1" 200 85497
+INFO 2024-11-09 20:40:00,113 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-09 20:40:03,257 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806031
+INFO 2024-11-09 20:40:24,848 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 20:40:27,393 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-09 20:40:27,475 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 20:40:30,363 basehttp "GET /admin_tools_stats/analytics/?show=total_users HTTP/1.1" 200 5678
+INFO 2024-11-09 20:40:30,507 basehttp "GET /admin_tools_stats/admin_charts.js HTTP/1.1" 200 3022
+INFO 2024-11-09 20:40:30,633 basehttp "GET /admin_tools_stats/analytics/chart/total_users?analytics_chart=true HTTP/1.1" 301 0
+INFO 2024-11-09 20:40:30,691 basehttp "GET /admin_tools_stats/analytics/chart/total_users/?analytics_chart=true HTTP/1.1" 200 3021
+INFO 2024-11-09 20:40:30,793 basehttp "GET /admin_tools_stats/chart_data/total_users/?csrfmiddlewaretoken=IKgvQyVBPOXbbPX3Vfzj0jdVkLrOfO8sQvMOZNraIbgrvQwTQVJ8zNUFXQcavdLK&graph_key=total_users&select_box_operation=Count&select_box_interval=days&select_box_chart_type=discreteBarChart&time_since=2024-10-09&time_until=2024-11-09&_=1731181230501 HTTP/1.1" 200 2188
+INFO 2024-11-09 20:40:34,988 basehttp "GET /admin_tools_stats/chart_data/total_users/?csrfmiddlewaretoken=IKgvQyVBPOXbbPX3Vfzj0jdVkLrOfO8sQvMOZNraIbgrvQwTQVJ8zNUFXQcavdLK&graph_key=total_users&select_box_operation=Count&select_box_interval=months&select_box_chart_type=discreteBarChart&time_since=2024-10-09&time_until=2024-11-09&_=1731181230502 HTTP/1.1" 200 1288
+INFO 2024-11-09 20:40:41,523 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 20:40:44,009 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-09 20:40:47,852 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806031
+INFO 2024-11-09 20:41:09,313 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 20:41:10,943 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 170815
+INFO 2024-11-09 20:41:11,103 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 20:41:25,783 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 20:41:29,418 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-09 20:41:31,590 basehttp "GET /users/analytics/enrollment_trends/ HTTP/1.1" 200 9805623
+INFO 2024-11-09 20:41:45,609 basehttp "GET /users/analytics/resident_room_occupancy/ HTTP/1.1" 200 9815773
+INFO 2024-11-09 20:42:04,884 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 9805907
+INFO 2024-11-09 20:42:18,783 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 9806183
+INFO 2024-11-09 20:42:58,999 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 9806183
+INFO 2024-11-09 20:43:04,191 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 200 9805919
+INFO 2024-11-09 20:43:22,637 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 20:43:27,640 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-09 20:43:32,953 basehttp "GET /users/analytics/complaint_trends/ HTTP/1.1" 200 9805621
+INFO 2024-11-09 20:43:44,236 basehttp "GET /users/analytics/staff_assignment_by_role/ HTTP/1.1" 200 9805983
+INFO 2024-11-09 20:43:54,607 basehttp "GET /users/analytics/semester_based_dorm_usage/ HTTP/1.1" 200 9805703
+INFO 2024-11-09 20:44:15,325 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9806043
+INFO 2024-11-09 20:44:27,732 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 20:44:34,163 basehttp "GET /admin/Actions/vendor HTTP/1.1" 301 0
+INFO 2024-11-09 20:44:34,252 basehttp "GET /admin/Actions/vendor/ HTTP/1.1" 200 66041
+INFO 2024-11-09 20:44:34,312 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 20:44:48,046 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-09 20:44:48,257 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 20:44:49,458 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 20:44:52,017 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-09 20:44:54,960 basehttp "GET /users/analytics/anonymous_vs_non_anonymous_complaints/ HTTP/1.1" 200 9804989
+INFO 2024-11-09 20:45:02,593 basehttp "GET /admin/ HTTP/1.1" 200 85225
+INFO 2024-11-09 21:19:59,328 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 21:19:59,334 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 21:22:41,502 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 21:22:41,572 basehttp "GET /admin/ HTTP/1.1" 200 85497
+INFO 2024-11-09 21:23:01,522 basehttp "POST /admin/logout/ HTTP/1.1" 200 3183
+INFO 2024-11-09 21:23:03,251 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 21:23:03,256 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 21:23:26,467 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 7013
+INFO 2024-11-09 21:23:31,466 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 7013
+INFO 2024-11-09 21:23:45,391 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 21:23:45,462 basehttp "GET /admin/ HTTP/1.1" 200 29579
+WARNING 2024-11-09 21:23:49,643 log Forbidden (Permission denied): /admin/admin_tools_stats/dashboardstats/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\admin_tools_stats\app_label_renamer.py", line 58, in wrap
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-09 21:23:49,671 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 403 3778
+INFO 2024-11-09 21:23:53,171 basehttp "GET /admin/ HTTP/1.1" 200 29579
+INFO 2024-11-09 21:23:54,866 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 619992
+INFO 2024-11-09 21:23:54,932 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-11-09 21:23:56,966 log Forbidden (Permission denied): /admin/Dorms/storage/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-09 21:23:56,971 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 403 3778
+INFO 2024-11-09 21:23:58,902 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 619992
+WARNING 2024-11-09 21:24:00,503 log Forbidden (Permission denied): /admin/Dorms/dorm/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-09 21:24:00,511 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 403 3778
+INFO 2024-11-09 21:24:02,531 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 619992
+WARNING 2024-11-09 21:24:04,831 log Forbidden (Permission denied): /admin/UserProfiles/residents/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-09 21:24:04,837 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 403 3778
+INFO 2024-11-09 21:24:07,315 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 619992
+WARNING 2024-11-09 21:24:10,841 log Forbidden (Permission denied): /admin/UserProfiles/usercred/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-09 21:24:10,852 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 403 3778
+INFO 2024-11-09 21:24:13,413 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 619992
+INFO 2024-11-09 21:24:23,341 basehttp "GET /admin/ HTTP/1.1" 200 29579
+INFO 2024-11-09 21:25:11,766 basehttp "GET /admin/ HTTP/1.1" 200 29759
+INFO 2024-11-09 21:25:12,916 basehttp "GET /admin/ HTTP/1.1" 200 29759
+INFO 2024-11-09 21:25:13,851 basehttp "GET /admin/ HTTP/1.1" 200 29759
+INFO 2024-11-09 21:25:18,557 basehttp "GET / HTTP/1.1" 200 24
+INFO 2024-11-09 21:25:22,291 basehttp "POST /admin/logout/ HTTP/1.1" 200 3183
+INFO 2024-11-09 21:25:23,577 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 21:25:23,593 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-09 21:25:29,521 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-09 21:25:29,596 basehttp "GET /admin/ HTTP/1.1" 200 85405
+INFO 2024-11-09 21:25:56,963 basehttp "GET /admin/ HTTP/1.1" 200 85300
+INFO 2024-11-09 21:26:56,460 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-09 21:26:56,530 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:27:19,963 basehttp "GET /admin/ HTTP/1.1" 200 85300
+INFO 2024-11-09 21:27:22,870 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-09 21:27:22,937 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:27:51,145 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 95114
+INFO 2024-11-09 21:27:51,213 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:28:38,600 basehttp "GET /admin/UserProfiles/usercred/add/ HTTP/1.1" 200 53518
+INFO 2024-11-09 21:28:38,665 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:29:16,674 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 64106
+INFO 2024-11-09 21:29:16,746 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:30:00,632 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 52611
+INFO 2024-11-09 21:30:00,710 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:30:03,357 basehttp "GET /admin/autocomplete/?app_label=UserProfiles&model_name=residents&field_name=user HTTP/1.1" 200 581
+INFO 2024-11-09 21:30:11,923 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 52611
+INFO 2024-11-09 21:30:11,980 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:30:14,760 basehttp "GET /admin/UserProfiles/residents/add/ HTTP/1.1" 200 52611
+INFO 2024-11-09 21:30:14,829 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:30:47,392 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 64800
+INFO 2024-11-09 21:30:47,559 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:31:39,586 basehttp "GET /admin/UserProfiles/staffs/add/ HTTP/1.1" 200 52444
+INFO 2024-11-09 21:31:39,651 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:31:40,854 basehttp "GET /admin/UserProfiles/staffs/add/ HTTP/1.1" 200 52444
+INFO 2024-11-09 21:31:40,929 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:31:42,739 basehttp "GET /admin/autocomplete/?app_label=UserProfiles&model_name=staffs&field_name=user HTTP/1.1" 200 581
+INFO 2024-11-09 21:31:54,110 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 71861
+INFO 2024-11-09 21:31:54,132 basehttp "GET /static/adminsortable2/css/sortable.css HTTP/1.1" 304 0
+INFO 2024-11-09 21:31:54,132 basehttp "GET /static/adminsortable2/js/adminsortable2.js HTTP/1.1" 304 0
+INFO 2024-11-09 21:31:54,172 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:31:54,214 basehttp "GET /static/adminsortable2/icons/drag.png HTTP/1.1" 304 0
+INFO 2024-11-09 21:32:23,986 basehttp "GET /admin/UserProfiles/roles/b153878a-fd79-4357-a2c7-31c88320cc34/change/ HTTP/1.1" 200 60425
+INFO 2024-11-09 21:32:24,002 basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2024-11-09 21:32:24,002 basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15292
+INFO 2024-11-09 21:32:24,050 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:33:53,018 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 78403
+INFO 2024-11-09 21:33:53,083 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:34:27,312 basehttp "GET /admin/AcademicYear/staffassignment/add/ HTTP/1.1" 200 57856
+INFO 2024-11-09 21:34:27,374 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-09 21:34:29,018 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=staff HTTP/1.1" 200 338
+INFO 2024-11-09 21:34:31,023 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=role HTTP/1.1" 200 571
+INFO 2024-11-09 21:34:32,358 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=staffassignment&field_name=staff HTTP/1.1" 200 338
+INFO 2024-11-09 21:38:48,160 basehttp "GET /admin/ HTTP/1.1" 200 85405
+INFO 2024-11-09 21:38:51,012 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-09 21:38:52,699 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806031
+INFO 2024-11-10 00:37:17,138 autoreload Watching for file changes with StatReloader
+INFO 2024-11-10 00:37:22,928 basehttp "GET / HTTP/1.1" 200 24
+WARNING 2024-11-10 00:37:24,537 log Not Found: /favicon.ico
+WARNING 2024-11-10 00:37:24,539 basehttp "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2024-11-10 00:53:09,794 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-10 00:53:09,899 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-10 00:53:09,963 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6275
+INFO 2024-11-10 00:53:30,791 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-10 00:53:30,885 basehttp "GET /admin/ HTTP/1.1" 200 85677
+INFO 2024-11-10 00:54:25,719 basehttp "GET /admin/ HTTP/1.1" 200 85405
+INFO 2024-11-10 00:54:40,666 basehttp "GET /admin/ HTTP/1.1" 200 85405
+INFO 2024-11-10 00:54:53,959 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 57434
+INFO 2024-11-10 00:54:54,039 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:54:58,871 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 66054
+INFO 2024-11-10 00:54:58,953 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:55:02,822 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 170815
+INFO 2024-11-10 00:55:02,896 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:55:08,976 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 111357
+INFO 2024-11-10 00:55:09,047 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:56:22,835 basehttp "GET /admin/Dorms/dorm/add/ HTTP/1.1" 200 49548
+INFO 2024-11-10 00:56:22,927 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:56:25,338 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 687809
+INFO 2024-11-10 00:56:25,524 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:56:33,967 basehttp "GET /admin/Dorms/room/?q=202 HTTP/1.1" 200 111923
+INFO 2024-11-10 00:56:34,053 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:56:38,024 basehttp "GET /admin/Dorms/room/?o=&q=202 HTTP/1.1" 200 111081
+INFO 2024-11-10 00:56:38,100 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:56:40,279 basehttp "GET /admin/Dorms/room/?q= HTTP/1.1" 200 690565
+INFO 2024-11-10 00:56:40,355 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:56:43,836 basehttp "GET /admin/Dorms/room/?o=8.1&q= HTTP/1.1" 200 693511
+INFO 2024-11-10 00:56:44,017 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:56:54,713 basehttp "GET /admin/Dorms/room/?o=1&q= HTTP/1.1" 200 691619
+INFO 2024-11-10 00:56:54,791 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:57:02,262 basehttp "GET /admin/Dorms/room/?o=2.1&q= HTTP/1.1" 200 693443
+INFO 2024-11-10 00:57:02,344 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:57:09,482 basehttp "GET /admin/Dorms/room/?o=7.2.1&q= HTTP/1.1" 200 694852
+INFO 2024-11-10 00:57:09,560 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:57:14,352 basehttp "GET /admin/Dorms/room/?o=-2.7.1&q= HTTP/1.1" 200 695542
+INFO 2024-11-10 00:57:14,426 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:57:16,485 basehttp "GET /admin/Dorms/room/?o=2.7.1&q= HTTP/1.1" 200 695074
+INFO 2024-11-10 00:57:16,570 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:57:19,714 basehttp "GET /admin/Dorms/room/?o=-7.2.1&q= HTTP/1.1" 200 695950
+INFO 2024-11-10 00:57:19,790 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:58:52,698 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 53388
+INFO 2024-11-10 00:58:52,776 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:58:54,511 basehttp "GET /admin/Actions/announcement/ HTTP/1.1" 200 52298
+INFO 2024-11-10 00:58:54,695 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:58:55,961 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 68816
+INFO 2024-11-10 00:58:56,047 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:59:04,320 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 92257
+INFO 2024-11-10 00:59:04,395 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:59:56,207 basehttp "GET /admin/Actions/maintenancerequest/a0043a37-0c29-439e-9ec7-1aebb5835a6a/change/ HTTP/1.1" 200 69738
+INFO 2024-11-10 00:59:56,280 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 00:59:56,389 basehttp "GET /static/unfold/fonts/inter/Inter-Bold.woff2 HTTP/1.1" 200 46552
+INFO 2024-11-10 01:00:04,227 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 92257
+INFO 2024-11-10 01:00:06,414 basehttp "GET /admin/Actions/maintenancerequest/add/ HTTP/1.1" 200 67505
+INFO 2024-11-10 01:00:06,509 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:00:17,190 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=maintenancerequest&field_name=dorm HTTP/1.1" 200 700
+INFO 2024-11-10 01:02:18,072 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 59609
+INFO 2024-11-10 01:02:18,154 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:02:20,773 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 200 76430
+INFO 2024-11-10 01:02:20,851 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:02:25,229 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 68816
+INFO 2024-11-10 01:02:25,310 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:06:04,953 basehttp "GET /admin/Actions/announcement/ HTTP/1.1" 200 52298
+INFO 2024-11-10 01:06:05,024 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:06:08,804 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 68816
+INFO 2024-11-10 01:06:08,878 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:06:55,086 basehttp "GET /admin/Actions/complaint/ccdae312-a095-4f4d-b87c-48a4e84c0a88/change/ HTTP/1.1" 200 61123
+INFO 2024-11-10 01:06:55,167 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:06:59,181 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 68816
+INFO 2024-11-10 01:07:41,266 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 170815
+INFO 2024-11-10 01:07:41,339 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:08:43,586 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 80834
+INFO 2024-11-10 01:08:43,710 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:08:46,430 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 111357
+INFO 2024-11-10 01:08:46,498 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:08:47,791 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 687809
+INFO 2024-11-10 01:08:47,869 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:08:49,479 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 55141
+INFO 2024-11-10 01:08:49,564 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:08:52,488 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-10 01:08:52,557 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:08:56,433 basehttp "GET /admin/ HTTP/1.1" 200 85405
+INFO 2024-11-10 01:08:57,990 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-10 01:09:02,162 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806031
+INFO 2024-11-10 01:10:01,620 basehttp "GET /users/analytics/enrollment_trends/ HTTP/1.1" 200 9805623
+INFO 2024-11-10 01:10:06,025 basehttp "GET /users/analytics/resident_room_occupancy/ HTTP/1.1" 200 9815773
+INFO 2024-11-10 01:10:13,502 basehttp "GET /users/analytics/maintenance_requests_by_category/ HTTP/1.1" 200 9805907
+INFO 2024-11-10 01:10:40,646 basehttp "GET /users/analytics/request_completion_rate/ HTTP/1.1" 200 9806183
+INFO 2024-11-10 01:13:07,054 basehttp "GET /users/analytics/anonymous_vs_non_anonymous_complaints/ HTTP/1.1" 200 9804989
+INFO 2024-11-10 01:13:11,144 basehttp "GET /users/analytics/total_enrollment_by_dorm/ HTTP/1.1" 200 9806031
+INFO 2024-11-10 01:13:15,856 basehttp "GET /users/analytics/enrollment_trends/ HTTP/1.1" 200 9805623
+INFO 2024-11-10 01:13:32,758 basehttp "GET /users/analytics/complaint_status_analysis/ HTTP/1.1" 200 9805919
+INFO 2024-11-10 01:15:00,329 basehttp "GET /users/analytics/complaint_trends/ HTTP/1.1" 200 9805621
+INFO 2024-11-10 01:15:10,646 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9806043
+INFO 2024-11-10 01:15:26,943 basehttp "GET /users/analytics/semester_based_dorm_usage/ HTTP/1.1" 200 9805703
+INFO 2024-11-10 01:17:41,618 basehttp "GET /admin/ HTTP/1.1" 200 85405
+INFO 2024-11-10 01:17:43,232 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-10 01:17:43,315 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:17:44,397 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 57434
+INFO 2024-11-10 01:17:44,473 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:17:45,568 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 66054
+INFO 2024-11-10 01:17:45,688 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:17:47,442 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 57434
+INFO 2024-11-10 01:17:47,520 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:17:49,032 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97175
+INFO 2024-11-10 01:17:49,114 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:23:28,089 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\RMS\settings.py changed, reloading.
+INFO 2024-11-10 01:23:29,061 autoreload Watching for file changes with StatReloader
+INFO 2024-11-10 01:23:34,186 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-10 01:23:34,206 basehttp "GET /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 6308
+INFO 2024-11-10 01:23:41,337 basehttp "POST /admin/login/?next=/admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 302 0
+INFO 2024-11-10 01:23:41,476 basehttp "GET /admin/admin_tools_stats/dashboardstats/ HTTP/1.1" 200 97400
+INFO 2024-11-10 01:23:41,547 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:23:45,959 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 57427
+INFO 2024-11-10 01:23:46,031 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:23:48,070 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-10 01:23:50,816 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 57427
+INFO 2024-11-10 01:23:52,696 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-10 01:23:55,238 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 57427
+INFO 2024-11-10 01:24:00,926 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 1140
+INFO 2024-11-10 01:24:02,638 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 57427
+INFO 2024-11-10 01:26:17,749 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 57427
+INFO 2024-11-10 01:26:17,807 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-10 01:26:19,410 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4012
+INFO 2024-11-10 01:26:27,931 basehttp "GET /admin/ HTTP/1.1" 200 85398
+INFO 2024-11-10 01:26:30,635 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4012
+INFO 2024-11-10 01:26:34,600 basehttp "GET /users/analytics/anonymous_vs_non_anonymous_complaints/ HTTP/1.1" 200 9804989
+INFO 2024-11-10 01:26:52,377 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9808915
+INFO 2024-11-10 01:27:53,512 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9808915
+INFO 2024-11-10 01:29:44,230 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9808915
+INFO 2024-11-10 01:30:06,534 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9808915
+INFO 2024-11-10 01:30:30,619 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 9806047
+INFO 2024-11-10 01:30:37,927 basehttp "GET /admin/ HTTP/1.1" 200 85398
+INFO 2024-11-10 01:30:39,609 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 4012

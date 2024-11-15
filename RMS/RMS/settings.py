@@ -274,7 +274,8 @@ UNFOLD = {
                     {
                         "title": _("Analytics"),
                         "icon": "Timeline",  # Supported icon set: https://fonts.google.com/icons
-                        "link": reverse_lazy("admin:admin_tools_stats_dashboardstats_changelist"), 
+                        # "link": reverse_lazy("admin:admin_tools_stats_dashboardstats_changelist"),
+                         "link": reverse_lazy("analytics_dashboard"), 
                         # "link": reverse_lazy("admin:AcademicYear_academicsession_changelist"),    
                     },
                     {
