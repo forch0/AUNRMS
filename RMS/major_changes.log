@@ -23338,3 +23338,381 @@ INFO 2024-11-15 11:24:26,512 basehttp "GET /admin/ HTTP/1.1" 200 49165
 INFO 2024-11-15 11:24:49,962 basehttp "GET /admin/ HTTP/1.1" 200 49149
 INFO 2024-11-15 11:25:16,642 basehttp "GET /admin/ HTTP/1.1" 200 49149
 INFO 2024-11-15 11:25:31,167 basehttp "GET /admin/ HTTP/1.1" 200 49149
+INFO 2024-11-15 11:27:00,825 basehttp "GET /admin/ HTTP/1.1" 200 49013
+INFO 2024-11-15 11:27:17,262 basehttp "GET /admin/ HTTP/1.1" 200 48948
+INFO 2024-11-15 11:27:56,937 basehttp "GET /admin/ HTTP/1.1" 200 48550
+INFO 2024-11-15 14:40:40,927 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 14:40:43,735 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 14:40:43,780 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 14:40:51,590 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 14:40:51,683 basehttp "GET /admin/ HTTP/1.1" 200 48822
+INFO 2024-11-15 14:41:15,812 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378
+INFO 2024-11-15 14:41:19,780 basehttp "GET /admin/ HTTP/1.1" 200 48550
+INFO 2024-11-15 14:41:25,028 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97537
+INFO 2024-11-15 14:41:25,195 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 14:41:29,706 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 74284
+INFO 2024-11-15 14:41:29,730 basehttp "GET /static/adminsortable2/css/sortable.css HTTP/1.1" 200 1297
+INFO 2024-11-15 14:41:29,735 basehttp "GET /static/adminsortable2/js/adminsortable2.js HTTP/1.1" 200 116253
+INFO 2024-11-15 14:41:29,880 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 14:41:29,919 basehttp "GET /static/adminsortable2/icons/drag.png HTTP/1.1" 200 1653
+INFO 2024-11-15 14:44:13,382 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 80826
+INFO 2024-11-15 14:44:13,457 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 14:44:14,682 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 67223
+INFO 2024-11-15 14:44:14,747 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 14:44:16,235 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 66529
+INFO 2024-11-15 14:44:16,309 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 14:44:32,870 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97537
+INFO 2024-11-15 14:44:32,941 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:00:30,208 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:00:30,214 basehttp "GET /admin/login/?next=/admin/UserProfiles/usercred/ HTTP/1.1" 200 8735
+INFO 2024-11-15 15:01:55,754 basehttp "POST /admin/login/?next=/admin/UserProfiles/usercred/ HTTP/1.1" 200 9477
+INFO 2024-11-15 15:01:59,221 basehttp "POST /admin/login/?next=/admin/UserProfiles/usercred/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:01:59,296 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97809
+INFO 2024-11-15 15:01:59,367 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:02:03,941 basehttp "GET /admin/ HTTP/1.1" 200 48550
+INFO 2024-11-15 15:04:40,282 basehttp "GET /admin/ HTTP/1.1" 200 48750
+INFO 2024-11-15 15:04:46,226 basehttp "GET /admin/ HTTP/1.1" 200 48750
+INFO 2024-11-15 15:04:56,924 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 15:04:58,611 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:04:58,625 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:05:08,258 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:05:08,339 basehttp "GET /admin/ HTTP/1.1" 200 35562
+INFO 2024-11-15 15:06:27,464 basehttp "GET /admin/ HTTP/1.1" 200 35562
+INFO 2024-11-15 15:06:29,261 basehttp "GET /admin/ HTTP/1.1" 200 35562
+INFO 2024-11-15 15:09:41,865 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-11-15 15:09:42,703 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:09:58,284 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-11-15 15:09:59,186 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:10:05,225 basehttp "GET /admin/ HTTP/1.1" 200 36239
+INFO 2024-11-15 15:13:25,748 basehttp "GET /admin/ HTTP/1.1" 200 36155
+INFO 2024-11-15 15:15:55,557 basehttp "GET /admin/ HTTP/1.1" 200 36204
+INFO 2024-11-15 15:15:57,375 basehttp "GET /admin/ HTTP/1.1" 200 36204
+INFO 2024-11-15 15:15:58,567 basehttp "GET /admin/ HTTP/1.1" 200 36204
+INFO 2024-11-15 15:15:59,633 basehttp "GET /admin/ HTTP/1.1" 200 36204
+INFO 2024-11-15 15:16:17,967 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 15:16:19,298 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:16:19,309 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:16:26,428 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:16:26,480 basehttp "GET /admin/ HTTP/1.1" 200 48752
+INFO 2024-11-15 15:16:47,298 basehttp "GET /admin/ HTTP/1.1" 200 48405
+INFO 2024-11-15 15:16:56,187 basehttp "GET /admin/ HTTP/1.1" 200 48232
+INFO 2024-11-15 15:17:26,477 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97537
+INFO 2024-11-15 15:17:26,536 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:17:27,306 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 80826
+INFO 2024-11-15 15:17:27,369 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:17:34,744 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97537
+INFO 2024-11-15 15:17:34,802 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:17:48,930 basehttp "GET /admin/ HTTP/1.1" 200 48232
+INFO 2024-11-15 15:18:13,042 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97537
+INFO 2024-11-15 15:18:13,205 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:18:47,034 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 97537
+INFO 2024-11-15 15:18:47,086 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:18:48,451 basehttp "GET /admin/ HTTP/1.1" 200 48242
+INFO 2024-11-15 15:19:04,397 basehttp "GET /admin/ HTTP/1.1" 200 48252
+INFO 2024-11-15 15:21:01,760 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 66529
+INFO 2024-11-15 15:21:01,816 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:21:07,166 basehttp "GET /admin/ HTTP/1.1" 200 48135
+INFO 2024-11-15 15:21:30,285 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 15:21:32,210 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:21:32,219 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:21:39,405 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:21:39,473 basehttp "GET /admin/ HTTP/1.1" 200 35101
+INFO 2024-11-15 15:23:23,549 basehttp "GET /admin/ HTTP/1.1" 200 35129
+INFO 2024-11-15 15:23:54,809 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:23:57,844 basehttp "GET /admin/ HTTP/1.1" 200 35129
+INFO 2024-11-15 15:23:58,959 basehttp "GET /admin/ HTTP/1.1" 200 35129
+INFO 2024-11-15 15:24:06,503 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 15:24:07,981 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:24:07,992 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:24:15,189 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:24:15,239 basehttp "GET /admin/ HTTP/1.1" 200 48135
+INFO 2024-11-15 15:24:21,242 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 66529
+INFO 2024-11-15 15:24:21,303 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:24:23,584 basehttp "GET /admin/UserProfiles/residents/6c65d7cf-676b-4c77-a271-b338ef090016/change/ HTTP/1.1" 200 56651
+INFO 2024-11-15 15:24:23,649 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:24:30,996 basehttp "POST /admin/UserProfiles/residents/6c65d7cf-676b-4c77-a271-b338ef090016/change/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:24:31,060 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 66921
+INFO 2024-11-15 15:24:31,116 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:24:37,634 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 173238
+INFO 2024-11-15 15:24:37,693 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 15:24:45,356 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 15:24:46,647 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:24:46,654 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:24:57,470 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:24:57,626 basehttp "GET /admin/ HTTP/1.1" 200 35129
+INFO 2024-11-15 15:26:14,452 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-11-15 15:26:15,369 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:26:39,097 basehttp "GET /admin/ HTTP/1.1" 200 35148
+INFO 2024-11-15 15:26:40,295 basehttp "GET /admin/ HTTP/1.1" 200 35148
+INFO 2024-11-15 15:26:41,189 basehttp "GET /admin/ HTTP/1.1" 200 35148
+INFO 2024-11-15 15:31:20,749 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-15 15:31:21,609 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:32:42,594 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-15 15:32:43,438 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:32:46,444 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:32:46,465 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:32:52,644 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:32:52,711 basehttp "GET /admin/ HTTP/1.1" 200 35419
+WARNING 2024-11-15 15:32:59,594 log Forbidden (Permission denied): /admin/UserProfiles/residents/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-15 15:32:59,609 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 403 3778
+INFO 2024-11-15 15:33:07,964 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-15 15:33:09,221 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-15 15:33:09,985 log Forbidden (Permission denied): /admin/UserProfiles/residents/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-15 15:33:09,994 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 403 3778
+INFO 2024-11-15 15:33:11,769 basehttp "GET /admin/ HTTP/1.1" 200 35147
+INFO 2024-11-15 15:33:29,844 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 15:33:31,056 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:33:31,069 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:33:40,219 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9455
+INFO 2024-11-15 15:33:45,039 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9455
+INFO 2024-11-15 15:33:49,159 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9455
+INFO 2024-11-15 15:33:54,721 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:33:54,779 basehttp "GET /admin/ HTTP/1.1" 200 48135
+INFO 2024-11-15 15:43:32,708 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-15 15:43:33,729 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:43:53,465 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-15 15:43:54,302 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:44:27,716 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-15 15:44:28,593 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:45:04,274 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\admin.py changed, reloading.
+INFO 2024-11-15 15:45:05,355 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:47:57,614 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:47:57,631 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:48:04,188 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:48:04,255 basehttp "GET /admin/ HTTP/1.1" 200 48619
+INFO 2024-11-15 15:48:16,382 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 15:48:17,607 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:48:17,613 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:48:23,273 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:48:23,328 basehttp "GET /admin/ HTTP/1.1" 200 35159
+INFO 2024-11-15 15:52:30,242 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\UserProfiles\models.py changed, reloading.
+INFO 2024-11-15 15:52:31,159 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 15:56:39,638 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:56:39,661 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:56:44,981 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:56:45,041 basehttp "GET /admin/ HTTP/1.1" 200 48485
+INFO 2024-11-15 15:57:01,274 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 15:57:02,548 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:57:02,554 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:57:09,284 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:57:09,343 basehttp "GET /admin/ HTTP/1.1" 200 35005
+INFO 2024-11-15 15:59:26,331 basehttp "GET /admin/ HTTP/1.1" 200 35005
+INFO 2024-11-15 15:59:29,776 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 15:59:30,938 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:59:30,947 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 15:59:37,167 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 9455
+INFO 2024-11-15 15:59:41,552 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 15:59:41,602 basehttp "GET /admin/ HTTP/1.1" 200 48193
+INFO 2024-11-15 15:59:50,992 basehttp "GET /admin/ HTTP/1.1" 200 48193
+INFO 2024-11-15 15:59:52,349 basehttp "GET /admin/ HTTP/1.1" 200 48193
+INFO 2024-11-15 15:59:59,392 basehttp "GET /admin/ HTTP/1.1" 200 48198
+INFO 2024-11-15 16:00:12,199 basehttp "GET /admin/ HTTP/1.1" 200 48213
+INFO 2024-11-15 16:01:03,672 basehttp "GET /admin/ HTTP/1.1" 200 48213
+INFO 2024-11-15 16:01:09,212 basehttp "GET /admin/ HTTP/1.1" 200 48213
+INFO 2024-11-15 16:04:30,412 basehttp "GET /admin/ HTTP/1.1" 200 48213
+INFO 2024-11-15 16:04:33,862 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 16:04:35,240 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 16:04:35,250 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 16:04:44,907 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 16:04:44,957 basehttp "GET /admin/ HTTP/1.1" 200 35009
+INFO 2024-11-15 16:04:49,977 basehttp "GET /admin/ HTTP/1.1" 200 35009
+ERROR 2024-11-15 16:06:29,872 log Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'elif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 71, in resolve_template
+    return get_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'elif', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-11-15 16:06:29,877 basehttp "GET /admin/ HTTP/1.1" 500 219935
+ERROR 2024-11-15 16:07:18,507 log Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'elif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\response.py", line 71, in resolve_template
+    return get_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'elif', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-11-15 16:07:18,512 basehttp "GET /admin/ HTTP/1.1" 500 219901
+INFO 2024-11-15 16:08:37,380 basehttp "GET /admin/ HTTP/1.1" 200 35086
+INFO 2024-11-15 16:08:52,432 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378

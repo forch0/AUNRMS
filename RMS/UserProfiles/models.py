@@ -51,6 +51,16 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+    
+    @property
+    def is_resident(self):
+        """Returns True if the user has a related Resident object."""
+        return hasattr(self, 'residents')
+    
+    @property
+    def is_not_resident(self):
+        """Returns True if the user does not have a related Resident object."""
+        return not hasattr(self, 'residents')
 
 # Residents Model
 class Residents(models.Model):
@@ -58,7 +68,7 @@ class Residents(models.Model):
     user = models.OneToOneField(UserCred, on_delete=models.CASCADE, related_name='residents')
     guardian_phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
     address = models.CharField(max_length=40, blank=True)
-    role = models.ForeignKey('Roles', default=None, on_delete=models.CASCADE)  # Link to Roles model
+    role = models.ForeignKey('Roles', on_delete=models.CASCADE)  # Link to Roles model
 
     def __str__(self):
         return f"Resident: {self.user.email}"
@@ -67,6 +77,14 @@ class Residents(models.Model):
         verbose_name = 'resident'
         verbose_name_plural = 'residents'
         ordering = ['user__email']
+
+    def get_resident_info(self):
+        """Returns formatted resident information."""
+        return {
+            'guardian_phone_number': self.guardian_phone_number,
+            'address': self.address,
+            'role_name': self.role.name if self.role else "No Role Assigned"
+        }
 
 # Roles Model
 class Roles(models.Model):
@@ -79,7 +97,6 @@ class Roles(models.Model):
         default=0,
         blank=False,
         null=False,
-
     )
 
     def __str__(self):

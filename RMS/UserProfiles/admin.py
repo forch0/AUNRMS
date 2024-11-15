@@ -9,6 +9,7 @@ from django.utils.translation import gettext as _
 from adminsortable2.admin import SortableAdminMixin
 from typing import Any
 from django.http import HttpRequest
+from AcademicYear.models import StaffAssignment,Enrollment
 
 
 
@@ -136,6 +137,22 @@ class ResidentsAdmin(admin.ModelAdmin):
     list_filter = ('role',)
     autocomplete_fields = ['user']
 
+    def get_enrollment_info(self, obj):
+        # Fetch enrollment info for the resident
+        enrollment = Enrollment.objects.filter(resident=obj).first()
+        return f"Dorm: {enrollment.dorm.name}, Room: {enrollment.room.room_name}, Status: {enrollment.get_status_display()}" if enrollment else "Not Enrolled"
+
+    def get_assigned_staff(self, obj):
+        # Get staff assigned to the dorm of the resident
+        enrollment = Enrollment.objects.filter(resident=obj).first()
+        if enrollment:
+            staff_assignments = StaffAssignment.objects.filter(dorm=enrollment.dorm)
+            return ", ".join([f"{staff.staff.user.firstname} {staff.staff.user.lastname}" for staff in staff_assignments])
+        return "No Staff Assigned"
+
+    get_enrollment_info.short_description = "Enrollment Info"
+    get_assigned_staff.short_description = "Assigned Staff"
+
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
         return request.user.is_superuser
@@ -163,12 +180,26 @@ class ResidentsAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """Only superuser can delete."""
         return self._is_superuser(request)
+        
 class StaffsAdmin(admin.ModelAdmin):
     form = StaffForm
     list_display = ('user', 'role', 'date_joined')
     search_fields = ('user__email', 'role__name')
     list_filter = ('role',)
     autocomplete_fields = ['user']
+
+    def get_assigned_dorms(self, obj):
+        # Get dorms where staff is assigned based on StaffAssignment model
+        assignments = StaffAssignment.objects.filter(staff=obj).select_related('dorm')
+        return ", ".join([assignment.dorm.name for assignment in assignments])
+
+    def get_role(self, obj):
+        # Get the role of the staff based on their StaffAssignment
+        assignment = StaffAssignment.objects.filter(staff=obj).first()
+        return assignment.role.name if assignment else "No Role Assigned"
+    
+    get_assigned_dorms.short_description = "Assigned Dorms"
+    get_role.short_description = "Role"
 
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
@@ -181,6 +212,7 @@ class StaffsAdmin(admin.ModelAdmin):
         if staff:
             return staff.role.name in allowed_roles
         return False
+    
     
     def has_view_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """Allows selected roles and superuser to view the model."""

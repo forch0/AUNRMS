@@ -1,73 +1,73 @@
 {% extends "admin/base_site.html" %}
 {% load static %}
+
 {% block content %}
 
 <div class="profile-container">
-    <h1>Welcome back, {{ user.first_name }} {{ user.last_name }} 👋</h1>
+    <h1>Welcome back, {{ user.firstname }} {{ user.lastname }} 👋</h1>
     <p class="intro-text">Here is a summary of your profile and activities.</p>
     
     <!-- Profile Details -->
     <div class="profile-info">
         <div class="profile-section">
             <h2>Personal Details</h2>
-            <p><strong>Full Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+            <p><strong>Full Name:</strong> {{ user.firstname }} {{ user.lastname }}</p>
             <p><strong>Email:</strong> {{ user.email }}</p>
-            <p><strong>Guardian Phone Number:</strong> {{ user.resident.guardian_phone_number }}</p>
-            <p><strong>Address:</strong> {{ user.resident.address }}</p>
-            <p><strong>Role:</strong> {{ user.resident.role }}</p>
         </div>
 
-        <div class="profile-section">
-            <h2>Room Information</h2>
-            <p><strong>Dorm:</strong> {{ user.resident.dorm.name }}</p>
-            <p><strong>Room Number:</strong> {{ user.resident.room.number }}</p>
-            <p><strong>Capacity:</strong> {{ user.resident.room.capacity }}</p>
-            <p><strong>Floor:</strong> {{ user.resident.room.floor }}</p>
-        </div>
+        {% if user.staffs.all.exists %}
+            <!-- Staff Info -->
+            <div class="profile-section">
+                <h2>Staff Dashboard</h2>
+                <h3>Assigned Dorms</h3>
+                {% with staff_assignments=user.staffs.assignments.all %}
+                    {% if staff_assignments.exists %}
+                        {% for assignment in staff_assignments %}
+                            <p><strong>Dorm Assigned:</strong> {{ assignment.dorm.name }} (Role: {{ assignment.role.name }})</p>
+                            <p><strong>Semester:</strong> {{ assignment.semester.name }} - Academic Session: {{ assignment.academic_session.name }}</p>
+                        {% endfor %}
+                    {% else %}
+                        <p>No dorms assigned to you yet.</p>
+                    {% endif %}
+                {% endwith %}
+            </div>
+        {% endif %}
+
+        {% if user.residents.all.exists %}
+            <!-- Resident Info -->
+            <div class="profile-section">
+                <h2>Resident Dashboard</h2>
+                <h3>Enrollment Info</h3>
+                {% with enrollments=user.residents.all %}
+                    {% for enrollment in enrollments %}
+                        <p><strong>Enrolled in Dorm:</strong> {{ enrollment.dorm.name }} (Room: {{ enrollment.room.room_name }})</p>
+                        <p><strong>Status:</strong> {{ enrollment.get_status_display }}</p>
+                        
+                        <h4>Assigned Staff:</h4>
+                        {% with staff_assignments=enrollment.dorm.staffassignment_set.all %}
+                            {% for staff in staff_assignments %}
+                                <p>{{ staff.staff.user.first_name }} {{ staff.staff.user.last_name }} - Role: {{ staff.role.name }}</p>
+                            {% endfor %}
+                        {% endwith %}
+                    {% endfor %}
+                {% endwith %}
+            </div>
+        {% endif %}
+        
+        <!-- For non-staff and non-residents -->
+        {% if not user.staffs.all.exists and not user.residents.all.exists %}
+            <p>Access denied. You are not authorized to view this page.</p>
+        {% endif %}
+
     </div>
 
-    <!-- Maintenance Requests -->
-    <div class="activity-section">
-        <h2>Recent Maintenance Requests</h2>
-        <ul class="activity-list">
-            {% for request in maintenance_requests %}
-                <li>
-                    <strong>{{ request.category }} - {{ request.sub_category }}</strong>: {{ request.description }}
-                    <span class="status {{ request.status|lower }}">{{ request.status }}</span>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <!-- Announcements -->
-    <div class="activity-section">
-        <h2>Recent Announcements</h2>
-        <ul class="activity-list">
-            {% for announcement in announcements %}
-                <li>
-                    <strong>{{ announcement.title }}</strong> ({{ announcement.created_at|date:"F j, Y" }})
-                    {% if announcement.is_global %}<span class="tag global">Global</span>{% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <!-- Enrollment Details -->
-    <div class="profile-section">
-        <h2>Enrollment Details</h2>
-        <p><strong>Academic Session:</strong> {{ enrollment.academic_session.name }}</p>
-        <p><strong>Semester:</strong> {{ enrollment.semester.semester_type }}</p>
-        <p><strong>Date Enrolled:</strong> {{ enrollment.date_enrolled }}</p>
-    </div>
 </div>
 
 <style>
-
     /* Optional: Add styles to hide certain elements if necessary */
     .app { display: none; }
     .module { display: none; }
     .dashboard { display: none; }
-
 
     :root {
         --color-primary-600: 147, 51, 234; /* Primary color in RGB */
@@ -93,7 +93,6 @@
     h1 {
         text-align: center;
         color: rgb(var(--color-primary-600));
-        {% comment %} font-size: 2rem; {% endcomment %}
         margin-bottom: 10px;
     }
 
@@ -178,4 +177,5 @@
         color: rgba(var(--color-primary-600), 0.8);
     }
 </style>
+
 {% endblock %}
