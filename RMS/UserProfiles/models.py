@@ -61,6 +61,19 @@ class UserCred(AbstractBaseUser, PermissionsMixin):
     def is_not_resident(self):
         """Returns True if the user does not have a related Resident object."""
         return not hasattr(self, 'residents')
+    
+    @property
+    def role_name(self):
+        """Returns the role name of the user if it exists."""
+        if hasattr(self, 'residents'):
+            return self.residents.role.name
+        elif hasattr(self, 'staffs'):
+            return self.staffs.role.name
+        return None
+
+    def has_role(self, role_name):
+        """Check if the user has a specific role."""
+        return self.role_name == role_name
 
 # Residents Model
 class Residents(models.Model):

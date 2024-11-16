@@ -1,12 +1,15 @@
 from django.core.exceptions import ValidationError
 from django.contrib import admin
+from django.http import HttpResponse
 from .models import MaintenanceRequest, Category, SubCategory, Announcement, Complaint, Vendor
 from adminsortable2.admin import SortableAdminMixin
 from .forms import ComplaintForm
 from UserProfiles.models import Staffs
 from AcademicYear.models import Enrollment
 from django.http import HttpRequest
-
+from import_export import resources
+from import_export.admin import ExportMixin
+from import_export.formats.base_formats import XLSX
 @admin.register(Announcement)
 class AnnouncementAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'created_by', 'created_at', 'is_global')
@@ -198,8 +201,13 @@ class ComplaintAdmin(admin.ModelAdmin):
             return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
         return False  # Deny access otherwise
 
+
+
+class MaintenanceRequestsResource(resources.ModelResource):
+    class Meta:
+        model = MaintenanceRequest
 @admin.register(MaintenanceRequest)
-class MaintenanceRequestAdmin(admin.ModelAdmin):
+class MaintenanceRequestAdmin(ExportMixin,admin.ModelAdmin):
     list_display = [
         'id', 'resident', 'dorm', 'room', 
         'category','sub_category', 'description', 
@@ -233,6 +241,18 @@ class MaintenanceRequestAdmin(admin.ModelAdmin):
     autocomplete_fields = (
         'resident', 'dorm', 'room', 'category','semester', 'academic_session'
     )
+    
+    resource_class = MaintenanceRequestsResource
+
+
+    def export_selected(self, request, queryset):
+        dataset = MaintenanceRequestsResource().export(queryset=queryset)
+        response = HttpResponse(dataset.xlsx, content_type='application/vnd.ms-excel')
+        response['Content-Disposition'] = 'attachment; filename="maintenance_requests.xlsx"'
+        return response
+    
+    export_selected.short_description = "Export selected maintenance requests to XLSX"
+    actions = ['export_selected']
 
 
     def _is_staff_assigned_to_dorm(self, request: HttpRequest, obj: MaintenanceRequest) -> bool:
