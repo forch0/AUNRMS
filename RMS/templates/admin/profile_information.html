@@ -1,0 +1,184 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    /* Reset & Global Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        height: hidden; /* Prevent scrolling */
+    }
+
+    /* Main Content Styling */
+    .main-content {
+        margin-left: 250px; /* Adjust based on your sidebar width */
+        display: flex;
+        justify-content: center;
+        height: 60vh;
+        padding: 20px;
+        background-color: #f5f7fb;
+    }
+
+    .content-box {
+        background-color: #97accf;
+        color: #ffffff;
+        padding: 40px;
+        border-radius: 16px;
+        width: 800px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-box h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #ffd700; /* Gold color for a more professional look */
+    }
+
+    .content-box p {
+        line-height: 1.6;
+    }
+
+    .content-box hr {
+        border: none;
+        border-top: 1px solid #444;
+        margin: 20px 0;
+    }
+
+    .content-box button {
+        margin-top: 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .content-box button:hover {
+        background-color: #45a049;
+    }
+
+    /* Loader Styling */
+    .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.6s ease;
+    }
+
+    .loader.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .loader .loader-inner {
+        display: flex;
+        gap: 15px;
+    }
+
+    .loader-circle {
+        width: 15px;
+        height: 15px;
+        background-color: #ffd700;
+        border-radius: 50%;
+        opacity: 0;
+    }
+
+    /* Loader Animation */
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+            opacity: 0.7;
+        }
+        50% {
+            transform: translateY(-20px);
+            opacity: 1;
+        }
+    }
+</style>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+    <div class="loader-inner">
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+    </div>
+</div>
+
+<!-- Main Content Area -->
+<div class="main-content">
+    <!-- Profile Content Block -->
+    <div class="content-box">
+        <h2>Profile Information</h2>
+        <hr>
+
+        {% if error %}
+            <div class="error-message">{{ error }}</div>
+        {% else %}
+
+
+            {% if role == "Resident" %}
+                <div class="profile-section">
+                    <h2>Resident Information</h2>
+                    <p>{{ user_data }}- {{ user.firstname }} {{ user.lastname }} </p>
+                    <p>Role: {{ role }}</p>
+                    <p>{{ current_enrollment }}</p>
+                </div>
+                
+                <div class="activity-section">
+                    <h2>Your Dorm  Assignments</h2>
+                    <ul class="activity-list">
+                        {% for assignment in staff_assignments %}
+                            <li>{{ assignment }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% elif role == "Staff" %}
+                <div class="profile-section">
+                    <h2>Staff Information</h2>
+                    <p>{{ user_data }}</p>
+                </div>
+                <div class="profile-section">
+                    <h2>Current Assignment</h2>
+                    <p>{{ current_assignment }}</p>
+                </div>
+            {% endif %}
+        {% endif %}
+
+        <button><a href="{% url 'admin:index' %}">Go to Home</a></button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+    // Advanced Loader Animation
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        const circles = document.querySelectorAll('.loader-circle');
+
+        gsap.timeline()
+            .to(circles, { opacity: 1, stagger: 0.15, yoyo: true, repeat: -1, duration: 0.6, ease: "bounce.out" })
+            .to(loader, { opacity: 0, duration: 1, delay: 1, onComplete: () => loader.classList.add('hide') });
+    });
+</script>
+
+{% endblock %}

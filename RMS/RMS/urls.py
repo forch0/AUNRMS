@@ -19,7 +19,9 @@ from django.contrib.auth import views as auth_views
 from django.contrib import admin
 from django.conf.urls import handler403
 from django.shortcuts import render
-# from ratelimit.decorators import ratelimit
+# from .admin import custom_admin_index
+# from .admin import custom_admin_site
+from UserProfiles.views import profile_information
 
 def custom_403_view(request, exception=None):
     return render(request, '403.html', status=403)
@@ -34,6 +36,8 @@ urlpatterns = [
     path('admin/reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='admin_password_reset_confirm'),
     path('admin/reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='admin_password_reset_complete'),
     path('admin/', admin.site.urls),  # Admin path remains intact
+    
+    path('profile/', profile_information, name='profile_information'),
     path('admin_tools_stats/', include('admin_tools_stats.urls')),
     path('', include('Home.urls')),  # Home app URLs
     path('users/', include('UserProfiles.urls')),  # User profiles URLs

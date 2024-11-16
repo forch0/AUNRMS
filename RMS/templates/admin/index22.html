@@ -13,24 +13,24 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
-            height: hidden; /* Prevent scrolling */
+            overflow: hidden; /* Prevent scrolling */
         }
 
         /* Main Content Styling */
         .main-content {
             margin-left: 250px; /* Adjust based on your sidebar width */
             display: flex;
-            {% comment %} align-items: center; {% endcomment %}
+            align-items: center;
             justify-content: center;
-            height: 60vh;
+            height: 100vh;
             padding: 20px;
             background-color: #f5f7fb;
         }
-        {% comment %} #9051b8 {% endcomment %}
+
         .content-box {
-            background-color: #97accf;
+            background-color: #1c1c28;
             color: #ffffff;
             padding: 40px;
             border-radius: 16px;
@@ -130,17 +130,28 @@
     <div class="main-content">
         <!-- Professional Content Block -->
         <div class="content-box">
-            <h2>Welcome back, {{ user.firstname }} {{ user.lastname }} 👋</h2>
+            <h2>Welcome to Your Dashboard</h2>
             <hr>
             <p>Effortlessly manage dormitories, room allocations, and student profiles with our intuitive dashboard. Stay on top of your housing operations and enhance resident experiences.</p>
-            <p><strong>Full Name:</strong> {{ user.firstname }} {{ user.lastname }}</p>
-            <p><strong>Email:</strong> {{ user.email }}</p>
-            <p><strong>Phone Number:</strong> {{ user.phone_number }}</p>
-            <button><a href="{% url 'profile_information' %}">Go to Profile for more information</a></button>
+            <button>Get Started</button>
         </div>
+    <h1>Welcome back, {{ user.firstname }} {{ user.lastname }} 👋</h1>
     {% comment %} <p class="intro-text">Here is a summary of your profile and activities.</p> {% endcomment %}
     
     <!-- Profile Details -->
+    <div class="profile-info">
+        <div class="profile-section">
+            <h2>Personal Details</h2>
+            <p><strong>Full Name:</strong> {{ user.firstname }} {{ user.lastname }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Phone Number:</strong> {{ user.phone_number }}</p>
+            <a href="{% url 'profile_information' %}">Go to Profile for more information</a>
+
+        </div>
+
+    </div>
+    </div>
+
     <!-- GSAP Loader Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>

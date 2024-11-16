@@ -242,6 +242,10 @@ from django.conf import settings
 # views.py
 
 from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from UserProfiles.models import UserCred, Residents, Staffs
+from AcademicYear.models import Enrollment, StaffAssignment
 from .analytics import (
     total_enrollment_by_dorm,
     enrollment_trends,
@@ -303,8 +307,60 @@ def vendors_per_dorm_view(request):
     chart = vendors_per_dorm()
     return render(request, 'admin/chart_view.html', {'chart': chart.to_html(full_html=False)})
 
-
 def index(request):
     return HttpResponse("Welcome to AUN ResLife App.")
 
 
+@login_required
+def profile_information(request):
+    user = request.user
+    context = {'role': None}  # Default context with no role
+
+    try:
+        user_cred = UserCred.objects.get(email=user.email)
+
+        if user_cred.is_resident:
+            resident = Residents.objects.filter(user=user_cred).first()
+            if resident:
+                current_enrollment = (
+                    Enrollment.objects.filter(resident=resident, status='active')
+                    .order_by('-date_enrolled')
+                    .first()
+                )
+                staff_assignments = (
+                    StaffAssignment.objects.filter(dorm=current_enrollment.dorm)
+                    if current_enrollment
+                    else []
+                )
+                context.update({
+                    'role': 'Resident',
+                    'user_data': resident,
+                    'current_enrollment': current_enrollment,
+                    'staff_assignments': staff_assignments,
+                })
+            else:
+                context['error'] = "Resident profile not found."
+
+        elif hasattr(user_cred, 'staffs'):
+            staff = Staffs.objects.filter(user=user_cred).first()
+            if staff:
+                current_assignment = (
+                    StaffAssignment.objects.filter(staff=staff)
+                    .order_by('-created_at')
+                    .first()
+                )
+                context.update({
+                    'role': 'Staff',
+                    'user_data': staff,
+                    'current_assignment': current_assignment,
+                })
+            else:
+                context['error'] = "Staff profile not found."
+
+        else:
+            context['error'] = "No role assigned."
+
+    except UserCred.DoesNotExist:
+        context['error'] = f"User profile with email {user.email} not found."
+
+    return render(request, 'admin/profile_information.html', context)

@@ -233,7 +233,7 @@ from Dashboard.context_processors import get_navigation
 UNFOLD = {
     "ENABLE_THEMING": True,  # Optional customization options
     # "THEME": "default",
-    "SITE_HEADER": "Appears in sidebar at the top",
+    "SITE_HEADER": "AUN RMS",
     "SITE_ICON": {
         "light": lambda request: static("images/2.png"),  # light mode
         "dark": lambda request: static("images/2.png"),
@@ -414,3 +414,4 @@ EMAIL_HOST_USER = 'your-email@example.com'
 EMAIL_HOST_PASSWORD = 'your-email-password'
 DEFAULT_FROM_EMAIL = 'webmaster@yourdomain.com'
 
+# LOGIN_REDIRECT_URL = '/profile/'
