@@ -26232,3 +26232,7 @@ django.core.exceptions.PermissionDenied
 WARNING 2024-11-16 14:14:22,649 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 403 3778
 INFO 2024-11-16 14:14:24,266 basehttp "GET /admin/ HTTP/1.1" 200 35295
 INFO 2024-11-16 18:05:28,436 autoreload Watching for file changes with StatReloader
+INFO 2024-11-16 18:05:52,526 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-16 18:05:52,567 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-16 18:10:02,526 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-16 18:10:02,601 basehttp "GET /admin/ HTTP/1.1" 200 48769
