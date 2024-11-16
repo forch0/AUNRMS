@@ -1,0 +1,33 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <h1>Past Enrollments for {{ user.username }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Semester</th>
+                <th>Academic Session</th>
+                <th>Room</th>
+                <th>Dorm</th>
+                <th>Status</th>
+                <th>Date Enrolled</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for enrollment in enrollments %}
+                <tr>
+                    <td>{{ enrollment.semester.semester_type }}</td>
+                    <td>{{ enrollment.academic_session.name }}</td>
+                    <td>{{ enrollment.room.name }}</td>
+                    <td>{{ enrollment.dorm.name }}</td>
+                    <td>{{ enrollment.get_status_display }}</td>
+                    <td>{{ enrollment.date_enrolled }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No past enrollments found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

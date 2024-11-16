@@ -363,4 +363,40 @@ def profile_information(request):
     except UserCred.DoesNotExist:
         context['error'] = f"User profile with email {user.email} not found."
 
-    return render(request, 'admin/profile_information.html', context)
+    return render(request, 'admin/profiles/profile_information.html', context)
+
+# View for displaying past enrollments of a resident
+@login_required
+def past_enrollments(request):
+    # Get the current logged-in resident
+    user = request.user
+    try:
+        resident = user.residents  # Assuming you have a related Resident model
+    except Residents.DoesNotExist:
+        return render(request, 'error.html', {'message': 'Resident not found'})
+
+    # Fetch past enrollments for the logged-in resident
+    enrollments = Enrollment.objects.filter(resident=resident).order_by('-date_enrolled')
+
+    return render(request, 'admin/profiles/past_enrollments.html', {
+        'enrollments': enrollments,
+        'user': user
+    })
+
+
+@login_required
+def past_staff_assignments(request):
+    # Get the current logged-in staff member
+    user = request.user
+    try:
+        staff = user.staffs  # Assuming you have a related Staff model
+    except Staffs.DoesNotExist:
+        return render(request, 'error.html', {'message': 'Staff not found'})
+
+    # Fetch past staff assignments for the logged-in staff
+    staff_assignments = StaffAssignment.objects.filter(staff=staff).order_by('-created_at')
+
+    return render(request, 'admin/profiles/past_staff_assignments.html', {
+        'staff_assignments': staff_assignments,
+        'user': user
+    })

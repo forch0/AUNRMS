@@ -13,7 +13,7 @@
     }
 
     body {
-        font-family: 'Arial', sans-serif;
+        font-family: 'Inter', sans-serif;
         background-color: #f8f9fa;
         height: hidden; /* Prevent scrolling */
     }
@@ -29,7 +29,7 @@
     }
 
     .content-box {
-        background-color: #97accf;
+        background-color: #6b21a8;
         color: #ffffff;
         padding: 40px;
         border-radius: 16px;
@@ -68,61 +68,17 @@
         background-color: #45a049;
     }
 
-    /* Loader Styling */
-    .loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, 0.9);
-        z-index: 9999;
-        opacity: 1;
-        transition: opacity 0.6s ease;
-    }
-
-    .loader.hide {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .loader .loader-inner {
-        display: flex;
-        gap: 15px;
-    }
-
-    .loader-circle {
-        width: 15px;
-        height: 15px;
-        background-color: #ffd700;
-        border-radius: 50%;
-        opacity: 0;
-    }
-
-    /* Loader Animation */
-    @keyframes bounce {
-        0%, 100% {
-            transform: translateY(0);
-            opacity: 0.7;
-        }
-        50% {
-            transform: translateY(-20px);
-            opacity: 1;
-        }
-    }
+ 
 </style>
 
 <!-- Loader -->
-<div class="loader" id="loader">
+{% comment %} <div class="loader" id="loader">
     <div class="loader-inner">
         <div class="loader-circle"></div>
         <div class="loader-circle"></div>
         <div class="loader-circle"></div>
     </div>
-</div>
+</div> {% endcomment %}
 
 <!-- Main Content Area -->
 <div class="main-content">
@@ -137,12 +93,22 @@
 
 
             {% if role == "Resident" %}
-                <div class="profile-section">
-                    <h2>Resident Information</h2>
-                    <p>{{ user_data }}- {{ user.firstname }} {{ user.lastname }} </p>
-                    <p>Role: {{ role }}</p>
-                    <p>{{ current_enrollment }}</p>
-                </div>
+            <div class="profile-section">
+                <p>{{ user_data }}- {{ user.firstname }} {{ user.lastname }} </p>
+                <p>Guardian Phone: {{ user_data.guardian_phone_number }}</p>
+                <p>Address: {{ user_data.address }}</p>
+                <p>Role: {{ role }}</p>
+        
+                {% if current_enrollment %}
+                    <h2>Current Enrollment</h2>
+                    <p>Room: {{ current_enrollment.room }}</p>
+                    <p>Status: {{ current_enrollment.status }}</p>
+                    <p>Semester: {{ current_enrollment.semester.semester_type }}</p>
+                {% else %}
+                    <p>No active enrollment found.</p>
+                {% endif %} 
+                <button><a href="{% url 'past_enrollments' %}">View Past Enrollments</a>
+            </div>
                 
                 <div class="activity-section">
                     <h2>Your Dorm  Assignments</h2>
@@ -160,6 +126,7 @@
                 <div class="profile-section">
                     <h2>Current Assignment</h2>
                     <p>{{ current_assignment }}</p>
+                    <a href="{% url 'past_staff_assignments' %}">View Past Staff Assignment <!-- This was the line with the error, now fixed -->
                 </div>
             {% endif %}
         {% endif %}
@@ -168,8 +135,8 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script>
+{% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> {% endcomment %}
+{% comment %} <script>
     // Advanced Loader Animation
     window.addEventListener('load', () => {
         const loader = document.getElementById('loader');
@@ -179,6 +146,6 @@
             .to(circles, { opacity: 1, stagger: 0.15, yoyo: true, repeat: -1, duration: 0.6, ease: "bounce.out" })
             .to(loader, { opacity: 0, duration: 1, delay: 1, onComplete: () => loader.classList.add('hide') });
     });
-</script>
+</script> {% endcomment %}
 
 {% endblock %}

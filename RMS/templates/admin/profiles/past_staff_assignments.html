@@ -1,0 +1,31 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <h1>Past Staff Assignments for {{ user.username }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Semester</th>
+                <th>Academic Session</th>
+                <th>Dorm</th>
+                <th>Role</th>
+                <th>Assigned Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for assignment in staff_assignments %}
+                <tr>
+                    <td>{{ assignment.semester.semester_type }}</td>
+                    <td>{{ assignment.academic_session.name }}</td>
+                    <td>{{ assignment.dorm.name }}</td>
+                    <td>{{ assignment.role.name }}</td>
+                    <td>{{ assignment.created_at }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5">No past assignments found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
