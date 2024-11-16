@@ -13,7 +13,7 @@
             <h2>Personal Details</h2>
             <p><strong>Full Name:</strong> {{ user.firstname }} {{ user.lastname }}</p>
             <p><strong>Email:</strong> {{ user.email }}</p>
-            <p><strong>Email:</strong> {{ user.phone_number }}</p>
+            <p><strong>Phone Number:</strong> {{ user.phone_number }}</p>
         </div>
 
     </div>
@@ -134,5 +134,29 @@
         color: rgba(var(--color-primary-600), 0.8);
     }
 </style>
-
+<script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+    <!-- Datepicker initialization script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var datepickers = document.querySelectorAll('.datepicker');
+            datepickers.forEach(function(datepicker) {
+                $(datepicker).datepicker({
+                    format: 'yyyy-mm-dd',
+                    autoclose: true,
+                    todayHighlight: true
+                });
+            });
+        });
+    </script>
+    <!-- Include your custom JS script -->
+    <script src="{% static 'js/permission_counter.js' %}"></script>
+    <!-- Include Select2 CSS and JS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2();
+        });
+    </script>
 {% endblock %}

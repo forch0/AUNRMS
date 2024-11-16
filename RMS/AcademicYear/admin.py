@@ -128,6 +128,9 @@ class EnrollmentAdmin(admin.ModelAdmin):
     confirmation_fields = ['resident',]
     search_fields = ['resident__user__username', 'academic_session__name', 'semester__semester_type', 'dorm__name', 'room__room_number']
 
+    # Adding autocomplete fields
+    autocomplete_fields = ['resident', 'semester', 'academic_session', 'dorm', 'room']
+
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
         return request.user.is_superuser

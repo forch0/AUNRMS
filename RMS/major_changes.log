@@ -23780,3 +23780,471 @@ INFO 2024-11-15 17:21:15,732 basehttp "GET /users/analytics/complaint_trends/ HT
 INFO 2024-11-15 17:21:20,075 basehttp "GET /users/analytics/staff_assignment_by_role/ HTTP/1.1" 200 4567492
 INFO 2024-11-15 17:21:24,717 basehttp "GET /users/analytics/semester_based_dorm_usage/ HTTP/1.1" 200 4567390
 INFO 2024-11-15 17:21:29,737 basehttp "GET /users/analytics/vendors-per-dorm/ HTTP/1.1" 200 4567500
+INFO 2024-11-15 17:23:22,918 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 17:23:22,924 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 17:23:31,062 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 17:23:31,117 basehttp "GET /admin/ HTTP/1.1" 200 48171
+INFO 2024-11-15 17:23:50,426 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 80826
+INFO 2024-11-15 17:23:50,487 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:23:56,693 basehttp "GET /admin/ HTTP/1.1" 200 48171
+INFO 2024-11-15 17:24:07,122 basehttp "GET /admin/UserProfiles/roles/ HTTP/1.1" 200 74284
+INFO 2024-11-15 17:24:07,179 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:15,726 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 80826
+INFO 2024-11-15 17:24:15,780 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:17,002 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 67223
+INFO 2024-11-15 17:24:17,060 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:18,782 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 66546
+INFO 2024-11-15 17:24:18,937 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:20,945 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 200 78853
+INFO 2024-11-15 17:24:21,104 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:22,226 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 62032
+INFO 2024-11-15 17:24:22,280 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:23,837 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 94680
+INFO 2024-11-15 17:24:23,897 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:25,709 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 71239
+INFO 2024-11-15 17:24:25,764 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:27,162 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 94680
+INFO 2024-11-15 17:24:27,216 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:35,237 basehttp "GET /admin/Actions/maintenancerequest/add/ HTTP/1.1" 200 69928
+INFO 2024-11-15 17:24:35,300 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:38,259 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=maintenancerequest&field_name=room HTTP/1.1" 200 1512
+INFO 2024-11-15 17:24:40,504 basehttp - Broken pipe from ('127.0.0.1', 59995)
+INFO 2024-11-15 17:24:40,767 basehttp "GET /admin/autocomplete/?term=10&app_label=Actions&model_name=maintenancerequest&field_name=room HTTP/1.1" 200 1521
+INFO 2024-11-15 17:24:41,328 basehttp "GET /admin/autocomplete/?term=103&app_label=Actions&model_name=maintenancerequest&field_name=room HTTP/1.1" 200 564
+INFO 2024-11-15 17:24:45,107 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 71239
+INFO 2024-11-15 17:24:45,170 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:46,840 basehttp "GET /admin/Actions/announcement/ HTTP/1.1" 200 54721
+INFO 2024-11-15 17:24:46,895 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:48,896 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 55811
+INFO 2024-11-15 17:24:48,954 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:50,007 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 57564
+INFO 2024-11-15 17:24:50,070 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:51,323 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 690232
+INFO 2024-11-15 17:24:51,379 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:52,937 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 113780
+INFO 2024-11-15 17:24:53,014 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:54,732 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 173238
+INFO 2024-11-15 17:24:54,801 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:24:55,772 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 68477
+INFO 2024-11-15 17:24:55,795 basehttp "GET /static/js/datepicker_init.js HTTP/1.1" 200 368
+INFO 2024-11-15 17:24:55,937 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:28:13,742 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 68477
+INFO 2024-11-15 17:28:13,802 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:28:18,763 basehttp "GET /admin/AcademicYear/semester/add/ HTTP/1.1" 200 53831
+INFO 2024-11-15 17:28:18,820 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:28:27,457 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 173238
+INFO 2024-11-15 17:28:27,528 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:28:29,142 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 59857
+INFO 2024-11-15 17:28:29,220 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:28:30,852 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 68477
+INFO 2024-11-15 17:28:30,932 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:28:32,747 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378
+INFO 2024-11-15 17:28:34,766 basehttp "GET /admin/ HTTP/1.1" 200 49273
+INFO 2024-11-15 17:28:34,794 basehttp "GET /static/js/permission_counter.js HTTP/1.1" 200 722
+WARNING 2024-11-15 17:28:34,804 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
+INFO 2024-11-15 17:28:41,877 basehttp "POST /admin/logout/ HTTP/1.1" 200 3369
+INFO 2024-11-15 17:28:43,088 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 17:28:43,102 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-15 17:28:54,352 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-11-15 17:28:54,401 basehttp "GET /admin/ HTTP/1.1" 200 36071
+WARNING 2024-11-15 17:28:54,425 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
+INFO 2024-11-15 17:28:56,165 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378
+INFO 2024-11-15 17:28:57,816 basehttp "GET /admin/ HTTP/1.1" 200 36071
+INFO 2024-11-15 17:28:59,022 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 42242
+INFO 2024-11-15 17:28:59,076 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:00,427 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 50385
+INFO 2024-11-15 17:29:00,485 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:03,848 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 160056
+INFO 2024-11-15 17:29:03,905 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:05,677 basehttp "GET /admin/Dorms/dorm/ HTTP/1.1" 200 91705
+INFO 2024-11-15 17:29:05,734 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:06,876 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 677050
+INFO 2024-11-15 17:29:06,937 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:07,912 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 677050
+INFO 2024-11-15 17:29:07,977 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:08,577 basehttp "GET /admin/Dorms/storage/ HTTP/1.1" 200 44382
+INFO 2024-11-15 17:29:08,652 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:09,434 basehttp "GET /admin/Dorms/storageitem/ HTTP/1.1" 200 42629
+INFO 2024-11-15 17:29:09,500 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:10,277 basehttp "GET /admin/Actions/announcement/ HTTP/1.1" 200 41539
+INFO 2024-11-15 17:29:10,342 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:11,327 basehttp "GET /admin/Actions/complaint/ HTTP/1.1" 200 58057
+INFO 2024-11-15 17:29:11,384 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:12,847 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 56377
+INFO 2024-11-15 17:29:12,905 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:13,752 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 48850
+INFO 2024-11-15 17:29:13,814 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-11-15 17:29:15,954 log Forbidden (Permission denied): /admin/Actions/subcategory/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-15 17:29:15,962 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 403 3778
+INFO 2024-11-15 17:29:18,416 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 48850
+INFO 2024-11-15 17:29:21,202 basehttp "GET /admin/UserProfiles/residents/ HTTP/1.1" 200 48453
+INFO 2024-11-15 17:29:21,265 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:23,671 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 48639
+INFO 2024-11-15 17:29:23,737 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:25,027 basehttp "GET /admin/AcademicYear/staffassignment/ HTTP/1.1" 200 67644
+INFO 2024-11-15 17:29:25,084 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:28,966 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 160056
+INFO 2024-11-15 17:29:29,027 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:31,207 basehttp "GET /admin/UserProfiles/staffs/ HTTP/1.1" 200 48639
+INFO 2024-11-15 17:29:31,272 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:33,084 basehttp "GET /admin/UserProfiles/usercred/ HTTP/1.1" 200 76943
+INFO 2024-11-15 17:29:33,145 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:35,877 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 160056
+INFO 2024-11-15 17:29:35,936 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:37,665 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 67657
+INFO 2024-11-15 17:29:37,733 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:49,281 basehttp "GET /admin/Dorms/room/ HTTP/1.1" 200 677050
+INFO 2024-11-15 17:29:49,345 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:58,147 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 56377
+INFO 2024-11-15 17:29:58,212 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:29:59,834 basehttp "GET /admin/Actions/maintenancerequest/add/ HTTP/1.1" 200 52487
+INFO 2024-11-15 17:29:59,891 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:30:01,067 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=maintenancerequest&field_name=resident HTTP/1.1" 200 214
+INFO 2024-11-15 17:30:05,000 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378
+INFO 2024-11-15 17:30:06,638 basehttp "GET /admin/ HTTP/1.1" 200 36071
+WARNING 2024-11-15 17:30:06,660 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
+INFO 2024-11-15 17:30:07,873 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 160056
+INFO 2024-11-15 17:30:07,931 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:30:08,792 basehttp "GET /admin/AcademicYear/semester/ HTTP/1.1" 200 50385
+INFO 2024-11-15 17:30:08,847 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:30:10,382 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 160056
+INFO 2024-11-15 17:30:10,442 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:30:11,607 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 42242
+INFO 2024-11-15 17:30:11,661 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:30:14,107 basehttp "GET /users/admin/analytics-dashboard/ HTTP/1.1" 200 5378
+INFO 2024-11-15 17:30:15,730 basehttp "GET /admin/ HTTP/1.1" 200 36071
+WARNING 2024-11-15 17:30:15,748 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
+INFO 2024-11-15 17:30:23,167 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 160056
+INFO 2024-11-15 17:30:23,223 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:30:29,977 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 67657
+INFO 2024-11-15 17:30:30,034 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:31:17,068 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 160056
+INFO 2024-11-15 17:31:22,542 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 56377
+INFO 2024-11-15 17:31:22,603 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:31:24,162 basehttp "GET /admin/Actions/maintenancerequest/add/ HTTP/1.1" 200 52487
+INFO 2024-11-15 17:31:24,215 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:31:26,780 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=maintenancerequest&field_name=resident HTTP/1.1" 200 214
+INFO 2024-11-15 17:32:06,670 basehttp "GET /admin/ HTTP/1.1" 200 36071
+WARNING 2024-11-15 17:32:06,691 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
+INFO 2024-11-15 17:33:33,736 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\AcademicYear\admin.py changed, reloading.
+INFO 2024-11-15 17:33:34,731 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:33:40,173 basehttp "GET /admin/ HTTP/1.1" 200 36071
+WARNING 2024-11-15 17:33:40,198 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
+INFO 2024-11-15 17:33:42,228 basehttp "GET /admin/AcademicYear/enrollment/ HTTP/1.1" 200 160056
+INFO 2024-11-15 17:33:42,294 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:33:44,226 basehttp "GET /admin/AcademicYear/enrollment/add/ HTTP/1.1" 200 45332
+INFO 2024-11-15 17:33:44,291 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:33:45,802 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=enrollment&field_name=semester HTTP/1.1" 200 208
+INFO 2024-11-15 17:33:46,741 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=enrollment&field_name=dorm HTTP/1.1" 200 700
+INFO 2024-11-15 17:33:48,287 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=enrollment&field_name=academic_session HTTP/1.1" 200 113
+INFO 2024-11-15 17:33:49,321 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=enrollment&field_name=room HTTP/1.1" 200 1512
+INFO 2024-11-15 17:33:50,263 basehttp "GET /admin/autocomplete/?app_label=AcademicYear&model_name=enrollment&field_name=resident HTTP/1.1" 200 214
+INFO 2024-11-15 17:33:54,322 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 56377
+INFO 2024-11-15 17:33:54,383 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:33:55,573 basehttp "GET /admin/Actions/maintenancerequest/add/ HTTP/1.1" 200 52487
+INFO 2024-11-15 17:33:55,635 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:33:58,244 basehttp "GET /admin/autocomplete/?app_label=Actions&model_name=maintenancerequest&field_name=resident HTTP/1.1" 200 214
+WARNING 2024-11-15 17:34:03,755 log Forbidden (Permission denied): /admin/Actions/subcategory/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-15 17:34:03,756 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 403 3778
+INFO 2024-11-15 17:37:48,575 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\admin.py changed, reloading.
+INFO 2024-11-15 17:37:49,606 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:37:51,612 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\admin.py changed, reloading.
+INFO 2024-11-15 17:37:52,461 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-15 17:37:57,336 log Forbidden (Permission denied): /admin/Actions/subcategory/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-15 17:37:57,343 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 403 3778
+INFO 2024-11-15 17:37:58,941 basehttp "GET /admin/ HTTP/1.1" 200 36071
+WARNING 2024-11-15 17:37:58,981 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
+INFO 2024-11-15 17:38:01,721 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 56377
+INFO 2024-11-15 17:38:01,782 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:38:05,571 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 48850
+INFO 2024-11-15 17:38:05,631 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-11-15 17:38:06,627 log Forbidden (Permission denied): /admin/Actions/subcategory/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-15 17:38:06,631 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 403 3778
+INFO 2024-11-15 17:38:55,489 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\admin.py changed, reloading.
+INFO 2024-11-15 17:38:56,444 autoreload Watching for file changes with StatReloader
+INFO 2024-11-15 17:39:18,401 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\admin.py changed, reloading.
+INFO 2024-11-15 17:39:19,346 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-15 17:39:20,732 log Forbidden (Permission denied): /admin/Actions/subcategory/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-15 17:39:20,741 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 403 3778
+INFO 2024-11-15 17:39:22,816 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 48850
+WARNING 2024-11-15 17:39:24,851 log Forbidden (Permission denied): /admin/Actions/subcategory/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2024-11-15 17:39:24,857 basehttp "GET /admin/Actions/subcategory/ HTTP/1.1" 403 3778
+INFO 2024-11-15 17:39:26,556 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 48850
+INFO 2024-11-15 17:39:27,921 basehttp "GET /admin/Actions/maintenancerequest/ HTTP/1.1" 200 56377
+INFO 2024-11-15 17:39:27,987 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-15 17:39:29,094 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 48850
+INFO 2024-11-15 17:39:29,152 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-11-15 17:39:31,601 log Internal Server Error: /admin/Actions/category/90477257-8d85-4317-af2c-dcffcac0525d/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1820, in _changeform_view
+    formsets, inline_instances = self._create_formsets(
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2257, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 906, in get_formsets_with_inlines
+    for inline in self.get_inline_instances(request, obj):
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 677, in get_inline_instances
+    if not inline.has_add_permission(request, obj):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SubCategoryInline.has_add_permission() takes 2 positional arguments but 3 were given
+ERROR 2024-11-15 17:39:31,606 basehttp "GET /admin/Actions/category/90477257-8d85-4317-af2c-dcffcac0525d/change/ HTTP/1.1" 500 135967
+INFO 2024-11-15 17:39:48,278 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\admin.py changed, reloading.
+INFO 2024-11-15 17:39:49,161 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-15 17:40:01,231 log Internal Server Error: /admin/Actions/category/90477257-8d85-4317-af2c-dcffcac0525d/change/
+Traceback (most recent call last):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 1820, in _changeform_view
+    formsets, inline_instances = self._create_formsets(
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 2257, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 906, in get_formsets_with_inlines
+    for inline in self.get_inline_instances(request, obj):
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fortu\OneDrive\Documents\AUNRMS\venv\Lib\site-packages\django\contrib\admin\options.py", line 677, in get_inline_instances
+    if not inline.has_add_permission(request, obj):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SubCategoryInline.has_add_permission() takes 2 positional arguments but 3 were given
+ERROR 2024-11-15 17:40:01,236 basehttp "GET /admin/Actions/category/90477257-8d85-4317-af2c-dcffcac0525d/change/ HTTP/1.1" 500 133426
+INFO 2024-11-15 17:40:02,996 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 48850
+INFO 2024-11-15 17:40:04,646 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 48850
+INFO 2024-11-15 17:40:04,701 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-16 09:40:46,824 autoreload Watching for file changes with StatReloader
+INFO 2024-11-16 09:41:16,237 basehttp "GET /admin/Actions/category/ HTTP/1.1" 302 0
+INFO 2024-11-16 09:41:16,265 basehttp "GET /admin/login/?next=/admin/Actions/category/ HTTP/1.1" 200 8730
+INFO 2024-11-16 09:41:29,103 basehttp - Broken pipe from ('127.0.0.1', 61162)
+INFO 2024-11-16 09:41:29,192 basehttp "POST /admin/login/?next=/admin/Actions/category/ HTTP/1.1" 302 0
+INFO 2024-11-16 09:41:29,427 basehttp "GET /admin/Actions/category/ HTTP/1.1" 200 62304
+INFO 2024-11-16 09:41:29,497 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-16 09:41:32,237 basehttp "GET /admin/ HTTP/1.1" 200 49273
+WARNING 2024-11-16 09:41:32,305 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
+INFO 2024-11-16 09:42:36,884 basehttp "GET /admin/ HTTP/1.1" 200 49280
+WARNING 2024-11-16 09:42:36,912 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
