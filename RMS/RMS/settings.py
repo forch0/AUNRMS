@@ -244,7 +244,7 @@ UNFOLD = {
     "SHOW_HISTORY": True,
     "SIDEBAR": {
         "show_search": True,  # Search in applications and models names
-        "show_all_applications": True,  # Dropdown with all applications and models
+        # "show_all_applications": True,  # Dropdown with all applications and models
         # "navigation": get_navigation(request),
         "navigation": [
             {
