@@ -86,18 +86,12 @@ class Room(models.Model):
     is_occupied = models.BooleanField(default=False)
 
     def active_residents_count(self, semester):
-        return Enrollment.objects.filter(room=self, semester=semester).count()
-
-    def active_capacity_count(self, semester):
-        """Return the current number of residents assigned to this room."""
-        return self.active_residents_count(semester)
-
-    def is_full(self, semester):
-        active_count = self.active_residents_count(semester)
-        return active_count >= self.capacity
-
+        """Count active residents in this room for the given semester."""
+        active_count = Enrollment.objects.filter(room=self, semester=semester, status='active').count()
+        print(f"Active count for room {self.room_name}: {active_count}")  # Debugging line
+        return active_count
     def update_occupation_status(self, semester):
-        """Update the occupancy status based on the active residents."""
+        """Update the 'is_occupied' field based on active enrollments."""
         active_count = self.active_residents_count(semester)
         self.is_occupied = active_count > 0
         self.save()
@@ -107,13 +101,22 @@ class Room(models.Model):
 
     @property
     def room_name(self):
+        """Return a formatted string of room and dorm name."""
         return f"{self.dorm.name}-{self.number}"
 
     @property
     def occupancy_ratio(self, semester):
-        """Return the occupancy ratio in the format 'active_count/capacity'."""
+        """Return the occupancy ratio as 'active_count/capacity'."""
         active_count = self.active_residents_count(semester)
         return f"{active_count}/{self.capacity}"
+
+    def save(self, *args, **kwargs):
+        """Override the save method to dynamically set the 'is_occupied' field."""
+        semester = Semester.objects.first()  # Assuming first semester if not specified
+        if semester:
+            self.update_occupation_status(semester)
+        super().save(*args, **kwargs)
+
 
 class Storage(models.Model):
     FLOOR_CHOICES = [

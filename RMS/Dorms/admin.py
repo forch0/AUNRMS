@@ -72,27 +72,32 @@ class RoomAdmin(admin.ModelAdmin):
     ordering = ('id',)
 
     def occupancy_ratio_display(self, obj):
-        # Set a default semester or handle no semester case
-        semester = Semester.objects.first()  # Adjust based on the logic for your default semester
-        if not semester:
-            return "No Semester Available"
-        
-        # Return occupancy ratio without saving
-        active_count = obj.active_capacity_count(semester)
-        return f"{active_count}/{obj.capacity}"
-
-    occupancy_ratio_display.short_description = 'Occupancy Ratio'
-
-    def is_full_display(self, obj):
-        # Set a default semester or handle no semester case
+        # Set a default semester or handle if no semester exists
         semester = Semester.objects.first()
         if not semester:
             return "No Semester Available"
         
-        # Check if the room is fully occupied
-        return "Yes" if obj.is_full(semester) else "No"
+        # Calculate the occupancy ratio for the given semester based on enrollments
+        active_count = obj.active_residents_count(semester)
+        return f"{active_count}/{obj.capacity}"
+    occupancy_ratio_display.short_description = 'Occupancy Ratio'
 
+    def is_full_display(self, obj):
+        # Set a default semester or handle if no semester exists
+        semester = Semester.objects.first()
+        if not semester:
+            return "No Semester Available"
+        
+        # Check if the room is full based on enrollments
+        return "Yes" if obj.active_residents_count(semester) >= obj.capacity else "No"
     is_full_display.short_description = 'Room is Full'
+
+    def is_occupied_display(self, obj):
+        """Display 'Yes' or 'No' based on the room's occupancy status."""
+        return "Yes" if obj.is_occupied else "No"
+    is_occupied_display.short_description = 'Room Occupied'
+
+
     # Helper Methods for Permissions
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
