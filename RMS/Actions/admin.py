@@ -5,11 +5,15 @@ from .models import MaintenanceRequest, Category, SubCategory, Announcement, Com
 from adminsortable2.admin import SortableAdminMixin
 from .forms import ComplaintForm
 from UserProfiles.models import Staffs
-from AcademicYear.models import Enrollment
+from Dorms.models import Dorm, Room
+from AcademicYear.models import *
+from UserProfiles.models import *
 from django.http import HttpRequest
-from import_export import resources
+from import_export.widgets import ForeignKeyWidget, DateWidget
+from import_export import resources,fields
 from import_export.admin import ExportMixin
 from import_export.formats.base_formats import XLSX
+from django.utils.dateformat import DateFormat
 @admin.register(Announcement)
 class AnnouncementAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'created_by', 'created_at', 'is_global')
@@ -201,11 +205,77 @@ class ComplaintAdmin(admin.ModelAdmin):
             return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
         return False  # Deny access otherwise
 
+class MaintenanceRequestResource(resources.ModelResource):
+    dorm_name = fields.Field(
+        attribute='dorm', column_name='Dorm Name',
+        widget=ForeignKeyWidget(Dorm, 'name')
+    )
+    room_number = fields.Field(
+        attribute='room', column_name='Room Number',
+        widget=ForeignKeyWidget(Room, 'number')
+    )
+    resident_name = fields.Field(
+        attribute='resident', column_name='Resident Name',
+        widget=ForeignKeyWidget(Residents, 'user__email')
+    )
+    semester_name = fields.Field(
+        attribute='semester', column_name='Semester',
+        widget=ForeignKeyWidget(Semester, 'semester_type')
+    )
+    session_name = fields.Field(
+        attribute='academic_session', column_name='Academic Session',
+        widget=ForeignKeyWidget(AcademicSession, 'name')
+    )
+    category_name = fields.Field(
+        attribute='category', column_name='Category',
+        widget=ForeignKeyWidget(Category, 'name')
+    )
+    sub_category_name = fields.Field(
+        attribute='sub_category', column_name='Subcategory',
+        widget=ForeignKeyWidget(SubCategory, 'name')
+    )
+    updated_by_name = fields.Field(
+        attribute='updated_by', column_name='Updated By',
+        widget=ForeignKeyWidget(Staffs, 'user__email')
+    )
+    status_human_readable = fields.Field(
+        column_name='Status',
+        attribute='status'
+    )
+    
+    def dehydrate_status_human_readable(self, obj):
+        status_map = {
+            MaintenanceRequest.PENDING: "Pending",
+            MaintenanceRequest.IN_PROGRESS: "In Progress",
+            MaintenanceRequest.COMPLETED: "Completed",
+        }
+        return status_map.get(obj.status, "Unknown")
+    
+    def dehydrate_created_date(self, obj):
+        if obj.created_at:
+            return DateFormat(obj.created_at).format('d/m/Y H:i')
+        return ''
 
+    def dehydrate_completion_date(self, obj):
+        if obj.completion_date:
+            return DateFormat(obj.completion_date).format('d/m/Y H:i')
+        return ''
 
-class MaintenanceRequestsResource(resources.ModelResource):
     class Meta:
         model = MaintenanceRequest
+        fields = [
+            'id', 'dorm_name', 'room_number', 'resident_name',
+            'category_name', 'sub_category_name', 'description',
+            'status_human_readable', 'created_at', 'completion_date',
+            'updated_by_name', 'semester_name', 'session_name'
+        ]
+        export_order = [
+            'id', 'dorm_name', 'room_number', 'resident_name',
+            'semester_name', 'session_name', 'category_name', 'sub_category_name',
+            'description', 'status_human_readable', 'created_at',
+            'completion_date', 'updated_by_name'
+        ]
+
 @admin.register(MaintenanceRequest)
 class MaintenanceRequestAdmin(ExportMixin,admin.ModelAdmin):
     list_display = [
@@ -242,17 +312,10 @@ class MaintenanceRequestAdmin(ExportMixin,admin.ModelAdmin):
         'resident', 'dorm', 'room', 'category','semester', 'academic_session'
     )
     
-    resource_class = MaintenanceRequestsResource
+    resource_class = MaintenanceRequestResource
 
 
-    def export_selected(self, request, queryset):
-        dataset = MaintenanceRequestsResource().export(queryset=queryset)
-        response = HttpResponse(dataset.xlsx, content_type='application/vnd.ms-excel')
-        response['Content-Disposition'] = 'attachment; filename="maintenance_requests.xlsx"'
-        return response
-    
-    export_selected.short_description = "Export selected maintenance requests to XLSX"
-    actions = ['export_selected']
+
 
 
     def _is_staff_assigned_to_dorm(self, request: HttpRequest, obj: MaintenanceRequest) -> bool:
