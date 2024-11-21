@@ -80,9 +80,16 @@ class Enrollment(models.Model):
     date_enrolled = models.DateField(auto_now_add=True)
     created_at = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='active')  # New status field
+    
+
+    def is_active(self):
+        return self.status == 'active'
+
     def __str__(self):
         return f"{self.resident.user.email} - {self.semester.semester_type} ({self.academic_session.name})"
 
+    class Meta:
+        unique_together = ('resident', 'semester', 'academic_session')  # Prevent duplicate enrollments
 
 class StaffAssignment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

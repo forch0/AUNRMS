@@ -14,14 +14,12 @@ class Dorm(models.Model):
         (FEMALE, 'Female'),
         (UNISEX, 'Unisex'),
     ]
-
     ON_CAMPUS = 'ON'
     OFF_CAMPUS = 'OFF'
     CAMPUS_STATUS_CHOICES = [
         (ON_CAMPUS, 'On Campus'),
         (OFF_CAMPUS, 'Off Campus'),
     ]
-
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=255, null=True, blank=True)
@@ -31,30 +29,40 @@ class Dorm(models.Model):
     def active_residents_count(self, semester):
         return Enrollment.objects.filter(room__dorm=self, semester=semester).count()
 
-    def total_capacity(self):
-        return sum(room.capacity for room in self.rooms.all())
-
     def is_full(self, semester):
         active_count = self.active_residents_count(semester)
         return active_count >= self.total_capacity()
 
-    def occupancy_ratio(self, semester):
-        active_count = self.active_residents_count(semester)
+    def occupancy_ratio(self, semester, academic_session):
+        """Calculate the occupancy ratio based on active enrollments for a specific semester and academic session."""
+        
+        # Get the number of active enrollments in the dorm for the given semester and academic session
+        active_enrollments = Enrollment.objects.filter(
+            dorm=self,
+            semester=semester,
+            academic_session=academic_session,
+            status='active'  # Only count active enrollments
+        )
+
+        # Count active enrollments
+        current_enrollment_count = active_enrollments.count()
+
+        # Get the total capacity of the dorm
         total_capacity = self.total_capacity()
-        return f"{active_count}/{total_capacity}"
+
+        # Calculate the occupancy ratio
+        if total_capacity > 0:
+            return current_enrollment_count / total_capacity
+        return 0  # If there are no rooms or no active enrollments
     
+    def total_capacity(self):
+        return sum(room.capacity for room in self.rooms.all())
+
     def room_count(self):
         return self.rooms.count()
 
     def __str__(self):
         return self.name
-
-
-    # @property
-    # def occupancy_ratio(self):
-    #     """Return the occupancy ratio as a string in the format 'current/total'."""
-    #     active_count = self.active_capacity_count(semester)  # Ensure to pass the semester appropriately
-    #     return f"{active_count}/{self.capacity}"
 
 class Room(models.Model):
     FLOOR_CHOICES = [

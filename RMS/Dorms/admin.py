@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from .models import Dorm, Room, Storage, StorageItem
 from .forms import RoomGenerationForm, StorageItemForm
-from AcademicYear.models import Semester,Enrollment,StaffAssignment
+from AcademicYear.models import Semester,Enrollment,StaffAssignment, AcademicSession
 from typing import Any
 from django.http import HttpRequest
 from UserProfiles.models import Staffs,Residents
@@ -22,14 +22,30 @@ class DormAdmin(admin.ModelAdmin):
         return obj.room_count()
 
     def occupancy_ratio(self, obj):
-        """Returns the occupancy ratio of the dorm."""
-        semester = Semester.objects.latest('start_date')  # Get the most recent semester
-        return obj.occupancy_ratio(semester)
+        # Fetch current enrollments for the dorm
+        current_enrollments = Enrollment.objects.filter(
+            dorm=obj,  # Filter enrollments for the current dorm
+            status='active'  # Only count active enrollments
+        )
+        # Count active enrollments for the current semester and academic session
+        current_enrollment_count = current_enrollments.count()
+        # Get the total capacity of the dorm
+        total_capacity = obj.total_capacity()
+
+        # Calculate occupancy ratio
+        if total_capacity > 0:
+            occupancy_ratio = current_enrollment_count / total_capacity
+            return f"{current_enrollment_count}/{total_capacity}"
+        return "N/A"  # If there are no rooms or no enrollments
+    occupancy_ratio.short_description = 'Occupancy Ratio'
+
 
     def is_full(self, obj):
         """Returns if the dorm is full."""
         semester = Semester.objects.latest('start_date')  # Get the most recent semester
         return obj.is_full(semester)
+    
+
     # Permission Helper Methods
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
