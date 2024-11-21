@@ -86,17 +86,6 @@ class Room(models.Model):
     range = models.CharField(max_length=20, choices=RANGE_CHOICES, blank=True, null=True)
     is_occupied = models.BooleanField(default=False)
 
-    def active_residents_count(self, semester):
-        """Count active residents in this room for the given semester."""
-        active_count = Enrollment.objects.filter(room=self, semester=semester, status='active').count()
-        print(f"Active count for room {self.room_name}: {active_count}")  # Debugging line
-        return active_count
-    def update_occupation_status(self, semester):
-        """Update the 'is_occupied' field based on active enrollments."""
-        active_count = self.active_residents_count(semester)
-        self.is_occupied = active_count > 0
-        self.save()
-
     def __str__(self):
         return f"Room {self.number} - {self.dorm.name}"
 
@@ -105,19 +94,28 @@ class Room(models.Model):
         """Return a formatted string of room and dorm name."""
         return f"{self.dorm.name}-{self.number}"
 
-    @property
-    def occupancy_ratio(self, semester):
-        """Return the occupancy ratio as 'active_count/capacity'."""
-        active_count = self.active_residents_count(semester)
-        return f"{active_count}/{self.capacity}"
+    def current_occupants(self):
+        """
+        Returns the number of residents currently enrolled in the room.
+        """
+        return self.enrollments.filter(status='active').count()
 
     def save(self, *args, **kwargs):
-        """Override the save method to dynamically set the 'is_occupied' field."""
-        semester = Semester.objects.first()  # Assuming first semester if not specified
-        if semester:
-            self.update_occupation_status(semester)
+        """Automatically update the `is_occupied` field."""
+        self.is_occupied = self.current_occupants() > 0  # Ensure this is a method call
         super().save(*args, **kwargs)
 
+    @property
+    def is_full(self):
+        """Return True if the room is fully occupied."""
+        return self.current_occupants() >= self.capacity
+
+    def occupancy_ratio(self):
+        """
+        Returns the occupancy ratio as a string in the form 'x/y'.
+        """
+        return f"{self.current_occupants()}/{self.capacity}"
+    
 class Storage(models.Model):
     FLOOR_CHOICES = [
         (1, 'Ground Floor'),

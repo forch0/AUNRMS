@@ -134,3 +134,4 @@ class Staffs(models.Model):
         verbose_name = 'staff'
         verbose_name_plural = 'staffs'
         ordering = ['user__email']
+

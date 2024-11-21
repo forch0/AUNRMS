@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.utils.html import format_html
+from django.utils import timezone
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from .models import Dorm, Room, Storage, StorageItem
@@ -10,31 +12,24 @@ from UserProfiles.models import Staffs,Residents
 
 @admin.register(Dorm)
 class DormAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address', 'gender', 'campus_status', 'get_room_count','total_capacity','occupancy_ratio_display', 'is_full_display')
+    list_display = ('name', 'address', 'gender', 'campus_status', 'room_count','occupancy_ratio', 'is_full')
     list_filter = ('gender', 'campus_status')
     search_fields = ('name', 'address')
     ordering = ('name',)
     
-    
-    def get_room_count(self, obj):
+    def room_count(self, obj):
+        """Returns the count of rooms in the dorm."""
         return obj.room_count()
-    get_room_count.short_description = 'Room Count'
 
-    def total_capacity(self, obj):
-        return obj.total_capacity()
-    total_capacity.short_description = 'Total Capacity'
+    def occupancy_ratio(self, obj):
+        """Returns the occupancy ratio of the dorm."""
+        semester = Semester.objects.latest('start_date')  # Get the most recent semester
+        return obj.occupancy_ratio(semester)
 
-    def occupancy_ratio_display(self, obj):
-        # You may need to pass a specific semester here if necessary
-        current_semester = Semester.objects.latest('start_date')  # Example: latest semester
-        return obj.occupancy_ratio(current_semester)
-    occupancy_ratio_display.short_description = 'Occupancy Ratio'
-
-    def is_full_display(self, obj):
-        current_semester = Semester.objects.latest('start_date')  # Example: latest semester
-        return 'Yes' if obj.is_full(current_semester) else 'No'
-    is_full_display.short_description = 'Is Full'
-
+    def is_full(self, obj):
+        """Returns if the dorm is full."""
+        semester = Semester.objects.latest('start_date')  # Get the most recent semester
+        return obj.is_full(semester)
     # Permission Helper Methods
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
@@ -66,38 +61,19 @@ class DormAdmin(admin.ModelAdmin):
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm', 'is_occupied', 'occupancy_ratio_display','is_full_display')
+    list_display = ('id', 'number', 'room_name', 'capacity', 'room_plan', 'floor', 'dorm', 'occupancy_ratio','is_full')
     list_filter = ('dorm__name', 'room_plan', 'floor')
     search_fields = ('number', 'dorm__name')
     ordering = ('id',)
 
-    def occupancy_ratio_display(self, obj):
-        # Set a default semester or handle if no semester exists
-        semester = Semester.objects.first()
-        if not semester:
-            return "No Semester Available"
-        
-        # Calculate the occupancy ratio for the given semester based on enrollments
-        active_count = obj.active_residents_count(semester)
-        return f"{active_count}/{obj.capacity}"
-    occupancy_ratio_display.short_description = 'Occupancy Ratio'
+    @admin.display(description='Occupancy Ratio')
+    def occupancy_ratio(self, obj):
+        """Returns the occupancy ratio in the format '1/3'."""
+        return obj.occupancy_ratio()
 
-    def is_full_display(self, obj):
-        # Set a default semester or handle if no semester exists
-        semester = Semester.objects.first()
-        if not semester:
-            return "No Semester Available"
-        
-        # Check if the room is full based on enrollments
-        return "Yes" if obj.active_residents_count(semester) >= obj.capacity else "No"
-    is_full_display.short_description = 'Room is Full'
-
-    def is_occupied_display(self, obj):
-        """Display 'Yes' or 'No' based on the room's occupancy status."""
-        return "Yes" if obj.is_occupied else "No"
-    is_occupied_display.short_description = 'Room Occupied'
-
-
+    
+    # is_occupied.boolean = True  # Display as a boolean icon in admin
+    # is_full.boolean = True  # Display as a boolean icon in admin
     # Helper Methods for Permissions
     def _is_superuser(self, request: HttpRequest) -> bool:
         """Checks if the user is a Django superuser."""
@@ -208,6 +184,7 @@ class StorageAdmin(admin.ModelAdmin):
         return self._is_superuser(request) or self._has_reslife_director_role(request) or self._has_residence_director_role(request)
 
 
+
 @admin.register(StorageItem)
 class StorageItemAdmin(admin.ModelAdmin):
     list_display = (
@@ -222,59 +199,110 @@ class StorageItemAdmin(admin.ModelAdmin):
         'status', 
         'approved_by', 
         'approval_date', 
-        'display_collected_at', 
-        'display_collected_by'
+        'item_type',
+        # 'display_collected_at', 
+        # 'display_collected_by'
     )
     list_filter = ('status', 'approved_by')
     search_fields = ('description', 'storage__dorm__name', 'resident__name')
     ordering = ('id',)
-    autocomplete_fields = ['room']
+    autocomplete_fields = ['storage','resident','room','semester','academic_session','approved_by','collected_by',  ]
+    readonly_fields = ('approval_date', 'created_at')
+    actions = ['mark_as_collected']
 
-    # Displaying fields safely
-    def display_collected_at(self, obj):
-        return obj.collected_at or "Not Collected"
-    display_collected_at.short_description = 'Collected At'
+    # if request.user.is_superuser or self._has_selected_roles(request, allowed_roles=['ResLife Directors']):
+    # 'Residence Director'
 
-    def display_collected_by(self, obj):
-        return obj.collected_by.name if obj.collected_by else 'Not Collected'
-    display_collected_by.short_description = 'Collected By'
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
 
-    # Helper Methods for Permissions
-    def _is_superuser(self, request: HttpRequest) -> bool:
-        return request.user.is_superuser
+        if request.user.is_superuser:
+            return qs  # Superusers see all items
 
-    def _has_selected_roles(self, request: HttpRequest, allowed_roles=['ResLife Directors']) -> bool:
-        staff = Staffs.objects.filter(user=request.user).first()
-        return staff and staff.role.name in allowed_roles
+        # Get staff member for checking role
+        staff_member = request.user.staffs  # Access the related Staffs object
 
-    def _is_resident(self, request: HttpRequest) -> bool:
-        return hasattr(request.user, 'residents')
+        if staff_member:
+            # ResLife Directors have full access, just like Superusers
+            if staff_member.role.name == 'ResLife Director':
+                return qs  # ResLife Directors see all items for their dorm
 
-    def _resident_storage_items(self, request: HttpRequest):
-        resident = Residents.objects.filter(user=request.user).first()
-        return StorageItem.objects.filter(resident=resident) if resident else StorageItem.objects.none()
+            # Residence Assistants see only items assigned to them for their dorm
+            if staff_member.role.name in ['Residence Assistant', 'Residence Director']:
+                recent_assignment = StaffAssignment.objects.filter(staff=staff_member).order_by('-created_at').first()
+                if recent_assignment:
+                    return qs.filter(storage__room__dorm=recent_assignment.dorm, collected_by__isnull=True)
 
-    # Permissions
-    def has_view_permission(self, request: HttpRequest, obj=None) -> bool:
-        if self._is_superuser(request) or self._has_selected_roles(request):
-            return True
-        if self._is_resident(request):
-            return obj is None or obj.resident.user == request.user
+    # If the user is a resident, show only items assigned to them or their own items
+        logged_in_resident = Residents.objects.filter(user=request.user).first()
+        if logged_in_resident:
+            return qs.filter(collected_by=logged_in_resident)  # Items assigned to the logged-in resident
+
+        return qs.none()  # If no applicable items, show nothing
+
+    def has_view_permission(self, request, obj=None):
+        if request.user.is_superuser or (request.user.is_staff and request.user.staffs.role.name == 'ResLife Directors'):
+            return True  # Superusers and ResLife Directors can view all items
+
+        staff_member = request.user.staffs  # Access the related Staffs object
+        if staff_member:
+            if staff_member.role.name in ['Residence Assistant', 'Residence Director']:
+                return True  # Residence Assistants and Residence Directors can view items for their assigned dorm
+
+        logged_in_resident = Residents.objects.filter(user=request.user).first()
+        if logged_in_resident:
+            return True  # Residents can view their own items
+
         return False
 
-    def has_add_permission(self, request: HttpRequest) -> bool:
-        return self._is_superuser(request) or self._has_selected_roles(request)
+    def has_add_permission(self, request):
+        if request.user.is_superuser or (request.user.is_staff and request.user.staffs.role.name == 'ResLife Directors'):
+            return True  # Superusers and ResLife Directors can add items
 
-    def has_change_permission(self, request: HttpRequest, obj=None) -> bool:
-        return self._is_superuser(request) or self._has_selected_roles(request)
+        staff_member = request.user.staffs  # Access the related Staffs object
+        if staff_member:
+            if staff_member.role.name in ['Residence Assistant', 'Residence Director']:
+                return True  # Residence Assistants and Residence Directors can add items in their assigned dorm
 
-    def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
-        return self._is_superuser(request) or self._has_selected_roles(request)
+        return False
 
-    def get_queryset(self, request: HttpRequest):
-        qs = super().get_queryset(request)
-        if self._is_superuser(request) or self._has_selected_roles(request):
-            return qs
-        if self._is_resident(request):
-            return self._resident_storage_items(request)
-        return qs.none()
+    def has_change_permission(self, request, obj=None):
+        if request.user.is_superuser or (request.user.is_staff and request.user.staffs.role.name == 'ResLife Directors'):
+            return True  # Superusers and ResLife Directors can change items
+
+        staff_member = request.user.staffs  # Access the related Staffs object
+        if staff_member:
+            if staff_member.role.name in ['Residence Assistant', 'Residence Director']:
+                return True  # Residence Assistants and Residence Directors can change items in their assigned dorm
+
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        if request.user.is_superuser or (request.user.is_staff and request.user.staffs.role.name == 'ResLife Directors'):
+            return True  # Superusers and ResLife Directors can delete items
+
+        staff_member = request.user.staffs  # Access the related Staffs object
+        if staff_member:
+            if staff_member.role.name in ['Residence Assistant', 'Residence Director']:
+                return True  # Residence Assistants and Residence Directors can delete items in their assigned dorm
+
+        return False
+
+    def item_type(self, obj):
+        logged_in_resident = Residents.objects.filter(user=self.request.user).first()
+        if logged_in_resident:
+            if obj.resident == logged_in_resident:
+                return format_html('<strong>My Item</strong>')  # Display "My Item" if the item belongs to the logged-in resident
+            else:
+                return format_html('<span style="color: red;">Assigned to Collect</span>')  # Display differently if it's assigned to collect
+        return "Unknown"
+    item_type.short_description = "Item Type"
+
+    def mark_as_collected(self, request, queryset):
+        """Action to mark selected items as collected"""
+        for item in queryset:
+            item.status = StorageItem.APPROVED
+            item.collected_at = timezone.now()  # Add collection timestamp
+            item.save()
+        self.message_user(request, f"{queryset.count()} items marked as collected.")
+    mark_as_collected.short_description = "Mark selected items as collected"

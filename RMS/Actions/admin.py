@@ -420,48 +420,50 @@ class MaintenanceRequestAdmin(ExportMixin,admin.ModelAdmin):
 
         return False  # Deny access otherwise
 
-class SubCategoryInline(SortableAdminMixin,admin.TabularInline):
+class SubCategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
     list_display = ('name','my_order','category')
     search_fields = ('name','category')
-    model = SubCategory
-    extra = 1  # Number of empty subcategory forms to display
+    # model = SubCategory
+    # extra = 1  # Number of empty subcategory forms to display
     ordering = ['my_order']
 
     autocomplete_fields = (
        'category',
     )
-    
 
     def _is_reslife_directors(self, request: HttpRequest) -> bool:
         """Checks if the user is a ResLife Director."""
         staff = Staffs.objects.filter(user=request.user).first()
         return staff and staff.role.name == 'ResLife Directors'
+    
 
     # Overriding has_view_permission to allow viewing for superusers and ResLife Directors
     def has_view_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
-        if request.user.is_superuser or self._is_reslife_directors(request):
-            return True  # Superusers and ResLife Directors can view categories
-        return False  # All others are restricted from viewing
-
+        is_reslife_director = self._is_reslife_directors(request)
+        print(f"Checking view permission for ResLife Director: {is_reslife_director}")
+        if request.user.is_superuser or is_reslife_director:
+            return True
+        return False
     # Overriding has_add_permission to allow adding for superusers and ResLife Directors
-    def has_add_permission(self, request: HttpRequest) -> bool:
+    def has_add_permission(self, request: HttpRequest, obj: SubCategory | None = None) -> bool:
         if request.user.is_superuser or self._is_reslife_directors(request):
-            return True  # Superusers and ResLife Directors can add categories
+            return True  # Superusers and ResLife Directors can add SubCategories
         return False  # All others are restricted from adding
 
     # Overriding has_change_permission to allow changing for superusers and ResLife Directors
-    def has_change_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+    def has_change_permission(self, request: HttpRequest, obj: SubCategory | None = None) -> bool:
         if request.user.is_superuser or self._is_reslife_directors(request):
-            return True  # Superusers and ResLife Directors can change categories
+            return True  # Superusers and ResLife Directors can change SubCategories
         return False  # All others are restricted from changing
 
     # Overriding has_delete_permission to allow deleting for superusers and ResLife Directors
-    def has_delete_permission(self, request: HttpRequest, obj: Category | None = None) -> bool:
+    def has_delete_permission(self, request: HttpRequest, obj: SubCategory | None = None) -> bool:
         if request.user.is_superuser or self._is_reslife_directors(request):
-            return True  # Superusers and ResLife Directors can delete categories
-        return False  # All others are restricted from deleting
+            return True  # Superusers and ResLife Directors can delete SubCategories
+        return False
+
 class CategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
-    inlines = [SubCategoryInline]
+    # inlines = [SubCategoryInline]
     list_display = ('name','my_order')
     search_fields = ('name',)
     ordering = ['my_order']
@@ -495,6 +497,7 @@ class CategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
         if request.user.is_superuser or self._is_reslife_directors(request):
             return True  # Superusers and ResLife Directors can delete categories
         return False  # All others are restricted from deleting
+
 class VendorAdmin(admin.ModelAdmin):
     list_display = ('business_name', 'owner_name', 'phone_number', 'dorm', 'is_off_campus', 'product')
     search_fields = ('business_name', 'owner_name', 'product')
@@ -532,7 +535,7 @@ class VendorAdmin(admin.ModelAdmin):
     
 admin.site.register(Vendor, VendorAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(SubCategory)
+admin.site.register(SubCategory, SubCategoryAdmin)
 
 
 

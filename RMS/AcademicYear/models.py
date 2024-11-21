@@ -83,6 +83,7 @@ class Enrollment(models.Model):
     def __str__(self):
         return f"{self.resident.user.email} - {self.semester.semester_type} ({self.academic_session.name})"
 
+
 class StaffAssignment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     staff = models.ForeignKey(Staffs, on_delete=models.CASCADE)
