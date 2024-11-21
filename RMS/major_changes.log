@@ -27908,3 +27908,8 @@ WARNING 2024-11-21 08:40:28,559 basehttp "GET /static/plugins/slick/slick.min.js
 WARNING 2024-11-21 08:40:28,571 basehttp "GET /static/plugins/syotimer/jquery.syotimer.min.js HTTP/1.1" 404 1876
 INFO 2024-11-21 08:40:29,318 basehttp "GET /static/plugins/themify-icons/fonts/themify.woff?-fvbane HTTP/1.1" 200 56108
 INFO 2024-11-21 08:40:29,864 basehttp "GET /static/images/logos/200px-logo.png HTTP/1.1" 200 24473
+INFO 2024-11-21 08:45:56,590 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-11-21 08:45:56,595 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-21 08:45:56,610 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
+INFO 2024-11-21 08:47:12,974 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-11-21 08:47:12,982 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 8713
