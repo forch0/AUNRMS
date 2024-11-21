@@ -4,6 +4,7 @@ from django.utils.translation import gettext_lazy as _
 from AcademicYear.models import Enrollment, AcademicSession, Semester
 from UserProfiles.models import Residents, Staffs
 from django.utils import timezone
+
 class Dorm(models.Model):
     MALE = 'M'
     FEMALE = 'F'
@@ -116,7 +117,6 @@ class Room(models.Model):
         if semester:
             self.update_occupation_status(semester)
         super().save(*args, **kwargs)
-
 
 class Storage(models.Model):
     FLOOR_CHOICES = [
