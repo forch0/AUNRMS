@@ -28123,3 +28123,7 @@ INFO 2024-11-21 08:57:26,315 basehttp "GET /admin/Actions/announcement/ HTTP/1.1
 WARNING 2024-11-21 08:57:26,358 basehttp "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 404 1855
 WARNING 2024-11-21 08:57:26,360 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
 INFO 2024-11-21 08:57:26,390 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-11-21 08:59:06,145 basehttp "GET /admin/AcademicYear/academicsession/ HTTP/1.1" 200 46550
+WARNING 2024-11-21 08:59:06,195 basehttp "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 404 1855
+WARNING 2024-11-21 08:59:06,196 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
+INFO 2024-11-21 08:59:06,235 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
