@@ -228,16 +228,16 @@ UNFOLD = {
     # "THEME": "default",
     "SITE_HEADER": "AUN RMS",
     "SITE_ICON": {
-        "light": lambda request: static("images/2.png"),  # light mode
-        "dark": lambda request: static("images/2.png"),
+        "light": lambda request: static("images/logos/200px-Transparent.png"),  # light mode
+        "dark": lambda request: static("images/logos/200px-Transparent.png"),
         },
 
     "SITE_FAVICONS": [
         {
-            "rel": "icon",
-            "sizes": "32x32",
-            "type": "image/png+xml",
-            "href": lambda request: static("images/2.png"),
+            # "rel": "icon",
+            # "sizes": "32x32",
+            # "type": "image/png+xml",
+            "href": lambda request: static("images/logos/200px-Transparent.png"),
         },
     ],
 

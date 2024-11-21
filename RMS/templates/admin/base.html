@@ -1,5 +1,7 @@
 {% extends "admin/base_site.html" %}
 {% load static %}
+{% comment %} <link rel="shortcut icon" type="image/png" href="{% static 'images/logos/200px-logo.png' %}" /> {% endcomment %}
+
 
 {% block extrahead %}
     {{ block.super }}
@@ -7,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-datepicker.min.css' %}">
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/admin_custom.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logos/200px-logo.png' %}" />
 
     <!-- Custom CSS to Increase Width of Permissions Select Box -->
     <style>
