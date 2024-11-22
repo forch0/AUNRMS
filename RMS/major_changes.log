@@ -35741,3 +35741,4 @@ WARNING 2024-11-22 01:49:54,506 basehttp "GET /static/css/bootstrap-datepicker.m
 INFO 2024-11-22 01:49:54,537 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 WARNING 2024-11-22 01:49:54,544 basehttp "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 404 1849
 INFO 2024-11-22 01:50:20,330 autoreload C:\Users\fortu\OneDrive\Documents\AUNRMS\RMS\Actions\admin.py changed, reloading.
+INFO 2024-11-22 01:50:21,220 autoreload Watching for file changes with StatReloader
