@@ -6,6 +6,7 @@ from Dorms.models import Dorm
 from UserProfiles.models import Staffs, Roles, UserCred
 from admin_confirm import AdminConfirmMixin
 from typing import Any
+from django.shortcuts import get_object_or_404
 
 @admin.register(AdminConfirmMixin,AcademicSession)
 class AcademicSessionAdmin(admin.ModelAdmin):
@@ -238,33 +239,24 @@ class StaffAssignmentAdmin(admin.ModelAdmin):
 
     def has_view_permission(self, request: HttpRequest, obj=None) -> bool:
         """Allows superusers, ResLife Directors, Deans of Student Affairs, Residence Assistants, and Residence Directors to view assignments."""
+        
         if self._is_superuser(request):
             return True
         if self._is_reslife_director(request):
             return True
         if self._is_dean_of_student_affairs(request):
             return True
-        if self._is_residence_assistant(request):
-            # RAs can only view assignments in their dorm
-            staff = Staffs.objects.filter(user=request.user).first()
-            if staff and obj and obj.dorm == staff.dorm:
-                return True
         if self._is_residence_director(request):
-            # Residence Directors can view assignments for their dorm
-            staff = Staffs.objects.filter(user=request.user).first()
-            if staff and obj and obj.dorm == staff.dorm:
-                return True
-        return False
-
+            return True
+        if self._is_residence_assistant(request):
+            return True
+        
     def has_add_permission(self, request: HttpRequest) -> bool:
         """Allows only superusers, ResLife Directors, and Residence Directors to add assignments."""
         if self._is_superuser(request):
             return True
         if self._is_reslife_director(request):
             return True
-        if self._is_residence_director(request):
-            return True
-        return False
 
     def has_change_permission(self, request: HttpRequest, obj=None) -> bool:
         """Allows superusers, ResLife Directors, Residence Directors, and Deans of Student Affairs to change assignments."""
@@ -272,14 +264,6 @@ class StaffAssignmentAdmin(admin.ModelAdmin):
             return True
         if self._is_reslife_director(request):
             return True
-        if self._is_dean_of_student_affairs(request):
-            return True
-        if self._is_residence_director(request):
-            # Residence Directors can change assignments only in their dorm
-            staff = Staffs.objects.filter(user=request.user).first()
-            if staff and obj and obj.dorm == staff.dorm:
-                return True
-        return False
 
     def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
         """Allows only superusers, ResLife Directors, and Residence Directors to delete assignments."""
@@ -287,12 +271,5 @@ class StaffAssignmentAdmin(admin.ModelAdmin):
             return True
         if self._is_reslife_director(request):
             return True
-        if self._is_residence_director(request):
-            # Residence Directors can delete assignments in their dorm
-            staff = Staffs.objects.filter(user=request.user).first()
-            if staff and obj and obj.dorm == staff.dorm:
-                return True
-        return False
-
 # Register StaffAssignmentAdmin
 admin.site.register(StaffAssignment, StaffAssignmentAdmin)

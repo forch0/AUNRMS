@@ -223,6 +223,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'UserProfiles.UserCred'
 
 
+
 UNFOLD = {
     "ENABLE_THEMING": True,  # Optional customization options
     # "THEME": "default",

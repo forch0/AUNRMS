@@ -159,7 +159,7 @@ class ResidentsAdmin(admin.ModelAdmin):
     
     def _has_selected_roles(self, request: HttpRequest) -> bool:
         """Checks if the user has one of the allowed roles."""
-        allowed_roles = ['ResLife Directors',]  # Add the role names you want here
+        allowed_roles = ['ResLife Directors','Residence Director', 'Residence Assistant']  # Add the role names you want here
         staff = Staffs.objects.filter(user=request.user).first()
         if staff:
             return staff.role.name in allowed_roles
@@ -180,7 +180,7 @@ class ResidentsAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request: HttpRequest, obj: Any | None = None) -> bool:
         """Only superuser can delete."""
         return self._is_superuser(request)
-        
+     
 class StaffsAdmin(admin.ModelAdmin):
     form = StaffForm
     list_display = ('user', 'role', 'date_joined')
@@ -207,7 +207,7 @@ class StaffsAdmin(admin.ModelAdmin):
     
     def _has_selected_roles(self, request: HttpRequest) -> bool:
         """Checks if the user has one of the allowed roles."""
-        allowed_roles = ['ResLife Directors',]  # Add the role names you want here
+        allowed_roles = ['ResLife Directors','Residence Director','Residence Assistant']  # Add the role names you want here
         staff = Staffs.objects.filter(user=request.user).first()
         if staff:
             return staff.role.name in allowed_roles

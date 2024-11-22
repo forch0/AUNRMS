@@ -1,9 +1,10 @@
+from django.core.exceptions import PermissionDenied
 from django.core.exceptions import ValidationError
 from django.contrib import admin
 from django.http import HttpResponse
 from .models import MaintenanceRequest, Category, SubCategory, Announcement, Complaint, Vendor
 from adminsortable2.admin import SortableAdminMixin
-from .forms import ComplaintForm
+from .forms import ComplaintForm, AnnouncementForm
 from UserProfiles.models import Staffs
 from Dorms.models import Dorm, Room
 from AcademicYear.models import *
@@ -14,106 +15,240 @@ from import_export import resources,fields
 from import_export.admin import ExportMixin
 from import_export.formats.base_formats import XLSX
 from django.utils.dateformat import DateFormat
+# @admin.register(Announcement)
+# class AnnouncementAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'title', 'created_by', 'created_at', 'is_global')
+#     list_filter = ('is_global', 'academic_session', 'semester')
+#     search_fields = ('title', 'created_by__user__username', 'academic_session__name')
+#     ordering = ('created_at',)
+
+#     def _is_reslife_directors(self, request: HttpRequest) -> bool:
+#         """Checks if the user is a ResLife Director."""
+#         staff = Staffs.objects.filter(user=request.user).first()
+#         return staff and staff.role.name == 'ResLife Directors'
+
+#     def has_view_permission(self, request: HttpRequest, obj: Announcement | None = None) -> bool:
+#         if request.user.is_superuser or self._is_reslife_directors:
+#             return True  # Superusers can view all announcements
+
+#         # Allow all staff to view global announcements
+#         if request.user.is_staff:
+#             if obj and obj.is_global:
+#                 return True
+
+#         # Allow residents to view global announcements
+#         if hasattr(request.user, 'resident'):
+#             if obj and obj.is_global:
+#                 return True
+            
+#             staff = Staffs.objects.filter(user=request.user).first()
+#             if staff:
+#                 # Allow Residence Directors and Assistants to view announcements for their assigned dorms
+#                 return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
+
+#         # Allow residents to view announcements for their dorm
+#         if hasattr(request.user, 'resident'):
+#             enrollments = Enrollment.objects.filter(resident__user=request.user)
+#             assigned_dorms = enrollments.values_list('dorm', flat=True)
+#             if obj and obj.dorm in assigned_dorms:
+#                 return True  # Residents can see announcements for their dorm
+
+#         return False  # No access for anyone else
+
+#     def has_add_permission(self, request: HttpRequest) -> bool:
+#         """Restrict add permission based on user roles."""
+#         if request.user.is_superuser or self._is_reslife_directors:
+#             return True  # Superusers can add any announcement
+
+#         staff = Staffs.objects.filter(user=request.user).first()
+#         if staff and staff.role.name == 'Residence Director' or 'Residence Assistant' :
+#             return True  # Residence Directors can create announcements for their dorms
+#         return False  # Deny add permissions for everyone else
+    
+#     def save_model(self, request, obj: Announcement, form, change):
+#         """Override save_model to set the created_by field."""
+#         if not change:  # If the announcement is new
+#             staff = Staffs.objects.filter(user=request.user).first()
+#             if staff:
+#                 obj.created_by = staff  # Set the creator of the announcement
+#         super().save_model(request, obj, form, change)
+    
+#     def get_queryset(self, request: HttpRequest):
+#         """Filter the queryset based on user roles."""
+#         queryset = super().get_queryset(request)
+
+#         if request.user.is_superuser or self._is_reslife_directors:
+#             return queryset  # Superusers see everything
+
+#         staff = Staffs.objects.filter(user=request.user).first()
+#         if staff:
+#             # Allow Residence Directors and Residence Assistants to see announcements for their assigned dorms
+#             return queryset.filter(dorm__in=staff.staffassignment_set.values_list('dorm', flat=True))
+
+#         if hasattr(request.user, 'resident'):
+#             # Allow residents to see announcements for their dorm
+#             enrollments = Enrollment.objects.filter(resident__user=request.user)
+#             assigned_dorms = enrollments.values_list('dorm', flat=True)
+#             return queryset.filter(dorm__in=assigned_dorms)
+
+#         return queryset.none()
+    
+#     def has_change_permission(self, request: HttpRequest, obj: Announcement | None = None) -> bool:
+#         """Allow only authorized staff to update announcements."""
+#         if request.user.is_superuser or self._is_reslife_directors:
+#             return True  # Superuser can update anything
+
+#         staff = Staffs.objects.filter(user=request.user).first()
+#         if staff and staff.role.name in ['Residence Director', 'Residence Assistant']:
+#             # Allow staff to change announcements for their assigned dorm
+#             return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
+#         return False  # Deny access otherwise  # No access for anyone else
+
+#     def has_delete_permission(self, request: HttpRequest, obj: Announcement | None = None) -> bool:
+#         """Allow only superusers and Residence Directors to delete announcements."""
+#         if request.user.is_superuser or self._is_reslife_directors:
+#             return True  # Superuser can delete anything
+
+#         staff = Staffs.objects.filter(user=request.user).first()
+#         if staff and staff.role.name == 'Residence Director':
+#             # Allow Residence Directors to delete announcements for their dorm
+#             return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
+#         return False  # Deny access otherwise
+ # No delete permission otherwise
+
 @admin.register(Announcement)
 class AnnouncementAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'created_by', 'created_at', 'is_global')
-    list_filter = ('is_global', 'academic_session', 'semester')
-    search_fields = ('title', 'created_by__user__username', 'academic_session__name')
-    ordering = ('created_at',)
+    form = AnnouncementForm
+    list_display = ('title','message', 'created_by', 'is_global', 'semester', 'academic_session', 'created_at')
+    list_filter = ('is_global', 'semester', 'academic_session', 'created_at')
+    search_fields = ('title', 'message', 'created_by__email', 'created_by__name')
+    ordering = ('-created_at',)
 
-    def _is_reslife_directors(self, request: HttpRequest) -> bool:
-        """Checks if the user is a ResLife Director."""
-        staff = Staffs.objects.filter(user=request.user).first()
-        return staff and staff.role.name == 'ResLife Directors'
-
-    def has_view_permission(self, request: HttpRequest, obj: Announcement | None = None) -> bool:
-        if request.user.is_superuser or self._is_reslife_directors:
-            return True  # Superusers can view all announcements
-
-        # Allow all staff to view global announcements
-        if request.user.is_staff:
-            if obj and obj.is_global:
-                return True
-
-        # Allow residents to view global announcements
-        if hasattr(request.user, 'resident'):
-            if obj and obj.is_global:
-                return True
-            
-            staff = Staffs.objects.filter(user=request.user).first()
-            if staff:
-                # Allow Residence Directors and Assistants to view announcements for their assigned dorms
-                return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
-
-        # Allow residents to view announcements for their dorm
-        if hasattr(request.user, 'resident'):
-            enrollments = Enrollment.objects.filter(resident__user=request.user)
-            assigned_dorms = enrollments.values_list('dorm', flat=True)
-            if obj and obj.dorm in assigned_dorms:
-                return True  # Residents can see announcements for their dorm
-
-        return False  # No access for anyone else
-
-    def has_add_permission(self, request: HttpRequest) -> bool:
-        """Restrict add permission based on user roles."""
-        if request.user.is_superuser or self._is_reslife_directors:
-            return True  # Superusers can add any announcement
-
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name == 'Residence Director' or 'Residence Assistant' :
-            return True  # Residence Directors can create announcements for their dorms
-        return False  # Deny add permissions for everyone else
-    
-    def save_model(self, request, obj: Announcement, form, change):
-        """Override save_model to set the created_by field."""
-        if not change:  # If the announcement is new
-            staff = Staffs.objects.filter(user=request.user).first()
-            if staff:
-                obj.created_by = staff  # Set the creator of the announcement
-        super().save_model(request, obj, form, change)
-    
-    def get_queryset(self, request: HttpRequest):
-        """Filter the queryset based on user roles."""
+    def get_queryset(self, request):
         queryset = super().get_queryset(request)
 
-        if request.user.is_superuser or self._is_reslife_directors:
-            return queryset  # Superusers see everything
+        if request.user.is_superuser:
+            return queryset
 
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff:
-            # Allow Residence Directors and Residence Assistants to see announcements for their assigned dorms
-            return queryset.filter(dorm__in=staff.staffassignment_set.values_list('dorm', flat=True))
+        # Check if the logged-in user has a staff profile
+        staff_profile = getattr(request.user, 'staffs', None)
+        if staff_profile:
+            # Check if the staff role is 'ResLife Director'
+            if staff_profile.role.name == 'ResLife Directors':
+                return queryset  # ResLife Directors can view all announcements
+            else:
+                # Filter announcements by dorms assigned to the staff
+                assigned_dorms = Dorm.objects.filter(staffassignment__staff=staff_profile)
+                return queryset.filter(dorms__in=assigned_dorms).distinct()
 
-        if hasattr(request.user, 'resident'):
-            # Allow residents to see announcements for their dorm
-            enrollments = Enrollment.objects.filter(resident__user=request.user)
-            assigned_dorms = enrollments.values_list('dorm', flat=True)
-            return queryset.filter(dorm__in=assigned_dorms)
+        return queryset.none()  # If not staff, return an empty queryset
 
-        return queryset.none()
-    
-    def has_change_permission(self, request: HttpRequest, obj: Announcement | None = None) -> bool:
-        """Allow only authorized staff to update announcements."""
-        if request.user.is_superuser or self._is_reslife_directors:
-            return True  # Superuser can update anything
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        
+        # Ensure 'created_by' is the current staff member
+        if 'created_by' in form.base_fields:
+            form.base_fields['created_by'].queryset = UserCred.objects.filter(id=request.user.id)
 
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name in ['Residence Director', 'Residence Assistant']:
-            # Allow staff to change announcements for their assigned dorm
-            return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
-        return False  # Deny access otherwise  # No access for anyone else
+        # Limit dorms to the ones the current staff is assigned to
+        if not request.user.is_superuser:
+            staff_profile = getattr(request.user, 'staffs', None)
+            if staff_profile:
+                assigned_dorms = Dorm.objects.filter(staffassignment__staff=staff_profile)
+                if 'dorms' in form.base_fields:
+                    form.base_fields['dorms'].queryset = assigned_dorms
 
-    def has_delete_permission(self, request: HttpRequest, obj: Announcement | None = None) -> bool:
-        """Allow only superusers and Residence Directors to delete announcements."""
-        if request.user.is_superuser or self._is_reslife_directors:
-            return True  # Superuser can delete anything
+        # Make fields read-only if it's a view (GET request)
+        if obj is not None:  # If we are viewing an existing object
+            if 'dorms' in form.base_fields:
+                form.base_fields['dorms'].disabled = True  # Disable dorms field when viewing
+            # if 'created_by' in form.base_fields:
+            #     form.base_fields['created_by'].disabled = True  # Disable created_by when viewing
 
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name == 'Residence Director':
-            # Allow Residence Directors to delete announcements for their dorm
-            return obj and obj.dorm in staff.staffassignment_set.values_list('dorm', flat=True)
-        return False  # Deny access otherwise
- # No delete permission otherwise
+        return form
+
+    def save_model(self, request, obj, form, change):
+    # Ensure the 'created_by' is assigned properly by the form
+        super().save_model(request, obj, form, change)
+
+    def has_add_permission(self, request):
+        # Superusers always have add permissions
+        if request.user.is_superuser:
+            return True
+
+        # Ensure the user has a staff profile
+        staff_profile = getattr(request.user, 'staffs', None)
+        if not staff_profile:
+            return False  # Non-staff users cannot add announcements
+
+        # Check the staff's role
+        if staff_profile.role.name == 'ResLife Directors':
+            return True  # ResLife Directors can add global announcements
+
+        # Other staff can only add announcements for their assigned dorms
+        assigned_dorms = Dorm.objects.filter(staffassignment__staff=staff_profile)
+        return assigned_dorms.exists()  # Allow adding if the staff is assigned to any dorm
+
+    def has_view_permission(self, request, obj=None):
+        if request.user.is_superuser:
+            return True
+        if obj is None:
+            return True
+        if hasattr(request.user, 'staffs'):
+            staff_profile = request.user.staffs
+            
+            # Access the reverse relation using the updated related_name 'staffassignments'
+            staff_assignments = staff_profile.staffassignments.all()  # Updated relation name
+            
+            # Get the assigned dorms for the staff
+            assigned_dorms = staff_assignments.values_list('dorm__id', flat=True)
+
+            # Check if the current object is assigned to the staff's dorms
+            if obj.dorms.filter(id__in=assigned_dorms).exists():
+                return True
+
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        """
+        Only allow changes if the user is assigned to the dorm or is a ResLife Director.
+        """
+        if request.user.is_superuser:
+            return True
+        if obj is None:
+            return True
+        if hasattr(request.user, 'staffs'):
+            staff_profile = request.user.staffs
+            
+            # Access the staff assignments (the reverse relation)
+            staff_assignments = staff_profile.staffassignments.all()  # This will work now
+            assigned_dorms = staff_assignments.values_list('dorm__id', flat=True)
+
+            # Check if the staff is assigned to the dorm for the current object
+            if obj.dorms.filter(id__in=assigned_dorms).exists():
+                return True
+
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        if request.user.is_superuser:
+            return True
+        if obj is None:
+            return True
+        if hasattr(request.user, 'staffs'):
+            staff_profile = request.user.staffs
+            
+            # Access the reverse relation using the updated related_name 'staffassignments'
+            staff_assignments = staff_profile.staffassignments.all()  # Updated relation name
+            
+            # Get the assigned dorms for the staff
+            assigned_dorms = staff_assignments.values_list('dorm__id', flat=True)
+
+            # Check if the current object is assigned to the staff's dorms
+            if obj.dorms.filter(id__in=assigned_dorms).exists():
+                return True
+
+        return False
 
 @admin.register(Complaint)
 class ComplaintAdmin(admin.ModelAdmin):
@@ -284,7 +419,6 @@ class MaintenanceRequestAdmin(ExportMixin,admin.ModelAdmin):
         'status', 'created_at', 'updated_at', 
         'completion_date', 'updated_by','semester', 'academic_session'
     ]
-    
     # Search fields mapped to fields in the model and foreign keys
     search_fields = [
         'id',                      # UUID of the request
@@ -297,11 +431,9 @@ class MaintenanceRequestAdmin(ExportMixin,admin.ModelAdmin):
         'academic_session__name', 
         'semester__semester_type',   # Updated by staff's email through the user model
     ]
-    
     list_filter = ['status', 'category', 'sub_category', 'created_at', 'updated_at', 'completion_date']
     readonly_fields = ['created_at', 'updated_at', 'completion_date']
     ordering = ['created_at', 'dorm', 'resident']
-    
     # Optimizing database queries by prefetching related models
     list_select_related = [
         'resident', 'dorm', 'room', 'category', 'sub_category', 'updated_by','semester', 'academic_session'
@@ -311,114 +443,14 @@ class MaintenanceRequestAdmin(ExportMixin,admin.ModelAdmin):
     autocomplete_fields = (
         'resident', 'dorm', 'room', 'category','semester', 'academic_session'
     )
-    
     resource_class = MaintenanceRequestResource
 
+    """
+    1. A resident can view and create a MR-- they only need select and input 'category', 'sub_category', 'description'. the system captures 'id', 'resident', 'dorm', 'room', 'status', 'created_at', 'updated_at', 
+        'completion_date', 'updated_by', 'semester', 'academic_session'
 
-
-
-
-    def _is_staff_assigned_to_dorm(self, request: HttpRequest, obj: MaintenanceRequest) -> bool:
-        """Check if the staff is assigned to the dorm for the semester and session."""
-        staff = Staffs.objects.filter(user=request.user).first()
-        if not staff:
-            return False  # No valid staff record
-
-        return staff.staffassignment_set.filter(
-            dorm=obj.dorm, semester=obj.semester, academic_session=obj.academic_session
-        ).exists()
-    
-    def get_queryset(self, request: HttpRequest):
-        """Filter the queryset based on the user’s role and dorm assignment."""
-        queryset = super().get_queryset(request)
-
-        if request.user.is_superuser:
-            return queryset  # Superusers see everything
-
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff:
-            if staff.role.name in ['ResLife Director', 'Dean of Student Affairs']:
-                return queryset  # Directors and Deans see all requests
-
-            # Filter requests by the staff’s assigned dorms for the current semester/session
-            assigned_dorms = staff.staffassignment_set.values_list('dorm', flat=True)
-            return queryset.filter(dorm__in=assigned_dorms)
-
-        if hasattr(request.user, 'resident'):
-            # Residents see only their own requests
-            return queryset.filter(resident__user=request.user)
-
-        return queryset.none()  # No access for anyone else
-
-    def has_view_permission(self, request: HttpRequest, obj: MaintenanceRequest | None = None) -> bool:
-        """Define view permissions."""
-        if request.user.is_superuser:
-            return True
-
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff:
-            if staff.role.name in ['ResLife Directors', 'Dean of Student Affairs']:
-                return True  # Can view all requests
-
-            if obj and self._is_staff_assigned_to_dorm(request, obj):
-                return True  # Assigned staff can view requests in their dorm
-
-        if hasattr(request.user, 'resident'):
-            return obj is None or obj.resident.user == request.user  # Residents see their own requests
-        return False
-
-    def has_add_permission(self, request: HttpRequest) -> bool:
-        """Restrict add permission based on user roles and assignments."""
-        if request.user.is_superuser:
-            return True  # Superusers can add any request
-
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff:
-            if staff.role.name == 'ResLife Directors':
-                return True  # ResLife Directors can create requests
-
-            # Check if the staff is assigned to a dorm for the semester
-            assigned_dorms = staff.staffassignment_set.values_list('dorm', flat=True)
-            if assigned_dorms.exists():
-                return True  # Assigned staff can create requests for their dorm
-
-        # Allow residents to create requests for their dorm
-        if hasattr(request.user, 'resident'):
-            return True  # Residents can add maintenance requests
-
-        return False  # Deny add permissions for everyone else
-    
-    def has_change_permission(self, request: HttpRequest, obj: MaintenanceRequest | None = None) -> bool:
-        """Allow only authorized staff to update requests."""
-        if request.user.is_superuser:
-            return True  # Superuser can update anything
-
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name in ['ResLife Directors', 'Dean of Student Affairs']:
-            return True  # ResLife Directors and Dean can update all requests
-
-        # Check if the staff is assigned to the dorm
-        if obj and self._is_staff_assigned_to_dorm(request, obj):
-            if staff.role.name in ['Residence Assistant', 'Residence Director']:
-                return True  # Assigned staff can update requests in their dorm
-
-        return False  # Deny access otherwise
-    
-    def has_delete_permission(self, request: HttpRequest, obj: MaintenanceRequest | None = None) -> bool:
-        """Allow only superusers and ResLife Directors to delete requests."""
-        if request.user.is_superuser:
-            return True  # Superuser can delete anything
-
-        staff = Staffs.objects.filter(user=request.user).first()
-        if staff and staff.role.name in ['ResLife Directors', 'Dean of Student Affairs']:
-            return True  # ResLife Directors and Dean can update all requests
-
-        # Check if the staff is assigned to the dorm
-        if obj and self._is_staff_assigned_to_dorm(request, obj):
-            if staff.role.name in ['Residence Assistant', 'Residence Director']:
-                return True  # Assigned staff can delete requests in their dorm
-
-        return False  # Deny access otherwise
+    2. same thing for Residence Assistance and Directors
+    """
 
 class SubCategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
     list_display = ('name','my_order','category')

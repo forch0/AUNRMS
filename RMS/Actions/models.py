@@ -87,35 +87,71 @@ class MaintenanceRequest(models.Model):
         verbose_name = 'Maintenance Request'
         verbose_name_plural = 'Maintenance Requests'
     
+# class Announcement(models.Model):
+#     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+#     title = models.CharField(max_length=200)
+#     message = models.TextField(blank=True, null=True)
+#     created_by = models.ForeignKey(Staffs, on_delete=models.CASCADE, related_name='created_announcements')
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
+#     dorms = models.ManyToManyField(Dorm, blank=True)  # For ResLife Director's global announcements
+#     is_global = models.BooleanField(default=False)
+#     semester = models.ForeignKey('AcademicYear.Semester', on_delete=models.CASCADE, related_name='announcements')
+#     academic_session = models.ForeignKey('AcademicYear.AcademicSession', on_delete=models.CASCADE, related_name='announcements')
+
+#     def clean(self):
+#         if self.is_global:
+#             if self.created_by.role.name != 'ResLife Director':
+#                 raise ValidationError("Only ResLife Directors can make global announcements.")
+#         else:
+#             if not self.dorms.exists():
+#                 raise ValidationError("Announcements must be assigned to a dorm.")
+#             for dorm in self.dorms.all():
+#                 if self.created_by.dorm != dorm and self.created_by.role.name not in ['Residence Director', 'Residence Assistant']:
+#                     raise ValidationError("You can only create announcements for the dorm you are assigned to.")
+
+#     def __str__(self):
+#         return f"{self.title} by {self.created_by.user.username}"
+
+#     class Meta:
+#         verbose_name = 'announcement'
+#         verbose_name_plural = 'announcements'
+
 class Announcement(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=200)
     message = models.TextField(blank=True, null=True)
-    created_by = models.ForeignKey(Staffs, on_delete=models.CASCADE, related_name='created_announcements')
+    created_by = models.ForeignKey(
+        Staffs, 
+        on_delete=models.CASCADE, 
+        related_name='created_announcements'
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    dorms = models.ManyToManyField(Dorm, blank=True)  # For ResLife Director's global announcements
+    dorms = models.ManyToManyField(
+        Dorm, 
+        blank=True, 
+        help_text="Select dorms for the announcement (Leave blank for global announcements)."
+    )
     is_global = models.BooleanField(default=False)
-    semester = models.ForeignKey('AcademicYear.Semester', on_delete=models.CASCADE, related_name='announcements')
-    academic_session = models.ForeignKey('AcademicYear.AcademicSession', on_delete=models.CASCADE, related_name='announcements')
-
-    def clean(self):
-        if self.is_global:
-            if self.created_by.role.name != 'ResLife Director':
-                raise ValidationError("Only ResLife Directors can make global announcements.")
-        else:
-            if not self.dorms.exists():
-                raise ValidationError("Announcements must be assigned to a dorm.")
-            for dorm in self.dorms.all():
-                if self.created_by.dorm != dorm and self.created_by.role.name not in ['Residence Director', 'Residence Assistant']:
-                    raise ValidationError("You can only create announcements for the dorm you are assigned to.")
-
-    def __str__(self):
-        return f"{self.title} by {self.created_by.user.username}"
+    semester = models.ForeignKey(
+        Semester, 
+        on_delete=models.CASCADE, 
+        related_name='announcements'
+    )
+    academic_session = models.ForeignKey(
+        AcademicSession, 
+        on_delete=models.CASCADE, 
+        related_name='announcements'
+    )
 
     class Meta:
-        verbose_name = 'announcement'
-        verbose_name_plural = 'announcements'
+        verbose_name = "Announcement"
+        verbose_name_plural = "Announcements"
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return self.title
 
 class Complaint(models.Model):
 
