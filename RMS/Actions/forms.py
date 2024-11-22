@@ -14,51 +14,6 @@ class SubCategoryForm(forms.ModelForm):
         model = SubCategory
         fields = ['name', 'category']
 
-class MaintenanceRequestForm(forms.ModelForm):
-    class Meta:
-        model = MaintenanceRequest
-        fields = [
-            'dorm', 'room', 'resident', 'semester', 'academic_session',
-            'category', 'sub_category', 'description', 'status', 'updated_by'
-        ]
-
-
-# class AnnouncementForm(forms.ModelForm):
-#     class Meta:
-#         model = Announcement
-#         fields = '__all__'
-
-#     def clean(self):
-#         cleaned_data = super().clean()
-#         is_global = cleaned_data.get('is_global')
-#         dorms = cleaned_data.get('dorms')
-#         created_by = cleaned_data.get('created_by')
-
-#         # Ensure the created_by user exists
-#         if not created_by:
-#             raise ValidationError("The 'created by' field is required.")
-
-#         # Ensure the user has a Staffs profile
-#         staff_profile = getattr(created_by, 'staffs', None)
-#         if not staff_profile:
-#             raise ValidationError("The selected user is not a staff member.")
-
-#         # Validate global announcement permissions
-#         if is_global and not staff_profile.role.name == 'ResLife Director':
-#             raise ValidationError("Only ResLife Directors can create global announcements.")
-
-#         # Validate dorms for non-global announcements
-#         if not is_global:
-#             if not dorms or dorms.count() == 0:
-#                 raise ValidationError("You must specify at least one dorm for non-global announcements.")
-
-#             # Ensure staff is assigned to the selected dorms
-#             assigned_dorms = Dorm.objects.filter(staffassignment__staff=staff_profile).values_list('id', flat=True)
-#             for dorm in dorms:
-#                 if dorm.id not in assigned_dorms:
-#                     raise ValidationError(f"You are not assigned to the dorm: {dorm.name}.")
-
-#         return cleaned_data
 
 class AnnouncementForm(forms.ModelForm):
     class Meta:

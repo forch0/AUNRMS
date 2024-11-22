@@ -312,6 +312,7 @@ class MaintenanceRequestResource(resources.ModelResource):
 
 @admin.register(MaintenanceRequest)
 class MaintenanceRequestAdmin(ExportMixin,admin.ModelAdmin):
+    # form= MaintenanceRequestForm
     list_display = [
         'id', 'resident', 'dorm', 'room', 
         'category','sub_category', 'description', 
@@ -337,19 +338,135 @@ class MaintenanceRequestAdmin(ExportMixin,admin.ModelAdmin):
     list_select_related = [
         'resident', 'dorm', 'room', 'category', 'sub_category', 'updated_by','semester', 'academic_session'
     ]
-    
     # Autocomplete fields for foreign keys
     autocomplete_fields = (
         'resident', 'dorm', 'room', 'category','semester', 'academic_session'
     )
     resource_class = MaintenanceRequestResource
 
-    """
-    1. A resident can view and create a MR-- they only need select and input 'category', 'sub_category', 'description'. the system captures 'id', 'resident', 'dorm', 'room', 'status', 'created_at', 'updated_at', 
-        'completion_date', 'updated_by', 'semester', 'academic_session'
 
-    2. same thing for Residence Assistance and Directors
-    """
+    # def get_form(self, request, obj=None, **kwargs):
+    #     """
+    #     Override get_form to pass the user to the form for validation.
+    #     """
+    #     # Pass the current user to the form's kwargs
+    #     kwargs['form'] = MaintenanceRequestForm
+    #     form = super().get_form(request, obj, **kwargs)
+    #     form.user = request.user  # Pass the logged-in user to the form
+    #     return form
+
+    # def get_queryset(self, request):
+    #     queryset = super().get_queryset(request)
+
+    #     # If the user is a superuser or ResLife Director, allow access to all maintenance requests
+    #     if request.user.is_superuser or request.user.staffs.role.name == 'ResLife Directors':
+    #         return queryset
+
+    #     # Otherwise, restrict access based on the staff's assigned dorms or resident's own requests
+    #     if hasattr(request.user, 'staffs'):
+    #         staff_profile = request.user.staffs
+    #         staff_assignments = staff_profile.staffassignments.all()
+
+    #         # Filter maintenance by dorms assigned to the staff
+    #         assigned_dorms = staff_assignments.values_list('dorm', flat=True)
+    #         queryset = queryset.filter(dorm__id__in=assigned_dorms)
+
+    #     elif hasattr(request.user, 'residents'):
+    #         # Allow residents to view their own maintenance requests
+    #         resident_profile = request.user.residents
+    #         queryset = queryset.filter(resident=resident_profile)
+
+    #     return queryset
+
+    # def save_model(self, request, obj, form, change):
+    #     user = request.user
+
+    #     # If the logged-in user is a resident, automatically set the resident and dorm
+    #     if hasattr(user, 'residents'):
+    #         obj.resident = user.residents
+    #         obj.dorm = obj.resident.room.dorm  # Assign dorm from resident's room
+    #     # If the logged-in user is staff (including ResLife Director), ensure they are submitting on behalf of a resident in their assigned dorm
+    #     elif hasattr(user, 'staffs'):
+    #         staff_profile = user.staffs
+    #         staff_assignments = staff_profile.staffassignments.all()
+    #         assigned_dorms = staff_assignments.values_list('dorm', flat=True)
+            
+    #         # Ensure the dorm belongs to the staff's assigned dorm
+    #         if obj.dorm.id not in assigned_dorms and staff_profile.role.name != 'ResLife Directors':
+    #             raise ValidationError("You cannot submit a request for a dorm you're not assigned to.")
+
+    #     # Call the parent class's save_model to save the object
+    #     super().save_model(request, obj, form, change)
+
+    # # Permissions for view, add, change, delete
+    # def has_view_permission(self, request, obj=None):
+    #     # Superuser or ResLife Directors can view all maintenance requests
+    #     if request.user.is_superuser or request.user.staffs.role.name == 'ResLife Directors':
+    #         return True
+    #     # Staff can only view maintenance requests for their assigned dorms
+    #     if hasattr(request.user, 'staffs'):
+    #         staff_profile = request.user.staffs
+    #         staff_assignments = staff_profile.staffassignments.all()
+    #         assigned_dorms = staff_assignments.values_list('dorm', flat=True)
+    #         if obj and obj.dorm.id in assigned_dorms:
+    #             return True
+    #         if not obj:
+    #             return True  # Allow staff to see a list of requests in their assigned dorms
+    #     # Residents can only view their own maintenance requests
+    #     if hasattr(request.user, 'residents'):
+    #         resident_profile = request.user.residents
+    #         if obj and obj.resident == resident_profile:
+    #             return True
+    #         if not obj:
+    #             return True  # Allow residents to see only their own requests
+    #     return False
+
+    # def has_add_permission(self, request):
+    #     # Allow staff and ResLife Directors to add requests, and allow residents to add their own requests
+    #     if request.user.is_superuser or request.user.staffs.role.name == 'ResLife Directors':
+    #         return True
+    #     if hasattr(request.user, 'staffs'):
+    #         staff_profile = request.user.staffs
+    #         staff_assignments = staff_profile.staffassignments.all()
+    #         if staff_assignments.exists():
+    #             return True
+    #     if hasattr(request.user, 'residents'):
+    #         return True  # Residents can add their own maintenance requests
+    #     return False
+
+    # def has_change_permission(self, request, obj=None):
+    #     # Superusers or ResLife Directors can change any maintenance request
+    #     if request.user.is_superuser or request.user.staffs.role.name == 'ResLife Directors':
+    #         return True
+    #     # Staff can change maintenance requests only for dorms they are assigned to
+    #     if hasattr(request.user, 'staffs'):
+    #         staff_profile = request.user.staffs
+    #         staff_assignments = staff_profile.staffassignments.all()
+    #         assigned_dorms = staff_assignments.values_list('dorm', flat=True)
+    #         if obj and obj.dorm.id in assigned_dorms:
+    #             return True
+    #     # Residents can only change their own requests
+    #     if hasattr(request.user, 'residents'):
+    #         resident_profile = request.user.residents
+    #         if obj and obj.resident == resident_profile:
+    #             return True
+    #     return False
+
+    # def has_delete_permission(self, request, obj=None):
+    #     # Superusers or ResLife Directors can delete any maintenance request
+    #     if request.user.is_superuser or request.user.staffs.role.name == 'ResLife Directors':
+    #         return True
+    #     # Staff can delete maintenance requests only for dorms they are assigned to
+    #     if hasattr(request.user, 'staffs'):
+    #         staff_profile = request.user.staffs
+    #         staff_assignments = staff_profile.staffassignments.all()
+    #         assigned_dorms = staff_assignments.values_list('dorm', flat=True)
+    #         if obj and obj.dorm.id in assigned_dorms:
+    #             return True
+    #     # Residents cannot delete maintenance requests; they can only add and change them
+    #     if hasattr(request.user, 'residents'):
+    #         return False
+    #     return False
 
 class SubCategoryAdmin(SortableAdminMixin,admin.ModelAdmin):
     list_display = ('name','my_order','category')
