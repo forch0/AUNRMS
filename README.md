@@ -5,13 +5,17 @@
 The **American University of Nigeria Residence Management System (AUNRMS)** is a **🌐 web-based application** designed to streamline and enhance the management of student residences at AUN. The system tackles inefficiencies in traditional residence management by improving **📢 communication**, **⚙️ automating tasks**, and enabling **📊 data-driven decisions**.  
 
 ### **✨ Key Features**  
-- **👥 User Management**: Account creation, login, and **🔑 role-based access** (residents, RAs, RDs, admins).  
+- **👥 User Management**: Account creation, login, and **🔑 role-based access** (residents, RAs, RDs, admins).
+- **👨‍💼 Staff Assignment: RAs/RDs can ✅ assign maintenance tasks to specific staff members based on expertise/availability.
+- **🏠 Room Assignment & Management: Admins/RDs can 🔀 assign rooms to students, track occupancy status (✅ Occupied, 🚫 Unoccupied, ⚠️ Unavailable), and manage dormitory info.
 - **🔧 Maintenance Requests**: Submit, track, and get **🔄 real-time updates** on requests.  
 - **📦 Storage Unit Management**: Request storage & manage allocations.  
 - **📢 Announcements & Messaging**: Secure **💬 messaging** and announcements for residents/groups.  
 - **📈 Reporting & Analytics**: **📊 Automated reports** on maintenance trends, response times, and demographics.  
 - **💳 Payment Integration**: Pay residence fees **💸 online**.  
-- **🗣️ Anonymous Complaints**: Submit and track complaints **🕵️ anonymously**.  
+- **🗣️ Anonymous Complaints**: Submit and track complaints **🕵️ anonymously**.
+- 
+  
 
 ---
 
