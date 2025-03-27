@@ -6,8 +6,8 @@ The **American University of Nigeria Residence Management System (AUNRMS)** is a
 
 ### **✨ Key Features**  
 - **👥 User Management**: Account creation, login, and **🔑 role-based access** (residents, RAs, RDs, admins).
-- **👨‍💼 Staff Assignment: RAs/RDs can ✅ assign maintenance tasks to specific staff members based on expertise/availability.
-- **🏠 Room Assignment & Management: Admins/RDs can 🔀 assign rooms to students, track occupancy status (✅ Occupied, 🚫 Unoccupied, ⚠️ Unavailable), and manage dormitory info.
+- 👨‍💼 Staff Assignment: RAs/RDs can ✅ assign maintenance tasks to specific staff members based on expertise/availability.
+- 🏠 Room Assignment & Management: Admins/RDs can 🔀 assign rooms to students, track occupancy status (✅ Occupied, 🚫 Unoccupied, ⚠️ Unavailable), and manage dormitory info.
 - **🔧 Maintenance Requests**: Submit, track, and get **🔄 real-time updates** on requests.  
 - **📦 Storage Unit Management**: Request storage & manage allocations.  
 - **📢 Announcements & Messaging**: Secure **💬 messaging** and announcements for residents/groups.  
